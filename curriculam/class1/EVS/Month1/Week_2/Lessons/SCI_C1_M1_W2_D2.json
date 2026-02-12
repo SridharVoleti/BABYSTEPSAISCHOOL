@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "lesson_id": "SCI_C1_M1_W2_D2",
+    "class": "1",
+    "subject": "Science",
+    "month": "1",
+    "week": "2",
+    "lesson_title": "Things That Grow and Move",
+    "version": "1.4",
+    "duration_minutes": 30,
+    "language": [
+      "English"
+    ],
+    "academic_year": "2025-2026"
+  },
+  "objectives": {
+    "primary_objective": "Understand the difference between living and non-living things - Things That Grow and Move",
+    "skills_targeted": [
+      "Observation",
+      "Classification",
+      "Reasoning"
+    ]
+  },
+  "content_blocks": [
+    {
+      "type": "intro_tts",
+      "text": "Today we learn about things that grow and move."
+    },
+    {
+      "type": "concept_explanation",
+      "text": "Living things grow, move, and need food. Non-living things do not."
+    },
+    {
+      "type": "activity",
+      "text": "Look around and name one living and one non-living thing."
+    },
+    {
+      "type": "summary_tts",
+      "text": "Living things breathe, grow, and reproduce. Non-living things do not."
+    }
+  ],
+  "ai_evaluation": {
+    "star_rating_system": {
+      "enabled": true,
+      "promotion_rule": "Minimum 2 stars to continue."
+    }
+  }
+}

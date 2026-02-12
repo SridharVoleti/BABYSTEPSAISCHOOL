@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "lesson_id": "SCI_C1_M7_W4_D2",
+    "class": "1",
+    "subject": "Science",
+    "month": "7",
+    "week": "4",
+    "lesson_title": "Teamwork and Cooperation",
+    "version": "1.4",
+    "duration_minutes": 30,
+    "language": [
+      "English"
+    ],
+    "academic_year": "2025-2026"
+  },
+  "objectives": {
+    "primary_objective": "Learn and understand - Teamwork and Cooperation",
+    "skills_targeted": [
+      "Observation",
+      "Understanding",
+      "Reasoning"
+    ]
+  },
+  "content_blocks": [
+    {
+      "type": "intro_tts",
+      "text": "Today we will learn about teamwork and cooperation."
+    },
+    {
+      "type": "concept_explanation",
+      "text": "This lesson helps us understand teamwork and cooperation."
+    },
+    {
+      "type": "activity",
+      "text": "Observe, discuss, or draw something related to today's topic."
+    },
+    {
+      "type": "summary_tts",
+      "text": "Great! We now know about teamwork and cooperation."
+    }
+  ],
+  "ai_evaluation": {
+    "star_rating_system": {
+      "enabled": true,
+      "promotion_rule": "Minimum 2 stars to continue."
+    }
+  }
+}

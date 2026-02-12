@@ -1,0 +1,8 @@
+# 2025-10-22: Dependencies for Authenticity & Integrity Monitor Microservice
+# Authors: Cascade
+
+Flask==3.0.0
+
+# 2025-10-22: AI/ML Libraries
+sentence-transformers==2.2.2
+torch==2.1.2

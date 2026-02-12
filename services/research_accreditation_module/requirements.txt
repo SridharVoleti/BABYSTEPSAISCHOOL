@@ -1,0 +1,5 @@
+# 2025-10-22: Dependencies for Research & Accreditation Module Microservice
+# Authors: Cascade
+
+Flask==3.0.0
+pandas==2.1.3

@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "lesson_id": "SCI_C1_M3_W4_D1",
+    "class": "1",
+    "subject": "Science",
+    "month": "3",
+    "week": "4",
+    "lesson_title": "How We Use Water and Air Daily",
+    "version": "1.4",
+    "duration_minutes": 30,
+    "language": [
+      "English"
+    ],
+    "academic_year": "2025-2026"
+  },
+  "objectives": {
+    "primary_objective": "Learn and understand - How We Use Water and Air Daily",
+    "skills_targeted": [
+      "Observation",
+      "Understanding",
+      "Reasoning"
+    ]
+  },
+  "content_blocks": [
+    {
+      "type": "intro_tts",
+      "text": "Today we will learn about how we use water and air daily."
+    },
+    {
+      "type": "concept_explanation",
+      "text": "This lesson helps us understand how we use water and air daily."
+    },
+    {
+      "type": "activity",
+      "text": "Observe, discuss, or draw something related to today's topic."
+    },
+    {
+      "type": "summary_tts",
+      "text": "Great! We now know about how we use water and air daily."
+    }
+  ],
+  "ai_evaluation": {
+    "star_rating_system": {
+      "enabled": true,
+      "promotion_rule": "Minimum 2 stars to continue."
+    }
+  }
+}

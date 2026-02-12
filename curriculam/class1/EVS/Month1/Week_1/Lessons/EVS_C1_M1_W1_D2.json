@@ -1,0 +1,182 @@
+{
+  "metadata": {
+    "lesson_id": "SCI_C1_M1_W1_D2",
+    "class": "1",
+    "subject": "Science",
+    "month": "1",
+    "week": "1",
+    "day": "2",
+    "lesson_title": "Asking Questions",
+    "version": "1.4",
+    "duration_minutes": 30,
+    "language": ["English"],
+    "level": "Foundational",
+    "academic_year": "2025-2026",
+    "status": "Active"
+  },
+
+  "objectives": {
+    "primary_objective": "Students learn that asking questions helps us understand the world and begin discovery.",
+    "learning_outcomes": [
+      "Recognize that scientists start by asking questions.",
+      "Create simple ‘why’, ‘how’, and ‘what’ questions about daily life.",
+      "Express curiosity politely and clearly."
+    ],
+    "skills_targeted": ["Curiosity", "Reasoning", "Communication", "Expression"],
+    "difficulty_level": "Basic"
+  },
+
+  "vocabulary": {
+    "total_new_words": 3,
+    "word_list": [
+      {
+        "word": "curious",
+        "definition": "Wanting to know more about something.",
+        "example_usage": "A curious child always asks questions."
+      },
+      {
+        "word": "discover",
+        "definition": "To find out something new.",
+        "example_usage": "We discover new facts when we ask questions."
+      },
+      {
+        "word": "wonder",
+        "definition": "To think about something and want to know the reason.",
+        "example_usage": "I wonder why stars twinkle."
+      }
+    ]
+  },
+
+  "content_blocks": [
+    {
+      "type": "intro_tts",
+      "text": "Yesterday, we learned that science means observing and exploring. Today, we’ll learn how asking questions helps us make discoveries!",
+      "duration_seconds": 60,
+      "points_awarded": 10,
+      "badge_awarded": "Curious Starter"
+    },
+    {
+      "type": "story",
+      "text": "Maya watched the rain and asked, 'Where does the rain come from?' Her teacher smiled and said, 'That’s how scientists begin — with a question!'",
+      "duration_seconds": 120,
+      "points_awarded": 15,
+      "badge_awarded": "Inquisitive Explorer"
+    },
+    {
+      "type": "concept_explanation",
+      "text": "Every discovery starts with a question. Questions like ‘Why is the sky blue?’ or ‘How do birds fly?’ help us learn new things.",
+      "duration_seconds": 180,
+      "points_awarded": 20,
+      "badge_awarded": "Concept Master",
+      "ai_expression_coach": {
+        "enabled": true,
+        "alternate_expressions": [
+          "Scientists begin by asking why and how things happen.",
+          "Learning starts with curiosity and questions.",
+          "We understand the world by asking and finding answers."
+        ],
+        "ai_prompt": "Can you say why asking questions is important, in your own words?",
+        "student_input_mode": "voice_or_text",
+        "ai_followup_feedback": {
+          "positive_response": "That’s a great explanation of curiosity!",
+          "neutral_response": "Almost right! Try adding an example, like 'why rain falls' or 'why stars shine'.",
+          "incorrect_response": "Let’s rephrase it together: Asking questions helps us discover new things."
+        },
+        "points_awarded": 10,
+        "badge_awarded": "Expressive Thinker"
+      }
+    },
+    {
+      "type": "activity",
+      "text": "Think of three questions about things you see every day. For example: Why do leaves move? Why is water clear? How does a fan spin?",
+      "duration_seconds": 120,
+      "points_awarded": 25,
+      "badge_awarded": "Question Creator",
+      "ai_expression_coach": {
+        "enabled": true,
+        "alternate_expressions": [
+          "Why does the sun feel hot?",
+          "How does the clock make sound?",
+          "What makes the rainbow appear?"
+        ],
+        "ai_prompt": "Can you try asking your question in another way? You can start with 'Why', 'How', or 'What'.",
+        "student_input_mode": "voice_or_text",
+        "ai_followup_feedback": {
+          "positive_response": "Excellent! That’s a thoughtful question.",
+          "neutral_response": "Nice! Try to make your question shorter or clearer.",
+          "incorrect_response": "Let's fix it. Start with 'Why', 'How', or 'What' to make it sound like a question."
+        },
+        "points_awarded": 15,
+        "badge_awarded": "Expressive Questioner"
+      }
+    },
+    {
+      "type": "summary_tts",
+      "text": "Science begins when we ask questions about the world around us. Keep wondering, keep asking!",
+      "duration_seconds": 60,
+      "points_awarded": 10,
+      "badge_awarded": "Lesson Finisher"
+    }
+  ],
+
+  "ai_evaluation": {
+    "star_rating_system": {
+      "enabled": true,
+      "rating_scale": [1, 2, 3],
+      "promotion_rule": "Minimum 2 stars required to unlock next lesson."
+    },
+    "feedback": {
+      "strengths_analysis": ["Asked thoughtful and clear questions.", "Used question words correctly."],
+      "weaknesses_analysis": ["Needs to give more examples of scientific questions."],
+      "for_two_star_students": {
+        "growth_feedback": "Good job! Try creating one more question that starts with ‘How’ or ‘Why’ to earn your 3rd star.",
+        "example_phrases_for_retry": [
+          "How do birds fly?",
+          "Why do stars twinkle at night?"
+        ]
+      },
+      "for_three_star_students": {
+        "mastery_feedback": "Wonderful! You’ve shown true curiosity by asking creative questions like a scientist."
+      }
+    }
+  },
+
+  "gamification": {
+    "points_system": {
+      "lesson_completion": 25,
+      "correct_answer": 10,
+      "activity_completion": 20
+    },
+    "badges_system": {
+      "Curious Starter": "Started the lesson with excitement.",
+      "Inquisitive Explorer": "Asked first scientific question.",
+      "Concept Master": "Understood importance of curiosity.",
+      "Question Creator": "Created 3 good questions.",
+      "Expressive Questioner": "Rephrased or improved questions clearly.",
+      "Lesson Finisher": "Completed the lesson successfully."
+    }
+  },
+
+  "analytics": {
+    "student_engagement_tracking": true,
+    "interaction_count_expected": 5,
+    "completion_rate_target": 90,
+    "average_expected_score": 80,
+    "points_earned": 100,
+    "star_rating": 2
+  },
+
+  "review_cycle": {
+    "recap_days": ["Thursday", "Friday"],
+    "assessment_frequency": "Weekly"
+  },
+
+  "compliance": {
+    "curriculum_alignment": [
+      "CBSE Class 1 Science/EVS",
+      "ICSE Primary Science",
+      "TS SCERT Class 1 Environmental Studies"
+    ],
+    "competency_tags": ["Curiosity", "Inquiry", "Communication"]
+  }
+}

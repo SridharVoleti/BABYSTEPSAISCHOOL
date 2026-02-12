@@ -1,0 +1,6 @@
+# 2025-10-22: Dependencies for AI Examiner Dashboard Microservice
+# Authors: Cascade
+
+dash==2.14.2
+plotly==5.18.0
+pandas==2.1.3

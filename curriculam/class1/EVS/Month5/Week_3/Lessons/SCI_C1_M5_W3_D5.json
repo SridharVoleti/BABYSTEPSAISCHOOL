@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "lesson_id": "SCI_C1_M5_W3_D5",
+    "class": "1",
+    "subject": "Science",
+    "month": "5",
+    "week": "3",
+    "lesson_title": "Progress Check \u2013 The Sky and Beyond",
+    "version": "1.4",
+    "duration_minutes": 30,
+    "language": [
+      "English"
+    ],
+    "academic_year": "2025-2026"
+  },
+  "objectives": {
+    "primary_objective": "Learn and understand - Progress Check \u2013 The Sky and Beyond",
+    "skills_targeted": [
+      "Observation",
+      "Understanding",
+      "Reasoning"
+    ]
+  },
+  "content_blocks": [
+    {
+      "type": "intro_tts",
+      "text": "Today we will learn about progress check \u2013 the sky and beyond."
+    },
+    {
+      "type": "concept_explanation",
+      "text": "This lesson helps us understand progress check \u2013 the sky and beyond."
+    },
+    {
+      "type": "activity",
+      "text": "Observe, discuss, or draw something related to today's topic."
+    },
+    {
+      "type": "summary_tts",
+      "text": "Great! We now know about progress check \u2013 the sky and beyond."
+    }
+  ],
+  "ai_evaluation": {
+    "star_rating_system": {
+      "enabled": true,
+      "promotion_rule": "Minimum 2 stars to continue."
+    }
+  }
+}

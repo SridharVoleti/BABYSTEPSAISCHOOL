@@ -1,0 +1,274 @@
+{
+  "lesson_id": "MATH_C5_CH3_ML1",
+  "title": "Understanding Fractions - Part and Whole",
+  "learning_objective": "Students will understand that a fraction represents a part of a whole and identify the numerator and denominator.",
+  "subject": "Math",
+  "class_number": 5,
+  "chapter_id": "CH3",
+  "chapter_name": "Fractions",
+  "sequence_in_chapter": 1,
+  "duration_minutes": 7,
+  
+  "worked_examples": [
+    {
+      "id": "WE1",
+      "title": "Pizza Slices",
+      "problem": "A pizza is cut into 8 equal slices. Ravi eats 3 slices. What fraction of the pizza did Ravi eat?",
+      "visual": "/visuals/math/fractions/pizza_8_slices.png",
+      "solution_steps": [
+        "Step 1: Count the total number of equal parts → 8 slices (this is the denominator)",
+        "Step 2: Count how many parts Ravi ate → 3 slices (this is the numerator)",
+        "Step 3: Write the fraction as numerator/denominator → 3/8",
+        "Step 4: Read it as 'three-eighths' or '3 out of 8'"
+      ],
+      "answer": "3/8",
+      "key_concept": "The denominator tells us how many equal parts the whole is divided into. The numerator tells us how many parts we are talking about."
+    },
+    {
+      "id": "WE2",
+      "title": "Chocolate Bar",
+      "problem": "A chocolate bar has 6 equal pieces. Priya takes 2 pieces. What fraction of the chocolate bar does Priya have?",
+      "visual": "/visuals/math/fractions/chocolate_6_pieces.png",
+      "solution_steps": [
+        "Step 1: Identify the whole → The chocolate bar",
+        "Step 2: Count total equal parts → 6 pieces (denominator)",
+        "Step 3: Count parts Priya has → 2 pieces (numerator)",
+        "Step 4: Write the fraction → 2/6",
+        "Step 5: This can also be simplified to 1/3 (we'll learn this later)"
+      ],
+      "answer": "2/6",
+      "key_concept": "A fraction shows how many parts of a whole we have. The bottom number (denominator) shows total parts, the top number (numerator) shows parts we're counting."
+    }
+  ],
+  
+  "practice_questions": [
+    {
+      "id": "PQ1",
+      "type": "multiple_choice",
+      "question": "A cake is cut into 4 equal pieces. If you eat 1 piece, what fraction of the cake did you eat?",
+      "visual": "/visuals/math/fractions/cake_4_pieces.png",
+      "options": ["1/2", "1/4", "1/3", "4/1"],
+      "answer": "1/4",
+      "solution_steps": ["Total pieces = 4 (denominator)", "Pieces eaten = 1 (numerator)", "Fraction = 1/4"],
+      "hint": "Count the total pieces first, then count how many you ate.",
+      "support_hint": "The bottom number is how many pieces the cake was cut into.",
+      "misconceptions": {
+        "4/1": "Remember: the total parts go on the bottom (denominator), not the top."
+      },
+      "difficulty": "easy"
+    },
+    {
+      "id": "PQ2",
+      "type": "multiple_choice",
+      "question": "In the fraction 5/8, what does the number 8 represent?",
+      "options": ["Parts we have", "Total equal parts", "The answer", "Parts left over"],
+      "answer": "Total equal parts",
+      "solution_steps": ["In a fraction, the bottom number is called the denominator", "The denominator tells us the total number of equal parts"],
+      "hint": "Think about what the bottom number in a fraction tells us.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "PQ3",
+      "type": "fill_blank",
+      "question": "A ribbon is cut into 5 equal parts. If 3 parts are red, the fraction of red ribbon is ___/5.",
+      "answer": "3",
+      "acceptable_answers": ["3", "three"],
+      "solution_steps": ["Red parts = 3", "Total parts = 5", "Fraction = 3/5"],
+      "hint": "How many parts are red?",
+      "difficulty": "easy"
+    },
+    {
+      "id": "PQ4",
+      "type": "multiple_choice",
+      "question": "Which fraction shows '2 out of 7 equal parts'?",
+      "options": ["7/2", "2/7", "2/9", "7/7"],
+      "answer": "2/7",
+      "solution_steps": ["'Out of' tells us the total (denominator) = 7", "The parts we're counting (numerator) = 2", "Fraction = 2/7"],
+      "hint": "The number after 'out of' goes on the bottom.",
+      "misconceptions": {
+        "7/2": "The total parts go on the bottom, not the top."
+      },
+      "difficulty": "medium"
+    },
+    {
+      "id": "PQ5",
+      "type": "multiple_choice",
+      "question": "A glass is 3/4 full of water. What does the 4 tell us?",
+      "options": ["The glass is divided into 4 equal parts", "There are 4 glasses", "4 parts have water", "The glass is empty"],
+      "answer": "The glass is divided into 4 equal parts",
+      "solution_steps": ["The denominator (4) tells us the total equal parts", "The glass is imagined as divided into 4 equal parts"],
+      "hint": "What does the bottom number in a fraction represent?",
+      "difficulty": "medium"
+    },
+    {
+      "id": "PQ6",
+      "type": "true_false",
+      "question": "In the fraction 3/5, the numerator is 5.",
+      "answer": "False",
+      "solution_steps": ["The numerator is the top number", "In 3/5, the top number is 3", "So the numerator is 3, not 5"],
+      "hint": "The numerator is always on top.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "PQ7",
+      "type": "fill_blank",
+      "question": "If a rectangle is divided into 10 equal parts and 7 parts are shaded, the fraction shaded is 7/___.",
+      "answer": "10",
+      "acceptable_answers": ["10", "ten"],
+      "solution_steps": ["Total parts = 10", "This goes in the denominator", "Fraction = 7/10"],
+      "hint": "How many total parts is the rectangle divided into?",
+      "difficulty": "easy"
+    },
+    {
+      "id": "PQ8",
+      "type": "multiple_choice",
+      "question": "Meera has 6 apples. She gives 4 apples to her friend. What fraction of apples did she give away?",
+      "visual": "/visuals/math/fractions/apples_6.png",
+      "options": ["4/6", "6/4", "2/6", "4/10"],
+      "answer": "4/6",
+      "solution_steps": ["Total apples = 6 (denominator)", "Apples given = 4 (numerator)", "Fraction = 4/6"],
+      "hint": "Total apples go on the bottom, apples given go on top.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "PQ9",
+      "type": "ordering",
+      "question": "Arrange these steps to find a fraction: A) Count parts we want B) Write numerator/denominator C) Count total equal parts",
+      "answer": ["C", "A", "B"],
+      "solution_steps": ["First, count total equal parts (denominator)", "Then, count the parts we want (numerator)", "Finally, write the fraction"],
+      "hint": "We need to know the whole before we can find the part.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "PQ10",
+      "type": "word_problem",
+      "question": "A farmer has a field divided into 9 equal plots. He plants wheat in 5 plots. Write the fraction of the field with wheat.",
+      "answer": "5/9",
+      "acceptable_answers": ["5/9", "five-ninths", "five ninths"],
+      "key_elements": ["5", "9", "/"],
+      "solution_steps": ["Total plots = 9 (denominator)", "Plots with wheat = 5 (numerator)", "Fraction = 5/9"],
+      "hint": "What is the total? What part has wheat?",
+      "difficulty": "hard"
+    }
+  ],
+  
+  "practice_themes": [
+    "Food sharing (pizza, cake, chocolate)",
+    "Everyday objects (ribbon, paper, glass)",
+    "Nature and farming (fields, gardens)",
+    "Classroom items (books, pencils)",
+    "Sports and games (team divisions)",
+    "Family and friends (sharing equally)",
+    "Shapes and geometry (rectangles, circles)"
+  ],
+  
+  "visual_assets": [
+    {
+      "id": "VA1",
+      "type": "concept_intro",
+      "title": "What is a Fraction?",
+      "url": "/visuals/math/fractions/intro_fraction_concept.png",
+      "description": "Visual showing a whole circle divided into parts with numerator and denominator labeled",
+      "teacher_script": "Look at this circle. When we divide something into equal parts and take some of those parts, we use a fraction to describe it."
+    },
+    {
+      "id": "VA2",
+      "type": "example_linked",
+      "title": "Pizza Fraction Visual",
+      "url": "/visuals/math/fractions/pizza_8_slices.png",
+      "linked_example": "WE1",
+      "description": "Pizza divided into 8 slices with 3 highlighted"
+    },
+    {
+      "id": "VA3",
+      "type": "example_linked",
+      "title": "Chocolate Bar Visual",
+      "url": "/visuals/math/fractions/chocolate_6_pieces.png",
+      "linked_example": "WE2",
+      "description": "Chocolate bar with 6 pieces, 2 separated"
+    },
+    {
+      "id": "VA4",
+      "type": "misconception",
+      "title": "Common Mistake - Flipped Fraction",
+      "url": "/visuals/math/fractions/misconception_flipped.png",
+      "description": "Shows the wrong way (total on top) vs right way (total on bottom)",
+      "teacher_script": "Many students mix up which number goes where. Remember: the TOTAL always goes on the BOTTOM."
+    }
+  ],
+  
+  "teacher_narration": {
+    "support": {
+      "intro": "Today we're going to learn about fractions. Don't worry if it seems new - we'll go step by step with lots of pictures to help you understand.",
+      "concept": "A fraction is just a way to show parts of something. Think of cutting a cake - if you cut it into 4 pieces and eat 1, you ate 1 out of 4 pieces. We write this as 1/4.",
+      "practice_intro": "Now let's practice together. Take your time with each question. If you're not sure, use the hint button.",
+      "encouragement": "You're doing great! Remember, the bottom number tells us the total parts, and the top number tells us how many we're talking about."
+    },
+    "core": {
+      "intro": "Welcome to our lesson on fractions! Today you'll learn what fractions mean and how to identify the numerator and denominator.",
+      "concept": "A fraction represents a part of a whole. The denominator (bottom) shows total equal parts, and the numerator (top) shows the parts we're counting.",
+      "practice_intro": "Let's practice! Answer each question and check your understanding.",
+      "encouragement": "Good work! Keep going - you're building strong fraction skills."
+    },
+    "challenge": {
+      "intro": "Ready to master fractions? Let's dive deep into understanding parts and wholes.",
+      "concept": "Fractions express the relationship between a part and its whole. The denominator defines the unit of measurement, while the numerator counts those units.",
+      "practice_intro": "Challenge yourself with these questions. Try to solve them without hints!",
+      "encouragement": "Excellent thinking! You're ready for more advanced fraction concepts."
+    }
+  },
+  
+  "textbook_reading": {
+    "ncert_reference": "NCERT Class 5 Mathematics, Chapter 4: Parts and Wholes",
+    "page_numbers": "56-58",
+    "sections": ["4.1 Introduction to Fractions", "4.2 Numerator and Denominator"],
+    "reading_guide": "Read pages 56-58 and look at the pictures carefully. Pay attention to how fractions are written."
+  },
+  
+  "misconceptions": [
+    {
+      "id": "M1",
+      "misconception": "Writing the total on top instead of bottom",
+      "trigger": "denominator on top",
+      "explanation": "The denominator (total parts) always goes on the bottom. Think of it as the 'foundation' that holds everything.",
+      "remediation": "Practice with pizza slices - the total slices are the 'base' of your fraction."
+    },
+    {
+      "id": "M2",
+      "misconception": "Thinking bigger denominator means bigger fraction",
+      "trigger": "bigger bottom bigger fraction",
+      "explanation": "Actually, a bigger denominator means smaller pieces! 1/8 is smaller than 1/4 because the pizza is cut into more pieces.",
+      "remediation": "Compare 1/2 of a pizza vs 1/8 of a pizza - which gives you more to eat?"
+    },
+    {
+      "id": "M3",
+      "misconception": "Confusing numerator and denominator terms",
+      "trigger": "numerator denominator mixed",
+      "explanation": "Numerator = Number on top (counts parts). Denominator = Down below (total parts). Remember: D for Down, D for Denominator.",
+      "remediation": "Use the memory trick: 'Denominator is Down'"
+    }
+  ],
+  
+  "prerequisites": [],
+  
+  "qa_status": "passed",
+  "qa_notes": "Reviewed and approved. All PRD requirements met: 2 worked examples, 10 practice questions, 7 practice themes, visual assets included.",
+  
+  "version": "1.0",
+  "language": "en",
+  "localization_variants": {
+    "te": {
+      "title": "భిన్నాలను అర్థం చేసుకోవడం - భాగం మరియు మొత్తం",
+      "status": "pending"
+    },
+    "hi": {
+      "title": "भिन्नों को समझना - भाग और पूर्ण",
+      "status": "pending"
+    }
+  },
+  
+  "is_published": true,
+  "created_by": "Lesson Architect Agent",
+  "created_at": "2025-12-18T10:00:00Z",
+  "updated_at": "2025-12-18T10:00:00Z"
+}

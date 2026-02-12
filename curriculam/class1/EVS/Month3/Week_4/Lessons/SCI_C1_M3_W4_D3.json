@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "lesson_id": "SCI_C1_M3_W4_D3",
+    "class": "1",
+    "subject": "Science",
+    "month": "3",
+    "week": "4",
+    "lesson_title": "Good Habits for Water and Air",
+    "version": "1.4",
+    "duration_minutes": 30,
+    "language": [
+      "English"
+    ],
+    "academic_year": "2025-2026"
+  },
+  "objectives": {
+    "primary_objective": "Learn and understand - Good Habits for Water and Air",
+    "skills_targeted": [
+      "Observation",
+      "Understanding",
+      "Reasoning"
+    ]
+  },
+  "content_blocks": [
+    {
+      "type": "intro_tts",
+      "text": "Today we will learn about good habits for water and air."
+    },
+    {
+      "type": "concept_explanation",
+      "text": "This lesson helps us understand good habits for water and air."
+    },
+    {
+      "type": "activity",
+      "text": "Observe, discuss, or draw something related to today's topic."
+    },
+    {
+      "type": "summary_tts",
+      "text": "Great! We now know about good habits for water and air."
+    }
+  ],
+  "ai_evaluation": {
+    "star_rating_system": {
+      "enabled": true,
+      "promotion_rule": "Minimum 2 stars to continue."
+    }
+  }
+}

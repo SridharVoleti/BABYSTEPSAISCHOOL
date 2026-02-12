@@ -1,0 +1,38 @@
+# Frontend
+node_modules/
+build/
+frontend/build/
+
+# Backend
+__pycache__/
+*.pyc
+*.pyo
+*.sqlite3
+media/
+staticfiles/
+
+# Environment
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python
+*.egg-info/
+dist/
+*.egg
+
+# Testing
+.pytest_cache/
+htmlcov/
+.coverage
+
+# Ollama
+*.gguf

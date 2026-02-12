@@ -1,0 +1,9 @@
+# 2025-10-22: Dependencies for Read-Along & Mimic Engine Microservice
+# Authors: Cascade
+
+Flask==3.0.0
+
+# 2025-10-22: AI/ML Libraries for Speech Processing
+openai-whisper==20231117
+librosa==0.10.1
+soundfile==0.12.1

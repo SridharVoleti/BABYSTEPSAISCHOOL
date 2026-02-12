@@ -1,0 +1,8 @@
+# All models needed based on migrations:
+# From 0001: StudentActivity, StudentProgress
+# From 0002: Skill, Concept, StudentMastery, MasteryEvidence
+# From 0003: LearningSession, StudentSkillProgress
+# From 0004: LearningStyleProfile, ContentInteractionPattern, various learning style models
+# From 0005: ContentDifficulty, DifficultyProfile, DifficultyAdjustment
+# From 0006: AssessmentQuestion, AssessmentSession, StudentResponse, QuestionTemplate
+# NEW Phase 2: Classroom, ClassroomEnrollment, StudentGroup, Assignment, AssignmentSubmission, TeacherNote, ResourceRecommendation

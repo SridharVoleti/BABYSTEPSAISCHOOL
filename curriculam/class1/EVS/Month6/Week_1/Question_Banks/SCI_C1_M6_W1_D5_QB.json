@@ -1,0 +1,41 @@
+{
+  "question_bank_id": "SCI_C1_M6_W1_D5_QB",
+  "linked_lesson": "SCI_C1_M6_W1_D5",
+  "total_questions": 5,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "question_text": "What did we learn about in Progress Check \u2013 Transport?",
+      "options": [
+        "Transport",
+        "Weather",
+        "Plants"
+      ],
+      "correct_answer": "Transport"
+    },
+    {
+      "id": 2,
+      "type": "true_false",
+      "question_text": "Cars and buses are examples of land transport.",
+      "correct_answer": "True"
+    },
+    {
+      "id": 3,
+      "type": "fill_in_blank",
+      "question_text": "Aeroplanes fly in the ______.",
+      "correct_answer": "sky"
+    },
+    {
+      "id": 4,
+      "type": "voice_response",
+      "question_text": "Name one means of communication you use at home."
+    },
+    {
+      "id": 5,
+      "type": "reasoning",
+      "question_text": "Why should we follow safety rules on the road?",
+      "expected_answer": "To avoid accidents and stay safe."
+    }
+  ]
+}

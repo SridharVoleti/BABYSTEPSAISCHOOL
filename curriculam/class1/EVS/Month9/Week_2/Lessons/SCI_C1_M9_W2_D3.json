@@ -1,0 +1,85 @@
+{
+  "metadata": {
+    "lesson_id": "SCI_C1_M9_W2_D3",
+    "class": "1",
+    "subject": "Science",
+    "month": "9",
+    "week": "2",
+    "lesson_title": "Reversible and Irreversible Changes (Intro)",
+    "version": "1.4",
+    "duration_minutes": 30,
+    "language": [
+      "English"
+    ],
+    "academic_year": "2025-2026",
+    "status": "Active"
+  },
+  "objectives": {
+    "primary_objective": "Learn and understand - Reversible and Irreversible Changes (Intro)",
+    "learning_outcomes": [
+      "Recall basic ideas about reversible and irreversible changes (intro)",
+      "Use observation and description skills"
+    ],
+    "skills_targeted": [
+      "Observation",
+      "Understanding",
+      "Reasoning"
+    ]
+  },
+  "vocabulary": {
+    "total_new_words": 2,
+    "word_list": [
+      {
+        "word": "matter",
+        "definition": "Anything that takes up space and has weight.",
+        "example_usage": "A ball, water and air are all forms of matter."
+      },
+      {
+        "word": "sound",
+        "definition": "Vibrations that we can hear.",
+        "example_usage": "Clapping hands makes a sound."
+      }
+    ]
+  },
+  "content_blocks": [
+    {
+      "type": "intro_tts",
+      "text": "Today we will learn about reversible and irreversible changes (intro).",
+      "duration_seconds": 60,
+      "points_awarded": 10
+    },
+    {
+      "type": "concept_explanation",
+      "text": "This lesson helps us understand reversible and irreversible changes (intro).",
+      "duration_seconds": 180,
+      "points_awarded": 20
+    },
+    {
+      "type": "activity",
+      "text": "Observe, discuss, or draw something related to today's topic.",
+      "duration_seconds": 120,
+      "points_awarded": 25
+    },
+    {
+      "type": "summary_tts",
+      "text": "Great! We now know some facts about reversible and irreversible changes (intro).",
+      "duration_seconds": 60,
+      "points_awarded": 10
+    }
+  ],
+  "ai_evaluation": {
+    "star_rating_system": {
+      "enabled": true,
+      "rating_scale": [
+        1,
+        2,
+        3
+      ],
+      "promotion_rule": "Minimum 2 stars to continue."
+    },
+    "feedback": {
+      "strengths_analysis": [],
+      "weaknesses_analysis": []
+    }
+  }
+}

@@ -1,0 +1,304 @@
+{
+  "lesson_id": "ENG1_MRIDANG_01",
+  "class": 1,
+  "subject": "English",
+  "chapter_title": "The Wise Owl",
+  "character": "Ollie the Owl",
+  "duration_minutes": 20,
+  "mode": "AI-led",
+  "difficulty_level": 1,
+  "objectives_bloom": [
+    "Remember: Identify key vocabulary (owl, wise, night, forest).",
+    "Understand: Explain why the owl is called wise in simple terms.",
+    "Apply: Use the word 'wise' in a short sentence about self or family.",
+    "Analyze: Compare the owl's behaviour to another animal (e.g., rabbit).",
+    "Create: Invent a 1-2 sentence mini-story showing wisdom."
+  ],
+  "outcomes": [
+    "By the end of the lesson, students will be able to retell the main idea of 'The Wise Owl' in simple sentences.",
+    "Pronounce 6 new vocabulary words with recognisable accuracy.",
+    "Demonstrate comprehension by answering 3 simple questions and completing a 3-step sequencing activity."
+  ],
+  "lesson_text_summary": "Summary (copyright-safe teaching text):\n\nThe Wise Owl lives in a quiet forest. Every night the owl sits on a high branch and watches the animals. The owl is called wise because it listens first, thinks carefully, and then helps the other animals by giving good advice. In the story, a rabbit worries about a lost path and the owl helps by asking questions and noticing small traces on the ground. The animals learn that listening and thinking calmly are important when solving problems.\n\nMoral: Being wise means thinking carefully and listening before acting.",
+  "source_links": [
+    {
+      "label": "NCERT Mridang (Class 1) - official",
+      "url": "https://ncert.nic.in/textbook.php?le1=1-0"
+    },
+    {
+      "label": "NCERT example PDF",
+      "url": "https://ncert.nic.in/textbook/pdf/aemr101.pdf"
+    }
+  ],
+  "vocabulary": [
+    {
+      "word": "owl",
+      "level": "recognize",
+      "notes": "A bird that is active at night."
+    },
+    {
+      "word": "wise",
+      "level": "use",
+      "notes": "Shows good thinking; makes good choices."
+    },
+    {
+      "word": "forest",
+      "level": "recognize",
+      "notes": "A large area with many trees and animals."
+    },
+    {
+      "word": "listen",
+      "level": "use",
+      "notes": "To pay attention to sounds or someone speaking."
+    },
+    {
+      "word": "advice",
+      "level": "recognize",
+      "notes": "A helpful suggestion."
+    },
+    {
+      "word": "trace",
+      "level": "recognize",
+      "notes": "A small sign that shows something happened."
+    }
+  ],
+  "ai_dialogue_flow": [
+    {
+      "stage": "greeting",
+      "ollie": "Hello, young explorers! I'm Ollie the Owl. Tonight we will meet a wise friend from the forest. Are you ready to flap your wings and learn?"
+    },
+    {
+      "stage": "warmup",
+      "ollie": "Say the magic word with me: WISE. One, two, three — WISE! Great job."
+    },
+    {
+      "stage": "preteach_vocab",
+      "ollie": "Listen to these new words: owl, wise, forest, listen, advice. Repeat after me: OWL... WISE... FOREST..."
+    },
+    {
+      "stage": "reading_1",
+      "ollie": "Now I will read the story. Listen carefully. [read short paragraph 1]"
+    },
+    {
+      "stage": "checkpoint_1",
+      "ollie": "Who sat on the high branch? Tap the right picture: Owl, Rabbit, or Dog?"
+    },
+    {
+      "stage": "reading_2",
+      "ollie": "Let's listen to the next part. [read short paragraph 2]"
+    },
+    {
+      "stage": "activity_sequence",
+      "ollie": "Time to put the pictures in the correct order. Drag picture A, B, C to make the story."
+    },
+    {
+      "stage": "retell_prompt",
+      "ollie": "Now your turn — tell me in one sentence how the owl helped the rabbit."
+    },
+    {
+      "stage": "wrap_up",
+      "ollie": "You did great! You earned feathers of wisdom. Remember: listening first is part of being wise."
+    }
+  ],
+  "activities": [
+    {
+      "id": "A1_read_along",
+      "title": "Read-Along & Repeat",
+      "type": "reading_practice",
+      "steps": [
+        "Ollie narrates paragraph 1 with clear, slow TTS.",
+        "AI prompts student to repeat sentence-by-sentence.",
+        "ASR checks for presence of key words (owl, wise, forest) and gives gentle corrective feedback.",
+        "If student repeats correctly, award 5 XP."
+      ],
+      "assessment": {
+        "metric": "pronunciation_keywords_matched",
+        "threshold": 0.7
+      }
+    },
+    {
+      "id": "A2_picture_sequence",
+      "title": "Picture Sequencing",
+      "type": "drag_drop",
+      "steps": [
+        "Show 3 illustrated scenes from story in shuffled order.",
+        "Student drags into sequence.",
+        "AI gives hint after one wrong attempt (highlight correct first scene).",
+        "Successful sequence awards badge 'Story Order' and 10 XP."
+      ],
+      "assessment": {
+        "metric": "sequence_correct",
+        "threshold": 1.0
+      }
+    },
+    {
+      "id": "A3_vocabulary_match",
+      "title": "Word-Picture Match",
+      "type": "matching",
+      "steps": [
+        "Present 6 words and 6 pictures.",
+        "Student matches each word to picture by drag or tap.",
+        "AI provides example sentence for missed words and a mini-practice.",
+        "3 correct matches => 5 XP, 6 correct => 15 XP."
+      ],
+      "assessment": {
+        "metric": "match_accuracy",
+        "threshold": 0.8
+      }
+    },
+    {
+      "id": "A4_retell_record",
+      "title": "Retell in One Sentence",
+      "type": "open_response_voice",
+      "steps": [
+        "AI prompts student: 'Tell me in one sentence how the owl helped the rabbit.'",
+        "Student records voice (max 20s).",
+        "ASR extracts keywords; AI checks for 2 of 3 key concepts (owl/listen/advice).",
+        "If criteria met, award 'Tiny Storyteller' badge and 20 XP."
+      ],
+      "assessment": {
+        "metric": "keywords_present",
+        "threshold": 2
+      }
+    },
+    {
+      "id": "A5_moral_reflection",
+      "title": "Moral Match & Draw",
+      "type": "reflection_creative",
+      "steps": [
+        "Multiple choice: 'What is the story's lesson?' with options.",
+        "If student selects correct option, prompt them to draw or select a picture showing 'listening' or 'thinking'.",
+        "Upload saved drawing or choose in-app sticker to represent the moral. Award 10 XP."
+      ],
+      "assessment": {
+        "metric": "moral_understanding",
+        "threshold": 1.0
+      }
+    }
+  ],
+  "gamified_flow": {
+    "theme": "Night Forest Adventure",
+    "missions": [
+      {
+        "name": "Feather Finder",
+        "task": "Complete Read-Along",
+        "reward_xp": 5
+      },
+      {
+        "name": "Order Keeper",
+        "task": "Picture Sequencing",
+        "reward_xp": 10
+      },
+      {
+        "name": "Word Hunter",
+        "task": "Vocabulary Match",
+        "reward_xp": 15
+      },
+      {
+        "name": "Story Teller",
+        "task": "Retell",
+        "reward_xp": 25
+      }
+    ],
+    "badges": [
+      "Story Order",
+      "Tiny Storyteller",
+      "Word Wizard"
+    ],
+    "progression": "Collect 3 feathers to unlock 'Reader Owl' badge.",
+    "leaderboard": {
+      "scope": "class",
+      "visibility": "anonymized"
+    }
+  },
+  "quiz_items": [
+    {
+      "type": "mcq",
+      "q": "Who sat on the high branch?",
+      "options": [
+        "Owl",
+        "Rabbit",
+        "Dog"
+      ],
+      "answer": "Owl"
+    },
+    {
+      "type": "mcq",
+      "q": "Why was the owl called wise?",
+      "options": [
+        "It sleeps a lot",
+        "It listens and thinks",
+        "It runs fast"
+      ],
+      "answer": "It listens and thinks"
+    },
+    {
+      "type": "match",
+      "q": "Match the word to meaning: Wise -> ?",
+      "options": [
+        "Thinks carefully",
+        "Runs fast",
+        "Loud sound"
+      ],
+      "answer": "Thinks carefully"
+    },
+    {
+      "type": "open",
+      "q": "Tell one way the owl helped the rabbit (in one sentence).",
+      "answer_criteria": "contains_keywords['owl','listen','advice']"
+    }
+  ],
+  "assessment_logic": {
+    "fluency_score": {
+      "method": "ASR_keyword_match_rate",
+      "pass_threshold": 0.7
+    },
+    "vocab_mastery": {
+      "method": "match_accuracy",
+      "pass_threshold": 0.8
+    },
+    "retell_mastery": {
+      "method": "keywords_present",
+      "pass_threshold": 2
+    },
+    "completion": {
+      "conditions": [
+        "fluency_score>=0.7",
+        "vocab_mastery>=0.8",
+        "retell_mastery>=2"
+      ]
+    }
+  },
+  "ai_monitoring_plan": {
+    "what_to_track": [
+      "time_spent",
+      "attempts",
+      "accuracy",
+      "keywords_detected",
+      "hesitation_pauses"
+    ],
+    "alerts": {
+      "low_performance": "flag_teacher",
+      "high_engagement": "suggest_extension"
+    },
+    "interventions": {
+      "if_fluency_low": "repeat_reading_with_slower_tts_and_more_prompts",
+      "if_vocab_low": "launch_vocab_micropractice_sequence",
+      "if_retell_fails_twice": "switch_to_structured_sentence_stem_mode"
+    }
+  },
+  "developer_notes": {
+    "asset_requirements": [
+      "3 scene illustrations",
+      "audio TTS files for Ollie (3 voice speeds)",
+      "6 vocab pictures",
+      "anim icon set for feathers/badges"
+    ],
+    "api_endpoints_example": {
+      "fetch_lesson": "/api/lesson/ENG1_MRIDANG_01",
+      "submit_activity": "/api/activity/submit",
+      "update_progress": "/api/progress/update"
+    },
+    "json_schema": "See provided JSON file for ingestion into Flask DB."
+  }
+}

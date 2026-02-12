@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "lesson_id": "SCI_C1_M6_W3_D3",
+    "class": "1",
+    "subject": "Science",
+    "month": "6",
+    "week": "3",
+    "lesson_title": "Good Habits and Manners",
+    "version": "1.4",
+    "duration_minutes": 30,
+    "language": [
+      "English"
+    ],
+    "academic_year": "2025-2026"
+  },
+  "objectives": {
+    "primary_objective": "Learn and understand - Good Habits and Manners",
+    "skills_targeted": [
+      "Observation",
+      "Understanding",
+      "Reasoning"
+    ]
+  },
+  "content_blocks": [
+    {
+      "type": "intro_tts",
+      "text": "Today we will learn about good habits and manners."
+    },
+    {
+      "type": "concept_explanation",
+      "text": "This lesson helps us understand good habits and manners."
+    },
+    {
+      "type": "activity",
+      "text": "Observe, discuss, or draw something related to today's topic."
+    },
+    {
+      "type": "summary_tts",
+      "text": "Great! We now know about good habits and manners."
+    }
+  ],
+  "ai_evaluation": {
+    "star_rating_system": {
+      "enabled": true,
+      "promotion_rule": "Minimum 2 stars to continue."
+    }
+  }
+}

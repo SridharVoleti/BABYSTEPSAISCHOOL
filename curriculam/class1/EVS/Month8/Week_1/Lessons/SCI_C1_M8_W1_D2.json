@@ -1,0 +1,85 @@
+{
+  "metadata": {
+    "lesson_id": "SCI_C1_M8_W1_D2",
+    "class": "1",
+    "subject": "Science",
+    "month": "8",
+    "week": "1",
+    "lesson_title": "Sun Gives Light and Heat",
+    "version": "1.4",
+    "duration_minutes": 30,
+    "language": [
+      "English"
+    ],
+    "academic_year": "2025-2026",
+    "status": "Active"
+  },
+  "objectives": {
+    "primary_objective": "Learn and understand - Sun Gives Light and Heat",
+    "learning_outcomes": [
+      "Recall basic ideas about sun gives light and heat",
+      "Use observation and description skills"
+    ],
+    "skills_targeted": [
+      "Observation",
+      "Understanding",
+      "Reasoning"
+    ]
+  },
+  "vocabulary": {
+    "total_new_words": 2,
+    "word_list": [
+      {
+        "word": "sun",
+        "definition": "The star at the center of our solar system that gives us light and heat.",
+        "example_usage": "The sun rises in the morning."
+      },
+      {
+        "word": "moon",
+        "definition": "A round object that moves around the Earth and we can see it at night.",
+        "example_usage": "We can see the moon in the sky at night."
+      }
+    ]
+  },
+  "content_blocks": [
+    {
+      "type": "intro_tts",
+      "text": "Today we will learn about sun gives light and heat.",
+      "duration_seconds": 60,
+      "points_awarded": 10
+    },
+    {
+      "type": "concept_explanation",
+      "text": "This lesson helps us understand sun gives light and heat.",
+      "duration_seconds": 180,
+      "points_awarded": 20
+    },
+    {
+      "type": "activity",
+      "text": "Observe the sky today and tell one thing you notice about the sun or moon.",
+      "duration_seconds": 120,
+      "points_awarded": 25
+    },
+    {
+      "type": "summary_tts",
+      "text": "Great! We now know some facts about sun gives light and heat.",
+      "duration_seconds": 60,
+      "points_awarded": 10
+    }
+  ],
+  "ai_evaluation": {
+    "star_rating_system": {
+      "enabled": true,
+      "rating_scale": [
+        1,
+        2,
+        3
+      ],
+      "promotion_rule": "Minimum 2 stars to continue."
+    },
+    "feedback": {
+      "strengths_analysis": [],
+      "weaknesses_analysis": []
+    }
+  }
+}

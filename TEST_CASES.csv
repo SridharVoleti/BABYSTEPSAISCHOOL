@@ -1,0 +1,131 @@
+Test_ID,Category,Component,Test_Name,Description,Expected_Result,Priority,Status,Automated
+TC-001,Backend,Curriculum API,Curriculum List Success,Test successful retrieval of curriculum list,200 status with valid JSON response,High,Active,Yes
+TC-002,Backend,Curriculum API,Curriculum List Structure,Test curriculum list response structure,Each curriculum has required fields,High,Active,Yes
+TC-003,Backend,Curriculum API,Curriculum List Content Type,Test response content type,application/json,Medium,Active,Yes
+TC-004,Backend,Curriculum API,Get Lesson Success,Test successful lesson retrieval,200 status with lesson data,High,Active,Yes
+TC-005,Backend,Curriculum API,Get Lesson Invalid Class,Test lesson retrieval with invalid class number,400 or 404 status,High,Active,Yes
+TC-006,Backend,Curriculum API,Get Lesson Invalid Month,Test lesson retrieval with invalid month,400 or 404 status,High,Active,Yes
+TC-007,Backend,Curriculum API,Get Lesson Invalid Week,Test lesson retrieval with invalid week,400 or 404 status,High,Active,Yes
+TC-008,Backend,Curriculum API,Get Lesson Invalid Day,Test lesson retrieval with invalid day,400 or 404 status,High,Active,Yes
+TC-009,Backend,Curriculum API,Get Lesson With Cache,Test lesson retrieval with cache parameter,200 or 404 status respecting cache param,Medium,Active,Yes
+TC-010,Backend,Curriculum API,Get Lesson Structure,Test lesson response structure when found,Contains metadata objectives content_blocks,High,Active,Yes
+TC-011,Backend,Curriculum API,Get Question Bank Success,Test successful question bank retrieval,200 or 404 status,High,Active,Yes
+TC-012,Backend,Curriculum API,Get Question Bank Structure,Test question bank response structure,Contains question_bank data,High,Active,Yes
+TC-013,Backend,Curriculum API,Get Next Lesson Success,Test successful next lesson retrieval,200 or 404 status with proper structure,High,Active,Yes
+TC-014,Backend,Curriculum API,Get Next Lesson Coordinates,Test next lesson returns proper coordinates,Coordinates increment correctly,High,Active,Yes
+TC-015,Backend,Curriculum API,Get Next Lesson End,Test next lesson at end of curriculum,404 status with appropriate message,Medium,Active,Yes
+TC-016,Backend,Curriculum API,Clear Cache All,Test clearing all caches,200 status with success message,Medium,Active,Yes
+TC-017,Backend,Curriculum API,Clear Cache Specific,Test clearing specific cache key,200 status with success message mentioning key,Medium,Active,Yes
+TC-018,Backend,Curriculum API,API Root Success,Test API root endpoint,200 status with API information,High,Active,Yes
+TC-019,Backend,Curriculum API,API Root Endpoints,Test API root returns endpoint list,All major endpoints listed,High,Active,Yes
+TC-020,Backend,Mentor Chat API,Chat Missing Message,Test chat with missing message,400 status with error message,High,Active,Yes
+TC-021,Backend,Mentor Chat API,Chat Empty Message,Test chat with empty message,400 status with error message,High,Active,Yes
+TC-022,Backend,Mentor Chat API,Chat Whitespace Message,Test chat with whitespace-only message,400 status with error message,High,Active,Yes
+TC-023,Backend,Mentor Chat API,Chat Invalid JSON,Test chat with invalid JSON,400 status with error message,High,Active,Yes
+TC-024,Backend,Mentor Chat API,Chat Default Class,Test chat without class_number defaults to 1,200 or 503 status,Medium,Active,Yes
+TC-025,Backend,Mentor Chat API,Chat Various Classes,Test chat with different class numbers 1-12,Appropriate teacher assigned for each class,High,Active,Yes
+TC-026,Backend,Mentor Chat API,Chat Success Mock,Test successful chat with mocked Ollama,200 status with AI response,High,Active,Yes
+TC-027,Backend,Mentor Chat API,Chat Response Structure,Test chat response structure,All required fields present,High,Active,Yes
+TC-028,Backend,Mentor Chat API,Chat TTS Rate Scaling,Test TTS rate scales with class number,Higher classes have faster speech rate,Medium,Active,Yes
+TC-029,Backend,Mentor Chat API,Health Check Exists,Test health check endpoint is accessible,200 or 503 status,High,Active,Yes
+TC-030,Backend,Mentor Chat API,Health Check Structure,Test health check response structure,Contains success status fields,High,Active,Yes
+TC-031,Backend,Mentor Chat API,Health Check Healthy,Test health check when Ollama is healthy,200 status with healthy status,High,Active,Yes
+TC-032,Backend,Mentor Chat API,Health Check Unhealthy,Test health check when Ollama is unhealthy,503 status with unhealthy status,High,Active,Yes
+TC-033,Backend,Mentor Chat API,Physics Detection,Test physics question detection,Subject identified as Physics,Medium,Active,Yes
+TC-034,Backend,Mentor Chat API,Chemistry Detection,Test chemistry question detection,Subject identified as Chemistry,Medium,Active,Yes
+TC-035,Backend,Mentor Chat API,Biology Detection,Test biology question detection,Subject identified as Biology,Medium,Active,Yes
+TC-036,Backend,Mentor Chat API,Teacher Assignment,Test correct teacher assignment for all classes,Each class gets designated teacher,High,Active,Yes
+TC-037,Backend,Models,Create Curriculum Metadata,Test creating curriculum metadata,Model instance created successfully,High,Active,Yes
+TC-038,Backend,Models,Curriculum String Representation,Test curriculum __str__ method,Proper string representation,Low,Active,Yes
+TC-039,Backend,Models,Curriculum Unique Constraint,Test unique_together constraint,Cannot create duplicate class-subject,High,Active,Yes
+TC-040,Backend,Models,Curriculum Defaults,Test default field values,Default values set correctly,Medium,Active,Yes
+TC-041,Backend,Models,Create Lesson File,Test creating lesson file,Lesson file created with relationships,High,Active,Yes
+TC-042,Backend,Models,Lesson String Representation,Test lesson __str__ method,Proper string representation,Low,Active,Yes
+TC-043,Backend,Models,Lesson Unique Constraint,Test unique lesson per coordinates,Cannot create duplicate lessons,High,Active,Yes
+TC-044,Backend,Models,Lesson Defaults,Test lesson default field values,Defaults set correctly,Medium,Active,Yes
+TC-045,Backend,Models,Create Question Bank,Test creating question bank,Question bank created with relationship,High,Active,Yes
+TC-046,Backend,Models,Question Bank One-to-One,Test one-to-one relationship with lesson,Only one question bank per lesson,High,Active,Yes
+TC-047,Backend,Models,Question Bank Defaults,Test question bank default values,Defaults set correctly,Medium,Active,Yes
+TC-048,Backend,Models,Create Cache,Test creating curriculum cache,Cache created with JSON content,High,Active,Yes
+TC-049,Backend,Models,Cache Unique Key,Test unique cache key constraint,Cannot create duplicate cache keys,High,Active,Yes
+TC-050,Backend,Models,Cache Hit Count,Test cache hit count tracking,Hit count can be incremented,Medium,Active,Yes
+TC-051,Frontend,LessonViewer,Render With Lesson,Test LessonViewer renders with lesson data,Component renders with lesson content,High,Active,Yes
+TC-052,Frontend,LessonViewer,Display Metadata,Test lesson metadata display,Metadata fields displayed correctly,High,Active,Yes
+TC-053,Frontend,LessonViewer,Render Content Blocks,Test content block rendering,Content blocks are rendered,High,Active,Yes
+TC-054,Frontend,LessonViewer,Navigation Controls,Test navigation controls present,Previous/Next buttons rendered,High,Active,Yes
+TC-055,Frontend,LessonViewer,No Content Blocks,Test lesson with no content blocks,Graceful handling of empty content,Medium,Active,Yes
+TC-056,Frontend,LessonViewer,Normalize Simple Lesson,Test lesson normalization for simple lessons,Simple lessons normalized to full structure,High,Active,Yes
+TC-057,Frontend,LessonViewer,Complete Callback,Test onComplete callback,onComplete called when lesson ends,Medium,Active,Yes
+TC-058,Frontend,LessonViewer,Vocabulary Display,Test vocabulary display,Vocabulary section renders if present,Medium,Active,Yes
+TC-059,Frontend,LessonViewer,Loading State,Test loading state,Loading indicator shown when no lesson,Medium,Active,Yes
+TC-060,Frontend,LessonViewer,Error Handling,Test error boundary integration,Errors caught and handled gracefully,High,Active,Yes
+TC-061,Frontend,LessonViewer,TTS Auto-play,Test TTS auto-play functionality,TTS auto-plays content when enabled,High,Active,Yes
+TC-062,Frontend,LessonViewer,TTS Controls,Test TTS controls present,Play/Pause/Stop controls rendered,High,Active,Yes
+TC-063,Frontend,LessonViewer,Navigate Next,Test navigation between content blocks,User can navigate forward through blocks,High,Active,Yes
+TC-064,Frontend,LessonViewer,Navigate Previous,Test backward navigation,User can navigate backward through blocks,High,Active,Yes
+TC-065,Frontend,LessonViewer,Navigation Bounds,Test navigation bounds,Cannot navigate before first or after last,Medium,Active,Yes
+TC-066,Frontend,MentorChat,Render When Open,Test MentorChat renders when open,Component renders with chat interface,High,Active,Yes
+TC-067,Frontend,MentorChat,Toggle Chat,Test chat toggle functionality,Chat can be opened and closed,High,Active,Yes
+TC-068,Frontend,MentorChat,Teacher Display,Test teacher name display,Correct teacher name shown for class,High,Active,Yes
+TC-069,Frontend,MentorChat,Subject Theme,Test subject theme color,Correct theme color applied for subject,Low,Active,Yes
+TC-070,Frontend,MentorChat,Input Field,Test input field presence,Message input field is rendered,High,Active,Yes
+TC-071,Frontend,MentorChat,Send Message,Test sending a message,Message is sent to backend API,High,Active,Yes
+TC-072,Frontend,MentorChat,Empty Message,Test empty message handling,Empty messages are not sent,High,Active,Yes
+TC-073,Frontend,MentorChat,Display User Message,Test message display after sending,User message appears in chat,High,Active,Yes
+TC-074,Frontend,MentorChat,Display Bot Response,Test bot response display,Bot response appears in chat,High,Active,Yes
+TC-075,Frontend,MentorChat,Error Handling,Test error handling,Error message displayed on API failure,High,Active,Yes
+TC-076,Frontend,MentorChat,Teacher Class 1-12,Test teacher for each class level,Correct teacher assigned for each class,High,Active,Yes
+TC-077,Frontend,MentorChat,Subject Colors,Test subject-based theme colors,Different colors for different subjects,Low,Active,Yes
+TC-078,Frontend,MentorChat,TTS Bot Responses,Test TTS speaks bot responses,TTS triggered for bot messages,High,Active,Yes
+TC-079,Frontend,MentorChat,TTS Controls,Test TTS control buttons,Play/Pause/Stop controls present,Medium,Active,Yes
+TC-080,Frontend,MentorChat,TTS Stop New Message,Test TTS stop on new message,Previous TTS stops when new message sent,High,Active,Yes
+TC-081,Frontend,TTSService,Initialize Service,Test TTSService initializes correctly,Service instance created successfully,High,Active,Yes
+TC-082,Frontend,TTSService,Browser Support,Test browser support detection,Correctly detects speech synthesis support,High,Active,Yes
+TC-083,Frontend,TTSService,Load Voices,Test voice loading,Voices are loaded and available,High,Active,Yes
+TC-084,Frontend,TTSService,Indian Voice Preference,Test Indian English voice preference,en-IN voices are preferred,Medium,Active,Yes
+TC-085,Frontend,TTSService,Speak Function,Test speak function,Text is spoken with correct parameters,High,Active,Yes
+TC-086,Frontend,TTSService,Speak With Options,Test speak with options,Options are applied correctly,High,Active,Yes
+TC-087,Frontend,TTSService,Stop Function,Test stop function,Speech is cancelled,High,Active,Yes
+TC-088,Frontend,TTSService,Pause Function,Test pause function,Speech is paused,High,Active,Yes
+TC-089,Frontend,TTSService,Resume Function,Test resume function,Speech is resumed,High,Active,Yes
+TC-090,Frontend,TTSService,Empty Text,Test empty text handling,Empty text is not spoken,High,Active,Yes
+TC-091,Frontend,TTSService,Whitespace Text,Test whitespace-only text handling,Whitespace-only text is not spoken,High,Active,Yes
+TC-092,Frontend,TTSService,Priority Queue Exists,Test priority queue exists,Service has priority queue functionality,Medium,Active,Yes
+TC-093,Frontend,TTSService,High Priority Interrupt,Test high priority interrupts low priority,High priority interrupts normal priority,High,Active,Yes
+TC-094,Frontend,TTSService,Queue Processing,Test queue processing,Queued items processed in priority order,Medium,Active,Yes
+TC-095,Frontend,TTSService,Voice Selection,Test voice selection by name,Voice is selected correctly,Medium,Active,Yes
+TC-096,Frontend,TTSService,Voice Persistence,Test voice persistence,Selected voice persists across calls,Medium,Active,Yes
+TC-097,Frontend,TTSService,Invalid Voice,Test invalid voice name handling,Invalid voice name handled gracefully,Medium,Active,Yes
+TC-098,Frontend,TTSService,Speaking State,Test isSpeaking state,State reflects speaking status,Medium,Active,Yes
+TC-099,Frontend,TTSService,Paused State,Test isPaused state,State reflects paused status,Medium,Active,Yes
+TC-100,Frontend,TTSService,Cleanup,Test cleanup,Service cleans up resources,Medium,Active,Yes
+TC-101,Frontend,TTSService,Error Callback,Test error callback,Error callback invoked on error,High,Active,Yes
+TC-102,Frontend,TTSService,Graceful Degradation,Test graceful degradation,Service continues working after errors,High,Active,Yes
+TC-103,Frontend,TTSService,OnStart Callback,Test onStart callback,Callback invoked when speech starts,Medium,Active,Yes
+TC-104,Frontend,TTSService,OnEnd Callback,Test onEnd callback,Callback invoked when speech ends,Medium,Active,Yes
+TC-105,Frontend,TTSService,OnPause Callback,Test onPause callback,Callback invoked when speech pauses,Medium,Active,Yes
+TC-106,Integration,End-to-End,Student Login Flow,Test complete student login and dashboard access,Student can login and see dashboard,High,Pending,No
+TC-107,Integration,End-to-End,Lesson Playback Flow,Test complete lesson playback with TTS,Lesson plays with audio successfully,High,Pending,No
+TC-108,Integration,End-to-End,Chat Interaction Flow,Test complete mentor chat interaction,Student can ask questions and get responses,High,Pending,No
+TC-109,Integration,End-to-End,Assessment Flow,Test complete assessment taking and grading,Assessment can be completed and graded,High,Pending,No
+TC-110,Integration,End-to-End,Reading Assessment Flow,Test reading assessment with speech recognition,Student can complete pronunciation assessment,Medium,Pending,No
+TC-111,Performance,Backend,API Response Time,Test curriculum API response time under load,Response time < 500ms for 95% requests,High,Pending,No
+TC-112,Performance,Backend,Concurrent Requests,Test handling of concurrent API requests,Handle 100+ concurrent requests,Medium,Pending,No
+TC-113,Performance,Backend,Ollama Response Time,Test Ollama chat response time,Response time < 10s for 95% requests,High,Pending,No
+TC-114,Performance,Frontend,Page Load Time,Test initial page load performance,Page loads in < 3s on 3G connection,Medium,Pending,No
+TC-115,Performance,Frontend,TTS Initialization,Test TTS initialization performance,TTS ready in < 1s,Medium,Pending,No
+TC-116,Security,Backend,SQL Injection Protection,Test API endpoints for SQL injection,All endpoints protected,High,Pending,No
+TC-117,Security,Backend,XSS Protection,Test for XSS vulnerabilities,No XSS vulnerabilities found,High,Pending,No
+TC-118,Security,Backend,CORS Configuration,Test CORS headers are properly configured,CORS allows only allowed origins,High,Pending,No
+TC-119,Security,Frontend,Input Validation,Test all user inputs are validated,All inputs validated before submission,High,Pending,No
+TC-120,Security,Frontend,Secure Storage,Test sensitive data storage,Credentials not stored in localStorage,High,Pending,No
+TC-121,Accessibility,Frontend,Keyboard Navigation,Test all features accessible via keyboard,All interactive elements keyboard accessible,High,Pending,No
+TC-122,Accessibility,Frontend,Screen Reader Support,Test screen reader compatibility,Content properly labeled for screen readers,High,Pending,No
+TC-123,Accessibility,Frontend,Color Contrast,Test color contrast ratios,All text meets WCAG AA standards,Medium,Pending,No
+TC-124,Accessibility,Frontend,TTS for Visually Impaired,Test TTS helps visually impaired users,All content can be read aloud,High,Pending,No
+TC-125,Compatibility,Frontend,Browser Chrome,Test application in Chrome browser,All features work in Chrome,High,Pending,No
+TC-126,Compatibility,Frontend,Browser Firefox,Test application in Firefox browser,All features work in Firefox,High,Pending,No
+TC-127,Compatibility,Frontend,Browser Edge,Test application in Edge browser,All features work in Edge,Medium,Pending,No
+TC-128,Compatibility,Frontend,Browser Safari,Test application in Safari browser,All features work in Safari,Medium,Pending,No
+TC-129,Compatibility,Frontend,Mobile Responsive,Test responsive design on mobile devices,UI adapts properly to mobile screens,High,Pending,No
+TC-130,Compatibility,Frontend,Tablet Responsive,Test responsive design on tablet devices,UI adapts properly to tablet screens,Medium,Pending,No

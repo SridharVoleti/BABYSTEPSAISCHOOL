@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Bash(done)",
+      "Bash(git -C \"D:\\\\Sridhar\\\\Projects\\\\BabyStepsDigitalSchool\" ls-files --error-unmatch db.sqlite3)",
+      "Bash(git init:*)",
+      "Bash(dir:*)",
+      "Bash(python:*)",
+      "Bash(more:*)",
+      "Bash(pip install:*)",
+      "Bash(npx react-scripts test --testPathPattern=\"pages/__tests__/Login\" --watchAll=false)",
+      "Bash(pushd:*)",
+      "Bash(npx react-scripts start)",
+      "Bash(netstat:*)"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+# 2025-10-22: Dependencies for Peer Reflection System Microservice
+# Authors: Cascade
+
+Flask==3.0.0
+transformers==4.36.2
+torch==2.1.2

@@ -1,0 +1,29 @@
+# 2025-11-26: Backend requirements for BabySteps Digital School
+# Author: BabySteps Development Team
+# Purpose: Python dependencies for Django backend with curriculum integration
+# Updated: 2025-11-26 - Added urllib3 for robust Ollama client
+
+Django==5.2.7
+djangorestframework==3.14.0
+django-cors-headers==4.3.1
+python-dotenv==1.0.0
+requests==2.31.0
+urllib3==2.1.0  # 2025-11-26: For connection pooling in Ollama client
+Pillow==10.1.0
+psycopg2-binary==2.9.9  # For PostgreSQL
+# sqlite3 is built-in, use for development
+
+# AI/ML dependencies (for future integration)
+# TTS==0.22.0
+# openai-whisper==20231117
+# transformers==4.36.2
+# torch==2.1.2
+
+# 2026-02-12: Authentication dependencies
+djangorestframework-simplejwt==5.3.1
+bcrypt==4.1.2
+
+# Development dependencies
+pytest==7.4.3
+pytest-django==4.5.2
+coverage==7.3.2

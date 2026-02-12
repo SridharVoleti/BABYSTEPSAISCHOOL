@@ -1,0 +1,58 @@
+{
+  "question_bank_id": "SCI_C1_M10_W4_D5_QB",
+  "linked_lesson": "SCI_C1_M10_W4_D5",
+  "total_questions": 5,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "question_text": "What did we learn about in Progress Check \u2013 Our Role in Environment?",
+      "options": [
+        "Animals",
+        "Energy",
+        "Water"
+      ],
+      "correct_answer": "Energy",
+      "points": 10
+    },
+    {
+      "id": 2,
+      "type": "true_false",
+      "question_text": "The Sun is our main source of energy.",
+      "correct_answer": "True",
+      "points": 10
+    },
+    {
+      "id": 3,
+      "type": "fill_in_blank",
+      "question_text": "We should always ______ electricity safely.",
+      "correct_answer": "use",
+      "points": 10
+    },
+    {
+      "id": 4,
+      "type": "voice_response",
+      "question_text": "Name one way you can save energy at home.",
+      "expected_keywords": [
+        "switch off",
+        "turn off lights",
+        "save water"
+      ],
+      "points": 10
+    },
+    {
+      "id": 5,
+      "type": "reasoning",
+      "question_text": "Why should we plant more trees?",
+      "expected_answer": "Because trees clean the air and help reduce pollution.",
+      "points": 10
+    }
+  ],
+  "difficulty_distribution": {
+    "easy": 60,
+    "medium": 30,
+    "hard": 10
+  },
+  "assessment_type": "Formative",
+  "max_score": 50
+}

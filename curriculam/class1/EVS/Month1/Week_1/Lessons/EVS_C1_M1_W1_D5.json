@@ -1,0 +1,194 @@
+{
+  "metadata": {
+    "lesson_id": "SCI_C1_M1_W1_D5",
+    "class": "1",
+    "subject": "Science",
+    "month": "1",
+    "week": "1",
+    "day": "5",
+    "lesson_title": "Progress Check — Little Scientists!",
+    "version": "1.4",
+    "duration_minutes": 30,
+    "language": ["English"],
+    "level": "Foundational",
+    "academic_year": "2025-2026",
+    "status": "Active"
+  },
+
+  "objectives": {
+    "primary_objective": "Evaluate how well students understand science, observation, curiosity, and asking questions.",
+    "learning_outcomes": [
+      "Recall and explain what science means.",
+      "Identify examples of observation and questioning.",
+      "Use vocabulary words correctly in context."
+    ],
+    "skills_targeted": ["Observation", "Curiosity", "Expression", "Reasoning"],
+    "difficulty_level": "Basic"
+  },
+
+  "vocabulary": {
+    "total_new_words": 0,
+    "word_list": ["science", "observe", "question", "curious", "sense", "describe"]
+  },
+
+  "content_blocks": [
+    {
+      "type": "intro_tts",
+      "text": "Today is our progress day! Let’s see how much we’ve learned about science, asking questions, and observing things around us!",
+      "duration_seconds": 60,
+      "points_awarded": 10,
+      "badge_awarded": "Assessment Starter"
+    },
+    {
+      "type": "activity",
+      "text": "Question 1: What does science mean? Try to explain in your own words.",
+      "duration_seconds": 90,
+      "points_awarded": 10,
+      "badge_awarded": "Science Thinker",
+      "ai_expression_coach": {
+        "enabled": true,
+        "alternate_expressions": [
+          "Science means learning by observing and asking why.",
+          "Science helps us discover new things about the world.",
+          "Science is exploring to understand how things work."
+        ],
+        "ai_prompt": "Can you express what science means in your own words?",
+        "student_input_mode": "voice_or_text",
+        "ai_followup_feedback": {
+          "positive_response": "Perfect! That’s a wonderful explanation.",
+          "neutral_response": "Good! Try adding how we observe or ask questions.",
+          "incorrect_response": "Let’s fix it together: Science means learning by observing and asking questions."
+        },
+        "points_awarded": 10,
+        "badge_awarded": "Expressive Thinker"
+      }
+    },
+    {
+      "type": "activity",
+      "text": "Question 2: Can you ask one science question about something around you?",
+      "duration_seconds": 90,
+      "points_awarded": 10,
+      "badge_awarded": "Question Creator",
+      "ai_expression_coach": {
+        "enabled": true,
+        "alternate_expressions": [
+          "Why do leaves fall?",
+          "How does the fan move?",
+          "What makes clouds white?"
+        ],
+        "ai_prompt": "Try rephrasing your question using 'Why', 'How', or 'What'.",
+        "student_input_mode": "voice_or_text",
+        "ai_followup_feedback": {
+          "positive_response": "Excellent! That’s a smart question.",
+          "neutral_response": "Good try! Add a 'why' or 'how' to make it clearer.",
+          "incorrect_response": "Let’s correct it: Start with 'Why', 'How', or 'What'."
+        },
+        "points_awarded": 10,
+        "badge_awarded": "Curiosity Builder"
+      }
+    },
+    {
+      "type": "activity",
+      "text": "Question 3: Describe any one object near you using two or more senses. For example: I can see, I can hear, I can touch...",
+      "duration_seconds": 120,
+      "points_awarded": 20,
+      "badge_awarded": "Observation Scientist",
+      "ai_expression_coach": {
+        "enabled": true,
+        "alternate_expressions": [
+          "I can see the clock and hear it tick.",
+          "I can feel the soft paper and see its color.",
+          "I observe the window, the sound of birds, and the smell of flowers."
+        ],
+        "ai_prompt": "Can you describe what you observed using more details?",
+        "student_input_mode": "voice_or_text",
+        "ai_followup_feedback": {
+          "positive_response": "Excellent! You used your senses well.",
+          "neutral_response": "Nice! Try adding one more sense to make it complete.",
+          "incorrect_response": "Let’s fix it: Use 'I can see' or 'I can hear' to start your sentence."
+        },
+        "points_awarded": 10,
+        "badge_awarded": "Expressive Observer"
+      }
+    },
+    {
+      "type": "summary_tts",
+      "text": "You did an amazing job this week! Remember — science begins with curiosity, grows with observation, and shines with questions!",
+      "duration_seconds": 60,
+      "points_awarded": 10,
+      "badge_awarded": "Lesson Finisher"
+    }
+  ],
+
+  "ai_evaluation": {
+    "star_rating_system": {
+      "enabled": true,
+      "rating_scale": [1, 2, 3],
+      "promotion_rule": "Minimum 2 stars required to unlock next module (Week 2)."
+    },
+    "feedback": {
+      "strengths_analysis": [
+        "Understands the meaning of science.",
+        "Shows curiosity through creative questions.",
+        "Describes observations using multiple senses."
+      ],
+      "weaknesses_analysis": [
+        "Needs to use more complete sentences when describing things."
+      ],
+      "for_two_star_students": {
+        "growth_feedback": "Good progress! Try redoing one activity using fuller sentences or adding one more sense to earn your 3rd star.",
+        "example_phrases_for_retry": [
+          "Science means asking and observing things around me.",
+          "I can see a flower, smell it, and touch its soft petals."
+        ]
+      },
+      "for_three_star_students": {
+        "mastery_feedback": "Fantastic! You’ve mastered all Week 1 concepts — observation, curiosity, and questioning like a true young scientist!"
+      }
+    }
+  },
+
+  "gamification": {
+    "points_system": {
+      "lesson_completion": 25,
+      "activity_completion": 20,
+      "correct_answer": 10
+    },
+    "badges_system": {
+      "Assessment Starter": "Began the progress assessment.",
+      "Science Thinker": "Explained what science means.",
+      "Question Creator": "Asked a scientific question.",
+      "Observation Scientist": "Used senses to describe.",
+      "Expressive Thinker": "Spoke clearly with understanding.",
+      "Lesson Finisher": "Completed the assessment successfully."
+    },
+    "leaderboard": {
+      "enabled": true,
+      "update_frequency": "Weekly",
+      "ranking_basis": ["Total Points", "Star Rating", "Badges Earned"]
+    }
+  },
+
+  "analytics": {
+    "student_engagement_tracking": true,
+    "interaction_count_expected": 5,
+    "completion_rate_target": 90,
+    "average_expected_score": 80,
+    "points_earned": 100,
+    "star_rating": 2
+  },
+
+  "review_cycle": {
+    "recap_days": ["Thursday", "Friday"],
+    "assessment_frequency": "Weekly"
+  },
+
+  "compliance": {
+    "curriculum_alignment": [
+      "CBSE Class 1 Science/EVS",
+      "ICSE Primary Science",
+      "TS SCERT Class 1 Environmental Studies"
+    ],
+    "competency_tags": ["Observation", "Curiosity", "Communication", "Application"]
+  }
+}

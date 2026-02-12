@@ -1,0 +1,41 @@
+{
+  "question_bank_id": "SCI_C1_M1_W3_D2_QB",
+  "linked_lesson": "SCI_C1_M1_W3_D2",
+  "total_questions": 5,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "question_text": "Which part of the plant makes food?",
+      "options": [
+        "Roots",
+        "Stem",
+        "Leaves"
+      ],
+      "correct_answer": "Leaves"
+    },
+    {
+      "id": 2,
+      "type": "true_false",
+      "question_text": "Flowers help the plant make new seeds.",
+      "correct_answer": "True"
+    },
+    {
+      "id": 3,
+      "type": "fill_in_blank",
+      "question_text": "The ______ carries water to all parts of the plant.",
+      "correct_answer": "stem"
+    },
+    {
+      "id": 4,
+      "type": "voice_response",
+      "question_text": "Name the parts of a plant you can see in your garden."
+    },
+    {
+      "id": 5,
+      "type": "reasoning",
+      "question_text": "Why are roots important for a plant?",
+      "expected_answer": "Because they hold the plant in the soil and take water."
+    }
+  ]
+}

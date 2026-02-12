@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "lesson_id": "SCI_C1_M1_W3_D2",
+    "class": "1",
+    "subject": "Science",
+    "month": "1",
+    "week": "3",
+    "lesson_title": "Roots, Stems, and Leaves",
+    "version": "1.4",
+    "duration_minutes": 30,
+    "language": [
+      "English"
+    ],
+    "academic_year": "2025-2026"
+  },
+  "objectives": {
+    "primary_objective": "Understand the parts of a plant and their functions - Roots, Stems, and Leaves",
+    "skills_targeted": [
+      "Observation",
+      "Identification",
+      "Reasoning"
+    ]
+  },
+  "content_blocks": [
+    {
+      "type": "intro_tts",
+      "text": "Today we will learn about roots, stems, and leaves."
+    },
+    {
+      "type": "concept_explanation",
+      "text": "Plants have roots, stems, leaves, flowers, and fruits. Each part has a special job."
+    },
+    {
+      "type": "activity",
+      "text": "Observe a plant near you and point to its roots, stem, and leaves."
+    },
+    {
+      "type": "summary_tts",
+      "text": "Roots fix the plant, stems carry water, leaves make food, and flowers grow into fruits."
+    }
+  ],
+  "ai_evaluation": {
+    "star_rating_system": {
+      "enabled": true,
+      "promotion_rule": "Minimum 2 stars to continue."
+    }
+  }
+}

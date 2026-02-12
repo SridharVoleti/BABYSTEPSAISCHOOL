@@ -1,0 +1,219 @@
+{
+  "metadata": {
+    "lesson_id": "SCI_C1_M1_W1_D4",
+    "class": "1",
+    "subject": "Science",
+    "month": "1",
+    "week": "1",
+    "day": "4",
+    "lesson_title": "Recap & Practice — What Have We Learned?",
+    "version": "1.4",
+    "duration_minutes": 30,
+    "language": ["English"],
+    "level": "Foundational",
+    "academic_year": "2025-2026",
+    "status": "Active"
+  },
+
+  "objectives": {
+    "primary_objective": "Students recall what science means, how to ask questions, and how to observe using senses.",
+    "learning_outcomes": [
+      "Review the meaning of science in their own words.",
+      "Ask and answer simple questions based on observation.",
+      "Use vocabulary words in short sentences."
+    ],
+    "skills_targeted": ["Observation", "Questioning", "Communication", "Vocabulary Recall"],
+    "difficulty_level": "Basic"
+  },
+
+  "vocabulary": {
+    "total_new_words": 6,
+    "word_list": [
+      {
+        "word": "science",
+        "definition": "Learning about the world by observing and asking questions.",
+        "example_usage": "Science helps us understand how things work."
+      },
+      {
+        "word": "observe",
+        "definition": "To look carefully to learn about something.",
+        "example_usage": "We observe the weather every day."
+      },
+      {
+        "word": "question",
+        "definition": "Something we ask to find information.",
+        "example_usage": "He asked a question about rain."
+      },
+      {
+        "word": "curious",
+        "definition": "Wanting to know more.",
+        "example_usage": "Curious children always ask 'why?'."
+      },
+      {
+        "word": "sense",
+        "definition": "A way our body helps us notice things.",
+        "example_usage": "We use our sense of hearing to listen to music."
+      },
+      {
+        "word": "describe",
+        "definition": "To tell what something looks, feels, or sounds like.",
+        "example_usage": "Describe the toy you see."
+      }
+    ]
+  },
+
+  "content_blocks": [
+    {
+      "type": "intro_tts",
+      "text": "Let’s review what we’ve learned this week about science, asking questions, and observing things using our senses!",
+      "duration_seconds": 60,
+      "points_awarded": 10,
+      "badge_awarded": "Curious Starter"
+    },
+    {
+      "type": "activity",
+      "text": "Say what science means in your own words. Try to use one or two of our new words: observe, question, or curious.",
+      "duration_seconds": 120,
+      "points_awarded": 20,
+      "badge_awarded": "Science Speaker",
+      "ai_expression_coach": {
+        "enabled": true,
+        "alternate_expressions": [
+          "Science means learning by watching and asking why.",
+          "Science helps us discover new things.",
+          "Science is when we observe and explore the world."
+        ],
+        "ai_prompt": "Can you explain what science means in your own way?",
+        "student_input_mode": "voice_or_text",
+        "ai_followup_feedback": {
+          "positive_response": "Beautiful! You explained science very well.",
+          "neutral_response": "Good effort! Try adding how we observe or ask questions.",
+          "incorrect_response": "Let’s fix that. Science means observing and asking to understand."
+        },
+        "points_awarded": 10,
+        "badge_awarded": "Expressive Thinker"
+      }
+    },
+    {
+      "type": "activity",
+      "text": "Now think of one question about something around you. Example: Why is the sky blue? How does the fan move?",
+      "duration_seconds": 120,
+      "points_awarded": 20,
+      "badge_awarded": "Question Creator",
+      "ai_expression_coach": {
+        "enabled": true,
+        "alternate_expressions": [
+          "Why is the leaf green?",
+          "How does water fall from clouds?",
+          "What makes light shine?"
+        ],
+        "ai_prompt": "Can you ask your question in another way or make it shorter?",
+        "student_input_mode": "voice_or_text",
+        "ai_followup_feedback": {
+          "positive_response": "Nice! That’s a thoughtful question.",
+          "neutral_response": "Try to make your question start with Why, How, or What.",
+          "incorrect_response": "Let’s fix it together: start your question with Why or How."
+        },
+        "points_awarded": 10,
+        "badge_awarded": "Expressive Questioner"
+      }
+    },
+    {
+      "type": "activity",
+      "text": "Observation Practice! Close your eyes and listen. What sounds can you hear? Then open your eyes — name two things you can see.",
+      "duration_seconds": 120,
+      "points_awarded": 25,
+      "badge_awarded": "Observation Expert",
+      "ai_expression_coach": {
+        "enabled": true,
+        "alternate_expressions": [
+          "I can hear a bell and I can see my notebook.",
+          "I notice music playing and a chair near me.",
+          "I observe light and sound around me."
+        ],
+        "ai_prompt": "Can you describe what you observed in a full sentence?",
+        "student_input_mode": "voice_or_text",
+        "ai_followup_feedback": {
+          "positive_response": "Perfect! That’s how a scientist observes.",
+          "neutral_response": "Good! Try using 'I can see' or 'I can hear' for clearer sentences.",
+          "incorrect_response": "Let’s try again: start with 'I can see' or 'I can hear'."
+        },
+        "points_awarded": 10,
+        "badge_awarded": "Observation Communicator"
+      }
+    },
+    {
+      "type": "summary_tts",
+      "text": "Science means asking, observing, and describing. We use our senses and curiosity every day to learn new things!",
+      "duration_seconds": 60,
+      "points_awarded": 10,
+      "badge_awarded": "Lesson Finisher"
+    }
+  ],
+
+  "ai_evaluation": {
+    "star_rating_system": {
+      "enabled": true,
+      "rating_scale": [1, 2, 3],
+      "promotion_rule": "Minimum 2 stars required to unlock next lesson."
+    },
+    "feedback": {
+      "strengths_analysis": [
+        "Remembers and uses key words like 'observe' and 'question'.",
+        "Gives clear examples of curiosity."
+      ],
+      "weaknesses_analysis": [
+        "Needs to connect observation and questioning more clearly."
+      ],
+      "for_two_star_students": {
+        "growth_feedback": "Well done! Try combining both a question and an observation next time to earn your 3rd star.",
+        "example_phrases_for_retry": [
+          "I observe clouds and wonder why they move.",
+          "I see a plant and ask how it grows."
+        ]
+      },
+      "for_three_star_students": {
+        "mastery_feedback": "Excellent! You’ve mastered the big ideas of observation and curiosity — great recap!"
+      }
+    }
+  },
+
+  "gamification": {
+    "points_system": {
+      "lesson_completion": 25,
+      "activity_completion": 20,
+      "correct_answer": 10
+    },
+    "badges_system": {
+      "Curious Starter": "Started the recap lesson.",
+      "Science Speaker": "Explained what science means.",
+      "Question Creator": "Created meaningful questions.",
+      "Observation Expert": "Used senses to observe carefully.",
+      "Observation Communicator": "Described observations clearly.",
+      "Lesson Finisher": "Completed the recap session successfully."
+    }
+  },
+
+  "analytics": {
+    "student_engagement_tracking": true,
+    "interaction_count_expected": 5,
+    "completion_rate_target": 90,
+    "average_expected_score": 80,
+    "points_earned": 100,
+    "star_rating": 2
+  },
+
+  "review_cycle": {
+    "recap_days": ["Thursday", "Friday"],
+    "assessment_frequency": "Weekly"
+  },
+
+  "compliance": {
+    "curriculum_alignment": [
+      "CBSE Class 1 Science/EVS",
+      "ICSE Primary Science",
+      "TS SCERT Class 1 Environmental Studies"
+    ],
+    "competency_tags": ["Curiosity", "Observation", "Communication"]
+  }
+}

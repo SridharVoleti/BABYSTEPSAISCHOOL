@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "lesson_id": "SCI_C1_M1_W3_D4",
+    "class": "1",
+    "subject": "Science",
+    "month": "1",
+    "week": "3",
+    "lesson_title": "Recap & Practice \u2013 Plant Parts and Functions",
+    "version": "1.4",
+    "duration_minutes": 30,
+    "language": [
+      "English"
+    ],
+    "academic_year": "2025-2026"
+  },
+  "objectives": {
+    "primary_objective": "Understand the parts of a plant and their functions - Recap & Practice \u2013 Plant Parts and Functions",
+    "skills_targeted": [
+      "Observation",
+      "Identification",
+      "Reasoning"
+    ]
+  },
+  "content_blocks": [
+    {
+      "type": "intro_tts",
+      "text": "Today we will learn about recap & practice \u2013 plant parts and functions."
+    },
+    {
+      "type": "concept_explanation",
+      "text": "Plants have roots, stems, leaves, flowers, and fruits. Each part has a special job."
+    },
+    {
+      "type": "activity",
+      "text": "Observe a plant near you and point to its roots, stem, and leaves."
+    },
+    {
+      "type": "summary_tts",
+      "text": "Roots fix the plant, stems carry water, leaves make food, and flowers grow into fruits."
+    }
+  ],
+  "ai_evaluation": {
+    "star_rating_system": {
+      "enabled": true,
+      "promotion_rule": "Minimum 2 stars to continue."
+    }
+  }
+}

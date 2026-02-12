@@ -1,0 +1,6 @@
+# 2025-10-22: Dependencies for Data Ethics & Governance Microservice
+# Authors: Cascade
+
+Flask==3.0.0
+shap==0.43.0
+scikit-learn==1.3.2

@@ -1,0 +1,186 @@
+{
+  "metadata": {
+    "lesson_id": "SCI_C1_M1_W1_D3",
+    "class": "1",
+    "subject": "Science",
+    "month": "1",
+    "week": "1",
+    "day": "3",
+    "lesson_title": "Observing Things",
+    "version": "1.4",
+    "duration_minutes": 30,
+    "language": ["English"],
+    "level": "Foundational",
+    "academic_year": "2025-2026",
+    "status": "Active"
+  },
+
+  "objectives": {
+    "primary_objective": "Students learn that observing with our senses helps us understand the world better.",
+    "learning_outcomes": [
+      "Identify the five senses used for observation.",
+      "Describe objects and surroundings using sight, sound, touch, smell, and taste.",
+      "Understand that good observation is important for science."
+    ],
+    "skills_targeted": ["Observation", "Description", "Awareness", "Expression"],
+    "difficulty_level": "Basic"
+  },
+
+  "vocabulary": {
+    "total_new_words": 3,
+    "word_list": [
+      {
+        "word": "observe",
+        "definition": "To look closely and notice details.",
+        "example_usage": "We observe how plants grow every day."
+      },
+      {
+        "word": "sense",
+        "definition": "A way our body helps us experience the world — like seeing or hearing.",
+        "example_usage": "We use our sense of sight to see colors."
+      },
+      {
+        "word": "describe",
+        "definition": "To tell what something looks, feels, or sounds like.",
+        "example_usage": "Describe the flower using its color and shape."
+      }
+    ]
+  },
+
+  "content_blocks": [
+    {
+      "type": "intro_tts",
+      "text": "Yesterday we learned that asking questions helps us discover new things. Today, we’ll learn how to observe carefully using our five senses!",
+      "duration_seconds": 60,
+      "points_awarded": 10,
+      "badge_awarded": "Curious Starter"
+    },
+    {
+      "type": "story",
+      "text": "Aarav looked at a flower in his garden. He saw bright petals, smelled its sweet scent, and felt its soft leaves. He said, 'I used my eyes, nose, and hands!' His sister said, 'You were observing!'",
+      "duration_seconds": 120,
+      "points_awarded": 15,
+      "badge_awarded": "Observation Explorer"
+    },
+    {
+      "type": "concept_explanation",
+      "text": "We use our five senses to observe the world — sight, hearing, touch, smell, and taste. Each sense helps us learn something different.",
+      "duration_seconds": 180,
+      "points_awarded": 20,
+      "badge_awarded": "Concept Master",
+      "ai_expression_coach": {
+        "enabled": true,
+        "alternate_expressions": [
+          "Our eyes, ears, nose, tongue, and skin help us observe things.",
+          "We use our five senses to understand the world around us.",
+          "Observing means using our senses to notice details."
+        ],
+        "ai_prompt": "Can you tell in your own words how we use our senses to observe?",
+        "student_input_mode": "voice_or_text",
+        "ai_followup_feedback": {
+          "positive_response": "Excellent! You used the idea of senses correctly.",
+          "neutral_response": "That’s good, but try naming one or two senses in your answer.",
+          "incorrect_response": "Let’s rephrase: We observe using eyes, ears, nose, tongue, and skin."
+        },
+        "points_awarded": 10,
+        "badge_awarded": "Expressive Thinker"
+      }
+    },
+    {
+      "type": "activity",
+      "text": "Let’s play an observation game! Look around and name something you can see, hear, and touch. Example: I see a window, I hear a bell, I touch my pencil.",
+      "duration_seconds": 120,
+      "points_awarded": 25,
+      "badge_awarded": "Senses Scientist",
+      "ai_expression_coach": {
+        "enabled": true,
+        "alternate_expressions": [
+          "I can see my notebook, I can hear my friend talking, I can touch my desk.",
+          "I observe the light, I hear music, I feel the chair.",
+          "I notice bright colors and gentle sounds around me."
+        ],
+        "ai_prompt": "Can you describe what you observe using more details or different words?",
+        "student_input_mode": "voice_or_text",
+        "ai_followup_feedback": {
+          "positive_response": "Perfect! That’s how a scientist observes.",
+          "neutral_response": "Good start! Add one more sense to make your observation stronger.",
+          "incorrect_response": "Let’s fix it together. Try starting with 'I see', 'I hear', or 'I feel'."
+        },
+        "points_awarded": 15,
+        "badge_awarded": "Observation Communicator"
+      }
+    },
+    {
+      "type": "summary_tts",
+      "text": "When we observe carefully with all our senses, we become better learners. Science starts with careful observation!",
+      "duration_seconds": 60,
+      "points_awarded": 10,
+      "badge_awarded": "Lesson Finisher"
+    }
+  ],
+
+  "ai_evaluation": {
+    "star_rating_system": {
+      "enabled": true,
+      "rating_scale": [1, 2, 3],
+      "promotion_rule": "Minimum 2 stars required to unlock next lesson."
+    },
+    "feedback": {
+      "strengths_analysis": [
+        "Used sense-related words accurately.",
+        "Gave good real-world observation examples."
+      ],
+      "weaknesses_analysis": [
+        "Needs to include more than one sense while describing."
+      ],
+      "for_two_star_students": {
+        "growth_feedback": "Nice work! Try describing the same object using all five senses to earn your 3rd star.",
+        "example_phrases_for_retry": [
+          "I see a red flower, I smell it, I touch its soft petals."
+        ]
+      },
+      "for_three_star_students": {
+        "mastery_feedback": "Excellent! You observed carefully using all your senses — true scientist work!"
+      }
+    }
+  },
+
+  "gamification": {
+    "points_system": {
+      "lesson_completion": 25,
+      "correct_answer": 10,
+      "activity_completion": 20
+    },
+    "badges_system": {
+      "Curious Starter": "Started the lesson with enthusiasm.",
+      "Observation Explorer": "Used senses to observe surroundings.",
+      "Concept Master": "Understood the five senses concept.",
+      "Senses Scientist": "Completed observation activity.",
+      "Observation Communicator": "Described observations clearly.",
+      "Lesson Finisher": "Completed the lesson successfully."
+    }
+  },
+
+  "analytics": {
+    "student_engagement_tracking": true,
+    "interaction_count_expected": 5,
+    "completion_rate_target": 90,
+    "average_expected_score": 80,
+    "points_earned": 100,
+    "star_rating": 2
+  },
+
+  "review_cycle": {
+    "recap_days": ["Thursday", "Friday"],
+    "assessment_frequency": "Weekly"
+  },
+
+  "compliance": {
+    "curriculum_alignment": [
+      "CBSE Class 1 Science/EVS",
+      "ICSE Primary Science",
+      "TS SCERT Class 1 Environmental Studies"
+    ],
+    "competency_tags": ["Observation", "Senses", "Communication"]
+  }
+}

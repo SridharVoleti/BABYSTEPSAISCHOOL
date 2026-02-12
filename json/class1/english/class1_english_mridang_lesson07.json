@@ -1,0 +1,82 @@
+{
+    "lesson_id": "ENG1_MRIDANG_07",
+    "title": "The Lost Kitten",
+    "class": 1,
+    "board": "NCERT",
+    "publisher": "Mridang",
+    "subject": "English",
+    "objectives": {
+        "bloom": "Remembering, Understanding",
+        "outcome": "Students will be able to identify characters and retell the story 'The Lost Kitten' using key events"
+    },
+    "lesson_text": "A kitten got lost and the forest animals helped him find his way home, learning compassion and teamwork.",
+    "activities": [
+        {
+            "type": "reading",
+            "instructions": "Read the text aloud using your microphone. Follow the AI's pacing and pronunciation.",
+            "completion_metric": "ASR similarity >= 80%",
+            "xp": 10,
+            "badge": "Storyteller Apprentice"
+        },
+        {
+            "type": "retell",
+            "instructions": "Retell the story in your own words, highlighting the key characters and events.",
+            "keywords_required": [
+                "Kitten",
+                "Lost",
+                "Help",
+                "Compassion"
+            ],
+            "completion_metric": ">=2/3 keywords mentioned",
+            "xp": 15,
+            "badge": "Storyteller"
+        },
+        {
+            "type": "vocabulary",
+            "instructions": "Match new words with images.",
+            "completion_metric": "100% correct",
+            "xp": 5
+        },
+        {
+            "type": "quiz",
+            "instructions": "Answer multiple-choice questions based on the story.",
+            "completion_metric": ">=80% correct",
+            "xp": 10
+        }
+    ],
+    "ai_dialogue_script": [
+        {
+            "step": "greeting",
+            "text": "Hello! I am Ollie the Owl, let's read a story today!"
+        },
+        {
+            "step": "pre_read",
+            "text": "Here is the text. Follow along and read with me."
+        },
+        {
+            "step": "reading_check",
+            "text": "Great! Let me check your reading..."
+        },
+        {
+            "step": "retell",
+            "text": "Now try to retell the story in your own words."
+        },
+        {
+            "step": "quiz",
+            "text": "Time for a fun quiz!"
+        },
+        {
+            "step": "reward",
+            "text": "Well done! You earned XP and badges!"
+        }
+    ],
+    "gamification": {
+        "total_xp": 40,
+        "badges": [
+            "Storyteller Apprentice",
+            "Storyteller"
+        ],
+        "leaderboard": true
+    },
+    "online_gamified_implementation": "Drag-drop vocabulary with images, interactive retell with ASR scoring, animated feedback for correct/incorrect, XP bar increment, badge unlock animations."
+}

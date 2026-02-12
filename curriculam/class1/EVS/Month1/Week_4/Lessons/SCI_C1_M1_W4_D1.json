@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "lesson_id": "SCI_C1_M1_W4_D1",
+    "class": "1",
+    "subject": "Science",
+    "month": "1",
+    "week": "4",
+    "lesson_title": "Animals Around Us - Introduction",
+    "version": "1.4",
+    "duration_minutes": 30,
+    "language": [
+      "English"
+    ],
+    "academic_year": "2025-2026"
+  },
+  "objectives": {
+    "primary_objective": "Learn about different types of animals and their homes - Animals Around Us - Introduction",
+    "skills_targeted": [
+      "Observation",
+      "Classification",
+      "Reasoning"
+    ]
+  },
+  "content_blocks": [
+    {
+      "type": "intro_tts",
+      "text": "Today we will explore animals around us - introduction."
+    },
+    {
+      "type": "concept_explanation",
+      "text": "There are many animals around us. Some live in forests, some live with us at home."
+    },
+    {
+      "type": "activity",
+      "text": "Name two wild animals and two domestic animals you know."
+    },
+    {
+      "type": "summary_tts",
+      "text": "Animals can be wild or domestic. Each has a home and food habits that help it live."
+    }
+  ],
+  "ai_evaluation": {
+    "star_rating_system": {
+      "enabled": true,
+      "promotion_rule": "Minimum 2 stars to continue."
+    }
+  }
+}

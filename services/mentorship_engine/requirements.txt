@@ -1,0 +1,6 @@
+# 2025-10-22: Dependencies for Mentorship Engine Microservice
+# Authors: Cascade
+
+Flask==3.0.0
+sentence-transformers==2.2.2
+torch==2.1.2

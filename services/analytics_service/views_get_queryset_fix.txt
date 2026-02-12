@@ -1,0 +1,24 @@
+    def get_queryset(self):
+        """
+        Return queryset filtered by permissions.
+        
+        Returns:
+            QuerySet: Filtered progress records
+        """
+        user = self.request.user
+        
+        # Get all progress records for this user with student relationship
+        if user.is_staff:
+            # Teachers see all student progress
+            queryset = StudentProgress.objects.select_related('student').all()
+        else:
+            # Students see only their own
+            queryset = StudentProgress.objects.select_related('student').filter(student=user)
+        
+        # Apply additional filters
+        if self.request.query_params.get('last_activity_date__gte'):
+            from django.utils.dateparse import parse_date
+            date_from = parse_date(self.request.query_params['last_activity_date__gte'])
+            queryset = queryset.filter(last_activity_date__gte=date_from)
+        
+        return queryset

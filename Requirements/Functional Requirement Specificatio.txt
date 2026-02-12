@@ -1,0 +1,69 @@
+Functional Requirement Specification (FRS) – AI Virtual School
+Project: Owl Virtual School – AI Instructor
+Target: Classes 1–12, English and other subjects (Marigold/Mridang for English, optional Hindi/Sanskrit, etc.)
+Platform: Web + Mobile (Flask backend, React/Flutter frontend)
+Prepared for: Development & Curriculum Team
+Version: 1.0
+1. Overview
+The AI Virtual School will deliver fully virtual, gamified, AI-instructed lessons across subjects for students in Classes 1–12. Key features include AI character instructor, real-time activity monitoring using ASR and interaction tracking, gamification (XP, badges, progression), and detailed dashboards for teachers and administrators, with multi-board curriculum support.
+2. Functional Modules
+2.1 Student Module
+2.1.1 User Management
+• Student registration: email/phone, password, optional parental verification
+• Profile: Name, Class, Board, Subjects, Language proficiency
+• Parent-linked profile for monitoring
+2.1.2 Lesson Interface
+• Interactive AI lesson with TTS narration, animations, character avatar, lesson text, images, and videos
+2.1.3 Learning Activities & Completion Verification
+Reading Activity Example: ASR transcription vs canonical text, pass threshold ≥80%, AI hints and repeat prompts if failed.
+Retell / Oral Comprehension Example: Keyword detection, minimum 2/3 keywords for completion, AI prompts sentence stems if needed.
+2.1.4 Gamification
+• XP points per activity
+• Badges per milestone
+• Collectibles (feathers, stars)
+• Leaderboards, unlockable content after milestones
+2.1.5 Progress Tracking
+• Per lesson completion status
+• Time spent on activities
+• Engagement metrics: pauses, retries, attempts
+2.2 Teacher Module
+2.2.1 Dashboard: view class roster, activity status, completion %, reading accuracy, quiz scores
+2.2.2 Lesson & Activity Management: create/edit lessons, upload multimedia, assign custom paths
+2.2.3 Monitoring & Intervention: alerts for low engagement/completion/accuracy, trigger live teacher support
+2.2.4 Reporting: export per-class/student reports, detailed logs of activity completion & ASR results
+2.3 Administrator Module
+• School management: classes, subjects, boards, assign teachers
+• Compliance & verification: track activity completion, maintain audit logs, certificates issuance
+• Analytics: school-wide performance, subject-level insights, teacher engagement reports
+• Security: role-based access, 2FA optional, encrypted storage
+2.4 AI Instructor & Monitoring Module
+• Dialogue Management: stage-based AI flows, branching based on performance
+• Speech Analysis: ASR transcription, reading accuracy, keyword detection for retell
+• Gamification Engine: assign XP & badges, track missions & collectibles
+• Intervention Logic: AI prompts based on accuracy thresholds
+• Logging & Metrics: timestamp, attempts, time spent, temporary audio sample storage
+3. Non-Functional Requirements
+• Performance: Support at least 1000 concurrent students per class
+• Availability: 99.9% uptime
+• Scalability: Add classes/grades, new subjects, multiple AI characters
+• Security: HTTPS, encryption, GDPR/India Data Protection compliant
+• Device Support: Web, iOS, Android, responsive design
+4. Data Model / API Endpoints
+Example Tables: Students, Lessons, Activities, Logs, Badges
+Example API Endpoints:
+• GET /api/lesson/{lesson_id} – fetch lesson content
+• POST /api/activity/submit – submit activity results
+• GET /api/progress/{student_id} – fetch progress & gamification stats
+• POST /api/feedback – AI feedback submission / teacher override
+5. Gamification & Rewards Logic
+• XP assignment, badges, unlockables, leaderboard updates
+6. Activity Completion Verification
+• Reading, Retell, Quiz examples with thresholds, ASR keyword checks, logging for teachers/admins
+7. Additional Recommendations
+• Parent dashboards, AI adaptive paths, offline mode, modular design for curriculum updates, multi-character support
+8. Deliverables
+1. FRS document
+2. Database schema & API design
+3. Teacher, Admin, Student dashboards mockups
+4. AI lesson JSON templates
+5. Gamification engine & leaderboards design

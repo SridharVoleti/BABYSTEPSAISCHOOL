@@ -1,0 +1,189 @@
+Claude Code - Sustainable 24x7 Development Instructions
+🎯 PRIMARY OBJECTIVE
+Work continuously on this project at a sustainable pace that NEVER hits rate limits. Maximize total work completed over 24 hours rather than speed per task.
+⚠️ CRITICAL RATE LIMIT AWARENESS
+Current Limits (5-Hour Rolling Window)
+
+Your usage quota resets on a rolling 5-hour window
+Messages expire gradually as they pass the 5-hour mark
+Each task consumes 10-30 "message equivalents" due to tool calls and file operations
+Long conversations cost exponentially more tokens
+
+Weekly Limits (Active Since Aug 2025)
+
+Additional weekly ceiling caps total compute hours
+Pro: ~40-80 hours of Claude Code usage per week
+Max ($100): 5x Pro usage
+Max ($200): 20x Pro usage
+
+🚦 SUSTAINABLE WORK STRATEGY
+Rule 1: Work in Small, Focused Batches
+DO THIS:
+
+Make 1-2 file changes per task
+Test immediately after changes
+Commit after each small win
+Start fresh conversations for each major feature
+
+DON'T DO THIS:
+
+Massive refactoring across 20 files at once
+Long conversations (they include full history each time)
+Asking "review everything and fix all issues"
+
+Rule 2: Use Strategic Pauses
+After completing each task:
+
+Wait 3-5 minutes before starting the next task
+Use this time for:
+
+Git commits
+Manual testing
+Code review
+Planning next steps
+
+
+This allows your rate limit quota to replenish continuously
+
+Rule 3: Maximize Efficiency Per Request
+Before Each Task:
+
+Check /status to see remaining quota
+Use /compact to reduce context size if conversation is getting long
+Use /clear to start fresh for unrelated tasks
+
+Model Selection (Tier Tasks Appropriately):
+
+Haiku (fastest, cheapest): Simple edits, syntax fixes, quick questions
+Sonnet 4 (balanced): Most development work, code reviews, documentation
+Opus 4.5 (most capable): Complex architecture, multi-file refactoring, security-critical code
+
+File Operations:
+
+Only read files that are absolutely necessary
+Use targeted file sections, not entire files
+Avoid reading the same file multiple times
+
+📋 24-HOUR WORK PLAN TEMPLATE
+Cycle 1 (Hours 0-5)
+
+Hour 0-1: Feature planning & architecture (minimal code generation)
+Hour 1-2: Implement core functionality (2-3 focused tasks with 5-min breaks)
+Hour 2-3: Write tests (2-3 test files with breaks)
+Hour 3-4: Documentation & code review
+Hour 4-5: Bug fixes & polish (small, targeted fixes)
+
+5-HOUR BREAK: Let quota fully reset
+Cycle 2 (Hours 5-10)
+[Repeat similar pattern]
+Cycle 3 (Hours 10-15)
+[Repeat similar pattern]
+Continue Pattern for 24 Hours
+🎮 SPECIFIC TASK EXECUTION INSTRUCTIONS
+When Writing Code:
+✅ GOOD: "Add user authentication to auth.py. Only modify auth.py."
+❌ BAD: "Implement complete user management system across all files"
+When Refactoring:
+✅ GOOD: "Refactor the login function in auth.py to use async/await"
+❌ BAD: "Refactor the entire authentication module to use modern patterns"
+When Testing:
+✅ GOOD: "Write unit tests for the login function in test_auth.py"
+❌ BAD: "Write comprehensive test coverage for the entire application"
+When Debugging:
+✅ GOOD: "Fix the TypeError in line 45 of user_service.py"
+❌ BAD: "Debug all errors in the application"
+🔄 SELF-REGULATION PROTOCOL
+After EVERY task completion:
+
+Estimate tokens used (file reads + code generation + conversation history)
+If a single task consumed >20% of quota: Break future tasks into smaller pieces
+If approaching 80% quota usage: Pause for 30 minutes
+If quota is depleted: Switch to planning/documentation mode or wait for reset
+
+📊 MONITORING COMMANDS
+Use these regularly:
+
+/status - Check remaining quota
+/compact - Reduce conversation context
+/clear - Start fresh session for new task
+/context - Debug context issues (v1.0.86+)
+
+🚨 WHAT TO DO IF RATE LIMITED
+
+Immediate Actions:
+
+Use /status to check reset time
+Switch to lower-tier model (Sonnet → Haiku)
+Do manual code review/testing
+Write documentation
+Plan next features
+
+
+Prevent Future Limits:
+
+Review task sizes (make them smaller)
+Increase pause time between tasks
+Use /compact more frequently
+Start fresh conversations more often
+
+
+
+🎯 SUCCESS METRICS
+Optimize for:
+
+✅ Total features completed over 24 hours
+✅ Consistent progress without interruptions
+✅ Never hitting hard rate limits
+
+NOT:
+
+❌ Speed of individual tasks
+❌ Number of files changed per task
+❌ Continuous rapid-fire requests
+
+💡 WORKFLOW EXAMPLE
+WRONG APPROACH (Will hit limits fast):
+9:00 AM - Start coding
+9:05 AM - "Build entire user authentication system"
+9:10 AM - "Add all CRUD operations"
+9:15 AM - "Write all tests"
+9:20 AM - "Add complete documentation"
+9:25 AM - RATE LIMITED ❌
+RIGHT APPROACH (Sustainable 24x7):
+9:00 AM - "Add User model in models/user.py"
+9:05 AM - [5-min break - commit, review]
+9:10 AM - "Add login endpoint in routes/auth.py"
+9:15 AM - [5-min break - test manually]
+9:20 AM - "Write test for login in tests/test_auth.py"
+9:25 AM - [5-min break - commit]
+9:30 AM - "Add password hashing in utils/security.py"
+... continues all day without hitting limits ✅
+🏆 FINAL INSTRUCTIONS
+
+Before every task: Check if it can be broken into smaller pieces
+During every task: Be efficient with file reads and context
+After every task: Pause 3-5 minutes before continuing
+Throughout the day: Monitor quota with /status
+
+Remember: We're optimizing for marathon productivity, not sprint speed.
+The goal is to have made significant progress 24 hours from now, not to exhaust the quota in 2 hours.
+
+Current Project Context
+Project: AI Education Platform for NCERT Curriculum
+Tech Stack: FastAPI (backend), Node.js (lesson generation), Claude API integration
+Focus Areas:
+
+Lesson generation (dual-output: PPTX + JSON)
+Multi-subject support (Math, Science, Languages, Programming, Commerce, Sanskrit, Vedas)
+Llama integration for local model support
+Automated curriculum content creation
+
+Immediate Priorities:
+
+Document integration workflow improvements
+Lesson generation system optimization
+JSON output format standardization
+Testing and quality assurance
+
+Development Philosophy:
+Small, testable increments with frequent commits and manual validation.

@@ -1,0 +1,41 @@
+{
+  "question_bank_id": "SCI_C1_M5_W2_D2_QB",
+  "linked_lesson": "SCI_C1_M5_W2_D2",
+  "total_questions": 5,
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "question_text": "What did we learn about in Summer and Winter?",
+      "options": [
+        "Sun",
+        "Weather",
+        "Stars"
+      ],
+      "correct_answer": "Weather"
+    },
+    {
+      "id": 2,
+      "type": "true_false",
+      "question_text": "The Sun gives us light and heat.",
+      "correct_answer": "True"
+    },
+    {
+      "id": 3,
+      "type": "fill_in_blank",
+      "question_text": "We wear ______ clothes in winter.",
+      "correct_answer": "warm"
+    },
+    {
+      "id": 4,
+      "type": "voice_response",
+      "question_text": "Name your favorite season and why you like it."
+    },
+    {
+      "id": 5,
+      "type": "reasoning",
+      "question_text": "Why do we see stars only at night?",
+      "expected_answer": "Because the Sun's light hides the stars during the day."
+    }
+  ]
+}

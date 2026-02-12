@@ -1,0 +1,7 @@
+# 2025-10-22: Dependencies for Emotion–Engagement Engine Microservice
+# Authors: Cascade
+
+Flask==3.0.0
+opencv-python==4.8.0.76
+transformers==4.36.2
+torch==2.1.2

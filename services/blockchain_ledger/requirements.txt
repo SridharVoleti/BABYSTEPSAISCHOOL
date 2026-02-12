@@ -1,0 +1,4 @@
+# 2025-10-22: Dependencies for Blockchain Academic Ledger Microservice
+# Authors: Cascade
+
+Flask==3.0.0

@@ -1,0 +1,8 @@
+# 2025-10-22: Dependencies for Adaptive Learning Engine Microservice
+# Authors: Cascade
+
+Flask==3.0.0
+
+# 2025-10-22: AI/ML Libraries
+transformers==4.36.2
+torch==2.1.2

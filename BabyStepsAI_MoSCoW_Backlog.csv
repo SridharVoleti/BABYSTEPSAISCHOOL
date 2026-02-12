@@ -1,0 +1,39 @@
+ID,Priority,User Story,Description
+M1,Must Have,Access sequential lessons (Math & Science),"Student can access lessons for class 1–12 in structured, calendar-based flow."
+M2,Must Have,Exam & Olympiad dual-track content,Each topic has two layers: foundational and challenge level.
+M3,Must Have,Weekly assessment modules,Assessments every Thursday–Friday for recap and mastery tracking.
+M4,Must Have,Bilingual instruction,English base with limited Telugu/Sanskrit for clarity.
+M5,Must Have,Vibe-compatible JSON lessons,"All lessons follow structured JSON with TTS/STT, quizzes, and challenges."
+M6,Must Have,Word-by-word Sanskrit meaning,Sanskrit lessons teach pronunciation and meaning side by side.
+M7,Must Have,Frozen Class 1 Science Calendar v1,Baseline structure for academic planning.
+M8,Must Have,16:9 standard visuals,All visual assets generated in 16:9 ratio for consistency.
+M9,Must Have,Urdhva Pundra in Vishnu devotee depictions,Spiritual accuracy in all devotional visuals.
+M10,Must Have,Separate file per lesson,Each lesson stored as independent file for modularity.
+M11,Must Have,Daily progress tracker,Students view daily mapped progress to academic calendar.
+M12,Must Have,Language clarity enforcement,Ensure Sanskrit used minimally within English lessons.
+M13,Must Have,Secure access control,"Role-based authentication for student, teacher, admin."
+S1,Should Have,Custom weekly assessments,Teachers can create/edit recap or challenge assessments.
+S2,Should Have,Parent progress dashboard,Parents can view child performance summaries.
+S3,Should Have,Activity-based learning kits,Physical or printable monthly kits similar to Flintobox.
+S4,Should Have,Audio explanations (English/Telugu),Dual-language TTS-based guidance.
+S5,Should Have,Lesson tagging system,"Each lesson tagged by domain, level, and difficulty."
+S6,Should Have,Offline learning mode,Cached JSON lessons for offline continuity.
+S7,Should Have,Visual storytelling integration,Cultural and devotional visuals within lessons.
+S8,Should Have,Reusable lesson templates,Template models for each subject type.
+S9,Should Have,Concept mastery tracking,Teachers can mark student understanding per concept.
+S10,Should Have,Monthly progress reports,Auto-generated reports per month.
+C1,Could Have,Gamified badges,Students earn badges or stars for consistent learning.
+C2,Could Have,AI-generated remedial lessons,Adaptive auto-lessons based on assessment data.
+C3,Could Have,Pronunciation feedback for Sanskrit,Speech AI checks sloka recitation accuracy.
+C4,Could Have,Parent notifications,Parents alerted when milestones achieved.
+C5,Could Have,Creative sharing space,Students upload artwork or project photos.
+C6,Could Have,Vedic Math leaderboard,Gamified competition among peers.
+C7,Could Have,AI revision schedule recommendations,Smart exam preparation planning.
+C8,Could Have,Narrated mythological animations,AI narration linking cultural stories with science concepts.
+W1,Would Have,AI tutor avatar,Conversational AI Vishnu devotee guide for students.
+W2,Would Have,AI analytics dashboard,Predictive dashboards for teachers and parents.
+W3,Would Have,AR/VR experiences,Immersive 3D learning for science and culture.
+W4,Would Have,AI multilingual translation,Instant translation of lessons into regional languages.
+W5,Would Have,AI lesson video generation,Auto-creates videos from text JSON content.
+W6,Would Have,Michel Thomas–style Sanskrit learning,Conversational AI-based Sanskrit tutor.
+W7,Would Have,Adaptive difficulty AI,AI auto-adjusts pace and level dynamically.

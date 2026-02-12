@@ -1,0 +1,45 @@
+Academic_Year,Month,Week_Number,Week_Focus,Core_Concepts,CPA_Emphasis,Expected_Student_Outcomes
+2026,June,1,Getting to Know Numbers,"Numbers 1–3, counting objects, one-to-one correspondence, more/less",Concrete,"Counts up to 3 accurately; matches numbers to objects"
+2026,June,2,Numbers All Around Me,"Numbers 4–5, counting to 5, comparing sets",Concrete→Pictorial,"Counts to 5; identifies more/less correctly"
+2026,June,3,Zero and Careful Counting,"Zero concept, forward/backward counting 0–5",Concrete,"Understands zero; counts forwards and backwards to 5"
+2026,June,4,June Review and Play,"Revision of numbers 0–5, games, oral questions",Concrete+Pictorial,"Confident with numbers 0–5"
+
+2026,July,5,Breaking Numbers,"Number bonds of 2 and 3, part–whole concept",Concrete→Pictorial,"Understands that numbers can be split"
+2026,July,6,Making 4 and 5,"Number bonds of 4 and 5, part–whole diagrams",Pictorial,"Knows all number bonds of 5"
+2026,July,7,Adding and Taking Away,"Addition and subtraction within 5 using objects",Concrete+Pictorial,"Adds and subtracts within 5"
+2026,July,8,July Review and Stories,"Number bond stories, oral word problems",Pictorial,"Explains thinking verbally using pictures"
+
+2026,August,9,Numbers 6 and 7,"Number bonds of 6 and 7, decomposition",Concrete→Pictorial,"Breaks 6 and 7 into parts"
+2026,August,10,Numbers 8 and 9,"Number bonds of 8 and 9, visualization",Pictorial,"Identifies all combinations of 8 and 9"
+2026,August,11,Making 10,"Number bond of 10, making-10 strategy",Concrete→Pictorial→Abstract,"Knows all ways to make 10"
+2026,August,12,Fluency and Word Problems,"Addition/subtraction within 10, simple word problems",Abstract+Pictorial,"Recalls bonds to 10; solves word problems"
+
+2026,September,13,Ten and One More,"Numbers 11–13, ten-and-ones concept",Concrete→Pictorial,"Builds numbers using tens and ones"
+2026,September,14,Numbers 14–16,"Place value, drawing tens and ones, comparison",Pictorial,"Represents and compares numbers correctly"
+2026,September,15,Numbers 17–20,"Number line to 20, ordering numbers",Pictorial→Abstract,"Orders and explains numbers to 20"
+2026,September,16,Patterns and Review,"Number patterns, skip counting",Concrete+Pictorial,"Creates and extends patterns"
+
+2026,October,17,Smart Adding,"Addition within 20, making-10 strategy",Pictorial→Abstract,"Adds within 20 using strategies"
+2026,October,18,Smart Subtracting,"Subtraction within 20, bar model introduction",Pictorial→Abstract,"Subtracts within 20 using reasoning"
+2026,October,19,Word Problems,"Part–whole and comparison problems",Pictorial,"Solves word problems visually"
+2026,October,20,Strategy Review,"Mixed problems, explanation of strategies",Abstract,"Explains strategies clearly"
+
+2026,November,21,Two-Dimensional Shapes,"Circle, square, rectangle, triangle",Concrete,"Identifies and names 2D shapes"
+2026,November,22,Three-Dimensional Shapes,"Cube, sphere, cylinder, cone",Concrete,"Identifies 3D shapes in real life"
+2026,November,23,Space and Position,"Spatial vocabulary: above, below, inside, outside",Concrete,"Uses spatial language correctly"
+2026,November,24,Patterns with Shapes,"Shape patterns, creative designs",Concrete+Pictorial,"Creates patterns using shapes"
+
+2026,December,25,Counting by Tens,"Numbers 21–50, skip counting by 10s",Concrete→Pictorial,"Counts confidently by tens"
+2026,December,26,Bigger Numbers,"Numbers 51–100, place value",Pictorial,"Reads and writes numbers to 100"
+2026,December,27,Adding Bigger Numbers,"Addition within 40, mental strategies",Pictorial→Abstract,"Adds larger numbers with confidence"
+2026,December,28,Number Line and Review,"Estimation, comparison, review",Pictorial,"Uses number line to compare and estimate"
+
+2026,January,29,Measurement,"Length, weight, capacity using non-standard units",Concrete,"Compares and measures objects"
+2026,January,30,Time,"Days, months, telling time to the hour",Concrete→Pictorial,"Reads time to the hour"
+2026,January,31,Money,"Coins, notes, making amounts",Concrete,"Handles simple money situations"
+2026,January,32,Life Skills Review,"Measurement, time, money word problems",Pictorial,"Applies math to daily life"
+
+2026,February,33,Data Collection,"Surveys, tables, collecting data",Concrete,"Collects and organizes data"
+2026,February,34,Pictographs,"Reading and creating pictographs",Pictorial,"Interprets and draws pictographs"
+2026,February,35,Multi-Step Problems,"Mixed multi-step word problems",Pictorial→Abstract,"Solves multi-step problems"
+2026,February,36,Mastery and Celebration,"Revision, projects, math exhibition",Abstract,"Demonstrates confidence and mastery"

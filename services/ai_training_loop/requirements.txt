@@ -1,0 +1,5 @@
+# 2025-10-22: Dependencies for AI Training & Feedback Loop Microservice
+# Authors: Cascade
+
+Flask==3.0.0
+fedml==0.8.18

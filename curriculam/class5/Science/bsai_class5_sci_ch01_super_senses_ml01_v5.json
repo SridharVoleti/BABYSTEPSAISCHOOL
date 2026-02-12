@@ -1,0 +1,138 @@
+{
+  "metadata": {
+    "lesson_id": "class5_science_ch1_ml1",
+    "class": "5",
+    "subject": "Science",
+    "chapter_number": "1",
+    "chapter_name": "Super Senses",
+    "micro_lesson_number": "1",
+    "filename": "bsai_class5_sci_ch01_super_senses_ml01_v5.json",
+    "version": "5.0",
+    "last_updated": "2025-12-13"
+  },
+  "adaptive_levels": {
+    "default_level": "average",
+    "levels": [
+      "low",
+      "average",
+      "high"
+    ],
+    "promotion_rules": {
+      "promote_to_high_if_score_above": 85,
+      "stay_in_average_if_between": [
+        60,
+        85
+      ],
+      "downgrade_to_low_if_below": 60
+    }
+  },
+  "content": {
+    "blackboard_points": {
+      "low": [
+        {
+          "point": "We use five senses.",
+          "tts_expanded_explanation": {
+            "english": "We use five senses to understand the world: eyes, ears, nose, tongue, and skin.",
+            "telugu": "Manam world ni artham chesukovadaniki five senses vadutam: eyes, ears, nose, tongue, and skin.",
+            "hindi": "Hum duniya ko samajhne ke liye five senses ka upyog karte hain: eyes, ears, nose, tongue, and skin.",
+            "marathi": "Aamhi jag samajhun ghenyasathi five senses vaparto: eyes, ears, nose, tongue, and skin.",
+            "tamil": "Ulagai purindhukollavum five senses payanpaduthugiroam: eyes, ears, nose, tongue, and skin.",
+            "kannada": "Naavu prapanchavannu artha madikollalu five senses upayogisuttivi: eyes, ears, nose, tongue, and skin.",
+            "malayalam": "Lokam manasilakkan nammal five senses upayogikkunnu: eyes, ears, nose, tongue, and skin.",
+            "bengali": "Amra duniya bujhte five senses use kori: eyes, ears, nose, tongue, and skin.",
+            "punjabi": "Asi duniya nu samajhan layi five senses vartde haan: eyes, ears, nose, tongue, and skin."
+          }
+        }
+      ],
+      "average": [
+        {
+          "point": "Humans have five senses: sight, hearing, smell, taste, touch.",
+          "tts_expanded_explanation": {
+            "english": "Each sense organ has a special role and helps us stay safe and learn.",
+            "telugu": "Prathi sense organ ki oka special role undi mariyu manaki safety mariyu learning lo sahayam chestundi.",
+            "hindi": "Har sense organ ka ek khas role hota hai jo hame surakshit rakhta hai aur sikhata hai.",
+            "marathi": "Pratyek sense organ cha ek vishesh role asta jo aaplya surakshe ani shikshanat madat karto.",
+            "tamil": "Ovvoru sense organ kum thanithuva role irukkirathu, adhu nammai paadhukakkum matrum katrukollavum udhavum.",
+            "kannada": "Prathi sense organ ge visheshada role ide adu namma rakshane mattu kalikeyalli sahaya maduttade.",
+            "malayalam": "Ella sense organinum thanithuva role undu, athu nammale rakshikkukayum padippikkukayum cheyyunnu.",
+            "bengali": "Prottek sense organ er ekta bishesh role ache ja amader suraksha o shikshay shahajjo kore.",
+            "punjabi": "Har sense organ da apna khaas role hunda hai jo sanu surakhit rakhda hai te sikhaunda hai."
+          }
+        }
+      ],
+      "high": [
+        {
+          "point": "The brain integrates signals from all sense organs.",
+          "tts_expanded_explanation": {
+            "english": "The brain combines signals from all sense organs to understand the environment.",
+            "telugu": "Brain anni sense organs nundi vachina signals ni kalipi environment ni artham chesukuntundi.",
+            "hindi": "Dimaag sabhi sense organs se aane wale signals ko jodkar vatavaran ko samajhta hai.",
+            "marathi": "Brain sarva sense organs kadhun yenare signals ekatra karto ani paryavaran samajto.",
+            "tamil": "Brain ellaa sense organs il irundhu varum signals ai serthu soozhalai purindhukollum.",
+            "kannada": "Brain ella sense organs inda baruva signals annu seeri parisara arivannu tayarisuva.",
+            "malayalam": "Brain ella sense organs il ninnulla signals cherthu parisarathine manasilakkunnu.",
+            "bengali": "Mastishk shob sense organs theke asha signals ekotre kore poribesh bujhe.",
+            "punjabi": "Dimaag saare sense organs ton aunde signals nu jod ke mahol samajhda hai."
+          }
+        }
+      ]
+    }
+  },
+  "assessment": {
+    "low": {
+      "mcq": [
+        {
+          "question": "How many senses do humans have?",
+          "options": [
+            "2",
+            "3",
+            "5",
+            "7"
+          ],
+          "correct_answer": "5"
+        }
+      ]
+    },
+    "average": {
+      "mcq": [
+        {
+          "question": "Which sense organ helps us smell?",
+          "options": [
+            "Eye",
+            "Ear",
+            "Nose",
+            "Skin"
+          ],
+          "correct_answer": "Nose"
+        }
+      ]
+    },
+    "high": {
+      "mcq": [
+        {
+          "question": "Which sense organ helps the brain understand light?",
+          "options": [
+            "Ear",
+            "Eye",
+            "Nose",
+            "Skin"
+          ],
+          "correct_answer": "Eye"
+        }
+      ]
+    }
+  },
+  "spaced_repetition": {
+    "unlock_next_lesson_score": 60,
+    "intervals": [
+      "1 day",
+      "3 days",
+      "7 days",
+      "30 days"
+    ],
+    "concepts_to_repeat": [
+      "Five senses",
+      "Role of sense organs"
+    ]
+  }
+}
