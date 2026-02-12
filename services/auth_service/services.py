@@ -135,11 +135,18 @@ class AuthService:
 
         logger.info(f"OTP sent to {phone} for {purpose}")  # 2026-02-12: Log
 
-        return {  # 2026-02-12: Success response
+        result = {  # 2026-02-12: Success response
             'success': True,
             'message': 'OTP sent successfully.',
             'expires_in_minutes': config.get('otp_expiry_minutes', 10),
         }
+
+        # 2026-02-12: Include OTP in response for mock provider (dev only)
+        from django.conf import settings as django_settings
+        if getattr(django_settings, 'OTP_PROVIDER', 'mock') == 'mock':
+            result['debug_otp'] = otp_code
+
+        return result
 
     @classmethod
     def verify_otp(cls, phone, otp_code):

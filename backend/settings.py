@@ -266,7 +266,7 @@ OTP_CONFIG = {
     'otp_length': 6,
     'otp_expiry_minutes': 10,
     'max_attempts': 3,
-    'cooldown_seconds': 60,
+    'cooldown_seconds': 10,  # 2026-02-12: Short cooldown for dev (increase for production)
 }
 
 # Twilio settings (for production WhatsApp OTP)

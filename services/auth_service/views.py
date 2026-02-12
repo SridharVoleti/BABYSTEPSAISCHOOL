@@ -15,7 +15,7 @@ from rest_framework.response import Response  # 2026-02-12: API responses
 from rest_framework_simplejwt.tokens import RefreshToken  # 2026-02-12: Token refresh
 from rest_framework_simplejwt.exceptions import TokenError  # 2026-02-12: Token errors
 
-from .models import Student  # 2026-02-12: Models
+from .models import Student, Parent  # 2026-02-12: Models
 from .permissions import IsParent, IsParentOfStudent  # 2026-02-12: Custom perms
 from .serializers import (  # 2026-02-12: Serializers
     SendOTPSerializer, VerifyOTPSerializer, CompleteRegistrationSerializer,
@@ -204,6 +204,32 @@ class StudentAuthViewSet(viewsets.ViewSet):
             'student_name': student.full_name,
             'avatar_id': student.avatar_id,
             'pictures': shuffled,
+        })
+
+    @action(detail=False, methods=['get'], url_path=r'lookup/(?P<phone>[^/.]+)')
+    def lookup_by_phone(self, request, phone=None):
+        """2026-02-12: Look up students by parent phone (public, returns minimal info)."""
+        try:
+            parent = Parent.objects.get(phone=phone)  # 2026-02-12: Find parent
+        except Parent.DoesNotExist:
+            return Response(
+                {'students': [], 'message': 'No account found.'},
+                status=status.HTTP_200_OK,
+            )
+
+        # 2026-02-12: Return only public-safe student info (name, avatar, login method)
+        students = parent.students.filter(is_active=True)
+        return Response({
+            'students': [
+                {
+                    'id': str(s.id),
+                    'full_name': s.full_name,
+                    'avatar_id': s.avatar_id,
+                    'grade': s.grade,
+                    'login_method': s.login_method,
+                }
+                for s in students
+            ],
         })
 
 
