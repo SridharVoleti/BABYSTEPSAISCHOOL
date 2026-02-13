@@ -349,6 +349,55 @@ class AuthService:
         }
 
     @classmethod
+    def update_parent_profile(cls, parent, **kwargs):
+        """
+        2026-02-13: Update editable parent profile fields.
+
+        Args:
+            parent: Parent model instance.
+            **kwargs: Fields to update (full_name, email, state, preferred_language).
+
+        Returns:
+            dict: Result with updated parent data.
+        """
+        # 2026-02-13: Allowed editable fields
+        allowed_fields = {'full_name', 'email', 'state', 'preferred_language'}
+        updated_fields = []
+
+        for field, value in kwargs.items():
+            if field in allowed_fields and value is not None:
+                setattr(parent, field, value)  # 2026-02-13: Set field
+                updated_fields.append(field)
+
+        if not updated_fields:  # 2026-02-13: Nothing to update
+            return {
+                'success': False,
+                'error': 'No valid fields provided.',
+                'code': 'NO_FIELDS',
+            }
+
+        parent.save(update_fields=updated_fields + ['updated_at'])  # 2026-02-13: Save
+
+        AuditLog.objects.create(  # 2026-02-13: Audit
+            user=parent.user,
+            action='parent_profile_updated',
+            resource_type='parent',
+            metadata={'updated_fields': updated_fields},
+        )
+
+        return {  # 2026-02-13: Success
+            'success': True,
+            'parent': {
+                'id': str(parent.id),
+                'phone': parent.phone,
+                'full_name': parent.full_name,
+                'email': parent.email,
+                'state': parent.state,
+                'preferred_language': parent.preferred_language,
+            },
+        }
+
+    @classmethod
     def create_student(cls, parent, full_name, dob, grade, avatar_id='avatar_01',
                        pin=None, picture_sequence=None, password=None,
                        language_1='English', language_2='', language_3=''):
@@ -430,6 +479,129 @@ class AuthService:
                 'login_method': student.login_method,
                 'avatar_id': student.avatar_id,
             },
+        }
+
+    @classmethod
+    def update_student_profile(cls, student, parent, **kwargs):
+        """
+        2026-02-13: Update editable student profile fields.
+
+        Args:
+            student: Student model instance.
+            parent: Parent model instance (for ownership check).
+            **kwargs: Fields to update (full_name, grade, avatar_id, language_1/2/3).
+
+        Returns:
+            dict: Result with updated student data.
+        """
+        # 2026-02-13: Verify parent owns this student
+        if student.parent_id != parent.id:
+            return {
+                'success': False,
+                'error': 'Access denied.',
+                'code': 'NOT_OWNER',
+            }
+
+        # 2026-02-13: Allowed editable fields
+        allowed_fields = {
+            'full_name', 'grade', 'avatar_id',
+            'language_1', 'language_2', 'language_3',
+        }
+        updated_fields = []
+
+        for field, value in kwargs.items():
+            if field in allowed_fields and value is not None:
+                setattr(student, field, value)  # 2026-02-13: Set field
+                updated_fields.append(field)
+
+        if not updated_fields:  # 2026-02-13: Nothing to update
+            return {
+                'success': False,
+                'error': 'No valid fields provided.',
+                'code': 'NO_FIELDS',
+            }
+
+        student.save(update_fields=updated_fields + ['updated_at'])  # 2026-02-13: Save
+
+        AuditLog.objects.create(  # 2026-02-13: Audit
+            user=parent.user,
+            action='student_profile_updated',
+            resource_type='student',
+            metadata={
+                'student_id': str(student.id),
+                'updated_fields': updated_fields,
+            },
+        )
+
+        return {  # 2026-02-13: Success
+            'success': True,
+            'student': {
+                'id': str(student.id),
+                'full_name': student.full_name,
+                'grade': student.grade,
+                'avatar_id': student.avatar_id,
+                'language_1': student.language_1,
+                'language_2': student.language_2,
+                'language_3': student.language_3,
+            },
+        }
+
+    @classmethod
+    def reset_student_credentials(cls, student, parent, pin=None,
+                                  picture_sequence=None, password=None):
+        """
+        2026-02-13: Reset a student's login credentials.
+
+        Args:
+            student: Student model instance.
+            parent: Parent model instance (for ownership check).
+            pin: New 4-digit PIN (for login_method='pin').
+            picture_sequence: New picture sequence list (for login_method='picture').
+            password: New password string (for login_method='password').
+
+        Returns:
+            dict: Result with success status.
+        """
+        # 2026-02-13: Verify parent owns this student
+        if student.parent_id != parent.id:
+            return {
+                'success': False,
+                'error': 'Access denied.',
+                'code': 'NOT_OWNER',
+            }
+
+        # 2026-02-13: Reset based on login method
+        if pin and student.login_method == 'pin':
+            student.pin_hash = cls._hash_value(pin)
+            student.save(update_fields=['pin_hash', 'updated_at'])
+        elif picture_sequence and student.login_method == 'picture':
+            sequence_str = ','.join(picture_sequence)
+            student.picture_sequence_hash = cls._hash_value(sequence_str)
+            student.save(update_fields=['picture_sequence_hash', 'updated_at'])
+        elif password and student.login_method == 'password':
+            student.user.set_password(password)
+            student.user.save(update_fields=['password'])
+            student.save(update_fields=['updated_at'])
+        else:
+            return {
+                'success': False,
+                'error': f'Credential type does not match login method ({student.login_method}).',
+                'code': 'METHOD_MISMATCH',
+            }
+
+        AuditLog.objects.create(  # 2026-02-13: Audit
+            user=parent.user,
+            action='student_credential_reset',
+            resource_type='student',
+            metadata={
+                'student_id': str(student.id),
+                'login_method': student.login_method,
+            },
+        )
+
+        return {
+            'success': True,
+            'message': f'{student.login_method.title()} credential has been reset.',
         }
 
     @classmethod
@@ -525,6 +697,57 @@ class AuthService:
         )
 
         return {  # 2026-02-12: Success
+            'success': True,
+            'tokens': tokens,
+            'student': {
+                'id': str(student.id),
+                'full_name': student.full_name,
+                'grade': student.grade,
+                'avatar_id': student.avatar_id,
+            },
+        }
+
+    @classmethod
+    def student_password_login(cls, student_id, password):
+        """
+        2026-02-13: Verify password login for 12+ students.
+
+        Args:
+            student_id: Student UUID.
+            password: Password string.
+
+        Returns:
+            dict: Result with tokens on success.
+        """
+        try:
+            student = Student.objects.get(  # 2026-02-13: Find student
+                id=student_id, login_method='password', is_active=True
+            )
+        except Student.DoesNotExist:
+            return {
+                'success': False,
+                'error': 'Student not found.',
+                'code': 'STUDENT_NOT_FOUND',
+            }
+
+        # 2026-02-13: Verify password via Django user
+        if not student.user.check_password(password):
+            return {
+                'success': False,
+                'error': 'Incorrect password.',
+                'code': 'INVALID_PASSWORD',
+            }
+
+        # 2026-02-13: Generate tokens
+        tokens = get_tokens_for_student(student)
+
+        AuditLog.objects.create(  # 2026-02-13: Audit
+            user=student.user,
+            action='student_password_login',
+            resource_type='student',
+        )
+
+        return {  # 2026-02-13: Success
             'success': True,
             'tokens': tokens,
             'student': {

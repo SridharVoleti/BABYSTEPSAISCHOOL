@@ -503,3 +503,319 @@ class TestRBAC:
         # 2026-02-12: Try to access parent2's child
         response = client.get(f'/api/v1/auth/students/{other_student_id}/')
         assert response.status_code == 403  # 2026-02-12: Access denied
+
+
+# ============================================================
+# Password Login Tests (ages 12+)
+# ============================================================
+
+@pytest.mark.django_db
+class TestPasswordLogin:
+    """2026-02-13: Tests for password-based student login (12+ age group)."""
+
+    def test_password_login_success(self, db, auth_parent):
+        """2026-02-13: Test successful password login for 12+ student."""
+        # 2026-02-13: Create a 12+ student with password
+        result = AuthService.create_student(
+            parent=auth_parent,
+            full_name='Teen Student',
+            dob=date(2012, 1, 15),  # 2026-02-13: ~14 years old
+            grade=9,
+            password='SecurePass123',
+        )
+        assert result['success'] is True
+        assert result['student']['login_method'] == 'password'
+
+        # 2026-02-13: Login with correct password
+        login_result = AuthService.student_password_login(
+            student_id=result['student']['id'],
+            password='SecurePass123',
+        )
+        assert login_result['success'] is True
+        assert 'tokens' in login_result
+        assert login_result['student']['full_name'] == 'Teen Student'
+
+    def test_password_login_wrong_password(self, db, auth_parent):
+        """2026-02-13: Test password login with incorrect password."""
+        result = AuthService.create_student(
+            parent=auth_parent,
+            full_name='Teen Student 2',
+            dob=date(2012, 6, 1),
+            grade=9,
+            password='CorrectPass',
+        )
+        login_result = AuthService.student_password_login(
+            student_id=result['student']['id'],
+            password='WrongPass',
+        )
+        assert login_result['success'] is False
+        assert login_result['code'] == 'INVALID_PASSWORD'
+
+    def test_password_login_endpoint(self, api_client, db, auth_parent):
+        """2026-02-13: Test password login API endpoint."""
+        result = AuthService.create_student(
+            parent=auth_parent,
+            full_name='Endpoint Teen',
+            dob=date(2011, 3, 20),
+            grade=10,
+            password='ApiPass456',
+        )
+        student_id = result['student']['id']
+
+        response = api_client.post(
+            '/api/v1/auth/student-auth/password-login/',
+            {'student_id': student_id, 'password': 'ApiPass456'},
+            format='json',
+        )
+        assert response.status_code == 200
+        assert response.data['success'] is True
+        assert 'tokens' in response.data
+
+    def test_password_login_endpoint_wrong_password(self, api_client, db, auth_parent):
+        """2026-02-13: Test password login endpoint with wrong password."""
+        result = AuthService.create_student(
+            parent=auth_parent,
+            full_name='Endpoint Teen 2',
+            dob=date(2011, 7, 10),
+            grade=10,
+            password='RealPass',
+        )
+        student_id = result['student']['id']
+
+        response = api_client.post(
+            '/api/v1/auth/student-auth/password-login/',
+            {'student_id': student_id, 'password': 'FakePass'},
+            format='json',
+        )
+        assert response.status_code == 400
+        assert response.data['success'] is False
+
+
+# ============================================================
+# Parent Profile Update Tests
+# ============================================================
+
+@pytest.mark.django_db
+class TestParentProfileUpdate:
+    """2026-02-13: Tests for parent profile get/update."""
+
+    def test_update_profile_service(self, db, auth_parent):
+        """2026-02-13: Test profile update via service layer."""
+        result = AuthService.update_parent_profile(
+            parent=auth_parent,
+            full_name='Updated Name',
+            email='new@test.com',
+            state='Karnataka',
+        )
+        assert result['success'] is True
+        assert result['parent']['full_name'] == 'Updated Name'
+        assert result['parent']['email'] == 'new@test.com'
+        assert result['parent']['state'] == 'Karnataka'
+
+        # 2026-02-13: Verify DB was updated
+        auth_parent.refresh_from_db()
+        assert auth_parent.full_name == 'Updated Name'
+
+    def test_update_profile_no_fields(self, db, auth_parent):
+        """2026-02-13: Test profile update with no valid fields."""
+        result = AuthService.update_parent_profile(parent=auth_parent)
+        assert result['success'] is False
+        assert result['code'] == 'NO_FIELDS'
+
+    def test_get_profile_endpoint(self, authenticated_parent_client):
+        """2026-02-13: Test GET /profile/ returns parent data."""
+        response = authenticated_parent_client.get('/api/v1/auth/profile/')
+        assert response.status_code == 200
+        assert 'full_name' in response.data
+        assert 'phone' in response.data
+
+    def test_update_profile_endpoint(self, authenticated_parent_client):
+        """2026-02-13: Test PUT /profile/ updates parent data."""
+        response = authenticated_parent_client.put(
+            '/api/v1/auth/profile/',
+            {'full_name': 'API Updated', 'state': 'Telangana'},
+            format='json',
+        )
+        assert response.status_code == 200
+        assert response.data['success'] is True
+        assert response.data['parent']['full_name'] == 'API Updated'
+
+    def test_profile_requires_auth(self, api_client, db):
+        """2026-02-13: Test profile endpoint requires authentication."""
+        response = api_client.get('/api/v1/auth/profile/')
+        assert response.status_code in (401, 403)
+
+
+# ============================================================
+# Student Profile Update Tests
+# ============================================================
+
+@pytest.mark.django_db
+class TestStudentProfileUpdate:
+    """2026-02-13: Tests for student profile update by parent."""
+
+    def test_update_student_service(self, db, auth_parent, auth_student):
+        """2026-02-13: Test student update via service layer."""
+        result = AuthService.update_student_profile(
+            student=auth_student,
+            parent=auth_parent,
+            full_name='Updated Child',
+            grade=5,
+            avatar_id='avatar_03',
+            language_1='Telugu',
+        )
+        assert result['success'] is True
+        assert result['student']['full_name'] == 'Updated Child'
+        assert result['student']['grade'] == 5
+        assert result['student']['avatar_id'] == 'avatar_03'
+        assert result['student']['language_1'] == 'Telugu'
+
+        # 2026-02-13: Verify DB
+        auth_student.refresh_from_db()
+        assert auth_student.full_name == 'Updated Child'
+
+    def test_update_student_wrong_parent(self, db, auth_student):
+        """2026-02-13: Test update denied for non-owner parent."""
+        other_user = User.objects.create_user(username='other_parent')
+        other_parent = Parent.objects.create(
+            user=other_user, phone='+910000000000', full_name='Other',
+            is_phone_verified=True, is_profile_complete=True,
+        )
+        result = AuthService.update_student_profile(
+            student=auth_student,
+            parent=other_parent,
+            full_name='Hacked',
+        )
+        assert result['success'] is False
+        assert result['code'] == 'NOT_OWNER'
+
+    def test_update_student_endpoint(self, authenticated_parent_client, auth_student):
+        """2026-02-13: Test PUT /students/{id}/ updates student."""
+        response = authenticated_parent_client.put(
+            f'/api/v1/auth/students/{auth_student.id}/',
+            {'full_name': 'API Child', 'grade': 4},
+            format='json',
+        )
+        assert response.status_code == 200
+        assert response.data['success'] is True
+        assert response.data['student']['full_name'] == 'API Child'
+        assert response.data['student']['grade'] == 4
+
+    def test_update_student_endpoint_not_found(self, authenticated_parent_client):
+        """2026-02-13: Test update returns 404 for invalid student ID."""
+        import uuid
+        fake_id = str(uuid.uuid4())
+        response = authenticated_parent_client.put(
+            f'/api/v1/auth/students/{fake_id}/',
+            {'full_name': 'Ghost'},
+            format='json',
+        )
+        assert response.status_code == 404
+
+
+# ============================================================
+# Student Credential Reset Tests
+# ============================================================
+
+@pytest.mark.django_db
+class TestCredentialReset:
+    """2026-02-13: Tests for student credential reset by parent."""
+
+    def test_reset_pin_service(self, db, auth_parent, auth_student):
+        """2026-02-13: Test PIN reset via service layer."""
+        # 2026-02-13: auth_student has login_method='pin', PIN='1234'
+        result = AuthService.reset_student_credentials(
+            student=auth_student, parent=auth_parent, pin='5678',
+        )
+        assert result['success'] is True
+
+        # 2026-02-13: Old PIN should fail, new PIN should work
+        login_old = AuthService.student_pin_login(str(auth_student.id), '1234')
+        assert login_old['success'] is False
+        login_new = AuthService.student_pin_login(str(auth_student.id), '5678')
+        assert login_new['success'] is True
+
+    def test_reset_password_service(self, db, auth_parent):
+        """2026-02-13: Test password reset via service layer."""
+        result = AuthService.create_student(
+            parent=auth_parent,
+            full_name='Password Teen',
+            dob=date(2012, 1, 1),
+            grade=9,
+            password='OldPass123',
+        )
+        student = Student.objects.get(id=result['student']['id'])
+
+        reset = AuthService.reset_student_credentials(
+            student=student, parent=auth_parent, password='NewPass456',
+        )
+        assert reset['success'] is True
+
+        # 2026-02-13: Old password fails, new password works
+        login_old = AuthService.student_password_login(str(student.id), 'OldPass123')
+        assert login_old['success'] is False
+        login_new = AuthService.student_password_login(str(student.id), 'NewPass456')
+        assert login_new['success'] is True
+
+    def test_reset_picture_service(self, db, auth_parent):
+        """2026-02-13: Test picture sequence reset via service layer."""
+        result = AuthService.create_student(
+            parent=auth_parent,
+            full_name='Picture Kid',
+            dob=date(2022, 5, 10),
+            grade=1,
+            picture_sequence=['cat', 'dog', 'fish'],
+        )
+        student = Student.objects.get(id=result['student']['id'])
+
+        reset = AuthService.reset_student_credentials(
+            student=student, parent=auth_parent,
+            picture_sequence=['sun', 'moon', 'star'],
+        )
+        assert reset['success'] is True
+
+        # 2026-02-13: Old sequence fails, new sequence works
+        login_old = AuthService.student_picture_login(
+            str(student.id), ['cat', 'dog', 'fish']
+        )
+        assert login_old['success'] is False
+        login_new = AuthService.student_picture_login(
+            str(student.id), ['sun', 'moon', 'star']
+        )
+        assert login_new['success'] is True
+
+    def test_reset_method_mismatch(self, db, auth_parent, auth_student):
+        """2026-02-13: Test reset fails when credential type mismatches login method."""
+        # 2026-02-13: auth_student is PIN-based, try resetting password
+        result = AuthService.reset_student_credentials(
+            student=auth_student, parent=auth_parent, password='WrongType',
+        )
+        assert result['success'] is False
+        assert result['code'] == 'METHOD_MISMATCH'
+
+    def test_reset_wrong_parent(self, db, auth_student):
+        """2026-02-13: Test credential reset denied for non-owner parent."""
+        other_user = User.objects.create_user(username='other_cred_parent')
+        other_parent = Parent.objects.create(
+            user=other_user, phone='+910000000001', full_name='Other Cred',
+            is_phone_verified=True, is_profile_complete=True,
+        )
+        result = AuthService.reset_student_credentials(
+            student=auth_student, parent=other_parent, pin='9999',
+        )
+        assert result['success'] is False
+        assert result['code'] == 'NOT_OWNER'
+
+    def test_reset_pin_endpoint(self, authenticated_parent_client, auth_student):
+        """2026-02-13: Test POST /students/reset-credentials/ for PIN."""
+        response = authenticated_parent_client.post(
+            '/api/v1/auth/students/reset-credentials/',
+            {'student_id': str(auth_student.id), 'pin': '0000'},
+            format='json',
+        )
+        assert response.status_code == 200
+        assert response.data['success'] is True
+
+        # 2026-02-13: Verify new PIN works
+        login = AuthService.student_pin_login(str(auth_student.id), '0000')
+        assert login['success'] is True

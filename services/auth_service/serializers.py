@@ -138,6 +138,78 @@ class PINLoginSerializer(serializers.Serializer):
     pin = serializers.CharField(max_length=4, min_length=4)  # 2026-02-12: 4-digit PIN
 
 
+class ParentUpdateSerializer(serializers.Serializer):
+    """2026-02-13: Serializer for parent profile update."""
+
+    full_name = serializers.CharField(  # 2026-02-13: Parent name
+        max_length=150, required=False
+    )
+    email = serializers.EmailField(  # 2026-02-13: Optional email
+        required=False, allow_blank=True
+    )
+    state = serializers.CharField(  # 2026-02-13: Indian state
+        max_length=50, required=False, allow_blank=True
+    )
+    preferred_language = serializers.CharField(  # 2026-02-13: UI language
+        max_length=20, required=False
+    )
+
+
+class StudentUpdateSerializer(serializers.Serializer):
+    """2026-02-13: Serializer for student profile update (by parent)."""
+
+    full_name = serializers.CharField(  # 2026-02-13: Student name
+        max_length=150, required=False
+    )
+    grade = serializers.IntegerField(  # 2026-02-13: Class/grade
+        min_value=1, max_value=12, required=False
+    )
+    avatar_id = serializers.CharField(  # 2026-02-13: Avatar
+        max_length=50, required=False
+    )
+    language_1 = serializers.CharField(  # 2026-02-13: Primary language
+        max_length=30, required=False
+    )
+    language_2 = serializers.CharField(  # 2026-02-13: Second language
+        max_length=30, required=False, allow_blank=True
+    )
+    language_3 = serializers.CharField(  # 2026-02-13: Third language
+        max_length=30, required=False, allow_blank=True
+    )
+
+
+class ResetCredentialSerializer(serializers.Serializer):
+    """2026-02-13: Serializer for student credential reset by parent."""
+
+    student_id = serializers.UUIDField()  # 2026-02-13: Student UUID
+    pin = serializers.CharField(  # 2026-02-13: New 4-digit PIN
+        max_length=4, min_length=4, required=False
+    )
+    picture_sequence = serializers.ListField(  # 2026-02-13: New picture sequence
+        child=serializers.CharField(max_length=50),
+        min_length=3, max_length=3, required=False,
+    )
+    password = serializers.CharField(  # 2026-02-13: New password
+        max_length=128, min_length=6, required=False
+    )
+
+    def validate(self, data):
+        """2026-02-13: Ensure exactly one credential is provided."""
+        creds = [k for k in ('pin', 'picture_sequence', 'password') if k in data]
+        if len(creds) != 1:
+            raise serializers.ValidationError(
+                'Provide exactly one credential: pin, picture_sequence, or password.'
+            )
+        return data
+
+
+class PasswordLoginSerializer(serializers.Serializer):
+    """2026-02-13: Serializer for password login (ages 12+)."""
+
+    student_id = serializers.UUIDField()  # 2026-02-13: Student UUID
+    password = serializers.CharField(max_length=128)  # 2026-02-13: Password string
+
+
 class ConsentGrantSerializer(serializers.Serializer):
     """2026-02-12: Serializer for consent grant/withdraw."""
 

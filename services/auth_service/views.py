@@ -19,8 +19,10 @@ from .models import Student, Parent  # 2026-02-12: Models
 from .permissions import IsParent, IsParentOfStudent  # 2026-02-12: Custom perms
 from .serializers import (  # 2026-02-12: Serializers
     SendOTPSerializer, VerifyOTPSerializer, CompleteRegistrationSerializer,
-    StudentCreateSerializer, StudentSerializer, PictureLoginSerializer,
-    PINLoginSerializer, ConsentGrantSerializer, LanguageSelectionSerializer,
+    ParentUpdateSerializer, StudentCreateSerializer, StudentUpdateSerializer,
+    StudentSerializer, PictureLoginSerializer, PINLoginSerializer,
+    PasswordLoginSerializer, ResetCredentialSerializer,
+    ConsentGrantSerializer, LanguageSelectionSerializer,
 )
 from .services import AuthService  # 2026-02-12: Business logic
 from .language_data import (  # 2026-02-12: Language data
@@ -141,6 +143,35 @@ class AuthViewSet(viewsets.ViewSet):
             )
 
 
+    @action(detail=False, methods=['get', 'put'], url_path='profile',
+            permission_classes=[IsParent])
+    def profile(self, request):
+        """2026-02-13: Get or update parent profile."""
+        parent = request.user.parent_profile  # 2026-02-13: Get parent
+
+        if request.method == 'GET':  # 2026-02-13: Return profile
+            return Response({
+                'id': str(parent.id),
+                'phone': parent.phone,
+                'full_name': parent.full_name,
+                'email': parent.email,
+                'state': parent.state,
+                'preferred_language': parent.preferred_language,
+            })
+
+        # 2026-02-13: PUT - update profile
+        serializer = ParentUpdateSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+
+        result = AuthService.update_parent_profile(
+            parent=parent, **serializer.validated_data
+        )
+
+        if result['success']:
+            return Response(result, status=status.HTTP_200_OK)
+        return Response(result, status=status.HTTP_400_BAD_REQUEST)
+
+
 class StudentAuthViewSet(viewsets.ViewSet):
     """
     2026-02-12: Student authentication viewset.
@@ -177,6 +208,21 @@ class StudentAuthViewSet(viewsets.ViewSet):
         result = AuthService.student_pin_login(  # 2026-02-12: Business logic
             student_id=serializer.validated_data['student_id'],
             pin=serializer.validated_data['pin'],
+        )
+
+        if result['success']:
+            return Response(result, status=status.HTTP_200_OK)
+        return Response(result, status=status.HTTP_400_BAD_REQUEST)
+
+    @action(detail=False, methods=['post'], url_path='password-login')
+    def password_login(self, request):
+        """2026-02-13: Login student with password (ages 12+)."""
+        serializer = PasswordLoginSerializer(data=request.data)  # 2026-02-13: Validate
+        serializer.is_valid(raise_exception=True)
+
+        result = AuthService.student_password_login(  # 2026-02-13: Business logic
+            student_id=serializer.validated_data['student_id'],
+            password=serializer.validated_data['password'],
         )
 
         if result['success']:
@@ -267,6 +313,32 @@ class StudentProfileViewSet(viewsets.ViewSet):
             return Response(result, status=status.HTTP_201_CREATED)
         return Response(result, status=status.HTTP_400_BAD_REQUEST)
 
+    def update(self, request, pk=None):
+        """2026-02-13: Update a student profile."""
+        try:
+            student = Student.objects.get(  # 2026-02-13: Find student
+                id=pk, is_active=True
+            )
+        except (Student.DoesNotExist, ValueError):
+            return Response(
+                {'error': 'Student not found.'},
+                status=status.HTTP_404_NOT_FOUND,
+            )
+
+        serializer = StudentUpdateSerializer(data=request.data)  # 2026-02-13: Validate
+        serializer.is_valid(raise_exception=True)
+
+        parent = request.user.parent_profile  # 2026-02-13: Get parent
+        result = AuthService.update_student_profile(  # 2026-02-13: Business logic
+            student=student, parent=parent, **serializer.validated_data
+        )
+
+        if result['success']:
+            return Response(result, status=status.HTTP_200_OK)
+        if result.get('code') == 'NOT_OWNER':
+            return Response(result, status=status.HTTP_403_FORBIDDEN)
+        return Response(result, status=status.HTTP_400_BAD_REQUEST)
+
     def retrieve(self, request, pk=None):
         """2026-02-12: Get a single student profile."""
         try:
@@ -288,6 +360,38 @@ class StudentProfileViewSet(viewsets.ViewSet):
 
         serializer = StudentSerializer(student)
         return Response(serializer.data)
+
+    @action(detail=False, methods=['post'], url_path='reset-credentials')
+    def reset_credentials(self, request):
+        """2026-02-13: Reset student login credentials (parent-only)."""
+        serializer = ResetCredentialSerializer(data=request.data)  # 2026-02-13: Validate
+        serializer.is_valid(raise_exception=True)
+
+        student_id = serializer.validated_data['student_id']
+        try:
+            student = Student.objects.get(  # 2026-02-13: Find student
+                id=student_id, is_active=True
+            )
+        except (Student.DoesNotExist, ValueError):
+            return Response(
+                {'error': 'Student not found.'},
+                status=status.HTTP_404_NOT_FOUND,
+            )
+
+        parent = request.user.parent_profile  # 2026-02-13: Get parent
+        result = AuthService.reset_student_credentials(
+            student=student,
+            parent=parent,
+            pin=serializer.validated_data.get('pin'),
+            picture_sequence=serializer.validated_data.get('picture_sequence'),
+            password=serializer.validated_data.get('password'),
+        )
+
+        if result['success']:
+            return Response(result, status=status.HTTP_200_OK)
+        if result.get('code') == 'NOT_OWNER':
+            return Response(result, status=status.HTTP_403_FORBIDDEN)
+        return Response(result, status=status.HTTP_400_BAD_REQUEST)
 
 
 class ConsentViewSet(viewsets.ViewSet):
