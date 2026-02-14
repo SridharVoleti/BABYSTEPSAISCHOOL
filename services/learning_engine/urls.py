@@ -27,6 +27,7 @@ from .views import (
     PracticeValidationView,
     StudentDashboardView,
     DifficultyCalibrationViewSet,
+    DailyActivityView,
 )
 
 # 2025-12-18: Create router and register viewsets
@@ -45,4 +46,7 @@ urlpatterns = [
     
     # 2025-12-18: Student dashboard endpoint
     path('dashboard/', StudentDashboardView.as_view(), name='student-dashboard'),
+
+    # 2026-02-14: Daily activity endpoint for streak tracking
+    path('daily-activity/', DailyActivityView.as_view(), name='daily-activity'),
 ]

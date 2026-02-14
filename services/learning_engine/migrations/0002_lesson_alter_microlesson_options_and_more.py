@@ -96,6 +96,12 @@ class Migration(migrations.Migration):
             name='visual_assets',
             field=models.JSONField(blank=True, default=list, help_text='Supporting visual assets for this micro-lesson'),
         ),
+        # 2026-02-14: Remove old lesson_id CharField BEFORE adding lesson ForeignKey
+        # (ForeignKey creates a lesson_id column which would conflict)
+        migrations.RemoveField(
+            model_name='microlesson',
+            name='lesson_id',
+        ),
         migrations.AddField(
             model_name='microlesson',
             name='lesson',
@@ -128,10 +134,6 @@ class Migration(migrations.Migration):
         migrations.RemoveField(
             model_name='microlesson',
             name='learning_objective',
-        ),
-        migrations.RemoveField(
-            model_name='microlesson',
-            name='lesson_id',
         ),
         migrations.RemoveField(
             model_name='microlesson',

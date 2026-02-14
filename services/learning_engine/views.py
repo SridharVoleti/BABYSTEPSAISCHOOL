@@ -32,6 +32,7 @@ from .models import (
     MicroLessonProgress,
     PracticeAttempt,
     DifficultyCalibration,
+    DailyActivity,
 )
 
 # 2025-12-18: Import serializers
@@ -46,6 +47,7 @@ from .serializers import (
     DifficultyCalibrationSerializer,
     StudentDashboardSerializer,
     LessonProgressUpdateSerializer,
+    DailyActivitySerializer,
 )
 
 
@@ -460,85 +462,202 @@ class PracticeValidationView(APIView):
 
 class StudentDashboardView(APIView):
     """
-    2025-12-18: API view for student dashboard data.
-    Aggregates progress, mastery, streaks, and recommendations.
+    2026-02-14: Enhanced API view for student star map dashboard.
+    Per BS-STU-001-F (Star Map) and BS-STU-002-F (Daily Streak).
     """
-    
+
     permission_classes = [permissions.IsAuthenticated]
-    
+
+    # 2026-02-14: Streak milestone thresholds
+    STREAK_MILESTONES = [3, 7, 14, 30, 60, 100]
+
+    def _mastery_to_stars(self, mastery_score):
+        """
+        2026-02-14: Convert mastery percentage (0-100) to star count (0-5).
+        0-19%=0, 20-39%=1, 40-59%=2, 60-79%=3, 80-89%=4, 90-100%=5.
+        """
+        if mastery_score >= 90:
+            return 5
+        elif mastery_score >= 80:
+            return 4
+        elif mastery_score >= 60:
+            return 3
+        elif mastery_score >= 40:
+            return 2
+        elif mastery_score >= 20:
+            return 1
+        return 0
+
+    def _update_streak(self, profile, user):
+        """
+        2026-02-14: Update streak based on DailyActivity records.
+        Checks yesterday and today for qualifying activity.
+        """
+        today = timezone.now().date()
+        # 2026-02-14: Get or create today's activity record
+        daily_activity, _ = DailyActivity.objects.get_or_create(
+            student=user,
+            activity_date=today,
+        )
+
+        # 2026-02-14: Check if streak needs updating
+        if profile.last_activity_date == today:
+            return  # 2026-02-14: Already updated today
+
+        yesterday = today - timezone.timedelta(days=1)
+        yesterday_activity = DailyActivity.objects.filter(
+            student=user,
+            activity_date=yesterday,
+            qualifies_as_learning_day=True
+        ).exists()
+
+        if profile.last_activity_date == yesterday and yesterday_activity:
+            # 2026-02-14: Streak continues
+            pass
+        elif profile.last_activity_date and (today - profile.last_activity_date).days > 1:
+            # 2026-02-14: Streak broken (missed more than 1 day)
+            if not yesterday_activity:
+                profile.current_streak_days = 0
+                profile.save()
+
+    def _get_streak_milestone(self, current_streak):
+        """
+        2026-02-14: Check if current streak hits a milestone.
+        Returns milestone value or None.
+        """
+        if current_streak in self.STREAK_MILESTONES:
+            return current_streak
+        return None
+
     def get(self, request):
         """
-        2025-12-18: Get dashboard data for current user.
+        2026-02-14: Get star map dashboard data for current user.
+        Returns student info, streak, star map, today's learning, daily activity.
         """
         user = request.user
-        
-        # 2025-12-18: Get or create learning profile
+
+        # 2026-02-14: Get or create learning profile
         profile, _ = StudentLearningProfile.objects.get_or_create(user=user)
-        
-        # 2025-12-18: Get progress statistics
-        progress_stats = MicroLessonProgress.objects.filter(student=user).aggregate(
-            completed_count=Count('id', filter=Q(status__in=['completed', 'mastered'])),
-            in_progress_count=Count('id', filter=Q(status='in_progress')),
-            avg_mastery=Avg('mastery_score', filter=Q(status__in=['completed', 'mastered']))
-        )
-        
-        # 2025-12-18: Get recent lessons
-        recent_progress = MicroLessonProgress.objects.filter(
+
+        # 2026-02-14: Update streak status
+        self._update_streak(profile, user)
+        profile.refresh_from_db()
+
+        # 2026-02-14: Get student grade from user profile
+        grade = getattr(user, 'grade', None) or 1
+
+        # 2026-02-14: Get all progress records for this student (best attempt per concept)
+        all_progress = MicroLessonProgress.objects.filter(
             student=user
-        ).select_related('micro_lesson').order_by('-updated_at')[:5]
-        
-        # 2025-12-18: Build skill heatmap (mastery by chapter)
-        skill_heatmap = {}
-        completed_progress = MicroLessonProgress.objects.filter(
-            student=user,
-            status__in=['completed', 'mastered']
-        ).select_related('micro_lesson')
-        
-        for prog in completed_progress:
-            chapter_key = f"{prog.micro_lesson.subject}_{prog.micro_lesson.chapter_id}"
-            if chapter_key not in skill_heatmap:
-                skill_heatmap[chapter_key] = {
-                    'subject': prog.micro_lesson.subject,
-                    'chapter': prog.micro_lesson.chapter_name,
-                    'scores': [],
-                }
-            skill_heatmap[chapter_key]['scores'].append(prog.mastery_score)
-        
-        # 2025-12-18: Calculate averages for heatmap
-        for key in skill_heatmap:
-            scores = skill_heatmap[key]['scores']
-            skill_heatmap[key]['average_mastery'] = sum(scores) / len(scores) if scores else 0
-            del skill_heatmap[key]['scores']
-        
-        # 2025-12-18: Get recommended lessons (next in sequence)
-        completed_lesson_ids = completed_progress.values_list('micro_lesson_id', flat=True)
-        recommended = MicroLesson.objects.filter(
+        ).select_related('micro_lesson', 'micro_lesson__lesson').order_by(
+            'micro_lesson_id', '-mastery_score'
+        )
+
+        # 2026-02-14: Build best mastery per micro-lesson
+        best_mastery = {}
+        for prog in all_progress:
+            ml_id = prog.micro_lesson_id
+            if ml_id not in best_mastery or prog.mastery_score > best_mastery[ml_id]:
+                best_mastery[ml_id] = prog.mastery_score
+
+        # 2026-02-14: Build star map grouped by subject
+        all_lessons = MicroLesson.objects.filter(
             is_published=True,
             qa_status='passed'
-        ).exclude(
-            id__in=completed_lesson_ids
-        ).order_by('class_number', 'subject', 'chapter_id', 'sequence_in_chapter')[:5]
-        
-        # 2025-12-18: Get lessons needing revision (low mastery)
-        revision_needed_progress = MicroLessonProgress.objects.filter(
+        ).select_related('lesson').order_by('lesson__subject', 'lesson__chapter_id', 'sequence_in_lesson')
+
+        star_map = {}
+        total_stars = 0
+        for ml in all_lessons:
+            subject = ml.lesson.subject if ml.lesson else 'General'
+            if subject not in star_map:
+                star_map[subject] = []
+
+            mastery = best_mastery.get(ml.id, 0)
+            stars = self._mastery_to_stars(mastery)
+            total_stars += stars
+
+            # 2026-02-14: Lock check - previous concept in same subject needs 3+ stars
+            locked = False
+            subject_concepts = star_map[subject]
+            if subject_concepts:
+                prev_stars = subject_concepts[-1]['stars']
+                if prev_stars < 3:
+                    locked = True
+
+            star_map[subject].append({
+                'id': ml.id,
+                'title': ml.title,
+                'stars': stars,
+                'locked': locked,
+                'mastery': mastery,
+            })
+
+        # 2026-02-14: Build today's learning suggestions
+        todays_learning = []
+        # 2026-02-14: Find in-progress and next concepts
+        in_progress_lessons = MicroLessonProgress.objects.filter(
             student=user,
-            status__in=['completed', 'mastered'],
-            mastery_score__lt=70
-        ).select_related('micro_lesson').order_by('mastery_score')[:5]
-        revision_lessons = [p.micro_lesson for p in revision_needed_progress]
-        
-        # 2025-12-18: Build response
+            status='in_progress'
+        ).select_related('micro_lesson', 'micro_lesson__lesson')[:3]
+
+        for prog in in_progress_lessons:
+            ml = prog.micro_lesson
+            todays_learning.append({
+                'id': ml.id,
+                'title': ml.title,
+                'subject': ml.lesson.subject if ml.lesson else 'General',
+                'status': 'continue',
+                'stars': self._mastery_to_stars(prog.mastery_score),
+            })
+
+        # 2026-02-14: Add next unlocked concepts if fewer than 3 suggestions
+        if len(todays_learning) < 3:
+            completed_ids = set(best_mastery.keys())
+            in_progress_ids = set(p.micro_lesson_id for p in in_progress_lessons)
+            for subject, concepts in star_map.items():
+                if len(todays_learning) >= 3:
+                    break
+                for concept in concepts:
+                    if len(todays_learning) >= 3:
+                        break
+                    if concept['id'] not in completed_ids and concept['id'] not in in_progress_ids and not concept['locked']:
+                        todays_learning.append({
+                            'id': concept['id'],
+                            'title': concept['title'],
+                            'subject': subject,
+                            'status': 'next',
+                            'stars': 0,
+                        })
+
+        # 2026-02-14: Get today's daily activity
+        today = timezone.now().date()
+        daily_activity_obj, _ = DailyActivity.objects.get_or_create(
+            student=user,
+            activity_date=today,
+        )
+
+        # 2026-02-14: Determine avatar_id from user profile
+        avatar_id = getattr(user, 'avatar_id', 'boy_1') or 'boy_1'
+
+        # 2026-02-14: Build response
         response_data = {
-            'profile': StudentLearningProfileSerializer(profile).data,
-            'total_lessons_completed': progress_stats['completed_count'] or 0,
-            'total_lessons_in_progress': progress_stats['in_progress_count'] or 0,
-            'overall_mastery_average': round(progress_stats['avg_mastery'] or 0, 1),
-            'recent_lessons': MicroLessonProgressSerializer(recent_progress, many=True).data,
-            'skill_heatmap': skill_heatmap,
-            'recommended_lessons': MicroLessonListSerializer(recommended, many=True).data,
-            'revision_needed': MicroLessonListSerializer(revision_lessons, many=True).data,
+            'student_name': user.get_full_name() or user.username,
+            'avatar_id': avatar_id,
+            'grade': grade,
+            'current_streak': profile.current_streak_days,
+            'longest_streak': profile.longest_streak_days,
+            'total_stars': total_stars,
+            'todays_learning': todays_learning,
+            'star_map': star_map,
+            'streak_milestone': self._get_streak_milestone(profile.current_streak_days),
+            'daily_activity': {
+                'concepts_completed': daily_activity_obj.concepts_completed,
+                'questions_answered': daily_activity_obj.questions_answered,
+                'time_spent_minutes': daily_activity_obj.time_spent_minutes,
+            },
         }
-        
+
         return Response(response_data)
 
 
@@ -553,3 +672,50 @@ class DifficultyCalibrationViewSet(viewsets.ReadOnlyModelViewSet):
     def get_queryset(self):
         """2025-12-18: Return only current user's calibrations."""
         return DifficultyCalibration.objects.filter(student=self.request.user)
+
+
+class DailyActivityView(APIView):
+    """
+    2026-02-14: API view for recording and retrieving daily learning activity.
+    Used for BS-STU-002-F streak tracking.
+    """
+
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get(self, request):
+        """2026-02-14: Get today's activity for current user."""
+        today = timezone.now().date()
+        activity, _ = DailyActivity.objects.get_or_create(
+            student=request.user,
+            activity_date=today,
+        )
+        return Response(DailyActivitySerializer(activity).data)
+
+    def patch(self, request):
+        """
+        2026-02-14: Update today's activity (increment counters).
+        Accepts: concepts_completed, questions_answered, time_spent_minutes.
+        """
+        today = timezone.now().date()
+        activity, _ = DailyActivity.objects.get_or_create(
+            student=request.user,
+            activity_date=today,
+        )
+
+        # 2026-02-14: Increment counters
+        if 'concepts_completed' in request.data:
+            activity.concepts_completed += int(request.data['concepts_completed'])
+        if 'questions_answered' in request.data:
+            activity.questions_answered += int(request.data['questions_answered'])
+        if 'time_spent_minutes' in request.data:
+            activity.time_spent_minutes += int(request.data['time_spent_minutes'])
+
+        # 2026-02-14: Update qualification and save
+        activity.update_qualification()
+
+        # 2026-02-14: If qualified, update streak on profile
+        if activity.qualifies_as_learning_day:
+            profile, _ = StudentLearningProfile.objects.get_or_create(user=request.user)
+            profile.update_streak()
+
+        return Response(DailyActivitySerializer(activity).data)

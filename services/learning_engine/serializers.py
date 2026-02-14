@@ -24,6 +24,7 @@ from .models import (
     MicroLessonProgress,
     PracticeAttempt,
     DifficultyCalibration,
+    DailyActivity,
 )
 
 
@@ -354,31 +355,66 @@ class DifficultyCalibrationSerializer(serializers.ModelSerializer):
         ]
 
 
+class DailyActivitySerializer(serializers.ModelSerializer):
+    """
+    2026-02-14: Serializer for DailyActivity model.
+    Tracks per-day learning metrics for streak calculation.
+    """
+
+    class Meta:
+        model = DailyActivity
+        fields = [
+            'id',
+            'activity_date',
+            'concepts_completed',
+            'questions_answered',
+            'time_spent_minutes',
+            'qualifies_as_learning_day',
+        ]
+        read_only_fields = ['id', 'qualifies_as_learning_day']
+
+
+class StarMapConceptSerializer(serializers.Serializer):
+    """
+    2026-02-14: Serializer for a single concept in the star map.
+    Shows mastery as 0-5 stars with lock status.
+    """
+
+    # 2026-02-14: Concept identification
+    id = serializers.IntegerField()
+    title = serializers.CharField()
+    stars = serializers.IntegerField()
+    locked = serializers.BooleanField()
+    mastery = serializers.IntegerField()
+
+
 class StudentDashboardSerializer(serializers.Serializer):
     """
-    2025-12-18: Serializer for student dashboard data.
-    Aggregates progress, mastery, and streaks.
+    2026-02-14: Enhanced serializer for student star map dashboard.
+    Per BS-STU-001-F and BS-STU-002-F specifications.
     """
-    
-    # 2025-12-18: Profile info
-    profile = StudentLearningProfileSerializer()
-    
-    # 2025-12-18: Progress summary
-    total_lessons_completed = serializers.IntegerField()
-    total_lessons_in_progress = serializers.IntegerField()
-    overall_mastery_average = serializers.FloatField()
-    
-    # 2025-12-18: Recent activity
-    recent_lessons = MicroLessonProgressSerializer(many=True)
-    
-    # 2025-12-18: Skill heatmap data
-    skill_heatmap = serializers.DictField(
-        help_text="Mastery scores by chapter/topic"
-    )
-    
-    # 2025-12-18: Recommendations
-    recommended_lessons = MicroLessonListSerializer(many=True)
-    revision_needed = MicroLessonListSerializer(many=True)
+
+    # 2026-02-14: Student identity
+    student_name = serializers.CharField()
+    avatar_id = serializers.CharField()
+    grade = serializers.IntegerField()
+
+    # 2026-02-14: Streak data (BS-STU-002-F)
+    current_streak = serializers.IntegerField()
+    longest_streak = serializers.IntegerField()
+    total_stars = serializers.IntegerField()
+
+    # 2026-02-14: Today's suggested learning
+    todays_learning = serializers.ListField()
+
+    # 2026-02-14: Star map grouped by subject (BS-STU-001-F)
+    star_map = serializers.DictField()
+
+    # 2026-02-14: Streak milestone (3, 7, 14, 30, 60, 100 days)
+    streak_milestone = serializers.IntegerField(allow_null=True)
+
+    # 2026-02-14: Today's activity summary
+    daily_activity = serializers.DictField()
 
 
 class LessonProgressUpdateSerializer(serializers.Serializer):

@@ -917,11 +917,89 @@ class DifficultyCalibration(models.Model):
             'retries': retries,
             'timestamp': timezone.now().isoformat()
         }
-        
+
         # 2025-12-18: Add to list and trim to 20
         self.recent_attempts.append(attempt)
         if len(self.recent_attempts) > 20:
             self.recent_attempts = self.recent_attempts[-20:]
-        
+
         # 2025-12-18: Recalibrate after adding
         self.recalibrate()
+
+
+class DailyActivity(models.Model):
+    """
+    2026-02-14: Track daily learning activity per student for streak calculation.
+
+    Per BS-STU-002-F, a "learning day" qualifies when:
+    - Student completes >= 1 concept, OR
+    - Student answers >= 10 questions
+    """
+
+    # 2026-02-14: Link to student
+    student = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name='daily_activities',
+        help_text="Student whose activity is tracked"
+    )
+
+    # 2026-02-14: Activity date
+    activity_date = models.DateField(
+        help_text="Date of this activity record"
+    )
+
+    # 2026-02-14: Concepts completed count
+    concepts_completed = models.IntegerField(
+        default=0,
+        validators=[MinValueValidator(0)],
+        help_text="Number of concepts/micro-lessons completed this day"
+    )
+
+    # 2026-02-14: Questions answered count
+    questions_answered = models.IntegerField(
+        default=0,
+        validators=[MinValueValidator(0)],
+        help_text="Number of questions answered this day"
+    )
+
+    # 2026-02-14: Time spent in minutes
+    time_spent_minutes = models.IntegerField(
+        default=0,
+        validators=[MinValueValidator(0)],
+        help_text="Total time spent learning in minutes"
+    )
+
+    # 2026-02-14: Whether this day qualifies as a learning day for streak
+    qualifies_as_learning_day = models.BooleanField(
+        default=False,
+        help_text="True if >= 1 concept completed OR >= 10 questions answered"
+    )
+
+    # 2026-02-14: Audit fields
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = "Daily Activity"
+        verbose_name_plural = "Daily Activities"
+        unique_together = ['student', 'activity_date']
+        ordering = ['-activity_date']
+        indexes = [
+            models.Index(fields=['student', 'activity_date']),
+        ]
+
+    def __str__(self):
+        """2026-02-14: String representation."""
+        return f"{self.student.username} - {self.activity_date}"
+
+    def update_qualification(self):
+        """
+        2026-02-14: Update whether this day qualifies as a learning day.
+        Qualifies if: concepts_completed >= 1 OR questions_answered >= 10.
+        """
+        self.qualifies_as_learning_day = (
+            self.concepts_completed >= 1 or self.questions_answered >= 10
+        )
+        self.save()
+        return self.qualifies_as_learning_day
