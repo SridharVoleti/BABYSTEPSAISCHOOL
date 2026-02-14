@@ -306,6 +306,7 @@ class MicroLesson(models.Model):
     micro_lesson_id = models.CharField(
         max_length=100,
         unique=True,
+        default='',
         help_text="Unique micro-lesson ID (e.g., MATH_C5_CH3_ML2)"
     )
     

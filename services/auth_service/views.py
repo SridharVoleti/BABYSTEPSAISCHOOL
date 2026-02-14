@@ -430,6 +430,29 @@ class ConsentViewSet(viewsets.ViewSet):
             ],
         })
 
+    @action(detail=False, methods=['get'], url_path='status',
+            permission_classes=[IsParent])
+    def consent_status(self, request):
+        """2026-02-13: Get current consent status for parent."""
+        from .models import ConsentRecord  # 2026-02-13: Local import
+        parent = request.user.parent_profile  # 2026-02-13: Get parent
+        latest = ConsentRecord.objects.filter(
+            parent=parent
+        ).order_by('-timestamp').first()
+
+        if not latest:
+            return Response({
+                'has_consented': False,
+                'latest_action': None,
+            })
+
+        return Response({
+            'has_consented': latest.action == 'grant',
+            'latest_action': latest.action,
+            'consent_version': latest.consent_version,
+            'timestamp': latest.timestamp.isoformat(),
+        })
+
     @action(detail=False, methods=['post'], url_path='grant',
             permission_classes=[IsParent])
     def grant(self, request):

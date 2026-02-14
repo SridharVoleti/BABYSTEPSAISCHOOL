@@ -85,6 +85,7 @@ INSTALLED_APPS = [
     'services.learning_engine',  # 2025-12-18: Micro-lesson learning system
     'rest_framework_simplejwt',  # 2026-02-12: JWT authentication
     'services.auth_service',  # 2026-02-12: Authentication module (BS-AUT)
+    'services.diagnostic_service',  # 2026-02-12: Diagnostic assessment module (BS-DIA)
 ]
 
 MIDDLEWARE = [

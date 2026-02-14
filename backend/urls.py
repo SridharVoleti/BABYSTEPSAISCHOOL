@@ -67,4 +67,8 @@ urlpatterns = [
     # 2026-02-12: Authentication service endpoints (BS-AUT module)
     # Mounted at: http://localhost:8000/api/v1/auth/
     path('api/v1/auth/', include('services.auth_service.urls')),
+
+    # 2026-02-12: Diagnostic assessment service endpoints (BS-DIA module)
+    # Mounted at: http://localhost:8000/api/v1/diagnostic/
+    path('api/v1/diagnostic/', include('services.diagnostic_service.urls')),
 ]

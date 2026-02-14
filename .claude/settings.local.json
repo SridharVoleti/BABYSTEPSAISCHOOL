@@ -12,7 +12,19 @@
       "Bash(npx react-scripts test --testPathPattern=\"pages/__tests__/Login\" --watchAll=false)",
       "Bash(pushd:*)",
       "Bash(npx react-scripts start)",
-      "Bash(netstat:*)"
+      "Bash(netstat:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nInitial commit: BabySteps Digital School - AI education platform\n\nFeatures:\n- Django REST backend with curriculum loader, mentor chat \\(Ollama LLM\\), analytics, learning engine\n- React TypeScript SPA with micro-lessons, virtual blackboard, TTS, spaced repetition\n- Phase 1 Authentication: JWT auth with WhatsApp OTP flow \\(mock + Twilio providers\\)\n- Frontend auth: AuthContext, ProtectedRoute, login selector, parent/student login pages\n- 400+ curriculum JSON files \\(Class 1 EVS, NCERT aligned\\)\n- Student registration with admin approval workflow\n\nAll rights reserved. Sridhar Voleti.\nEOF\n\\)\")",
+      "Bash(git remote add:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(git pull:*)",
+      "Bash(unzip:*)",
+      "Bash(curl:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(npx tsc:*)",
+      "Bash(npx react-scripts build)",
+      "Bash(git submodule status:*)"
     ]
   }
 }

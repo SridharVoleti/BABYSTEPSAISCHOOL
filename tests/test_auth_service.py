@@ -819,3 +819,59 @@ class TestCredentialReset:
         # 2026-02-13: Verify new PIN works
         login = AuthService.student_pin_login(str(auth_student.id), '0000')
         assert login['success'] is True
+
+
+# ============================================================
+# Consent Status & Withdrawal Tests
+# ============================================================
+
+@pytest.mark.django_db
+class TestConsentManagement:
+    """2026-02-13: Tests for consent status and withdrawal endpoints."""
+
+    def test_consent_status_no_records(self, authenticated_parent_client):
+        """2026-02-13: Test status returns not consented when no records exist."""
+        response = authenticated_parent_client.get('/api/v1/auth/consent/status/')
+        assert response.status_code == 200
+        assert response.data['has_consented'] is False
+
+    def test_consent_grant_then_status(self, authenticated_parent_client):
+        """2026-02-13: Test status reflects grant after consent is given."""
+        # 2026-02-13: Grant consent
+        authenticated_parent_client.post(
+            '/api/v1/auth/consent/grant/',
+            {'consent_version': '1.0', 'action': 'grant', 'scroll_percentage': 100},
+            format='json',
+        )
+
+        # 2026-02-13: Check status
+        response = authenticated_parent_client.get('/api/v1/auth/consent/status/')
+        assert response.status_code == 200
+        assert response.data['has_consented'] is True
+        assert response.data['consent_version'] == '1.0'
+
+    def test_consent_withdraw_then_status(self, authenticated_parent_client):
+        """2026-02-13: Test status reflects withdrawal after consent is withdrawn."""
+        # 2026-02-13: Grant first
+        authenticated_parent_client.post(
+            '/api/v1/auth/consent/grant/',
+            {'consent_version': '1.0', 'action': 'grant'},
+            format='json',
+        )
+        # 2026-02-13: Withdraw
+        response = authenticated_parent_client.post(
+            '/api/v1/auth/consent/withdraw/',
+            {'consent_version': '1.0', 'action': 'withdraw'},
+            format='json',
+        )
+        assert response.status_code == 201
+
+        # 2026-02-13: Check status
+        status_response = authenticated_parent_client.get('/api/v1/auth/consent/status/')
+        assert status_response.data['has_consented'] is False
+        assert status_response.data['latest_action'] == 'withdraw'
+
+    def test_consent_status_requires_auth(self, api_client, db):
+        """2026-02-13: Test consent status requires authentication."""
+        response = api_client.get('/api/v1/auth/consent/status/')
+        assert response.status_code in (401, 403)
