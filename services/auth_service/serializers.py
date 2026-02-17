@@ -17,7 +17,7 @@ class SendOTPSerializer(serializers.Serializer):
         help_text='Phone number with country code (e.g., +91XXXXXXXXXX)',
     )
     purpose = serializers.ChoiceField(  # 2026-02-12: OTP purpose
-        choices=['registration', 'login'],
+        choices=['registration', 'login', 'reset'],
         default='registration',
     )
 
@@ -49,6 +49,9 @@ class CompleteRegistrationSerializer(serializers.Serializer):
 
     phone = serializers.CharField(max_length=15)  # 2026-02-12: Verified phone
     full_name = serializers.CharField(max_length=150)  # 2026-02-12: Parent name
+    password = serializers.CharField(  # 2026-02-17: Parent account password
+        min_length=6, max_length=128
+    )
     email = serializers.EmailField(required=False, default='')  # 2026-02-12: Optional
     state = serializers.CharField(  # 2026-02-12: Indian state
         max_length=50, required=False, default=''
@@ -220,6 +223,40 @@ class ConsentGrantSerializer(serializers.Serializer):
     scroll_percentage = serializers.IntegerField(  # 2026-02-12: Scroll tracking
         min_value=0, max_value=100, required=False, default=0
     )
+
+
+class ParentPasswordLoginSerializer(serializers.Serializer):
+    """2026-02-17: Serializer for parent phone + password login."""
+
+    phone = serializers.CharField(max_length=15)  # 2026-02-17: Phone number
+    password = serializers.CharField(max_length=128)  # 2026-02-17: Account password
+
+    def validate_phone(self, value):
+        """2026-02-17: Validate phone number format."""
+        cleaned = value.strip().replace(' ', '').replace('-', '')  # 2026-02-17: Clean
+        if not cleaned.startswith('+'):  # 2026-02-17: Must have country code
+            raise serializers.ValidationError(
+                'Phone number must include country code (e.g., +91XXXXXXXXXX).'
+            )
+        return cleaned  # 2026-02-17: Return cleaned value
+
+
+class ForgotPasswordSerializer(serializers.Serializer):
+    """2026-02-17: Serializer for parent forgot-password (set new password after OTP)."""
+
+    phone = serializers.CharField(max_length=15)  # 2026-02-17: Phone number
+    new_password = serializers.CharField(  # 2026-02-17: New password
+        min_length=6, max_length=128
+    )
+
+    def validate_phone(self, value):
+        """2026-02-17: Validate phone number format."""
+        cleaned = value.strip().replace(' ', '').replace('-', '')  # 2026-02-17: Clean
+        if not cleaned.startswith('+'):  # 2026-02-17: Must have country code
+            raise serializers.ValidationError(
+                'Phone number must include country code (e.g., +91XXXXXXXXXX).'
+            )
+        return cleaned  # 2026-02-17: Return cleaned value
 
 
 class LanguageSelectionSerializer(serializers.Serializer):

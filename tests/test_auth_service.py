@@ -190,6 +190,7 @@ class TestRegistration:
         result = AuthService.complete_registration(
             phone='+919888888888',
             full_name='New Parent',
+            password='TestPass123',
             email='new@test.com',
             state='Telangana',
         )
@@ -209,6 +210,7 @@ class TestRegistration:
         result = AuthService.complete_registration(
             phone=auth_parent.phone,
             full_name='Duplicate',
+            password='TestPass123',
         )
         assert result['success'] is False  # 2026-02-12: Should fail
         assert result['code'] == 'DUPLICATE_PHONE'
@@ -218,6 +220,7 @@ class TestRegistration:
         result = AuthService.complete_registration(
             phone='+919777777777',
             full_name='Unverified',
+            password='TestPass123',
         )
         assert result['success'] is False  # 2026-02-12: Should fail
         assert result['code'] == 'PHONE_NOT_VERIFIED'
@@ -875,3 +878,243 @@ class TestConsentManagement:
         """2026-02-13: Test consent status requires authentication."""
         response = api_client.get('/api/v1/auth/consent/status/')
         assert response.status_code in (401, 403)
+
+
+# ============================================================
+# Parent Password Login Tests
+# ============================================================
+
+@pytest.mark.django_db
+class TestParentPasswordLogin:
+    """2026-02-17: Tests for parent phone + password login."""
+
+    def test_parent_password_login_success(self, mock_otp_provider):
+        """2026-02-17: Test successful parent password login."""
+        # 2026-02-17: Register parent with password
+        otp_hash = AuthService._hash_value('123456')
+        OTPRequest.objects.create(
+            phone='+919555555555',
+            otp_hash=otp_hash,
+            purpose='registration',
+            expires_at=timezone.now() + timedelta(minutes=10),
+            is_verified=True,
+        )
+        AuthService.complete_registration(
+            phone='+919555555555',
+            full_name='Password Parent',
+            password='MyPass123',
+        )
+
+        # 2026-02-17: Login with correct password
+        result = AuthService.parent_password_login(
+            phone='+919555555555',
+            password='MyPass123',
+        )
+        assert result['success'] is True
+        assert 'tokens' in result
+        assert result['parent']['full_name'] == 'Password Parent'
+
+    def test_parent_password_login_wrong_password(self, mock_otp_provider):
+        """2026-02-17: Test parent login with incorrect password."""
+        otp_hash = AuthService._hash_value('123456')
+        OTPRequest.objects.create(
+            phone='+919555555554',
+            otp_hash=otp_hash,
+            purpose='registration',
+            expires_at=timezone.now() + timedelta(minutes=10),
+            is_verified=True,
+        )
+        AuthService.complete_registration(
+            phone='+919555555554',
+            full_name='Wrong Pass Parent',
+            password='RealPass',
+        )
+
+        result = AuthService.parent_password_login(
+            phone='+919555555554',
+            password='WrongPass',
+        )
+        assert result['success'] is False
+        assert result['code'] == 'INVALID_PASSWORD'
+
+    def test_parent_password_login_not_found(self, db):
+        """2026-02-17: Test parent login with non-existent phone."""
+        result = AuthService.parent_password_login(
+            phone='+910000000099',
+            password='AnyPass',
+        )
+        assert result['success'] is False
+        assert result['code'] == 'PARENT_NOT_FOUND'
+
+    def test_parent_password_login_endpoint(self, api_client, mock_otp_provider):
+        """2026-02-17: Test POST /api/v1/auth/password-login/ endpoint."""
+        otp_hash = AuthService._hash_value('123456')
+        OTPRequest.objects.create(
+            phone='+919555555553',
+            otp_hash=otp_hash,
+            purpose='registration',
+            expires_at=timezone.now() + timedelta(minutes=10),
+            is_verified=True,
+        )
+        AuthService.complete_registration(
+            phone='+919555555553',
+            full_name='Endpoint Parent',
+            password='EndpointPass',
+        )
+
+        response = api_client.post(
+            '/api/v1/auth/password-login/',
+            {'phone': '+919555555553', 'password': 'EndpointPass'},
+            format='json',
+        )
+        assert response.status_code == 200
+        assert response.data['success'] is True
+        assert 'tokens' in response.data
+
+    def test_parent_password_login_endpoint_wrong_password(self, api_client, mock_otp_provider):
+        """2026-02-17: Test password-login endpoint returns 401 for wrong password."""
+        otp_hash = AuthService._hash_value('123456')
+        OTPRequest.objects.create(
+            phone='+919555555552',
+            otp_hash=otp_hash,
+            purpose='registration',
+            expires_at=timezone.now() + timedelta(minutes=10),
+            is_verified=True,
+        )
+        AuthService.complete_registration(
+            phone='+919555555552',
+            full_name='Wrong Pass Endpoint',
+            password='RealEndpointPass',
+        )
+
+        response = api_client.post(
+            '/api/v1/auth/password-login/',
+            {'phone': '+919555555552', 'password': 'WrongPass'},
+            format='json',
+        )
+        assert response.status_code == 401
+        assert response.data['code'] == 'INVALID_PASSWORD'
+
+
+# ============================================================
+# Parent Forgot Password Tests
+# ============================================================
+
+@pytest.mark.django_db
+class TestParentForgotPassword:
+    """2026-02-17: Tests for parent forgot password (OTP-based reset)."""
+
+    def test_reset_password_success(self, mock_otp_provider):
+        """2026-02-17: Test successful password reset after OTP verification."""
+        # 2026-02-17: Register parent
+        otp_hash = AuthService._hash_value('123456')
+        OTPRequest.objects.create(
+            phone='+919444444444',
+            otp_hash=otp_hash,
+            purpose='registration',
+            expires_at=timezone.now() + timedelta(minutes=10),
+            is_verified=True,
+        )
+        AuthService.complete_registration(
+            phone='+919444444444',
+            full_name='Reset Parent',
+            password='OldPassword',
+        )
+
+        # 2026-02-17: Create verified reset OTP
+        reset_hash = AuthService._hash_value('654321')
+        OTPRequest.objects.create(
+            phone='+919444444444',
+            otp_hash=reset_hash,
+            purpose='reset',
+            expires_at=timezone.now() + timedelta(minutes=10),
+            is_verified=True,
+        )
+
+        # 2026-02-17: Reset password
+        result = AuthService.parent_reset_password(
+            phone='+919444444444',
+            new_password='NewPassword',
+        )
+        assert result['success'] is True
+
+        # 2026-02-17: Old password fails, new password works
+        old_login = AuthService.parent_password_login('+919444444444', 'OldPassword')
+        assert old_login['success'] is False
+        new_login = AuthService.parent_password_login('+919444444444', 'NewPassword')
+        assert new_login['success'] is True
+
+    def test_reset_password_without_otp(self, db, auth_parent):
+        """2026-02-17: Test reset fails without verified reset OTP."""
+        result = AuthService.parent_reset_password(
+            phone=auth_parent.phone,
+            new_password='HackedPass',
+        )
+        assert result['success'] is False
+        assert result['code'] == 'PHONE_NOT_VERIFIED'
+
+    def test_reset_password_not_found(self, db):
+        """2026-02-17: Test reset fails for non-existent phone."""
+        otp_hash = AuthService._hash_value('123456')
+        OTPRequest.objects.create(
+            phone='+910000000088',
+            otp_hash=otp_hash,
+            purpose='reset',
+            expires_at=timezone.now() + timedelta(minutes=10),
+            is_verified=True,
+        )
+        result = AuthService.parent_reset_password(
+            phone='+910000000088',
+            new_password='AnyPass',
+        )
+        assert result['success'] is False
+        assert result['code'] == 'PARENT_NOT_FOUND'
+
+    def test_forgot_password_endpoint(self, api_client, mock_otp_provider):
+        """2026-02-17: Test POST /api/v1/auth/forgot-password/ endpoint."""
+        # 2026-02-17: Register parent
+        otp_hash = AuthService._hash_value('123456')
+        OTPRequest.objects.create(
+            phone='+919444444443',
+            otp_hash=otp_hash,
+            purpose='registration',
+            expires_at=timezone.now() + timedelta(minutes=10),
+            is_verified=True,
+        )
+        AuthService.complete_registration(
+            phone='+919444444443',
+            full_name='Forgot Parent',
+            password='ForgotOld',
+        )
+
+        # 2026-02-17: Create verified reset OTP
+        reset_hash = AuthService._hash_value('654321')
+        OTPRequest.objects.create(
+            phone='+919444444443',
+            otp_hash=reset_hash,
+            purpose='reset',
+            expires_at=timezone.now() + timedelta(minutes=10),
+            is_verified=True,
+        )
+
+        response = api_client.post(
+            '/api/v1/auth/forgot-password/',
+            {'phone': '+919444444443', 'new_password': 'ForgotNew'},
+            format='json',
+        )
+        assert response.status_code == 200
+        assert response.data['success'] is True
+
+    def test_send_otp_with_reset_purpose(self, api_client):
+        """2026-02-17: Test send-otp endpoint accepts 'reset' purpose."""
+        response = api_client.post(
+            '/api/v1/auth/send-otp/',
+            {'phone': '+919444444442', 'purpose': 'reset'},
+            format='json',
+        )
+        assert response.status_code == 200
+        assert response.data['success'] is True
+        # 2026-02-17: Verify OTP was created with reset purpose
+        assert OTPRequest.objects.filter(
+            phone='+919444444442', purpose='reset'
+        ).exists()

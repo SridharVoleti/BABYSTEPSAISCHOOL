@@ -203,14 +203,15 @@ class AuthService:
         return {'success': True, 'message': 'OTP verified successfully.'}
 
     @classmethod
-    def complete_registration(cls, phone, full_name, email='', state='',
-                              preferred_language='en'):
+    def complete_registration(cls, phone, full_name, password, email='',
+                              state='', preferred_language='en'):
         """
         2026-02-12: Complete parent registration after OTP verification.
 
         Args:
             phone: Verified phone number.
             full_name: Parent's full name.
+            password: Account password (min 6 chars).
             email: Optional email.
             state: Indian state for language suggestions.
             preferred_language: UI language preference.
@@ -244,7 +245,7 @@ class AuthService:
         username = f"parent_{phone.replace('+', '')}"
         user = User.objects.create_user(
             username=username,
-            password=None,  # 2026-02-12: No password - OTP based
+            password=password,  # 2026-02-17: Set password at registration
         )
 
         # 2026-02-12: Create parent profile
@@ -346,6 +347,120 @@ class AuthService:
                     for s in parent.students.filter(is_active=True)
                 ],
             },
+        }
+
+    @classmethod
+    def parent_password_login(cls, phone, password):
+        """
+        2026-02-17: Login parent with phone + password.
+
+        Args:
+            phone: Phone number string.
+            password: Account password.
+
+        Returns:
+            dict: Result with tokens and parent data.
+        """
+        # 2026-02-17: Find parent by phone
+        try:
+            parent = Parent.objects.get(phone=phone)
+        except Parent.DoesNotExist:
+            return {
+                'success': False,
+                'error': 'No account found with this phone number.',
+                'code': 'PARENT_NOT_FOUND',
+            }
+
+        # 2026-02-17: Verify password via Django user
+        if not parent.user.check_password(password):
+            return {
+                'success': False,
+                'error': 'Incorrect password.',
+                'code': 'INVALID_PASSWORD',
+            }
+
+        # 2026-02-17: Generate tokens
+        tokens = get_tokens_for_parent(parent)
+
+        # 2026-02-17: Audit log
+        AuditLog.objects.create(
+            user=parent.user,
+            action='parent_password_login',
+            resource_type='parent',
+            metadata={'phone': phone},
+        )
+
+        return {  # 2026-02-17: Success
+            'success': True,
+            'tokens': tokens,
+            'parent': {
+                'id': str(parent.id),
+                'phone': parent.phone,
+                'full_name': parent.full_name,
+                'students': [
+                    {
+                        'id': str(s.id),
+                        'full_name': s.full_name,
+                        'avatar_id': s.avatar_id,
+                        'grade': s.grade,
+                        'login_method': s.login_method,
+                    }
+                    for s in parent.students.filter(is_active=True)
+                ],
+            },
+        }
+
+    @classmethod
+    def parent_reset_password(cls, phone, new_password):
+        """
+        2026-02-17: Reset parent password after OTP verification (purpose='reset').
+
+        Args:
+            phone: Phone number string.
+            new_password: New password (min 6 chars).
+
+        Returns:
+            dict: Result with success status.
+        """
+        # 2026-02-17: Verify OTP was completed for reset purpose
+        verified_otp = OTPRequest.objects.filter(
+            phone=phone,
+            is_verified=True,
+            purpose='reset',
+        ).order_by('-created_at').first()
+
+        if not verified_otp:
+            return {
+                'success': False,
+                'error': 'Phone number not verified for password reset.',
+                'code': 'PHONE_NOT_VERIFIED',
+            }
+
+        # 2026-02-17: Find parent
+        try:
+            parent = Parent.objects.get(phone=phone)
+        except Parent.DoesNotExist:
+            return {
+                'success': False,
+                'error': 'No account found with this phone number.',
+                'code': 'PARENT_NOT_FOUND',
+            }
+
+        # 2026-02-17: Set new password
+        parent.user.set_password(new_password)
+        parent.user.save(update_fields=['password'])
+
+        # 2026-02-17: Audit log
+        AuditLog.objects.create(
+            user=parent.user,
+            action='parent_password_reset',
+            resource_type='parent',
+            metadata={'phone': phone},
+        )
+
+        return {
+            'success': True,
+            'message': 'Password has been reset successfully.',
         }
 
     @classmethod

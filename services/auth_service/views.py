@@ -22,6 +22,7 @@ from .serializers import (  # 2026-02-12: Serializers
     ParentUpdateSerializer, StudentCreateSerializer, StudentUpdateSerializer,
     StudentSerializer, PictureLoginSerializer, PINLoginSerializer,
     PasswordLoginSerializer, ResetCredentialSerializer,
+    ParentPasswordLoginSerializer, ForgotPasswordSerializer,
     ConsentGrantSerializer, LanguageSelectionSerializer,
 )
 from .services import AuthService  # 2026-02-12: Business logic
@@ -114,6 +115,38 @@ class AuthViewSet(viewsets.ViewSet):
         # 2026-02-12: Then login
         result = AuthService.parent_login(
             phone=serializer.validated_data['phone'],
+        )
+
+        if result['success']:
+            return Response(result, status=status.HTTP_200_OK)
+        return Response(result, status=status.HTTP_400_BAD_REQUEST)
+
+    @action(detail=False, methods=['post'], url_path='password-login')
+    def password_login(self, request):
+        """2026-02-17: Parent login with phone + password."""
+        serializer = ParentPasswordLoginSerializer(data=request.data)  # 2026-02-17: Validate
+        serializer.is_valid(raise_exception=True)
+
+        result = AuthService.parent_password_login(  # 2026-02-17: Business logic
+            phone=serializer.validated_data['phone'],
+            password=serializer.validated_data['password'],
+        )
+
+        if result['success']:
+            return Response(result, status=status.HTTP_200_OK)
+        if result.get('code') == 'INVALID_PASSWORD':
+            return Response(result, status=status.HTTP_401_UNAUTHORIZED)
+        return Response(result, status=status.HTTP_400_BAD_REQUEST)
+
+    @action(detail=False, methods=['post'], url_path='forgot-password')
+    def forgot_password(self, request):
+        """2026-02-17: Reset parent password after OTP verification."""
+        serializer = ForgotPasswordSerializer(data=request.data)  # 2026-02-17: Validate
+        serializer.is_valid(raise_exception=True)
+
+        result = AuthService.parent_reset_password(  # 2026-02-17: Business logic
+            phone=serializer.validated_data['phone'],
+            new_password=serializer.validated_data['new_password'],
         )
 
         if result['success']:
