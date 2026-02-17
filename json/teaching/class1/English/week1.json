@@ -1,0 +1,460 @@
+{
+  "lesson_id": "ENG1_MRIDANG_W01",
+  "class": 1,
+  "subject": "English",
+  "chapter_id": "MRIDANG_CH01",
+  "chapter_title": "The Wise Owl",
+  "character": "Ollie the Owl",
+  "week_number": 1,
+  "learning_objectives": [
+    "Identify key vocabulary: owl, wise, night, forest, listen, advice",
+    "Explain why the owl is called wise in simple terms",
+    "Use the word 'wise' in a short sentence",
+    "Retell the main idea of The Wise Owl in simple sentences",
+    "Pronounce 6 new vocabulary words with recognisable accuracy"
+  ],
+  "micro_lessons": [
+    {
+      "day": 1,
+      "micro_lesson_id": "ENG1_MRIDANG_W01_D1",
+      "title": "Meeting Ollie the Owl",
+      "duration_minutes": 10,
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "This is Ollie. Ollie is an owl. Say it with me: OWL. O-W-L. Owl. Ollie lives in a forest. A forest has many, many trees. Say FOREST. F-O-R-E-S-T. Forest. Ollie sits on a tall tree branch every night. Night is when it is dark outside. Ollie watches all the animals from the high branch. Ollie is very wise. Wise means Ollie thinks very carefully before doing anything. Say WISE. W-I-S-E. Wise. Ollie is a wise owl.",
+          "pacing": "slow",
+          "repetition_count": 3,
+          "tts_rate": 0.7
+        },
+        "standard": {
+          "concept_text": "Meet Ollie the Owl! Ollie lives in a quiet forest and sits on a high branch every night. Ollie watches all the animals below. The other animals call Ollie 'wise' because Ollie always listens carefully and thinks before speaking. Being wise means making good choices by thinking first. Let's learn more about this wise owl!",
+          "pacing": "normal",
+          "repetition_count": 2,
+          "tts_rate": 0.9
+        },
+        "advanced": {
+          "concept_text": "Ollie the Owl lives in a forest and is known for being wise. Every night, Ollie observes the animals from a high branch. The animals respect Ollie because Ollie listens carefully, thinks deeply, and gives helpful advice. Wisdom means using knowledge and experience to make good decisions. Can you think of someone wise you know?",
+          "pacing": "fast",
+          "repetition_count": 1,
+          "tts_rate": 1.1
+        }
+      },
+      "vocabulary": [
+        {"word": "owl", "definition": "A bird that is active at night and can see in the dark.", "image_hint": "owl.png"},
+        {"word": "wise", "definition": "Shows good thinking; makes good choices.", "image_hint": "wise.png"},
+        {"word": "forest", "definition": "A large area with many trees and animals.", "image_hint": "forest.png"}
+      ],
+      "dialogue_flow": [
+        {"stage": "greeting", "text": "Hello, young explorers! I'm Ollie the Owl. Tonight we will meet a wise friend from the forest. Are you ready?"},
+        {"stage": "concept", "text": "Let me tell you about my home in the forest and why everyone calls me wise."},
+        {"stage": "activity", "text": "Now let's practice! Can you say these words after me? OWL... WISE... FOREST..."},
+        {"stage": "wrapup", "text": "Great job today! You learned three new words. Tomorrow we'll learn more about my forest friends!"}
+      ],
+      "activities": [
+        {
+          "id": "D1_A1",
+          "type": "matching",
+          "instructions": "Match each word to its picture",
+          "items": [
+            {"word": "owl", "match": "owl_picture"},
+            {"word": "forest", "match": "forest_picture"},
+            {"word": "wise", "match": "thinking_picture"}
+          ],
+          "scoring": {"correct_xp": 5}
+        }
+      ],
+      "practice_questions": [
+        {
+          "id": "D1_Q1",
+          "type": "mcq",
+          "question": "What kind of animal is Ollie?",
+          "options": ["An owl", "A rabbit", "A dog"],
+          "correct_answer": 0,
+          "hint": "Ollie sits on a high branch at night."
+        },
+        {
+          "id": "D1_Q2",
+          "type": "mcq",
+          "question": "Where does Ollie live?",
+          "options": ["In a city", "In a forest", "In the sea"],
+          "correct_answer": 1,
+          "hint": "A place with many, many trees."
+        },
+        {
+          "id": "D1_Q3",
+          "type": "mcq",
+          "question": "What does 'wise' mean?",
+          "options": ["Very fast", "Thinks carefully and makes good choices", "Very tall"],
+          "correct_answer": 1,
+          "hint": "Ollie listens first and thinks before acting."
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "micro_lesson_id": "ENG1_MRIDANG_W01_D2",
+      "title": "The Rabbit's Problem",
+      "duration_minutes": 10,
+      "revision_prompts": {
+        "foundation": [
+          "Yesterday we met Ollie. What animal is Ollie? Say it: OWL.",
+          "Where does Ollie live? In a... FOREST. Say FOREST.",
+          "Ollie is very... WISE. That means Ollie thinks carefully. Say WISE."
+        ],
+        "standard": [
+          "Quick review: Who is Ollie and where does he live?",
+          "What does it mean to be wise?"
+        ],
+        "advanced": [
+          "Use the word 'wise' in your own sentence about Ollie."
+        ]
+      },
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "Today we meet Rabbit. Say RABBIT. R-A-B-B-I-T. Rabbit. Rabbit is lost in the forest. Lost means Rabbit cannot find the way home. Rabbit is worried. Worried means Rabbit feels scared and sad. Say WORRIED. Rabbit goes to Ollie for help. Ollie gives advice. Advice means telling someone what to do. Say ADVICE. A-D-V-I-C-E. Advice. Ollie's advice helps Rabbit find the path home.",
+          "pacing": "slow",
+          "repetition_count": 3,
+          "tts_rate": 0.7
+        },
+        "standard": {
+          "concept_text": "One day, a rabbit gets lost in the forest and feels very worried. The rabbit doesn't know which way to go. So the rabbit goes to Ollie for advice. Ollie doesn't just tell the answer. Instead, Ollie asks questions: 'What do you see around you? Can you see any marks on the ground?' By asking questions, Ollie helps the rabbit think and find the path home.",
+          "pacing": "normal",
+          "repetition_count": 2,
+          "tts_rate": 0.9
+        },
+        "advanced": {
+          "concept_text": "A rabbit loses its way in the forest and approaches Ollie for help. Instead of simply giving directions, Ollie uses questions to guide the rabbit: 'What traces do you notice on the ground?' This teaches the rabbit to observe and think independently. Ollie's method shows that true wisdom is helping others learn to solve problems themselves.",
+          "pacing": "fast",
+          "repetition_count": 1,
+          "tts_rate": 1.1
+        }
+      },
+      "vocabulary": [
+        {"word": "rabbit", "definition": "A small furry animal with long ears.", "image_hint": "rabbit.png"},
+        {"word": "worried", "definition": "Feeling scared or nervous about something.", "image_hint": "worried.png"},
+        {"word": "advice", "definition": "A helpful suggestion about what to do.", "image_hint": "advice.png"}
+      ],
+      "dialogue_flow": [
+        {"stage": "greeting", "text": "Welcome back! Do you remember me? I'm Ollie! Today I'll tell you about my friend Rabbit."},
+        {"stage": "concept", "text": "Rabbit was lost and came to me for help. Let me tell you what happened."},
+        {"stage": "activity", "text": "Let's practice the new words. Can you say RABBIT... WORRIED... ADVICE..."},
+        {"stage": "wrapup", "text": "You're learning so fast! Tomorrow we'll discover how asking questions can help solve problems."}
+      ],
+      "activities": [
+        {
+          "id": "D2_A1",
+          "type": "sequencing",
+          "instructions": "Put the story events in the correct order",
+          "items": [
+            {"position": 1, "text": "Rabbit gets lost in the forest"},
+            {"position": 2, "text": "Rabbit goes to Ollie for help"},
+            {"position": 3, "text": "Ollie asks Rabbit questions"},
+            {"position": 4, "text": "Rabbit finds the way home"}
+          ],
+          "scoring": {"correct_xp": 10}
+        }
+      ],
+      "practice_questions": [
+        {
+          "id": "D2_Q1",
+          "type": "mcq",
+          "question": "Why did Rabbit go to Ollie?",
+          "options": ["To play", "To get help finding the way home", "To sleep"],
+          "correct_answer": 1,
+          "hint": "Rabbit was lost and needed help."
+        },
+        {
+          "id": "D2_Q2",
+          "type": "mcq",
+          "question": "How did Ollie help Rabbit?",
+          "options": ["Carried Rabbit home", "Asked questions to help Rabbit think", "Drew a map"],
+          "correct_answer": 1,
+          "hint": "Ollie asked: 'What do you see around you?'"
+        },
+        {
+          "id": "D2_Q3",
+          "type": "mcq",
+          "question": "What does 'advice' mean?",
+          "options": ["A type of food", "A helpful suggestion", "A loud sound"],
+          "correct_answer": 1,
+          "hint": "Ollie gave Rabbit a helpful suggestion."
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "micro_lesson_id": "ENG1_MRIDANG_W01_D3",
+      "title": "Listening and Thinking",
+      "duration_minutes": 10,
+      "revision_prompts": {
+        "foundation": [
+          "Who got lost in the forest? Say it: RABBIT.",
+          "Rabbit felt... WORRIED. Worried means feeling scared.",
+          "Ollie gave Rabbit... ADVICE. Advice means a helpful suggestion."
+        ],
+        "standard": [
+          "What happened to Rabbit in the story?",
+          "How did Ollie help Rabbit find the way home?"
+        ],
+        "advanced": [
+          "Why did Ollie ask questions instead of just telling Rabbit the answer?"
+        ]
+      },
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "Today we learn about listening. Say LISTEN. L-I-S-T-E-N. Listen. Listening means using your ears to hear carefully. When someone talks, we listen. Ollie listens very carefully before speaking. Ollie also thinks. Say THINK. Thinking means using your brain. First listen, then think, then speak. This is what wise people do. Listen. Think. Speak. Say it with me: LISTEN. THINK. SPEAK.",
+          "pacing": "slow",
+          "repetition_count": 3,
+          "tts_rate": 0.7
+        },
+        "standard": {
+          "concept_text": "Ollie is wise because Ollie follows three important steps: Listen, Think, and then Speak. When the animals come with problems, Ollie first listens carefully to understand. Then Ollie thinks about the best way to help. Only then does Ollie speak. This is why all the animals trust Ollie's advice. Listening is the first step to being wise!",
+          "pacing": "normal",
+          "repetition_count": 2,
+          "tts_rate": 0.9
+        },
+        "advanced": {
+          "concept_text": "Wisdom follows a pattern: Listen, Think, Speak. Ollie demonstrates this every day. When animals bring their problems, Ollie pays full attention, considers different solutions, and then shares thoughtful advice. This pattern works in our lives too. When a friend has a problem, we can be wise like Ollie by listening first, thinking carefully, and then responding with kindness.",
+          "pacing": "fast",
+          "repetition_count": 1,
+          "tts_rate": 1.1
+        }
+      },
+      "vocabulary": [
+        {"word": "listen", "definition": "To pay attention to sounds or someone speaking.", "image_hint": "listen.png"},
+        {"word": "think", "definition": "To use your brain to understand or solve something.", "image_hint": "think.png"},
+        {"word": "trace", "definition": "A small sign or mark that shows something happened.", "image_hint": "trace.png"}
+      ],
+      "dialogue_flow": [
+        {"stage": "greeting", "text": "Hello again! Today Ollie will teach you the secret to being wise. Ready?"},
+        {"stage": "concept", "text": "The secret is three steps: Listen, Think, and Speak. Let me explain!"},
+        {"stage": "activity", "text": "Let's practice listening! I'll say a word and you repeat it. LISTEN... THINK... TRACE..."},
+        {"stage": "wrapup", "text": "Wonderful! You now know the wise owl's secret. Tomorrow we'll put it all together!"}
+      ],
+      "activities": [
+        {
+          "id": "D3_A1",
+          "type": "matching",
+          "instructions": "Match each step to what it means",
+          "items": [
+            {"word": "Listen", "match": "Use your ears carefully"},
+            {"word": "Think", "match": "Use your brain"},
+            {"word": "Speak", "match": "Say your words"}
+          ],
+          "scoring": {"correct_xp": 5}
+        }
+      ],
+      "practice_questions": [
+        {
+          "id": "D3_Q1",
+          "type": "mcq",
+          "question": "What is the first step to being wise?",
+          "options": ["Speak", "Listen", "Run"],
+          "correct_answer": 1,
+          "hint": "Ollie uses ears first."
+        },
+        {
+          "id": "D3_Q2",
+          "type": "mcq",
+          "question": "What does 'listen' mean?",
+          "options": ["To run fast", "To pay attention to sounds", "To eat food"],
+          "correct_answer": 1,
+          "hint": "We use our ears to do this."
+        },
+        {
+          "id": "D3_Q3",
+          "type": "mcq",
+          "question": "What are Ollie's three steps?",
+          "options": ["Run, Jump, Play", "Listen, Think, Speak", "Eat, Sleep, Walk"],
+          "correct_answer": 1,
+          "hint": "First listen, then think, then..."
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "micro_lesson_id": "ENG1_MRIDANG_W01_D4",
+      "title": "Being Wise Like Ollie",
+      "duration_minutes": 10,
+      "revision_prompts": {
+        "foundation": [
+          "What are the three steps to being wise? LISTEN... THINK... SPEAK.",
+          "What does LISTEN mean? Using your ears carefully.",
+          "What does THINK mean? Using your brain."
+        ],
+        "standard": [
+          "What three steps does Ollie follow to be wise?",
+          "Can you tell me what 'trace' means?"
+        ],
+        "advanced": [
+          "Give an example from your life where you listened, thought, and then spoke wisely."
+        ]
+      },
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "Today we put everything together! Ollie lives in the forest. Ollie is wise. Rabbit got lost. Rabbit was worried. Ollie gave advice. Ollie asked questions to help Rabbit think. Ollie's secret is: Listen, Think, Speak. We can be wise too! When a friend needs help, we listen first. Then we think. Then we speak kindly. Say it with me: I am WISE. I LISTEN. I THINK. I SPEAK kindly.",
+          "pacing": "slow",
+          "repetition_count": 3,
+          "tts_rate": 0.7
+        },
+        "standard": {
+          "concept_text": "Let's bring the whole story together! Ollie the Owl is wise because he listens, thinks, and speaks carefully. When Rabbit was lost and worried, Ollie didn't just give the answer. Ollie asked questions so Rabbit could think and solve the problem. The moral of the story is: being wise means thinking carefully and listening before acting. We can all be wise like Ollie!",
+          "pacing": "normal",
+          "repetition_count": 2,
+          "tts_rate": 0.9
+        },
+        "advanced": {
+          "concept_text": "The Wise Owl story teaches us an important lesson about wisdom. True wisdom isn't about knowing all the answers — it's about the process of listening carefully, thinking deeply, and responding thoughtfully. Ollie helped Rabbit not by giving direct answers, but by guiding Rabbit to discover the solution independently. This kind of wisdom — helping others learn to help themselves — is the most valuable kind. How can you be wise like Ollie this week?",
+          "pacing": "fast",
+          "repetition_count": 1,
+          "tts_rate": 1.1
+        }
+      },
+      "vocabulary": [
+        {"word": "moral", "definition": "The lesson or message of a story.", "image_hint": "moral.png"},
+        {"word": "kindly", "definition": "In a nice and caring way.", "image_hint": "kindly.png"},
+        {"word": "solve", "definition": "To find the answer to a problem.", "image_hint": "solve.png"}
+      ],
+      "dialogue_flow": [
+        {"stage": "greeting", "text": "Welcome to our last lesson this week! Today we'll become wise like Ollie!"},
+        {"stage": "concept", "text": "Let's remember everything we learned about Ollie, Rabbit, and being wise."},
+        {"stage": "activity", "text": "Now let's use all our new words in a fun activity!"},
+        {"stage": "wrapup", "text": "Amazing work this week! Tomorrow is quiz day. Show me everything you've learned!"}
+      ],
+      "activities": [
+        {
+          "id": "D4_A1",
+          "type": "matching",
+          "instructions": "Match each vocabulary word to its meaning",
+          "items": [
+            {"word": "owl", "match": "A bird active at night"},
+            {"word": "wise", "match": "Thinks carefully"},
+            {"word": "forest", "match": "Place with many trees"},
+            {"word": "listen", "match": "Pay attention to sounds"},
+            {"word": "advice", "match": "Helpful suggestion"},
+            {"word": "worried", "match": "Feeling scared"}
+          ],
+          "scoring": {"correct_xp": 15}
+        }
+      ],
+      "practice_questions": [
+        {
+          "id": "D4_Q1",
+          "type": "mcq",
+          "question": "What is the moral of 'The Wise Owl' story?",
+          "options": ["Running is important", "Listening and thinking carefully before acting", "Sleeping at night"],
+          "correct_answer": 1,
+          "hint": "Think about what Ollie always does first."
+        },
+        {
+          "id": "D4_Q2",
+          "type": "mcq",
+          "question": "How can you be wise like Ollie?",
+          "options": ["Talk first, think later", "Listen, think, then speak", "Ignore others"],
+          "correct_answer": 1,
+          "hint": "Remember Ollie's three steps."
+        },
+        {
+          "id": "D4_Q3",
+          "type": "mcq",
+          "question": "What does 'solve' mean?",
+          "options": ["To find the answer to a problem", "To make noise", "To run away"],
+          "correct_answer": 0,
+          "hint": "Ollie helped Rabbit do this with the lost path problem."
+        }
+      ]
+    }
+  ],
+  "weekly_assessment": {
+    "assessment_id": "ENG1_MRIDANG_W01_ASSESS",
+    "title": "Week 1 Assessment: The Wise Owl",
+    "time_limit_minutes": 15,
+    "questions": [
+      {
+        "id": "WA_Q1",
+        "type": "mcq",
+        "question": "What kind of animal is Ollie?",
+        "options": ["A rabbit", "An owl", "A dog", "A cat"],
+        "correct_answer": 1,
+        "points": 2
+      },
+      {
+        "id": "WA_Q2",
+        "type": "mcq",
+        "question": "Where does Ollie live?",
+        "options": ["In a city", "In a house", "In a forest", "In the sea"],
+        "correct_answer": 2,
+        "points": 2
+      },
+      {
+        "id": "WA_Q3",
+        "type": "mcq",
+        "question": "Why is Ollie called 'wise'?",
+        "options": ["Ollie is very big", "Ollie listens and thinks carefully", "Ollie can fly fast", "Ollie is very old"],
+        "correct_answer": 1,
+        "points": 2
+      },
+      {
+        "id": "WA_Q4",
+        "type": "mcq",
+        "question": "Why did Rabbit go to Ollie?",
+        "options": ["To play a game", "To find food", "To get help finding the way home", "To sleep"],
+        "correct_answer": 2,
+        "points": 2
+      },
+      {
+        "id": "WA_Q5",
+        "type": "mcq",
+        "question": "How did Ollie help Rabbit?",
+        "options": ["Carried Rabbit home", "Asked questions to help Rabbit think", "Gave Rabbit a map", "Called another animal"],
+        "correct_answer": 1,
+        "points": 2
+      },
+      {
+        "id": "WA_Q6",
+        "type": "mcq",
+        "question": "What does 'advice' mean?",
+        "options": ["A type of food", "A loud noise", "A helpful suggestion", "A place to sleep"],
+        "correct_answer": 2,
+        "points": 2
+      },
+      {
+        "id": "WA_Q7",
+        "type": "mcq",
+        "question": "What are Ollie's three steps to being wise?",
+        "options": ["Eat, Sleep, Play", "Listen, Think, Speak", "Run, Jump, Swim", "Read, Write, Draw"],
+        "correct_answer": 1,
+        "points": 2
+      },
+      {
+        "id": "WA_Q8",
+        "type": "mcq",
+        "question": "What is the moral of the story?",
+        "options": ["Being fast is important", "Thinking carefully and listening before acting", "Playing is the best", "Animals are smart"],
+        "correct_answer": 1,
+        "points": 2
+      },
+      {
+        "id": "WA_Q9",
+        "type": "mcq",
+        "question": "What does 'worried' mean?",
+        "options": ["Feeling happy", "Feeling scared or nervous", "Feeling hungry", "Feeling sleepy"],
+        "correct_answer": 1,
+        "points": 2
+      },
+      {
+        "id": "WA_Q10",
+        "type": "mcq",
+        "question": "What does 'trace' mean?",
+        "options": ["A large animal", "A type of tree", "A small sign that shows something happened", "A loud sound"],
+        "correct_answer": 2,
+        "points": 2
+      }
+    ],
+    "star_thresholds": {
+      "one_star": 40,
+      "two_stars": 60,
+      "three_stars": 80
+    }
+  }
+}

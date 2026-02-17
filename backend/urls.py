@@ -71,4 +71,8 @@ urlpatterns = [
     # 2026-02-12: Diagnostic assessment service endpoints (BS-DIA module)
     # Mounted at: http://localhost:8000/api/v1/diagnostic/
     path('api/v1/diagnostic/', include('services.diagnostic_service.urls')),
+
+    # 2026-02-17: AI Teaching Engine endpoints (BS-AIE module)
+    # Mounted at: http://localhost:8000/api/v1/teaching/
+    path('api/v1/teaching/', include('services.teaching_engine.urls')),
 ]

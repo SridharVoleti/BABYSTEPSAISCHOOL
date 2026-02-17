@@ -86,6 +86,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',  # 2026-02-12: JWT authentication
     'services.auth_service',  # 2026-02-12: Authentication module (BS-AUT)
     'services.diagnostic_service',  # 2026-02-12: Diagnostic assessment module (BS-DIA)
+    'services.teaching_engine',  # 2026-02-17: AI Teaching Engine module (BS-AIE)
 ]
 
 MIDDLEWARE = [
