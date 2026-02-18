@@ -12,6 +12,7 @@ from .views import (  # 2026-02-17: Views
     StartDayView, CompleteDayView,
     AssessmentView, SubmitAssessmentView,
     TutoringChatView,
+    StartPracticeView, SubmitPracticeAnswerView, PracticeStatusView,  # 2026-02-18: Mastery practice
 )
 
 app_name = 'teaching_engine'  # 2026-02-17: Namespace
@@ -28,6 +29,11 @@ urlpatterns = [  # 2026-02-17: URL patterns
     # 2026-02-17: Weekly assessment endpoints
     path('lessons/<str:lesson_id>/assessment/', AssessmentView.as_view(), name='assessment'),
     path('lessons/<str:lesson_id>/submit-assessment/', SubmitAssessmentView.as_view(), name='submit-assessment'),
+
+    # 2026-02-18: Mastery practice endpoints
+    path('lessons/<str:lesson_id>/practice/start/', StartPracticeView.as_view(), name='practice-start'),
+    path('lessons/<str:lesson_id>/practice/status/', PracticeStatusView.as_view(), name='practice-status'),
+    path('practice/<str:session_id>/answer/', SubmitPracticeAnswerView.as_view(), name='practice-answer'),
 
     # 2026-02-17: Tutoring chat
     path('chat/', TutoringChatView.as_view(), name='tutoring-chat'),

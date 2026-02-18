@@ -10,6 +10,7 @@ from django.contrib import admin  # 2026-02-17: Django admin
 from .models import (  # 2026-02-17: Models
     TeachingLesson, StudentLessonProgress, DayProgress,
     WeeklyAssessmentAttempt, TutoringSession,
+    PracticeSession, PracticeResponse, ConceptMastery,  # 2026-02-17: Mastery practice models
 )
 
 
@@ -37,8 +38,8 @@ class StudentLessonProgressAdmin(admin.ModelAdmin):
 class DayProgressAdmin(admin.ModelAdmin):
     """2026-02-17: Admin config for DayProgress model."""
 
-    list_display = ['lesson_progress', 'day_number', 'status', 'practice_score', 'questions_correct']
-    list_filter = ['status', 'day_number']
+    list_display = ['lesson_progress', 'day_number', 'status', 'practice_score', 'questions_correct', 'mastery_star_rating', 'mastery_passed']
+    list_filter = ['status', 'day_number', 'mastery_passed']
     readonly_fields = ['id', 'created_at', 'updated_at']
 
 
@@ -57,4 +58,33 @@ class TutoringSessionAdmin(admin.ModelAdmin):
 
     list_display = ['student', 'lesson_progress', 'day_number', 'created_at']
     search_fields = ['student__full_name']
+    readonly_fields = ['id', 'created_at', 'updated_at']
+
+
+@admin.register(PracticeSession)
+class PracticeSessionAdmin(admin.ModelAdmin):
+    """2026-02-17: Admin config for PracticeSession model."""
+
+    list_display = ['student', 'day_number', 'iq_level', 'status', 'star_rating', 'questions_answered', 'questions_correct', 'attempt_number']
+    list_filter = ['status', 'iq_level', 'star_rating', 'day_number']
+    search_fields = ['student__full_name']
+    readonly_fields = ['id', 'created_at', 'updated_at']
+
+
+@admin.register(PracticeResponse)
+class PracticeResponseAdmin(admin.ModelAdmin):
+    """2026-02-17: Admin config for PracticeResponse model."""
+
+    list_display = ['session', 'position', 'question_id', 'difficulty', 'question_type', 'is_correct', 'time_taken_seconds']
+    list_filter = ['difficulty', 'question_type', 'is_correct']
+    readonly_fields = ['id', 'created_at']
+
+
+@admin.register(ConceptMastery)
+class ConceptMasteryAdmin(admin.ModelAdmin):
+    """2026-02-17: Admin config for ConceptMastery model."""
+
+    list_display = ['student', 'lesson', 'day_number', 'best_star_rating', 'attempts_count', 'is_mastered']
+    list_filter = ['is_mastered', 'best_star_rating', 'day_number']
+    search_fields = ['student__full_name', 'lesson__lesson_id']
     readonly_fields = ['id', 'created_at', 'updated_at']

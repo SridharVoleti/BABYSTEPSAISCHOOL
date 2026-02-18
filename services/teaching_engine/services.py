@@ -15,8 +15,10 @@ from services.diagnostic_service.models import DiagnosticResult  # 2026-02-17: I
 from .models import (  # 2026-02-17: Models
     TeachingLesson, StudentLessonProgress, DayProgress,
     WeeklyAssessmentAttempt,
+    PracticeSession, PracticeResponse, ConceptMastery,  # 2026-02-18: Mastery practice models
 )
 from .content_loader import TeachingContentLoader  # 2026-02-17: Content loader
+from .adaptive import AdaptiveEngine  # 2026-02-18: Adaptive difficulty engine
 
 logger = logging.getLogger(__name__)  # 2026-02-17: Module logger
 
@@ -195,6 +197,18 @@ class TeachingService:
                 'code': 'DAY_NOT_UNLOCKED',
             }
 
+        # 2026-02-18: Mastery gate check — previous day must be mastered (≥3 stars)
+        if target_day > 1:  # 2026-02-18: Days 2-4 require previous day mastery
+            prev_mastery = ConceptMastery.objects.filter(
+                student=student, lesson=lesson, day_number=target_day - 1
+            ).first()
+            if prev_mastery and not prev_mastery.is_mastered:  # 2026-02-18: Not mastered
+                return {
+                    'success': False,
+                    'error': f'Achieve 3+ stars on day {target_day - 1} mastery practice first.',
+                    'code': 'MASTERY_GATE_LOCKED',
+                }
+
         # 2026-02-17: Get or create DayProgress
         day_progress, day_created = DayProgress.objects.get_or_create(
             lesson_progress=progress, day_number=target_day,
@@ -329,46 +343,36 @@ class TeachingService:
 
         score = (correct_count * 100 // total_count) if total_count > 0 else 0  # 2026-02-17: Percentage
 
-        # 2026-02-17: Update DayProgress
-        day_progress.status = 'completed'  # 2026-02-17: Mark done
+        # 2026-02-18: Update DayProgress — transition to mastery_practice instead of completed
+        day_progress.status = 'mastery_practice'  # 2026-02-18: Awaiting mastery practice
         day_progress.practice_score = score  # 2026-02-17: Set score
         day_progress.questions_attempted = len(practice_answers)  # 2026-02-17: Attempted
         day_progress.questions_correct = correct_count  # 2026-02-17: Correct
         day_progress.time_spent_seconds = time_spent  # 2026-02-17: Time
-        day_progress.completed_at = timezone.now()  # 2026-02-17: Completion time
         day_progress.revision_completed = True  # 2026-02-17: Revision done (implicit)
         day_progress.save()  # 2026-02-17: Persist
 
-        # 2026-02-17: Update lesson progress
+        # 2026-02-18: Update lesson progress — don't advance current_day yet (mastery gate)
         progress.total_score += score  # 2026-02-17: Cumulative score
         statuses = progress.day_statuses or {}  # 2026-02-17: Day statuses
-        statuses[str(day_number)] = 'completed'  # 2026-02-17: Mark day done
-
-        # 2026-02-17: Advance to next day
-        if day_number < 4:  # 2026-02-17: More days
-            progress.current_day = day_number + 1  # 2026-02-17: Next day
-            statuses[str(day_number + 1)] = 'not_started'  # 2026-02-17: Unlock next
-        else:  # 2026-02-17: Day 4 done, unlock assessment
-            progress.current_day = 5  # 2026-02-17: Assessment day
-            statuses['5'] = 'not_started'  # 2026-02-17: Unlock assessment
+        statuses[str(day_number)] = 'mastery_practice'  # 2026-02-18: Awaiting mastery
 
         progress.day_statuses = statuses  # 2026-02-17: Update
         progress.save()  # 2026-02-17: Persist
 
         logger.info(  # 2026-02-17: Log
             f"Student {student.id} completed {lesson_id} day {day_number}: "
-            f"{correct_count}/{total_count} ({score}%)"
+            f"{correct_count}/{total_count} ({score}%) — mastery practice next"
         )
 
-        return {  # 2026-02-17: Return result
+        return {  # 2026-02-18: Return result with mastery_practice_required flag
             'success': True,
             'lesson_id': lesson_id,
             'day_number': day_number,
             'score': score,
             'questions_correct': correct_count,
             'questions_total': total_count,
-            'next_day': day_number + 1 if day_number < 4 else 5,
-            'assessment_unlocked': day_number == 4,
+            'mastery_practice_required': True,  # 2026-02-18: Signal to frontend
         }
 
     @classmethod
@@ -573,3 +577,605 @@ class TeachingService:
             'percentage': percentage,
             'star_rating': star_rating,
         }
+
+
+class MasteryPracticeService:
+    """
+    2026-02-18: Mastery practice service for adaptive post-lesson practice (BS-STR).
+
+    Manages the adaptive mastery practice flow: starting sessions,
+    submitting answers one at a time, computing star ratings, and
+    enforcing the mastery gate for day progression.
+    """
+
+    @classmethod
+    def start_practice(cls, student, lesson_id, day_number):
+        """
+        2026-02-18: Start a mastery practice session for a day.
+
+        Creates a PracticeSession and returns the first question.
+        Requires the day to be in 'mastery_practice' status.
+
+        Args:
+            student: Student model instance.
+            lesson_id: TeachingLesson.lesson_id string.
+            day_number: Day number (1-4).
+
+        Returns:
+            dict: Session info and first question, or error.
+        """
+        lesson = TeachingLesson.objects.filter(  # 2026-02-18: Lookup
+            lesson_id=lesson_id, status='published'
+        ).first()
+
+        if not lesson:  # 2026-02-18: Not found
+            return {
+                'success': False,
+                'error': 'Lesson not found.',
+                'code': 'LESSON_NOT_FOUND',
+            }
+
+        progress = StudentLessonProgress.objects.filter(  # 2026-02-18: Get progress
+            student=student, lesson=lesson
+        ).first()
+
+        if not progress:  # 2026-02-18: No progress
+            return {
+                'success': False,
+                'error': 'Start the lesson first.',
+                'code': 'NO_PROGRESS',
+            }
+
+        # 2026-02-18: Verify day is in mastery_practice status
+        day_progress = DayProgress.objects.filter(
+            lesson_progress=progress, day_number=day_number
+        ).first()
+
+        if not day_progress:  # 2026-02-18: Day not started
+            return {
+                'success': False,
+                'error': f'Complete day {day_number} micro-lesson first.',
+                'code': 'DAY_NOT_READY',
+            }
+
+        if day_progress.status == 'completed':  # 2026-02-18: Already completed
+            return {
+                'success': False,
+                'error': f'Day {day_number} already completed.',
+                'code': 'DAY_COMPLETED',
+            }
+
+        if day_progress.status != 'mastery_practice':  # 2026-02-18: Not ready
+            return {
+                'success': False,
+                'error': f'Complete the micro-lesson for day {day_number} first.',
+                'code': 'DAY_NOT_READY',
+            }
+
+        # 2026-02-18: Check for existing in-progress session
+        existing_session = PracticeSession.objects.filter(
+            student=student, lesson_progress=progress,
+            day_number=day_number, status='in_progress'
+        ).first()
+
+        if existing_session:  # 2026-02-18: Resume existing session
+            return cls._resume_session(existing_session, lesson)
+
+        # 2026-02-18: Load practice bank
+        try:
+            day_bank = TeachingContentLoader.load_practice_bank(
+                lesson.content_json_path, day_number
+            )
+        except (FileNotFoundError, ValueError) as e:  # 2026-02-18: Content error
+            logger.error(f"Practice bank load error for {lesson_id} day {day_number}: {e}")
+            return {
+                'success': False,
+                'error': 'Practice content not available.',
+                'code': 'CONTENT_ERROR',
+            }
+
+        # 2026-02-18: Determine question count and starting difficulty
+        iq_level = progress.iq_level  # 2026-02-18: From lesson progress
+        total_questions = AdaptiveEngine.get_total_questions(iq_level)  # 2026-02-18: Count
+        starting_difficulty = AdaptiveEngine.get_starting_difficulty(iq_level)  # 2026-02-18: Difficulty
+
+        # 2026-02-18: Get attempt number
+        attempt_count = PracticeSession.objects.filter(
+            student=student, lesson_progress=progress, day_number=day_number
+        ).count()
+
+        # 2026-02-18: Create session
+        session = PracticeSession.objects.create(
+            student=student,
+            lesson_progress=progress,
+            day_number=day_number,
+            iq_level=iq_level,
+            total_questions=total_questions,
+            current_difficulty=starting_difficulty,
+            attempt_number=attempt_count + 1,
+        )
+
+        # 2026-02-18: Select first question
+        questions_bank = day_bank.get('questions', {})  # 2026-02-18: Get bank
+        question, actual_difficulty = AdaptiveEngine.select_question(
+            questions_bank, starting_difficulty, set()
+        )
+
+        if not question:  # 2026-02-18: No questions available
+            return {
+                'success': False,
+                'error': 'No practice questions available.',
+                'code': 'NO_QUESTIONS',
+            }
+
+        # 2026-02-18: Track administered question
+        session.administered_question_ids = [question['id']]  # 2026-02-18: Track
+        session.current_difficulty = actual_difficulty  # 2026-02-18: Actual difficulty
+        session.same_difficulty_streak = 1  # 2026-02-18: First at this difficulty
+        session.save()  # 2026-02-18: Persist
+
+        logger.info(  # 2026-02-18: Log
+            f"Student {student.id} started mastery practice for {lesson_id} "
+            f"day {day_number} (attempt #{session.attempt_number}, {total_questions} Qs)"
+        )
+
+        return {  # 2026-02-18: Return session info + first question
+            'success': True,
+            'session_id': str(session.id),
+            'lesson_id': lesson_id,
+            'day_number': day_number,
+            'iq_level': iq_level,
+            'total_questions': total_questions,
+            'current_question': 1,
+            'question': cls._sanitize_question(question, actual_difficulty),
+        }
+
+    @classmethod
+    def _resume_session(cls, session, lesson):
+        """
+        2026-02-18: Resume an in-progress practice session.
+
+        Selects the next unanswered question.
+
+        Args:
+            session: PracticeSession instance.
+            lesson: TeachingLesson instance.
+
+        Returns:
+            dict: Session info and next question.
+        """
+        try:
+            day_bank = TeachingContentLoader.load_practice_bank(
+                lesson.content_json_path, session.day_number
+            )
+        except (FileNotFoundError, ValueError) as e:  # 2026-02-18: Content error
+            logger.error(f"Practice bank resume error: {e}")
+            return {
+                'success': False,
+                'error': 'Practice content not available.',
+                'code': 'CONTENT_ERROR',
+            }
+
+        questions_bank = day_bank.get('questions', {})  # 2026-02-18: Get bank
+        administered = set(session.administered_question_ids or [])  # 2026-02-18: Already used
+
+        question, actual_difficulty = AdaptiveEngine.select_question(
+            questions_bank, session.current_difficulty, administered
+        )
+
+        if not question:  # 2026-02-18: Exhausted
+            return {
+                'success': False,
+                'error': 'No more practice questions available.',
+                'code': 'QUESTIONS_EXHAUSTED',
+            }
+
+        # 2026-02-18: Track new question
+        administered.add(question['id'])  # 2026-02-18: Add to set
+        session.administered_question_ids = list(administered)  # 2026-02-18: Update
+        session.save()  # 2026-02-18: Persist
+
+        return {  # 2026-02-18: Return
+            'success': True,
+            'session_id': str(session.id),
+            'lesson_id': lesson.lesson_id,
+            'day_number': session.day_number,
+            'iq_level': session.iq_level,
+            'total_questions': session.total_questions,
+            'current_question': session.questions_answered + 1,
+            'question': cls._sanitize_question(question, actual_difficulty),
+        }
+
+    @classmethod
+    def submit_answer(cls, student, session_id, question_id, answer,
+                      time_taken=0, hints_used=0):
+        """
+        2026-02-18: Submit an answer for a mastery practice question.
+
+        Checks correctness, updates adaptive state, and returns
+        feedback + next question (or final result if complete).
+
+        Args:
+            student: Student model instance.
+            session_id: PracticeSession UUID string.
+            question_id: Question ID being answered.
+            answer: Student's answer (type varies).
+            time_taken: Seconds taken on this question.
+            hints_used: Hints used on this question.
+
+        Returns:
+            dict: Feedback, next question, or final result.
+        """
+        session = PracticeSession.objects.filter(  # 2026-02-18: Lookup
+            id=session_id, student=student, status='in_progress'
+        ).first()
+
+        if not session:  # 2026-02-18: Not found
+            return {
+                'success': False,
+                'error': 'Practice session not found or already completed.',
+                'code': 'SESSION_NOT_FOUND',
+            }
+
+        # 2026-02-18: Verify question was administered
+        administered = session.administered_question_ids or []  # 2026-02-18: Get list
+        if question_id not in administered:  # 2026-02-18: Not valid
+            return {
+                'success': False,
+                'error': 'Question was not administered in this session.',
+                'code': 'INVALID_QUESTION',
+            }
+
+        # 2026-02-18: Load the question from practice bank
+        lesson = session.lesson_progress.lesson  # 2026-02-18: Get lesson
+        try:
+            day_bank = TeachingContentLoader.load_practice_bank(
+                lesson.content_json_path, session.day_number
+            )
+        except (FileNotFoundError, ValueError) as e:  # 2026-02-18: Content error
+            logger.error(f"Practice bank load error: {e}")
+            return {
+                'success': False,
+                'error': 'Practice content not available.',
+                'code': 'CONTENT_ERROR',
+            }
+
+        # 2026-02-18: Find the question in the bank
+        question = cls._find_question(day_bank.get('questions', {}), question_id)
+        if not question:  # 2026-02-18: Not found
+            return {
+                'success': False,
+                'error': 'Question not found in practice bank.',
+                'code': 'QUESTION_NOT_FOUND',
+            }
+
+        # 2026-02-18: Check answer
+        is_correct, correct_answer, explanation = AdaptiveEngine.check_answer(
+            question, answer
+        )
+
+        # 2026-02-18: Determine the difficulty of this question
+        q_difficulty = cls._get_question_difficulty(
+            day_bank.get('questions', {}), question_id
+        )
+
+        # 2026-02-18: Record response
+        PracticeResponse.objects.create(
+            session=session,
+            question_id=question_id,
+            concept_id=day_bank.get('concept_id', ''),
+            difficulty=q_difficulty,
+            question_type=question.get('type', 'mcq'),
+            student_answer=answer,
+            correct_answer=correct_answer,
+            is_correct=is_correct,
+            time_taken_seconds=time_taken,
+            hints_used=hints_used,
+            position=session.questions_answered,
+            feedback_text=explanation,
+        )
+
+        # 2026-02-18: Update session state
+        session.questions_answered += 1  # 2026-02-18: Increment
+        session.time_spent_seconds += time_taken  # 2026-02-18: Accumulate
+        session.hints_used += hints_used  # 2026-02-18: Accumulate
+
+        if is_correct:  # 2026-02-18: Correct answer
+            session.questions_correct += 1
+            session.consecutive_correct += 1
+            session.consecutive_incorrect = 0
+        else:  # 2026-02-18: Incorrect answer
+            session.consecutive_incorrect += 1
+            session.consecutive_correct = 0
+
+        # 2026-02-18: Adapt difficulty
+        new_difficulty = AdaptiveEngine.adapt_difficulty(
+            session.current_difficulty,
+            session.consecutive_correct,
+            session.consecutive_incorrect,
+            session.same_difficulty_streak,
+        )
+
+        if new_difficulty == session.current_difficulty:  # 2026-02-18: Same difficulty
+            session.same_difficulty_streak += 1
+        else:  # 2026-02-18: Difficulty changed
+            session.current_difficulty = new_difficulty
+            session.same_difficulty_streak = 1
+            # 2026-02-18: Reset streaks on difficulty change
+            session.consecutive_correct = 0
+            session.consecutive_incorrect = 0
+
+        session.save()  # 2026-02-18: Persist
+
+        # 2026-02-18: Check if session is complete
+        if session.questions_answered >= session.total_questions:
+            return cls._complete_session(session, is_correct, correct_answer, explanation)
+
+        # 2026-02-18: Select next question
+        questions_bank = day_bank.get('questions', {})  # 2026-02-18: Get bank
+        administered_set = set(session.administered_question_ids or [])
+
+        next_question, actual_difficulty = AdaptiveEngine.select_question(
+            questions_bank, session.current_difficulty, administered_set
+        )
+
+        if not next_question:  # 2026-02-18: Questions exhausted early
+            return cls._complete_session(session, is_correct, correct_answer, explanation)
+
+        # 2026-02-18: Track next question
+        administered_set.add(next_question['id'])
+        session.administered_question_ids = list(administered_set)
+        session.save()  # 2026-02-18: Persist
+
+        return {  # 2026-02-18: Feedback + next question
+            'success': True,
+            'session_id': str(session.id),
+            'feedback': {
+                'is_correct': is_correct,
+                'correct_answer': correct_answer,
+                'explanation': explanation,
+            },
+            'progress': {
+                'questions_answered': session.questions_answered,
+                'questions_correct': session.questions_correct,
+                'total_questions': session.total_questions,
+            },
+            'next_question': cls._sanitize_question(next_question, actual_difficulty),
+            'completed': False,
+        }
+
+    @classmethod
+    def _complete_session(cls, session, last_is_correct, last_correct_answer,
+                          last_explanation):
+        """
+        2026-02-18: Finalize a mastery practice session.
+
+        Calculates star rating, updates ConceptMastery and DayProgress,
+        and potentially advances to the next day.
+
+        Args:
+            session: PracticeSession instance.
+            last_is_correct: Whether the last answer was correct.
+            last_correct_answer: Correct answer for last question.
+            last_explanation: Explanation for last question.
+
+        Returns:
+            dict: Final result with star rating and mastery status.
+        """
+        # 2026-02-18: Calculate final results
+        star_rating = AdaptiveEngine.calculate_star_rating(
+            session.questions_correct, session.questions_answered
+        )
+        percentage = (
+            (session.questions_correct * 100.0) / session.questions_answered
+            if session.questions_answered > 0 else 0.0
+        )
+        is_passed = AdaptiveEngine.is_mastery_passed(star_rating)
+
+        # 2026-02-18: Update session
+        session.status = 'completed'
+        session.star_rating = star_rating
+        session.percentage_correct = percentage
+        session.save()
+
+        # 2026-02-18: Update or create ConceptMastery
+        lesson = session.lesson_progress.lesson  # 2026-02-18: Get lesson
+        mastery, created = ConceptMastery.objects.get_or_create(
+            student=session.student,
+            lesson=lesson,
+            day_number=session.day_number,
+            defaults={
+                'best_star_rating': star_rating,
+                'attempts_count': 1,
+                'is_mastered': is_passed,
+            }
+        )
+
+        if not created:  # 2026-02-18: Update existing
+            mastery.attempts_count += 1
+            if star_rating > mastery.best_star_rating:  # 2026-02-18: New best
+                mastery.best_star_rating = star_rating
+            if is_passed:  # 2026-02-18: Mastered
+                mastery.is_mastered = True
+            mastery.save()
+
+        # 2026-02-18: Update DayProgress
+        day_progress = DayProgress.objects.filter(
+            lesson_progress=session.lesson_progress,
+            day_number=session.day_number
+        ).first()
+
+        if day_progress:  # 2026-02-18: Update mastery fields
+            if star_rating > day_progress.mastery_star_rating:
+                day_progress.mastery_star_rating = star_rating
+            day_progress.mastery_passed = mastery.is_mastered
+
+            # 2026-02-18: If mastered, advance to next day
+            if mastery.is_mastered:
+                day_progress.status = 'completed'
+                day_progress.completed_at = timezone.now()
+                day_progress.save()
+
+                # 2026-02-18: Advance lesson progress
+                progress = session.lesson_progress
+                statuses = progress.day_statuses or {}
+                statuses[str(session.day_number)] = 'completed'
+
+                if session.day_number < 4:  # 2026-02-18: More days
+                    progress.current_day = session.day_number + 1
+                    statuses[str(session.day_number + 1)] = 'not_started'
+                else:  # 2026-02-18: Day 4 done, unlock assessment
+                    progress.current_day = 5
+                    statuses['5'] = 'not_started'
+
+                progress.day_statuses = statuses
+                progress.save()
+            else:
+                day_progress.save()
+
+        logger.info(  # 2026-02-18: Log
+            f"Student {session.student.id} completed mastery practice "
+            f"day {session.day_number}: {session.questions_correct}/"
+            f"{session.questions_answered} ({percentage:.0f}%) - "
+            f"{star_rating} stars {'PASSED' if is_passed else 'FAILED'}"
+        )
+
+        return {  # 2026-02-18: Final result
+            'success': True,
+            'session_id': str(session.id),
+            'feedback': {
+                'is_correct': last_is_correct,
+                'correct_answer': last_correct_answer,
+                'explanation': last_explanation,
+            },
+            'completed': True,
+            'result': {
+                'star_rating': star_rating,
+                'percentage_correct': round(percentage, 1),
+                'questions_correct': session.questions_correct,
+                'questions_answered': session.questions_answered,
+                'is_passed': is_passed,
+                'attempt_number': session.attempt_number,
+                'time_spent_seconds': session.time_spent_seconds,
+            },
+        }
+
+    @classmethod
+    def get_practice_status(cls, student, lesson_id):
+        """
+        2026-02-18: Get mastery practice status for all 4 days of a lesson.
+
+        Args:
+            student: Student model instance.
+            lesson_id: TeachingLesson.lesson_id string.
+
+        Returns:
+            dict: Mastery status per day.
+        """
+        lesson = TeachingLesson.objects.filter(  # 2026-02-18: Lookup
+            lesson_id=lesson_id, status='published'
+        ).first()
+
+        if not lesson:  # 2026-02-18: Not found
+            return {
+                'success': False,
+                'error': 'Lesson not found.',
+                'code': 'LESSON_NOT_FOUND',
+            }
+
+        days_status = []  # 2026-02-18: Build per-day status
+        for day in range(1, 5):  # 2026-02-18: Days 1-4
+            mastery = ConceptMastery.objects.filter(
+                student=student, lesson=lesson, day_number=day
+            ).first()
+
+            if mastery:  # 2026-02-18: Has mastery record
+                days_status.append({
+                    'day_number': day,
+                    'best_star_rating': mastery.best_star_rating,
+                    'attempts_count': mastery.attempts_count,
+                    'is_mastered': mastery.is_mastered,
+                })
+            else:  # 2026-02-18: No attempts
+                days_status.append({
+                    'day_number': day,
+                    'best_star_rating': 0,
+                    'attempts_count': 0,
+                    'is_mastered': False,
+                })
+
+        return {  # 2026-02-18: Return
+            'success': True,
+            'lesson_id': lesson_id,
+            'days': days_status,
+        }
+
+    @staticmethod
+    def _sanitize_question(question, difficulty):
+        """
+        2026-02-18: Remove correct answer from question for client.
+
+        Args:
+            question: Full question dict from practice bank.
+            difficulty: Difficulty level of the question.
+
+        Returns:
+            dict: Client-safe question without correct_answer.
+        """
+        sanitized = {  # 2026-02-18: Copy safe fields
+            'id': question.get('id'),
+            'type': question.get('type', 'mcq'),
+            'question': question.get('question'),
+            'difficulty': difficulty,
+        }
+
+        # 2026-02-18: Type-specific fields
+        q_type = question.get('type', 'mcq')
+        if q_type in ('mcq',):  # 2026-02-18: MCQ options
+            sanitized['options'] = question.get('options', [])
+        elif q_type == 'true_false':  # 2026-02-18: No extra fields needed
+            sanitized['options'] = ['True', 'False']
+        elif q_type == 'drag_order':  # 2026-02-18: Items to order
+            sanitized['items'] = question.get('items', [])
+        # 2026-02-18: numeric_fill needs no extra fields
+
+        if question.get('hint'):  # 2026-02-18: Include hint if present
+            sanitized['hint'] = question['hint']
+
+        return sanitized
+
+    @staticmethod
+    def _find_question(questions_bank, question_id):
+        """
+        2026-02-18: Find a question by ID across all difficulty levels.
+
+        Args:
+            questions_bank: dict with 'easy', 'medium', 'hard' lists.
+            question_id: Question ID to find.
+
+        Returns:
+            dict or None: The question dict, or None if not found.
+        """
+        for difficulty in ('easy', 'medium', 'hard'):  # 2026-02-18: Search all
+            for q in questions_bank.get(difficulty, []):  # 2026-02-18: Iterate
+                if q.get('id') == question_id:  # 2026-02-18: Match
+                    return q
+        return None  # 2026-02-18: Not found
+
+    @staticmethod
+    def _get_question_difficulty(questions_bank, question_id):
+        """
+        2026-02-18: Get the difficulty level of a question by ID.
+
+        Args:
+            questions_bank: dict with 'easy', 'medium', 'hard' lists.
+            question_id: Question ID to find.
+
+        Returns:
+            str: Difficulty level, or 'medium' as default.
+        """
+        for difficulty in ('easy', 'medium', 'hard'):  # 2026-02-18: Search all
+            for q in questions_bank.get(difficulty, []):  # 2026-02-18: Iterate
+                if q.get('id') == question_id:  # 2026-02-18: Match
+                    return difficulty
+        return 'medium'  # 2026-02-18: Default

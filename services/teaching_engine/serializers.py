@@ -48,6 +48,35 @@ class SubmitAssessmentSerializer(serializers.Serializer):
     )
 
 
+class StartPracticeSerializer(serializers.Serializer):
+    """2026-02-18: Serializer for starting a mastery practice session."""
+
+    day_number = serializers.IntegerField(  # 2026-02-18: Day number (1-4)
+        min_value=1, max_value=4,
+        help_text='Day number (1-4) for mastery practice.',
+    )
+
+
+class SubmitPracticeAnswerSerializer(serializers.Serializer):
+    """2026-02-18: Serializer for submitting a mastery practice answer."""
+
+    question_id = serializers.CharField(  # 2026-02-18: Question being answered
+        max_length=100,
+        help_text='ID of the question being answered.',
+    )
+    answer = serializers.JSONField(  # 2026-02-18: Student's answer (any type)
+        help_text='Student answer: int for MCQ/numeric, bool for T/F, list for drag_order.',
+    )
+    time_taken = serializers.IntegerField(  # 2026-02-18: Seconds on this question
+        min_value=0, default=0,
+        help_text='Time taken in seconds.',
+    )
+    hints_used = serializers.IntegerField(  # 2026-02-18: Hints used
+        min_value=0, default=0,
+        help_text='Number of hints used.',
+    )
+
+
 class TutoringChatSerializer(serializers.Serializer):
     """2026-02-17: Serializer for tutoring chat messages."""
 

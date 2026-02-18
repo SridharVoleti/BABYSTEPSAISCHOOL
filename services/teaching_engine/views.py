@@ -15,8 +15,9 @@ from services.auth_service.models import Student  # 2026-02-17: Student model
 from .serializers import (  # 2026-02-17: Serializers
     StartDaySerializer, CompleteDaySerializer,
     SubmitAssessmentSerializer, TutoringChatSerializer,
+    StartPracticeSerializer, SubmitPracticeAnswerSerializer,  # 2026-02-18: Mastery practice
 )
-from .services import TeachingService  # 2026-02-17: Business logic
+from .services import TeachingService, MasteryPracticeService  # 2026-02-18: Business logic
 from .tutoring import TutoringService  # 2026-02-17: Tutoring logic
 
 
@@ -194,6 +195,92 @@ class SubmitAssessmentView(APIView):
         if result['success']:  # 2026-02-17: Success
             return Response(result, status=status.HTTP_200_OK)
         return Response(result, status=status.HTTP_400_BAD_REQUEST)
+
+
+class StartPracticeView(APIView):
+    """
+    2026-02-18: Start a mastery practice session for a day.
+
+    POST /api/v1/teaching/lessons/{lesson_id}/practice/start/
+    """
+
+    permission_classes = [IsAuthenticated]  # 2026-02-18: Auth required
+
+    def post(self, request, lesson_id):
+        """2026-02-18: Start mastery practice."""
+        student, error = _get_student(request)  # 2026-02-18: Get student
+        if error:
+            return error
+
+        serializer = StartPracticeSerializer(data=request.data)  # 2026-02-18: Validate
+        serializer.is_valid(raise_exception=True)
+
+        result = MasteryPracticeService.start_practice(  # 2026-02-18: Business logic
+            student=student,
+            lesson_id=lesson_id,
+            day_number=serializer.validated_data['day_number'],
+        )
+
+        if result['success']:  # 2026-02-18: Success
+            return Response(result, status=status.HTTP_200_OK)
+        return Response(result, status=status.HTTP_400_BAD_REQUEST)
+
+
+class SubmitPracticeAnswerView(APIView):
+    """
+    2026-02-18: Submit an answer for a mastery practice question.
+
+    POST /api/v1/teaching/practice/{session_id}/answer/
+    """
+
+    permission_classes = [IsAuthenticated]  # 2026-02-18: Auth required
+
+    def post(self, request, session_id):
+        """2026-02-18: Submit practice answer."""
+        student, error = _get_student(request)  # 2026-02-18: Get student
+        if error:
+            return error
+
+        serializer = SubmitPracticeAnswerSerializer(data=request.data)  # 2026-02-18: Validate
+        serializer.is_valid(raise_exception=True)
+
+        result = MasteryPracticeService.submit_answer(  # 2026-02-18: Business logic
+            student=student,
+            session_id=session_id,
+            question_id=serializer.validated_data['question_id'],
+            answer=serializer.validated_data['answer'],
+            time_taken=serializer.validated_data.get('time_taken', 0),
+            hints_used=serializer.validated_data.get('hints_used', 0),
+        )
+
+        if result['success']:  # 2026-02-18: Success
+            return Response(result, status=status.HTTP_200_OK)
+        return Response(result, status=status.HTTP_400_BAD_REQUEST)
+
+
+class PracticeStatusView(APIView):
+    """
+    2026-02-18: Get mastery practice status for all 4 days.
+
+    GET /api/v1/teaching/lessons/{lesson_id}/practice/status/
+    """
+
+    permission_classes = [IsAuthenticated]  # 2026-02-18: Auth required
+
+    def get(self, request, lesson_id):
+        """2026-02-18: Get practice status."""
+        student, error = _get_student(request)  # 2026-02-18: Get student
+        if error:
+            return error
+
+        result = MasteryPracticeService.get_practice_status(  # 2026-02-18: Business logic
+            student=student,
+            lesson_id=lesson_id,
+        )
+
+        if result['success']:  # 2026-02-18: Success
+            return Response(result, status=status.HTTP_200_OK)
+        return Response(result, status=status.HTTP_404_NOT_FOUND)
 
 
 class TutoringChatView(APIView):

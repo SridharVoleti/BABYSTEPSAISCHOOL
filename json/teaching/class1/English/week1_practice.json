@@ -1,0 +1,113 @@
+{
+  "lesson_id": "ENG1_MRIDANG_W01",
+  "practice_bank": {
+    "day_1": {
+      "concept_id": "ENG1_MRIDANG_W01_C1",
+      "concept_name": "Meeting Ollie the Owl",
+      "questions": {
+        "easy": [
+          {"id": "W01_D1_P_E1", "type": "mcq", "question": "What is the name of the owl?", "options": ["Ollie", "Polly", "Molly", "Dolly"], "correct_answer": 0, "explanation": "The owl's name is Ollie!", "hint": "It starts with the letter O."},
+          {"id": "W01_D1_P_E2", "type": "true_false", "question": "Ollie is a parrot.", "correct_answer": false, "explanation": "Ollie is an owl, not a parrot."},
+          {"id": "W01_D1_P_E3", "type": "mcq", "question": "What sound does an owl make?", "options": ["Meow", "Hoot", "Bark", "Moo"], "correct_answer": 1, "explanation": "Owls say 'Hoot hoot!'", "hint": "Think of a night sound."},
+          {"id": "W01_D1_P_E4", "type": "true_false", "question": "Owls can see well at night.", "correct_answer": true, "explanation": "Yes! Owls have excellent night vision."},
+          {"id": "W01_D1_P_E5", "type": "mcq", "question": "Where does Ollie live?", "options": ["In a pond", "In a tree", "In a house", "In a cave"], "correct_answer": 1, "explanation": "Ollie lives in a big tree!", "hint": "Birds like to live up high."}
+        ],
+        "medium": [
+          {"id": "W01_D1_P_M1", "type": "mcq", "question": "Which word rhymes with 'owl'?", "options": ["Ball", "Howl", "Tall", "Fall"], "correct_answer": 1, "explanation": "'Owl' and 'howl' both end in the same sound.", "hint": "A wolf does this at the moon."},
+          {"id": "W01_D1_P_M2", "type": "numeric_fill", "question": "How many letters are in the word 'Ollie'?", "correct_answer": 5, "explanation": "O-L-L-I-E has 5 letters."},
+          {"id": "W01_D1_P_M3", "type": "mcq", "question": "What does Ollie like to do?", "options": ["Swim", "Read books", "Play drums", "Sleep all day"], "correct_answer": 1, "explanation": "Ollie is a wise owl who loves reading!", "hint": "Wise owls enjoy this activity."},
+          {"id": "W01_D1_P_M4", "type": "true_false", "question": "The word 'Ollie' starts with a vowel.", "correct_answer": true, "explanation": "'O' is a vowel! The vowels are A, E, I, O, U."},
+          {"id": "W01_D1_P_M5", "type": "mcq", "question": "Which greeting did Ollie use?", "options": ["Goodbye", "Hello", "See you", "Thanks"], "correct_answer": 1, "explanation": "Ollie said 'Hello' to greet everyone!", "hint": "It's a common way to start a conversation."}
+        ],
+        "hard": [
+          {"id": "W01_D1_P_H1", "type": "drag_order", "question": "Put these words in the correct order to make a greeting:", "items": ["Hello", "am", "I", "Ollie"], "correct_order": [0, 2, 1, 3], "explanation": "The correct sentence is: 'Hello I am Ollie'."},
+          {"id": "W01_D1_P_H2", "type": "mcq", "question": "Which sentence is a proper greeting?", "options": ["Ollie tree lives in.", "Hello, I am Ollie!", "Owl hoot tree.", "Night bird Ollie."], "correct_answer": 1, "explanation": "'Hello, I am Ollie!' is a complete and proper greeting sentence."},
+          {"id": "W01_D1_P_H3", "type": "drag_order", "question": "Arrange these actions in the order Ollie does them:", "items": ["Wakes up", "Says hello", "Reads a book", "Goes to sleep"], "correct_order": [0, 1, 2, 3], "explanation": "First Ollie wakes up, then says hello, reads a book, and goes to sleep."},
+          {"id": "W01_D1_P_H4", "type": "mcq", "question": "Why is Ollie called a 'wise' owl?", "options": ["He is very old", "He knows many things", "He can fly fast", "He eats a lot"], "correct_answer": 1, "explanation": "Ollie is wise because he knows many things from reading books!"},
+          {"id": "W01_D1_P_H5", "type": "numeric_fill", "question": "How many vowels are in the word 'Ollie'?", "correct_answer": 3, "explanation": "O-L-L-I-E has three vowels: O, I, and E."}
+        ]
+      }
+    },
+    "day_2": {
+      "concept_id": "ENG1_MRIDANG_W01_C2",
+      "concept_name": "Greetings and Introductions",
+      "questions": {
+        "easy": [
+          {"id": "W01_D2_P_E1", "type": "mcq", "question": "What do we say when we meet someone?", "options": ["Goodbye", "Hello", "Sorry", "Thank you"], "correct_answer": 1, "explanation": "We say 'Hello' when we meet someone!", "hint": "It's a greeting word."},
+          {"id": "W01_D2_P_E2", "type": "true_false", "question": "'Good morning' is a greeting.", "correct_answer": true, "explanation": "Yes! 'Good morning' is a common greeting."},
+          {"id": "W01_D2_P_E3", "type": "mcq", "question": "When do we say 'Good night'?", "options": ["In the morning", "At lunchtime", "Before sleeping", "At school"], "correct_answer": 2, "explanation": "We say 'Good night' before going to sleep.", "hint": "Think about bedtime."},
+          {"id": "W01_D2_P_E4", "type": "true_false", "question": "'Bye' means hello.", "correct_answer": false, "explanation": "'Bye' means goodbye, not hello!"},
+          {"id": "W01_D2_P_E5", "type": "mcq", "question": "Which is a way to introduce yourself?", "options": ["I am hungry", "My name is...", "I like pizza", "Let's play"], "correct_answer": 1, "explanation": "'My name is...' is how we introduce ourselves.", "hint": "You tell people what to call you."}
+        ],
+        "medium": [
+          {"id": "W01_D2_P_M1", "type": "mcq", "question": "Which greeting is used in the afternoon?", "options": ["Good morning", "Good afternoon", "Good evening", "Good night"], "correct_answer": 1, "explanation": "We say 'Good afternoon' between noon and evening."},
+          {"id": "W01_D2_P_M2", "type": "true_false", "question": "We can greet people by waving.", "correct_answer": true, "explanation": "Yes! Waving is a friendly way to greet someone."},
+          {"id": "W01_D2_P_M3", "type": "mcq", "question": "What comes after 'How are' in a greeting?", "options": ["we", "you", "they", "it"], "correct_answer": 1, "explanation": "'How are you?' is a common greeting question.", "hint": "You ask one person about themselves."},
+          {"id": "W01_D2_P_M4", "type": "numeric_fill", "question": "How many words are in 'Good morning'?", "correct_answer": 2, "explanation": "'Good morning' has 2 words: 'Good' and 'morning'."},
+          {"id": "W01_D2_P_M5", "type": "mcq", "question": "What is a polite reply to 'How are you?'", "options": ["Go away", "I am fine, thank you", "What?", "I don't know"], "correct_answer": 1, "explanation": "'I am fine, thank you' is a polite response."}
+        ],
+        "hard": [
+          {"id": "W01_D2_P_H1", "type": "drag_order", "question": "Put these greetings in time order (morning to night):", "items": ["Good night", "Good morning", "Good afternoon", "Good evening"], "correct_order": [1, 2, 3, 0], "explanation": "The correct order is: Good morning → Good afternoon → Good evening → Good night."},
+          {"id": "W01_D2_P_H2", "type": "mcq", "question": "Which sentence is a complete introduction?", "options": ["Hello am name", "My I Ravi is", "Hello, my name is Ravi", "Name Ravi hello"], "correct_answer": 2, "explanation": "'Hello, my name is Ravi' is a complete, correct introduction."},
+          {"id": "W01_D2_P_H3", "type": "drag_order", "question": "Arrange to form a greeting:", "items": ["are", "How", "you", "?"], "correct_order": [1, 0, 2, 3], "explanation": "The correct order is: 'How are you?'"},
+          {"id": "W01_D2_P_H4", "type": "mcq", "question": "Which is the MOST formal greeting?", "options": ["Hey!", "Hi there", "Good morning, sir", "Yo!"], "correct_answer": 2, "explanation": "'Good morning, sir' is the most formal and polite greeting."},
+          {"id": "W01_D2_P_H5", "type": "true_false", "question": "'Nice to meet you' is used when meeting someone for the first time.", "correct_answer": true, "explanation": "Yes! We say 'Nice to meet you' when we meet someone new."}
+        ]
+      }
+    },
+    "day_3": {
+      "concept_id": "ENG1_MRIDANG_W01_C3",
+      "concept_name": "Family Words",
+      "questions": {
+        "easy": [
+          {"id": "W01_D3_P_E1", "type": "mcq", "question": "Your mother's mother is your...", "options": ["Sister", "Aunt", "Grandmother", "Cousin"], "correct_answer": 2, "explanation": "Your mother's mother is your grandmother!", "hint": "She is older than your mother."},
+          {"id": "W01_D3_P_E2", "type": "true_false", "question": "Your brother is part of your family.", "correct_answer": true, "explanation": "Yes! Your brother is a family member."},
+          {"id": "W01_D3_P_E3", "type": "mcq", "question": "Who is your father's wife?", "options": ["Sister", "Mother", "Aunt", "Cousin"], "correct_answer": 1, "explanation": "Your father's wife is your mother!", "hint": "She takes care of you."},
+          {"id": "W01_D3_P_E4", "type": "true_false", "question": "A family only has two people.", "correct_answer": false, "explanation": "Families can have many members!"},
+          {"id": "W01_D3_P_E5", "type": "mcq", "question": "Your parents' son is your...", "options": ["Father", "Uncle", "Brother", "Grandfather"], "correct_answer": 2, "explanation": "Your parents' son is your brother!", "hint": "He is a boy in your family who shares your parents."}
+        ],
+        "medium": [
+          {"id": "W01_D3_P_M1", "type": "mcq", "question": "Your father's brother is your...", "options": ["Uncle", "Brother", "Cousin", "Grandfather"], "correct_answer": 0, "explanation": "Your father's brother is your uncle.", "hint": "He is a male relative older than you."},
+          {"id": "W01_D3_P_M2", "type": "numeric_fill", "question": "If you have 2 sisters and 1 brother, how many siblings do you have?", "correct_answer": 3, "explanation": "2 sisters + 1 brother = 3 siblings."},
+          {"id": "W01_D3_P_M3", "type": "true_false", "question": "Cousins are children of your aunts and uncles.", "correct_answer": true, "explanation": "Correct! Your aunt's or uncle's children are your cousins."},
+          {"id": "W01_D3_P_M4", "type": "mcq", "question": "Which word means 'brother or sister'?", "options": ["Parent", "Sibling", "Cousin", "Neighbor"], "correct_answer": 1, "explanation": "'Sibling' means a brother or sister."},
+          {"id": "W01_D3_P_M5", "type": "mcq", "question": "Your mother's sister is your...", "options": ["Grandmother", "Aunt", "Cousin", "Sister"], "correct_answer": 1, "explanation": "Your mother's sister is your aunt!"}
+        ],
+        "hard": [
+          {"id": "W01_D3_P_H1", "type": "drag_order", "question": "Arrange from youngest to oldest in a family:", "items": ["Grandfather", "Baby", "Father", "Child"], "correct_order": [1, 3, 2, 0], "explanation": "Age order: Baby → Child → Father → Grandfather."},
+          {"id": "W01_D3_P_H2", "type": "mcq", "question": "Your aunt's daughter is your...", "options": ["Sister", "Niece", "Cousin", "Mother"], "correct_answer": 2, "explanation": "Your aunt's daughter is your cousin!"},
+          {"id": "W01_D3_P_H3", "type": "drag_order", "question": "Match the family pairs:", "items": ["Mother-Father", "Brother-Sister", "Grandmother-Grandfather", "Uncle-Aunt"], "correct_order": [0, 1, 2, 3], "explanation": "These are the matching family pairs."},
+          {"id": "W01_D3_P_H4", "type": "numeric_fill", "question": "If your grandmother has 3 children and each child has 2 children, how many grandchildren does she have?", "correct_answer": 6, "explanation": "3 children × 2 grandchildren each = 6 grandchildren total."},
+          {"id": "W01_D3_P_H5", "type": "mcq", "question": "Which sentence correctly introduces a family member?", "options": ["Brother is my this.", "This is my brother.", "My is brother this.", "Is this brother my."], "correct_answer": 1, "explanation": "'This is my brother.' is the correct way to introduce a family member."}
+        ]
+      }
+    },
+    "day_4": {
+      "concept_id": "ENG1_MRIDANG_W01_C4",
+      "concept_name": "Polite Words and Manners",
+      "questions": {
+        "easy": [
+          {"id": "W01_D4_P_E1", "type": "mcq", "question": "What do we say when someone gives us something?", "options": ["Sorry", "Thank you", "Goodbye", "Hello"], "correct_answer": 1, "explanation": "We say 'Thank you' when someone gives us something!", "hint": "It shows gratitude."},
+          {"id": "W01_D4_P_E2", "type": "true_false", "question": "'Please' is a polite word.", "correct_answer": true, "explanation": "Yes! 'Please' is a magic polite word."},
+          {"id": "W01_D4_P_E3", "type": "mcq", "question": "What do we say when we bump into someone?", "options": ["Thank you", "Please", "Sorry", "Hello"], "correct_answer": 2, "explanation": "We say 'Sorry' when we accidentally bump into someone.", "hint": "You apologize."},
+          {"id": "W01_D4_P_E4", "type": "true_false", "question": "It is polite to say 'please' when asking for something.", "correct_answer": true, "explanation": "Always say 'please' when you ask for something!"},
+          {"id": "W01_D4_P_E5", "type": "mcq", "question": "Which word means 'I apologize'?", "options": ["Thank you", "Please", "Sorry", "Welcome"], "correct_answer": 2, "explanation": "'Sorry' means 'I apologize'.", "hint": "You use it when you make a mistake."}
+        ],
+        "medium": [
+          {"id": "W01_D4_P_M1", "type": "mcq", "question": "What is the polite way to ask for water?", "options": ["Give me water!", "Water now!", "May I have some water, please?", "I want water."], "correct_answer": 2, "explanation": "'May I have some water, please?' is the polite way to ask.", "hint": "Use 'may I' and 'please'."},
+          {"id": "W01_D4_P_M2", "type": "true_false", "question": "Saying 'Excuse me' before asking a question is good manners.", "correct_answer": true, "explanation": "Yes! 'Excuse me' is polite when getting someone's attention."},
+          {"id": "W01_D4_P_M3", "type": "mcq", "question": "When someone says 'Thank you', you reply with...", "options": ["Sorry", "Please", "You're welcome", "Goodbye"], "correct_answer": 2, "explanation": "'You're welcome' is the polite reply to 'Thank you'."},
+          {"id": "W01_D4_P_M4", "type": "numeric_fill", "question": "How many polite words are in this list: please, sorry, thank you, excuse me?", "correct_answer": 4, "explanation": "Please, sorry, thank you, and excuse me are all polite words — that's 4!"},
+          {"id": "W01_D4_P_M5", "type": "mcq", "question": "Which is NOT a polite word?", "options": ["Please", "Thank you", "Shut up", "Excuse me"], "correct_answer": 2, "explanation": "'Shut up' is not polite. We should use kind words."}
+        ],
+        "hard": [
+          {"id": "W01_D4_P_H1", "type": "drag_order", "question": "Arrange to form a polite request:", "items": ["please", "May", "the book", "I have", "?"], "correct_order": [1, 3, 2, 0, 4], "explanation": "The correct sentence is: 'May I have the book please?'"},
+          {"id": "W01_D4_P_H2", "type": "mcq", "question": "Which response shows the BEST manners?", "options": ["Whatever.", "I don't care.", "Thank you so much, that's very kind!", "Fine."], "correct_answer": 2, "explanation": "'Thank you so much, that's very kind!' shows excellent manners."},
+          {"id": "W01_D4_P_H3", "type": "drag_order", "question": "Put these polite actions in the right order when entering a room:", "items": ["Say thank you", "Knock on the door", "Wait for answer", "Enter the room"], "correct_order": [1, 2, 3, 0], "explanation": "Knock → Wait → Enter → Say thank you."},
+          {"id": "W01_D4_P_H4", "type": "mcq", "question": "When should you say 'Excuse me'?", "options": ["When you're angry", "When you need to pass by someone", "When you're happy", "When you're sleeping"], "correct_answer": 1, "explanation": "Say 'Excuse me' when you need to pass by or get someone's attention."},
+          {"id": "W01_D4_P_H5", "type": "true_false", "question": "Good manners are only needed at school.", "correct_answer": false, "explanation": "Good manners are needed everywhere — at home, school, and in public!"}
+        ]
+      }
+    }
+  }
+}

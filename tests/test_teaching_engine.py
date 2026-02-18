@@ -21,9 +21,10 @@ from services.auth_service.models import Parent, Student  # 2026-02-17: Auth mod
 from services.teaching_engine.models import (  # 2026-02-17: Models
     TeachingLesson, StudentLessonProgress, DayProgress,
     WeeklyAssessmentAttempt, TutoringSession,
+    ConceptMastery,  # 2026-02-18: Mastery model for gate bypass
 )
 from services.teaching_engine.content_loader import TeachingContentLoader  # 2026-02-17: Loader
-from services.teaching_engine.services import TeachingService  # 2026-02-17: Service
+from services.teaching_engine.services import TeachingService, MasteryPracticeService  # 2026-02-18: Services
 from services.teaching_engine.tutoring import TutoringService  # 2026-02-17: Tutoring
 
 User = get_user_model()  # 2026-02-17: Django User model
@@ -321,7 +322,7 @@ class TestTeachingServiceDayFlow:
         assert result['code'] == 'DAY_NOT_UNLOCKED'
 
     def test_complete_day1(self, student_user, published_lesson):
-        """2026-02-17: Should complete day 1 and advance to day 2."""
+        """2026-02-17: Should complete day 1 and transition to mastery_practice."""
         TeachingService.start_day(student_user, 'ENG1_MRIDANG_W01')
         result = TeachingService.complete_day(
             student_user, 'ENG1_MRIDANG_W01',
@@ -332,8 +333,7 @@ class TestTeachingServiceDayFlow:
         assert result['success'] is True
         assert result['questions_correct'] == 3  # 2026-02-17: All correct
         assert result['score'] == 100
-        assert result['next_day'] == 2
-        assert result['assessment_unlocked'] is False
+        assert result['mastery_practice_required'] is True  # 2026-02-18: New flow
 
     def test_complete_day_partial_score(self, student_user, published_lesson):
         """2026-02-17: Should score partial answers correctly."""
@@ -357,6 +357,18 @@ class TestTeachingServiceDayFlow:
             practice_answers={'D1_Q1': 0, 'D1_Q2': 1, 'D1_Q3': 1},
             time_spent=120,
         )
+        # 2026-02-18: Pass mastery gate for day 1 (create ConceptMastery + advance)
+        progress = StudentLessonProgress.objects.get(student=student_user, lesson=published_lesson)
+        ConceptMastery.objects.create(
+            student=student_user, lesson=published_lesson,
+            day_number=1, best_star_rating=4, attempts_count=1, is_mastered=True
+        )
+        progress.current_day = 2
+        statuses = progress.day_statuses or {}
+        statuses['1'] = 'completed'
+        statuses['2'] = 'not_started'
+        progress.day_statuses = statuses
+        progress.save()
         # 2026-02-17: Start day 2
         result = TeachingService.start_day(student_user, 'ENG1_MRIDANG_W01')
         assert result['success'] is True
@@ -364,9 +376,9 @@ class TestTeachingServiceDayFlow:
         assert result['day_status'] == 'revision'  # 2026-02-17: Starts with revision
         assert len(result['revision_prompts']) > 0
 
-    def test_complete_day4_unlocks_assessment(self, student_user, published_lesson):
-        """2026-02-17: Completing day 4 should unlock assessment."""
-        # 2026-02-17: Complete days 1-4
+    def test_complete_day4_transitions_to_mastery(self, student_user, published_lesson):
+        """2026-02-18: Completing day 4 transitions to mastery_practice."""
+        # 2026-02-18: Complete days 1-4 with mastery pass after each
         answers_map = {
             1: {'D1_Q1': 0, 'D1_Q2': 1, 'D1_Q3': 1},
             2: {'D2_Q1': 1, 'D2_Q2': 1, 'D2_Q3': 1},
@@ -381,8 +393,26 @@ class TestTeachingServiceDayFlow:
                 practice_answers=answers_map[day],
                 time_spent=120,
             )
-        assert result['next_day'] == 5
-        assert result['assessment_unlocked'] is True
+            assert result['mastery_practice_required'] is True
+            # 2026-02-18: Simulate mastery pass to advance
+            progress = StudentLessonProgress.objects.get(student=student_user, lesson=published_lesson)
+            ConceptMastery.objects.create(
+                student=student_user, lesson=published_lesson,
+                day_number=day, best_star_rating=4, attempts_count=1, is_mastered=True
+            )
+            statuses = progress.day_statuses or {}
+            statuses[str(day)] = 'completed'
+            if day < 4:
+                progress.current_day = day + 1
+                statuses[str(day + 1)] = 'not_started'
+            else:
+                progress.current_day = 5
+                statuses['5'] = 'not_started'
+            progress.day_statuses = statuses
+            progress.save()
+        # 2026-02-18: Verify assessment unlocked
+        progress = StudentLessonProgress.objects.get(student=student_user, lesson=published_lesson)
+        assert progress.current_day == 5
 
     def test_lesson_not_found(self, student_user):
         """2026-02-17: Should return error for nonexistent lesson."""
@@ -405,7 +435,8 @@ class TestTeachingServiceAssessment:
     """2026-02-17: Tests for weekly assessment flow."""
 
     def _complete_all_days(self, student, lesson_id):
-        """2026-02-17: Helper to complete all 4 days."""
+        """2026-02-18: Helper to complete all 4 days with mastery pass."""
+        lesson = TeachingLesson.objects.get(lesson_id=lesson_id)
         answers_map = {
             1: {'D1_Q1': 0, 'D1_Q2': 1, 'D1_Q3': 1},
             2: {'D2_Q1': 1, 'D2_Q2': 1, 'D2_Q3': 1},
@@ -420,6 +451,22 @@ class TestTeachingServiceAssessment:
                 practice_answers=answers_map[day],
                 time_spent=120,
             )
+            # 2026-02-18: Simulate mastery pass to advance
+            progress = StudentLessonProgress.objects.get(student=student, lesson=lesson)
+            ConceptMastery.objects.get_or_create(
+                student=student, lesson=lesson, day_number=day,
+                defaults={'best_star_rating': 4, 'attempts_count': 1, 'is_mastered': True}
+            )
+            statuses = progress.day_statuses or {}
+            statuses[str(day)] = 'completed'
+            if day < 4:
+                progress.current_day = day + 1
+                statuses[str(day + 1)] = 'not_started'
+            else:
+                progress.current_day = 5
+                statuses['5'] = 'not_started'
+            progress.day_statuses = statuses
+            progress.save()
 
     def test_assessment_locked(self, student_user, published_lesson):
         """2026-02-17: Assessment should be locked before completing days."""
@@ -654,7 +701,7 @@ class TestAssessmentAPI:
     """2026-02-17: Tests for assessment endpoints."""
 
     def _complete_all_days_via_api(self, client):
-        """2026-02-17: Helper to complete all 4 days via API."""
+        """2026-02-18: Helper to complete all 4 days via API with mastery pass."""
         answers_map = {
             1: {'D1_Q1': 0, 'D1_Q2': 1, 'D1_Q3': 1},
             2: {'D2_Q1': 1, 'D2_Q2': 1, 'D2_Q3': 1},
@@ -675,6 +722,23 @@ class TestAssessmentAPI:
                 },
                 format='json',
             )
+            # 2026-02-18: Simulate mastery pass to advance
+            lesson = TeachingLesson.objects.get(lesson_id='ENG1_MRIDANG_W01')
+            progress = StudentLessonProgress.objects.get(lesson=lesson)
+            ConceptMastery.objects.get_or_create(
+                student=progress.student, lesson=lesson, day_number=day,
+                defaults={'best_star_rating': 4, 'attempts_count': 1, 'is_mastered': True}
+            )
+            statuses = progress.day_statuses or {}
+            statuses[str(day)] = 'completed'
+            if day < 4:
+                progress.current_day = day + 1
+                statuses[str(day + 1)] = 'not_started'
+            else:
+                progress.current_day = 5
+                statuses['5'] = 'not_started'
+            progress.day_statuses = statuses
+            progress.save()
 
     def test_get_assessment(self, student_client, published_lesson):
         """2026-02-17: Should return assessment after completing all days."""

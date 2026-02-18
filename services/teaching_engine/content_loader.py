@@ -167,6 +167,61 @@ class TeachingContentLoader:
         return data.get('weekly_assessment', {})  # 2026-02-17: Return assessment
 
     @classmethod
+    def load_practice_bank(cls, content_json_path, day_number):
+        """
+        2026-02-17: Load practice question bank for a specific day.
+
+        Practice banks are stored at the same directory as the lesson content,
+        with '_practice' suffix (e.g. week1.json → week1_practice.json).
+
+        Args:
+            content_json_path: Relative path to the lesson content JSON.
+            day_number: Day number (1-4).
+
+        Returns:
+            dict: Practice bank for the day with 'concept_id', 'concept_name',
+                  and 'questions' containing 'easy', 'medium', 'hard' lists.
+
+        Raises:
+            FileNotFoundError: If practice bank file does not exist.
+            ValueError: If day_number is invalid or day not found in bank.
+        """
+        if day_number < 1 or day_number > 4:  # 2026-02-17: Validate day
+            raise ValueError(f"day_number must be 1-4, got {day_number}")
+
+        # 2026-02-17: Derive practice file path from lesson path
+        practice_path = content_json_path.replace('.json', '_practice.json')  # 2026-02-17: Convention
+
+        # 2026-02-17: Check cache first
+        cache_key = f"{practice_path}:day_{day_number}"  # 2026-02-17: Day-specific key
+        cached = cls._cache.get(cache_key)  # 2026-02-17: Lookup
+
+        abs_path = cls._resolve_path(practice_path)  # 2026-02-17: Resolve path
+        file_hash = cls._get_file_hash(abs_path)  # 2026-02-17: Current hash
+
+        if cached and cached['hash'] == file_hash:  # 2026-02-17: Cache hit
+            return cached['data']  # 2026-02-17: Return cached
+
+        # 2026-02-17: Load full practice bank
+        with open(abs_path, 'r', encoding='utf-8') as f:  # 2026-02-17: Open file
+            data = json.load(f)  # 2026-02-17: Parse JSON
+
+        # 2026-02-17: Extract the day's bank
+        day_key = f"day_{day_number}"  # 2026-02-17: Key format
+        practice_bank = data.get('practice_bank', {})  # 2026-02-17: Get bank
+        day_data = practice_bank.get(day_key)  # 2026-02-17: Get day
+
+        if day_data is None:  # 2026-02-17: Day not found
+            raise ValueError(f"Day {day_number} not found in practice bank")
+
+        # 2026-02-17: Cache the day data
+        cls._cache[cache_key] = {  # 2026-02-17: Update cache
+            'hash': file_hash,
+            'data': day_data,
+        }
+        return day_data  # 2026-02-17: Return day practice bank
+
+    @classmethod
     def clear_cache(cls):
         """2026-02-17: Clear the in-memory content cache."""
         cls._cache.clear()  # 2026-02-17: Reset cache

@@ -158,6 +158,7 @@ class DayProgress(models.Model):
         ('revision', 'In Revision'),
         ('teaching', 'In Teaching'),
         ('practice', 'In Practice'),
+        ('mastery_practice', 'Mastery Practice'),  # 2026-02-17: Post-practice mastery session
         ('completed', 'Completed'),
     ]
 
@@ -179,6 +180,10 @@ class DayProgress(models.Model):
     questions_correct = models.IntegerField(default=0)  # 2026-02-17: Questions right
     time_spent_seconds = models.IntegerField(default=0)  # 2026-02-17: Time on this day
     hints_used = models.IntegerField(default=0)  # 2026-02-17: Hints requested
+    mastery_star_rating = models.IntegerField(  # 2026-02-17: Mastery practice star rating (0-5)
+        default=0, validators=[MinValueValidator(0), MaxValueValidator(5)]
+    )
+    mastery_passed = models.BooleanField(default=False)  # 2026-02-17: Mastery gate passed (≥3 stars)
     started_at = models.DateTimeField(null=True, blank=True)  # 2026-02-17: Day started
     completed_at = models.DateTimeField(null=True, blank=True)  # 2026-02-17: Day completed
     created_at = models.DateTimeField(auto_now_add=True)  # 2026-02-17: Created
@@ -274,3 +279,187 @@ class TutoringSession(models.Model):
         """2026-02-17: String representation."""
         msg_count = len(self.messages) if self.messages else 0  # 2026-02-17: Count
         return f"Tutoring ({msg_count} messages)"
+
+
+class PracticeSession(models.Model):
+    """
+    2026-02-17: Mastery practice session for a day's micro-lesson (BS-STR).
+
+    After completing a day's 3 in-lesson practice questions, students enter
+    an adaptive mastery practice session. Difficulty adapts based on
+    consecutive correct/incorrect answers. Star rating (1-5) is awarded
+    based on percentage correct.
+    """
+
+    STATUS_CHOICES = [  # 2026-02-17: Session status options
+        ('in_progress', 'In Progress'),
+        ('completed', 'Completed'),
+        ('abandoned', 'Abandoned'),
+    ]
+
+    IQ_LEVEL_CHOICES = [  # 2026-02-17: IQ level tiers
+        ('foundation', 'Foundation'),
+        ('standard', 'Standard'),
+        ('advanced', 'Advanced'),
+    ]
+
+    DIFFICULTY_CHOICES = [  # 2026-02-17: Difficulty levels
+        ('easy', 'Easy'),
+        ('medium', 'Medium'),
+        ('hard', 'Hard'),
+    ]
+
+    id = models.UUIDField(  # 2026-02-17: UUID primary key
+        primary_key=True, default=uuid.uuid4, editable=False
+    )
+    student = models.ForeignKey(  # 2026-02-17: Link to student
+        Student, on_delete=models.CASCADE, related_name='practice_sessions'
+    )
+    lesson_progress = models.ForeignKey(  # 2026-02-17: Parent lesson progress
+        StudentLessonProgress, on_delete=models.CASCADE,
+        related_name='practice_sessions'
+    )
+    day_number = models.IntegerField(  # 2026-02-17: Day (1-4)
+        validators=[MinValueValidator(1), MaxValueValidator(4)]
+    )
+    iq_level = models.CharField(  # 2026-02-17: Student's IQ level
+        max_length=20, choices=IQ_LEVEL_CHOICES, default='standard'
+    )
+    status = models.CharField(  # 2026-02-17: Session lifecycle
+        max_length=20, choices=STATUS_CHOICES, default='in_progress'
+    )
+    total_questions = models.IntegerField(default=0)  # 2026-02-17: Target question count
+    questions_answered = models.IntegerField(default=0)  # 2026-02-17: Answered so far
+    questions_correct = models.IntegerField(default=0)  # 2026-02-17: Correct so far
+    current_difficulty = models.CharField(  # 2026-02-17: Current adaptive difficulty
+        max_length=10, choices=DIFFICULTY_CHOICES, default='medium'
+    )
+    consecutive_correct = models.IntegerField(default=0)  # 2026-02-17: Streak for adaptation
+    consecutive_incorrect = models.IntegerField(default=0)  # 2026-02-17: Streak for adaptation
+    same_difficulty_streak = models.IntegerField(default=0)  # 2026-02-17: Same-difficulty counter
+    star_rating = models.IntegerField(  # 2026-02-17: Final star rating (0-5)
+        default=0, validators=[MinValueValidator(0), MaxValueValidator(5)]
+    )
+    percentage_correct = models.FloatField(default=0.0)  # 2026-02-17: Final percentage
+    time_spent_seconds = models.IntegerField(default=0)  # 2026-02-17: Total time
+    hints_used = models.IntegerField(default=0)  # 2026-02-17: Total hints used
+    attempt_number = models.IntegerField(default=1)  # 2026-02-17: Attempt count
+    administered_question_ids = models.JSONField(  # 2026-02-17: Track used question IDs
+        default=list, blank=True
+    )
+    created_at = models.DateTimeField(auto_now_add=True)  # 2026-02-17: Created
+    updated_at = models.DateTimeField(auto_now=True)  # 2026-02-17: Last updated
+
+    class Meta:
+        """2026-02-17: Model metadata."""
+
+        unique_together = ['lesson_progress', 'day_number', 'attempt_number']  # 2026-02-17: Unique attempt
+        ordering = ['-created_at']  # 2026-02-17: Newest first
+
+    def __str__(self):
+        """2026-02-17: String representation."""
+        return (
+            f"Practice Day {self.day_number} Attempt #{self.attempt_number} "
+            f"({self.star_rating} stars)"
+        )
+
+
+class PracticeResponse(models.Model):
+    """
+    2026-02-17: Individual question response within a mastery practice session.
+
+    Records the student's answer, correctness, timing, and difficulty
+    for each question in the adaptive practice session.
+    """
+
+    DIFFICULTY_CHOICES = [  # 2026-02-17: Difficulty levels
+        ('easy', 'Easy'),
+        ('medium', 'Medium'),
+        ('hard', 'Hard'),
+    ]
+
+    QUESTION_TYPE_CHOICES = [  # 2026-02-17: Question type options
+        ('mcq', 'Multiple Choice'),
+        ('true_false', 'True/False'),
+        ('numeric_fill', 'Numeric Fill'),
+        ('drag_order', 'Drag and Order'),
+    ]
+
+    id = models.UUIDField(  # 2026-02-17: UUID primary key
+        primary_key=True, default=uuid.uuid4, editable=False
+    )
+    session = models.ForeignKey(  # 2026-02-17: Parent practice session
+        PracticeSession, on_delete=models.CASCADE, related_name='responses'
+    )
+    question_id = models.CharField(max_length=100)  # 2026-02-17: Question identifier
+    concept_id = models.CharField(max_length=100, blank=True)  # 2026-02-17: Concept identifier
+    difficulty = models.CharField(  # 2026-02-17: Question difficulty
+        max_length=10, choices=DIFFICULTY_CHOICES
+    )
+    question_type = models.CharField(  # 2026-02-17: Question type
+        max_length=20, choices=QUESTION_TYPE_CHOICES, default='mcq'
+    )
+    student_answer = models.JSONField(  # 2026-02-17: Student's answer (any type)
+        default=dict, blank=True
+    )
+    correct_answer = models.JSONField(  # 2026-02-17: Correct answer (any type)
+        default=dict, blank=True
+    )
+    is_correct = models.BooleanField(default=False)  # 2026-02-17: Was answer correct
+    time_taken_seconds = models.IntegerField(default=0)  # 2026-02-17: Time for this question
+    hints_used = models.IntegerField(default=0)  # 2026-02-17: Hints for this question
+    position = models.IntegerField(default=0)  # 2026-02-17: Position in session (0-indexed)
+    feedback_text = models.TextField(blank=True, default='')  # 2026-02-17: Feedback shown
+    created_at = models.DateTimeField(auto_now_add=True)  # 2026-02-17: Created
+
+    class Meta:
+        """2026-02-17: Model metadata."""
+
+        unique_together = ['session', 'position']  # 2026-02-17: One per position
+        ordering = ['position']  # 2026-02-17: Sequential
+
+    def __str__(self):
+        """2026-02-17: String representation."""
+        status = "correct" if self.is_correct else "incorrect"  # 2026-02-17: Status text
+        return f"Q{self.position + 1} ({self.difficulty}) - {status}"
+
+
+class ConceptMastery(models.Model):
+    """
+    2026-02-17: Best mastery rating per student per lesson-day (BS-STR).
+
+    Tracks the best star rating across all practice attempts. Used as
+    the mastery gate: students need is_mastered=True (≥3 stars) to
+    unlock the next day.
+    """
+
+    id = models.UUIDField(  # 2026-02-17: UUID primary key
+        primary_key=True, default=uuid.uuid4, editable=False
+    )
+    student = models.ForeignKey(  # 2026-02-17: Link to student
+        Student, on_delete=models.CASCADE, related_name='concept_masteries'
+    )
+    lesson = models.ForeignKey(  # 2026-02-17: Link to lesson
+        TeachingLesson, on_delete=models.CASCADE, related_name='concept_masteries'
+    )
+    day_number = models.IntegerField(  # 2026-02-17: Day (1-4)
+        validators=[MinValueValidator(1), MaxValueValidator(4)]
+    )
+    best_star_rating = models.IntegerField(  # 2026-02-17: Best star rating (0-5)
+        default=0, validators=[MinValueValidator(0), MaxValueValidator(5)]
+    )
+    attempts_count = models.IntegerField(default=0)  # 2026-02-17: Total attempts
+    is_mastered = models.BooleanField(default=False)  # 2026-02-17: True when ≥3 stars
+    created_at = models.DateTimeField(auto_now_add=True)  # 2026-02-17: Created
+    updated_at = models.DateTimeField(auto_now=True)  # 2026-02-17: Last updated
+
+    class Meta:
+        """2026-02-17: Model metadata."""
+
+        unique_together = ['student', 'lesson', 'day_number']  # 2026-02-17: One per combo
+        ordering = ['day_number']  # 2026-02-17: By day
+
+    def __str__(self):
+        """2026-02-17: String representation."""
+        mastered = "Mastered" if self.is_mastered else "Not mastered"  # 2026-02-17: Status
+        return f"Day {self.day_number} - {self.best_star_rating} stars ({mastered})"
