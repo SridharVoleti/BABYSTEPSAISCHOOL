@@ -75,4 +75,8 @@ urlpatterns = [
     # 2026-02-17: AI Teaching Engine endpoints (BS-AIE module)
     # Mounted at: http://localhost:8000/api/v1/teaching/
     path('api/v1/teaching/', include('services.teaching_engine.urls')),
+
+    # 2026-02-19: Parent Dashboard endpoints (BS-PAR module)
+    # Mounted at: http://localhost:8000/api/v1/parent/
+    path('api/v1/parent/', include('services.parent_dashboard.urls')),
 ]

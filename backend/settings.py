@@ -87,6 +87,7 @@ INSTALLED_APPS = [
     'services.auth_service',  # 2026-02-12: Authentication module (BS-AUT)
     'services.diagnostic_service',  # 2026-02-12: Diagnostic assessment module (BS-DIA)
     'services.teaching_engine',  # 2026-02-17: AI Teaching Engine module (BS-AIE)
+    'services.parent_dashboard',  # 2026-02-19: Parent Dashboard module (BS-PAR)
 ]
 
 MIDDLEWARE = [
