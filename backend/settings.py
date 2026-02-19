@@ -88,6 +88,7 @@ INSTALLED_APPS = [
     'services.diagnostic_service',  # 2026-02-12: Diagnostic assessment module (BS-DIA)
     'services.teaching_engine',  # 2026-02-17: AI Teaching Engine module (BS-AIE)
     'services.parent_dashboard',  # 2026-02-19: Parent Dashboard module (BS-PAR)
+    'services.read_along_service',  # 2026-02-19: Read-Along & Mimic Engine (BS-RAM)
 ]
 
 MIDDLEWARE = [

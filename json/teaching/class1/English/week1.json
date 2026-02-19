@@ -88,7 +88,46 @@
           "correct_answer": 1,
           "hint": "Ollie listens first and thinks before acting."
         }
-      ]
+      ],
+      "read_along": {
+        "English": {
+          "sentences": [
+            "Ollie the Owl lives in a big forest.",
+            "He has big round eyes that can see in the dark.",
+            "All the animals call Ollie wise.",
+            "Wise means thinking carefully before you act."
+          ],
+          "transliterations": []
+        },
+        "Hindi": {
+          "sentences": [
+            "उल्लू ओली एक बड़े जंगल में रहता है।",
+            "उसकी बड़ी-बड़ी गोल आँखें अँधेरे में देख सकती हैं।",
+            "सभी जानवर ओली को बुद्धिमान कहते हैं।",
+            "बुद्धिमान होने का मतलब है सोच-समझकर काम करना।"
+          ],
+          "transliterations": [
+            "Ulloo Oli ek bare jungle mein rehta hai.",
+            "Uski badi-badi gol aankhein andhere mein dekh sakti hain.",
+            "Sabhi jaanwar Oli ko buddhimaan kehte hain.",
+            "Buddhimaan hone ka matlab hai soch-samajhkar kaam karna."
+          ]
+        },
+        "Telugu": {
+          "sentences": [
+            "ఓలీ గుడ్లగూబ పెద్ద అడవిలో నివసిస్తుంది.",
+            "అతనికి చీకటిలో చూడగల పెద్ద గుండ్రని కళ్ళు ఉన్నాయి.",
+            "అన్ని జంతువులు ఓలీని తెలివైనది అంటాయి.",
+            "తెలివైనది అంటే చర్య తీసుకునే ముందు జాగ్రత్తగా ఆలోచించడం."
+          ],
+          "transliterations": [
+            "Oli gudlaguba pedda adavilo nivasistu ndi.",
+            "Ataniki cheekatilo choodagala pedda gundrani kallu unnaayi.",
+            "Anni jaantuvulu Olini telivainadi antaayi.",
+            "Telivainadi ante charya teesukunne mundu jaagrattagaa aalochinchatadam."
+          ]
+        }
+      }
     },
     {
       "day": 2,
@@ -179,7 +218,46 @@
           "correct_answer": 1,
           "hint": "Ollie gave Rabbit a helpful suggestion."
         }
-      ]
+      ],
+      "read_along": {
+        "English": {
+          "sentences": [
+            "A rabbit got lost in the forest.",
+            "Rabbit was very worried and did not know the way home.",
+            "Rabbit went to Ollie for advice.",
+            "Ollie asked questions to help Rabbit think and find the path."
+          ],
+          "transliterations": []
+        },
+        "Hindi": {
+          "sentences": [
+            "एक खरगोश जंगल में खो गया।",
+            "खरगोश बहुत चिंतित था और उसे घर का रास्ता नहीं पता था।",
+            "खरगोश ओली के पास सलाह लेने गया।",
+            "ओली ने सवाल पूछे ताकि खरगोश सोच सके और रास्ता ढूंढ सके।"
+          ],
+          "transliterations": [
+            "Ek khargosh jungle mein kho gaya.",
+            "Khargosh bahut chintit tha aur use ghar ka raasta nahi pata tha.",
+            "Khargosh Oli ke paas salah lene gaya.",
+            "Oli ne sawaal puche taaki khargosh soch sake aur raasta dhundh sake."
+          ]
+        },
+        "Telugu": {
+          "sentences": [
+            "ఒక కుందేలు అడవిలో తప్పిపోయింది.",
+            "కుందేలు చాలా ఆందోళనగా ఉంది మరియు ఇంటికి దారి తెలియలేదు.",
+            "కుందేలు సలహా కోసం ఓలీ దగ్గరికి వెళ్ళింది.",
+            "ఓలీ ప్రశ్నలు అడిగాడు తద్వారా కుందేలు ఆలోచించి దారి కనుగొంది."
+          ],
+          "transliterations": [
+            "Oka kundelu adavilo tappipoyindi.",
+            "Kundelu chaala aandolanagaa undi mariyu intiki daari teliyalaedu.",
+            "Kundelu salaaha kosam Oli daggariki vellindi.",
+            "Oli prashnalu adegaadu, tadvara kundelu aalochinchi daari kanugonndi."
+          ]
+        }
+      }
     },
     {
       "day": 3,
@@ -269,7 +347,46 @@
           "correct_answer": 1,
           "hint": "First listen, then think, then..."
         }
-      ]
+      ],
+      "read_along": {
+        "English": {
+          "sentences": [
+            "Ollie always listens carefully before speaking.",
+            "First listen, then think, then speak.",
+            "This is the secret to being wise.",
+            "We can all follow Ollie's three steps."
+          ],
+          "transliterations": []
+        },
+        "Hindi": {
+          "sentences": [
+            "ओली बोलने से पहले हमेशा ध्यान से सुनता है।",
+            "पहले सुनो, फिर सोचो, फिर बोलो।",
+            "यही बुद्धिमान होने का रहस्य है।",
+            "हम सभी ओली के तीन कदमों का पालन कर सकते हैं।"
+          ],
+          "transliterations": [
+            "Oli bolne se pehle hamesha dhyan se sunta hai.",
+            "Pehle suno, phir socho, phir bolo.",
+            "Yahi buddhimaan hone ka rahasya hai.",
+            "Hum sabhi Oli ke teen kadmon ka palan kar sakte hain."
+          ]
+        },
+        "Telugu": {
+          "sentences": [
+            "ఓలీ మాట్లాడే ముందు ఎప్పుడూ శ్రద్ధగా వింటాడు.",
+            "మొదట వినండి, తరువాత ఆలోచించండి, తరువాత మాట్లాడండి.",
+            "ఇదే తెలివైనవారి రహస్యం.",
+            "మనమందరం ఓలీ యొక్క మూడు దశలు పాటించవచ్చు."
+          ],
+          "transliterations": [
+            "Oli maatlaade mundu eppudu shraddhagaa vintaadu.",
+            "Modati vinandi, taruvata aalochinchandi, taruvata maatlaadandi.",
+            "Ide telivainaavaari rahasyam.",
+            "Manamandaram Oli yokka moondu dasalu paatinchavchachu."
+          ]
+        }
+      }
     },
     {
       "day": 4,
@@ -362,7 +479,46 @@
           "correct_answer": 0,
           "hint": "Ollie helped Rabbit do this with the lost path problem."
         }
-      ]
+      ],
+      "read_along": {
+        "English": {
+          "sentences": [
+            "The moral of this story is to think carefully before acting.",
+            "Being wise means listening, thinking, and speaking kindly.",
+            "We can solve problems by helping others think.",
+            "Let us be wise like Ollie every day."
+          ],
+          "transliterations": []
+        },
+        "Hindi": {
+          "sentences": [
+            "इस कहानी की सीख है कि कोई काम करने से पहले ध्यान से सोचें।",
+            "बुद्धिमान होना मतलब सुनना, सोचना और दयालुता से बोलना।",
+            "हम दूसरों को सोचने में मदद करके समस्याएँ हल कर सकते हैं।",
+            "आइए हम हर दिन ओली की तरह बुद्धिमान बनें।"
+          ],
+          "transliterations": [
+            "Is kahaani ki seekh hai ki koi kaam karne se pehle dhyan se sochen.",
+            "Buddhimaan hona matlab sunna, sochna aur dayaaluta se bolna.",
+            "Hum doosron ko sochne mein madad karke samasyaein hal kar sakte hain.",
+            "Aao hum har din Oli ki tarah buddhimaan banen."
+          ]
+        },
+        "Telugu": {
+          "sentences": [
+            "ఈ కథ యొక్క నీతి ఏమిటంటే చర్య తీసుకునే ముందు జాగ్రత్తగా ఆలోచించడం.",
+            "తెలివైనది అంటే వినడం, ఆలోచించడం మరియు దయతో మాట్లాడటం.",
+            "ఇతరులు ఆలోచించడంలో సహాయపడటం ద్వారా సమస్యలు పరిష్కరించవచ్చు.",
+            "మనం ప్రతి రోజు ఓలీ మాదిరిగా తెలివైనవారిగా ఉండనివ్వండి."
+          ],
+          "transliterations": [
+            "Ee katha yokka neeti emitante charya teesukunne mundu jaagrattagaa aalochinchatadam.",
+            "Telivainadi ante vinatadam, aalochinchatadam mariyu dayatho maatlaadatadam.",
+            "Itarulu aalochinchatadam lo sahaaypadadam dvaara samasyalu parishkarinchavachu.",
+            "Manam prati roju Oli maadirugaa telivainavaaragaa undanivvandi."
+          ]
+        }
+      }
     }
   ],
   "weekly_assessment": {

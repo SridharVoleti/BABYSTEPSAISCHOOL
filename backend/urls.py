@@ -79,4 +79,8 @@ urlpatterns = [
     # 2026-02-19: Parent Dashboard endpoints (BS-PAR module)
     # Mounted at: http://localhost:8000/api/v1/parent/
     path('api/v1/parent/', include('services.parent_dashboard.urls')),
+
+    # 2026-02-19: Read-Along & Mimic Engine endpoints (BS-RAM module)
+    # Mounted at: http://localhost:8000/api/v1/read-along/
+    path('api/v1/read-along/', include('services.read_along_service.urls')),
 ]
