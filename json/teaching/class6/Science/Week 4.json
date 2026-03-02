@@ -1,0 +1,253 @@
+{
+  "lesson_id": "SCI6_DLW_W03_L02",
+  "class": 6,
+  "subject": "Science",
+  "chapter_id": "SCI6_CH02",
+  "chapter_title": "Diversity in the Living World",
+  "week_number": 3,
+  "focus": "Advanced Plant Classification – Leaves, Roots and Seeds",
+  "micro_lessons": [
+
+    {
+      "day": 11,
+      "micro_lesson_id": "SCI6_DLW_W03_L02_D11",
+      "title": "Leaf Venation – Patterns of Veins",
+      "duration_minutes": 15,
+
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "Leaves have thin lines called veins. The pattern of these veins is called venation."
+        },
+        "standard": {
+          "concept_text": "Reticulate venation forms a net-like pattern. Parallel venation has veins running parallel."
+        },
+        "advanced": {
+          "concept_text": "Venation is a structural feature used in plant classification and is often linked to root and seed type."
+        }
+      },
+
+      "media_assets": {
+        "images": [
+          {
+            "id": "IMG_D11_01",
+            "title": "Hibiscus Leaf – Reticulate Venation",
+            "type": "concept_visual",
+            "url": "https://cdn.school.com/images/hibiscus_reticulate.jpg",
+            "instructional_purpose": "Show net-like vein pattern"
+          },
+          {
+            "id": "IMG_D11_02",
+            "title": "Banana Leaf – Parallel Venation",
+            "type": "concept_visual",
+            "url": "https://cdn.school.com/images/banana_parallel.jpg",
+            "instructional_purpose": "Show parallel vein pattern"
+          },
+          {
+            "id": "IMG_D11_03",
+            "title": "Grass Leaf Close-up",
+            "type": "real_world_photo",
+            "url": "https://cdn.school.com/images/grass_parallel.jpg",
+            "instructional_purpose": "Reinforce parallel venation"
+          }
+        ],
+        "videos": [
+          {
+            "id": "VID_D11_01",
+            "title": "Leaf Vein Comparison Demo",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_venation_demo",
+            "duration_seconds": 50,
+            "instructional_purpose": "Visual comparison of venation types"
+          },
+          {
+            "id": "VID_D11_02",
+            "title": "Microscopic View of Leaf Veins",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_leaf_microscope",
+            "duration_seconds": 45,
+            "instructional_purpose": "Show structural details clearly"
+          }
+        ]
+      }
+    },
+
+    {
+      "day": 12,
+      "micro_lesson_id": "SCI6_DLW_W03_L02_D12",
+      "title": "Types of Roots – Taproot and Fibrous Root",
+      "duration_minutes": 15,
+
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "Some plants have one main root. Some have many thin roots."
+        },
+        "standard": {
+          "concept_text": "Taproot system has one main root. Fibrous root system has many thin roots of similar size."
+        },
+        "advanced": {
+          "concept_text": "Root structure provides anchorage and nutrient absorption and supports classification."
+        }
+      },
+
+      "media_assets": {
+        "images": [
+          {
+            "id": "IMG_D12_01",
+            "title": "Mustard Plant Taproot",
+            "type": "concept_visual",
+            "url": "https://cdn.school.com/images/mustard_taproot.jpg",
+            "instructional_purpose": "Show main root structure"
+          },
+          {
+            "id": "IMG_D12_02",
+            "title": "Grass Fibrous Roots",
+            "type": "concept_visual",
+            "url": "https://cdn.school.com/images/grass_fibrous.jpg",
+            "instructional_purpose": "Show fibrous root cluster"
+          }
+        ],
+        "videos": [
+          {
+            "id": "VID_D12_01",
+            "title": "Pulling Out Plants – Root Comparison",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_root_demo",
+            "duration_seconds": 60,
+            "instructional_purpose": "Demonstrate taproot vs fibrous visually"
+          }
+        ]
+      }
+    },
+
+    {
+      "day": 13,
+      "micro_lesson_id": "SCI6_DLW_W03_L02_D13",
+      "title": "Relation Between Venation and Roots",
+      "duration_minutes": 15,
+
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "Plants with net-like veins usually have one main root."
+        },
+        "standard": {
+          "concept_text": "Reticulate venation is generally associated with taproots. Parallel venation is associated with fibrous roots."
+        },
+        "advanced": {
+          "concept_text": "This correlation provides predictive classification in botany."
+        }
+      },
+
+      "media_assets": {
+        "images": [
+          {
+            "id": "IMG_D13_01",
+            "title": "Venation and Root Correlation Chart",
+            "type": "diagram",
+            "url": "https://cdn.school.com/images/venation_root_chart.jpg",
+            "instructional_purpose": "Show visual correlation"
+          }
+        ],
+        "videos": [
+          {
+            "id": "VID_D13_01",
+            "title": "Linking Leaf and Root Structure",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_leaf_root_link",
+            "duration_seconds": 55,
+            "instructional_purpose": "Explain correlation clearly"
+          }
+        ]
+      }
+    },
+
+    {
+      "day": 14,
+      "micro_lesson_id": "SCI6_DLW_W03_L02_D14",
+      "title": "Dicots and Monocots – Seed Classification",
+      "duration_minutes": 15,
+
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "Seeds may have one or two cotyledons."
+        },
+        "standard": {
+          "concept_text": "Dicots have two cotyledons. Monocots have one cotyledon."
+        },
+        "advanced": {
+          "concept_text": "Dicots typically show reticulate venation and taproots; monocots show parallel venation and fibrous roots."
+        }
+      },
+
+      "media_assets": {
+        "images": [
+          {
+            "id": "IMG_D14_01",
+            "title": "Chickpea Seed Split",
+            "type": "concept_visual",
+            "url": "https://cdn.school.com/images/chickpea_dicot.jpg",
+            "instructional_purpose": "Show two cotyledons"
+          },
+          {
+            "id": "IMG_D14_02",
+            "title": "Maize Seed Cross-section",
+            "type": "concept_visual",
+            "url": "https://cdn.school.com/images/maize_monocot.jpg",
+            "instructional_purpose": "Show single cotyledon"
+          }
+        ],
+        "videos": [
+          {
+            "id": "VID_D14_01",
+            "title": "Dicot vs Monocot Seed Demonstration",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_seed_demo",
+            "duration_seconds": 60,
+            "instructional_purpose": "Visual comparison of seeds"
+          }
+        ]
+      }
+    },
+
+    {
+      "day": 15,
+      "micro_lesson_id": "SCI6_DLW_W03_L02_D15",
+      "title": "Integrated Plant Classification",
+      "duration_minutes": 15,
+
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "Plants can be grouped using leaves, roots and seeds together."
+        },
+        "standard": {
+          "concept_text": "Monocots: parallel venation + fibrous roots + one cotyledon. Dicots: reticulate venation + taproot + two cotyledons."
+        },
+        "advanced": {
+          "concept_text": "Multi-feature classification strengthens accuracy and scientific reasoning."
+        }
+      },
+
+      "media_assets": {
+        "images": [
+          {
+            "id": "IMG_D15_01",
+            "title": "Integrated Classification Table",
+            "type": "diagram",
+            "url": "https://cdn.school.com/images/integrated_classification.jpg",
+            "instructional_purpose": "Summarize multi-feature linkage"
+          }
+        ],
+        "videos": [
+          {
+            "id": "VID_D15_01",
+            "title": "Plant Classification Practice Examples",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_classification_practice",
+            "duration_seconds": 60,
+            "instructional_purpose": "Apply integrated classification"
+          }
+        ]
+      }
+    }
+
+  ]
+}

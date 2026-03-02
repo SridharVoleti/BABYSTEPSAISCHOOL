@@ -1,0 +1,229 @@
+{
+  "lesson_id": "SCI6_MAG_W01_L04",
+  "class": 6,
+  "subject": "Science",
+  "chapter_id": "SCI6_CH04",
+  "chapter_title": "Exploring Magnets",
+  "week_number": 1,
+  "focus": "Understanding Magnetism Through Observation and Experimentation",
+  "source_reference": "NCERT Class 6 Science Chapter 4 – Exploring Magnets",
+  "micro_lessons": [
+
+    {
+      "day": 1,
+      "micro_lesson_id": "SCI6_MAG_W01_L04_D1",
+      "title": "Magnetic and Non-Magnetic Materials",
+      "duration_minutes": 15,
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "Some materials stick to a magnet, while others do not."
+        },
+        "standard": {
+          "concept_text": "Materials that are attracted towards a magnet are called magnetic materials. Materials not attracted are called non-magnetic materials."
+        },
+        "advanced": {
+          "concept_text": "Iron, nickel and cobalt are magnetic materials. Magnetism depends on the internal structure of materials."
+        }
+      },
+      "activity": {
+        "title": "Testing Materials with a Magnet",
+        "steps": [
+          "Collect objects made of wood, plastic, iron, glass and rubber.",
+          "Predict which objects will stick to a magnet.",
+          "Test each object and record observations.",
+          "Compare prediction with observation."
+        ],
+        "expected_learning": "Students understand that magnets attract only specific materials."
+      },
+      "media_assets": {
+        "images": [
+          {
+            "id": "IMG_D1_01",
+            "title": "Different Shapes of Magnets",
+            "type": "diagram",
+            "url": "https://cdn.school.com/images/magnet_shapes.jpg",
+            "instructional_purpose": "Show bar, U-shaped and ring magnets"
+          },
+          {
+            "id": "IMG_D1_02",
+            "title": "Testing Objects with Magnet",
+            "type": "real_world_photo",
+            "url": "https://cdn.school.com/images/testing_magnet_objects.jpg",
+            "instructional_purpose": "Demonstrate activity procedure"
+          }
+        ],
+        "videos": [
+          {
+            "id": "VID_D1_01",
+            "title": "Magnetic vs Non-Magnetic Materials Experiment",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_magnetic_materials",
+            "duration_seconds": 60,
+            "instructional_purpose": "Visual demonstration of classification activity"
+          }
+        ]
+      }
+    },
+
+    {
+      "day": 2,
+      "micro_lesson_id": "SCI6_MAG_W01_L04_D2",
+      "title": "Poles of a Magnet",
+      "duration_minutes": 15,
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "A magnet has two ends called poles."
+        },
+        "standard": {
+          "concept_text": "The two ends of a magnet are called North pole and South pole. Maximum magnetic strength is at the poles."
+        },
+        "advanced": {
+          "concept_text": "Magnetic poles always exist in pairs. A single pole cannot exist even if the magnet is broken."
+        }
+      },
+      "activity": {
+        "title": "Iron Filings Experiment",
+        "steps": [
+          "Spread iron filings on a sheet of paper.",
+          "Place a bar magnet over the filings.",
+          "Observe where maximum filings stick."
+        ],
+        "expected_learning": "Students observe magnetic strength concentration at poles."
+      },
+      "media_assets": {
+        "images": [
+          {
+            "id": "IMG_D2_01",
+            "title": "Iron Filings Around Bar Magnet",
+            "type": "experiment_photo",
+            "url": "https://cdn.school.com/images/iron_filings_magnet.jpg",
+            "instructional_purpose": "Show clustering of filings at poles"
+          }
+        ],
+        "videos": [
+          {
+            "id": "VID_D2_01",
+            "title": "Why Magnets Have Two Poles",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_magnet_poles",
+            "duration_seconds": 75,
+            "instructional_purpose": "Explain pole concept visually"
+          }
+        ]
+      }
+    },
+
+    {
+      "day": 3,
+      "micro_lesson_id": "SCI6_MAG_W01_L04_D3",
+      "title": "Finding Directions and the Magnetic Compass",
+      "duration_minutes": 15,
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "A freely suspended magnet comes to rest in the north-south direction."
+        },
+        "standard": {
+          "concept_text": "The end pointing north is called the North-seeking pole. The Earth behaves like a giant magnet."
+        },
+        "advanced": {
+          "concept_text": "The magnetic compass works because its needle is a freely rotating magnet aligned by Earth’s magnetic field."
+        }
+      },
+      "activity": {
+        "title": "Making a Simple Compass",
+        "steps": [
+          "Magnetize an iron needle by stroking it with a bar magnet.",
+          "Insert the needle into a cork.",
+          "Float it in water.",
+          "Observe alignment direction."
+        ],
+        "expected_learning": "Students understand Earth’s magnetic influence."
+      },
+      "media_assets": {
+        "images": [
+          {
+            "id": "IMG_D3_01",
+            "title": "Magnetic Compass Structure",
+            "type": "diagram",
+            "url": "https://cdn.school.com/images/compass_structure.jpg",
+            "instructional_purpose": "Show needle and dial"
+          },
+          {
+            "id": "IMG_D3_02",
+            "title": "DIY Compass in Water",
+            "type": "experiment_photo",
+            "url": "https://cdn.school.com/images/diy_compass.jpg",
+            "instructional_purpose": "Demonstrate homemade compass"
+          }
+        ],
+        "videos": [
+          {
+            "id": "VID_D3_01",
+            "title": "How a Compass Works",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_compass_working",
+            "duration_seconds": 80,
+            "instructional_purpose": "Explain Earth as a magnet"
+          }
+        ]
+      }
+    },
+
+    {
+      "day": 4,
+      "micro_lesson_id": "SCI6_MAG_W01_L04_D4",
+      "title": "Attraction and Repulsion Between Magnets",
+      "duration_minutes": 15,
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "Magnets can attract or repel each other."
+        },
+        "standard": {
+          "concept_text": "Unlike poles attract each other, while like poles repel each other."
+        },
+        "advanced": {
+          "concept_text": "Repulsion is the sure test of magnetism because iron can be attracted but cannot repel."
+        }
+      },
+      "activity": {
+        "title": "Interaction Between Two Magnets",
+        "steps": [
+          "Place one magnet on pencils.",
+          "Bring another magnet close without touching.",
+          "Observe movement direction.",
+          "Test with both pole combinations."
+        ],
+        "expected_learning": "Students differentiate attraction and repulsion."
+      },
+      "media_assets": {
+        "images": [
+          {
+            "id": "IMG_D4_01",
+            "title": "Like Poles Repel",
+            "type": "experiment_photo",
+            "url": "https://cdn.school.com/images/like_poles_repel.jpg",
+            "instructional_purpose": "Visualize repulsion"
+          },
+          {
+            "id": "IMG_D4_02",
+            "title": "Unlike Poles Attract",
+            "type": "experiment_photo",
+            "url": "https://cdn.school.com/images/unlike_poles_attract.jpg",
+            "instructional_purpose": "Visualize attraction"
+          }
+        ],
+        "videos": [
+          {
+            "id": "VID_D4_01",
+            "title": "Magnet Interaction Demonstration",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_magnet_interaction",
+            "duration_seconds": 60,
+            "instructional_purpose": "Demonstrate attraction and repulsion clearly"
+          }
+        ]
+      }
+    }
+
+  ]
+}

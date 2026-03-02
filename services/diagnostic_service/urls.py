@@ -13,6 +13,7 @@ from .views import (  # 2026-02-12: Views
     DiagnosticRespondView,
     DiagnosticStatusView,
     DiagnosticResultView,
+    IQReassessmentHistoryView,  # 2026-02-27: Reassessment history
 )
 
 # 2026-02-12: URL patterns
@@ -21,4 +22,9 @@ urlpatterns = [
     path('respond/', DiagnosticRespondView.as_view(), name='diagnostic-respond'),
     path('status/', DiagnosticStatusView.as_view(), name='diagnostic-status'),
     path('result/', DiagnosticResultView.as_view(), name='diagnostic-result'),
+    path(  # 2026-02-27: IQ reassessment history endpoint
+        'reassessment/history/',
+        IQReassessmentHistoryView.as_view(),
+        name='iq-reassessment-history',
+    ),
 ]

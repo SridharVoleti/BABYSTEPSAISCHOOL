@@ -1,0 +1,261 @@
+{
+  "lesson_id": "SCI6_DLW_W02_L02",
+  "class": 6,
+  "subject": "Science",
+  "chapter_id": "SCI6_CH02",
+  "chapter_title": "Diversity in the Living World",
+  "week_number": 2,
+  "focus": "Grouping Plants Based on Structural Features",
+  "micro_lessons": [
+
+    {
+      "day": 6,
+      "micro_lesson_id": "SCI6_DLW_W02_L02_D6",
+      "title": "Why Do We Group Plants?",
+      "duration_minutes": 15,
+
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "There are many types of plants. To study them easily, we group similar plants together."
+        },
+        "standard": {
+          "concept_text": "Scientific grouping uses consistent structural features such as height, stem type and branching pattern."
+        },
+        "advanced": {
+          "concept_text": "Classification must depend on stable morphological characteristics rather than temporary features."
+        }
+      },
+
+      "media_assets": {
+        "images": [
+          {
+            "id": "IMG_D6_01",
+            "title": "Variety of Plants in a Garden",
+            "type": "real_world_photo",
+            "url": "https://cdn.school.com/images/garden_variety.jpg",
+            "instructional_purpose": "Show diversity before grouping"
+          },
+          {
+            "id": "IMG_D6_02",
+            "title": "Grouped Plant Categories Chart",
+            "type": "diagram",
+            "url": "https://cdn.school.com/images/grouping_chart.jpg",
+            "instructional_purpose": "Visual representation of grouping idea"
+          }
+        ],
+        "videos": [
+          {
+            "id": "VID_D6_01",
+            "title": "Why Scientists Classify Plants",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_classification_intro",
+            "duration_seconds": 60,
+            "instructional_purpose": "Explain need for classification"
+          }
+        ]
+      }
+    },
+
+    {
+      "day": 7,
+      "micro_lesson_id": "SCI6_DLW_W02_L02_D7",
+      "title": "Understanding Herbs",
+      "duration_minutes": 15,
+
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "Herbs usually have soft, green stems."
+        },
+        "standard": {
+          "concept_text": "Herbs are non-woody plants. Stem softness is the key feature."
+        },
+        "advanced": {
+          "concept_text": "The absence of woody tissue differentiates herbs from shrubs and trees."
+        }
+      },
+
+      "media_assets": {
+        "images": [
+          {
+            "id": "IMG_D7_01",
+            "title": "Tomato Plant",
+            "type": "real_world_photo",
+            "url": "https://cdn.school.com/images/tomato_plant.jpg",
+            "instructional_purpose": "Example of herb"
+          },
+          {
+            "id": "IMG_D7_02",
+            "title": "Grass Close-up Stem",
+            "type": "comparison_visual",
+            "url": "https://cdn.school.com/images/grass_stem.jpg",
+            "instructional_purpose": "Show soft green stem"
+          }
+        ],
+        "videos": [
+          {
+            "id": "VID_D7_01",
+            "title": "Soft vs Woody Stem Demonstration",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_stem_demo",
+            "duration_seconds": 50,
+            "instructional_purpose": "Demonstrate stem bending comparison"
+          },
+          {
+            "id": "VID_D7_02",
+            "title": "Banana Plant Explained",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_banana_herb",
+            "duration_seconds": 45,
+            "instructional_purpose": "Clarify tall herb misconception"
+          }
+        ]
+      }
+    },
+
+    {
+      "day": 8,
+      "micro_lesson_id": "SCI6_DLW_W02_L02_D8",
+      "title": "Shrubs and Trees",
+      "duration_minutes": 15,
+
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "Trees have one thick trunk. Shrubs have many stems near the ground."
+        },
+        "standard": {
+          "concept_text": "Branching pattern and trunk structure differentiate shrubs and trees."
+        },
+        "advanced": {
+          "concept_text": "Height alone is insufficient; branching origin is a diagnostic structural trait."
+        }
+      },
+
+      "media_assets": {
+        "images": [
+          {
+            "id": "IMG_D8_01",
+            "title": "Mango Tree Structure",
+            "type": "real_world_photo",
+            "url": "https://cdn.school.com/images/mango_tree.jpg",
+            "instructional_purpose": "Show single woody trunk"
+          },
+          {
+            "id": "IMG_D8_02",
+            "title": "Rose Plant Structure",
+            "type": "real_world_photo",
+            "url": "https://cdn.school.com/images/rose_shrub.jpg",
+            "instructional_purpose": "Show multiple stems near ground"
+          }
+        ],
+        "videos": [
+          {
+            "id": "VID_D8_01",
+            "title": "Tree vs Shrub Comparison",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_tree_shrub",
+            "duration_seconds": 60,
+            "instructional_purpose": "Visually compare branching patterns"
+          }
+        ]
+      }
+    },
+
+    {
+      "day": 9,
+      "micro_lesson_id": "SCI6_DLW_W02_L02_D9",
+      "title": "Climbers and Creepers",
+      "duration_minutes": 15,
+
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "Some plants cannot stand straight. They either climb or spread."
+        },
+        "standard": {
+          "concept_text": "Climbers grow upward using support. Creepers spread along the ground."
+        },
+        "advanced": {
+          "concept_text": "Weak stem morphology leads to adaptive growth strategies."
+        }
+      },
+
+      "media_assets": {
+        "images": [
+          {
+            "id": "IMG_D9_01",
+            "title": "Money Plant Climbing",
+            "type": "real_world_photo",
+            "url": "https://cdn.school.com/images/money_plant.jpg",
+            "instructional_purpose": "Example of climber"
+          },
+          {
+            "id": "IMG_D9_02",
+            "title": "Pumpkin Creeper",
+            "type": "real_world_photo",
+            "url": "https://cdn.school.com/images/pumpkin_creeper.jpg",
+            "instructional_purpose": "Example of creeper"
+          }
+        ],
+        "videos": [
+          {
+            "id": "VID_D9_01",
+            "title": "Climber Growth Time-lapse",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_climber_growth",
+            "duration_seconds": 50,
+            "instructional_purpose": "Show upward growth pattern"
+          },
+          {
+            "id": "VID_D9_02",
+            "title": "Creeper Spread Demonstration",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_creeper_spread",
+            "duration_seconds": 45,
+            "instructional_purpose": "Show ground spread behaviour"
+          }
+        ]
+      }
+    },
+
+    {
+      "day": 10,
+      "micro_lesson_id": "SCI6_DLW_W02_L02_D10",
+      "title": "Applying Plant Classification",
+      "duration_minutes": 15,
+
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "Correct classification requires observing multiple features."
+        },
+        "standard": {
+          "concept_text": "Height, stem type and branching pattern must be considered together."
+        },
+        "advanced": {
+          "concept_text": "Scientific reasoning eliminates single-feature errors in classification."
+        }
+      },
+
+      "media_assets": {
+        "images": [
+          {
+            "id": "IMG_D10_01",
+            "title": "Mixed Plant Collection",
+            "type": "comparison_visual",
+            "url": "https://cdn.school.com/images/mixed_plants.jpg",
+            "instructional_purpose": "Provide classification practice visual"
+          }
+        ],
+        "videos": [
+          {
+            "id": "VID_D10_01",
+            "title": "Plant Classification Practice",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_classification_practice",
+            "duration_seconds": 60,
+            "instructional_purpose": "Demonstrate classification reasoning"
+          }
+        ]
+      }
+    }
+
+  ]
+}

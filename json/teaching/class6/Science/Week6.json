@@ -1,0 +1,259 @@
+{
+  "lesson_id": "SCI6_ME_W02_L03",
+  "class": 6,
+  "subject": "Science",
+  "chapter_id": "SCI6_CH03",
+  "chapter_title": "Mindful Eating – A Path to a Healthy Body",
+  "week_number": 2,
+  "focus": "Understanding Nutrients, Balanced Diet and Sustainable Food Choices",
+  "micro_lessons": [
+
+    {
+      "day": 1,
+      "micro_lesson_id": "SCI6_ME_W02_L03_D1",
+      "title": "Food Diversity and Changing Food Practices",
+      "duration_minutes": 15,
+
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "People in different regions eat different types of food based on crops grown and traditions."
+        },
+        "standard": {
+          "concept_text": "Traditional food varies across India due to climate, soil type, locally grown crops and cultural practices."
+        },
+        "advanced": {
+          "concept_text": "Food diversity reflects agricultural patterns, ecological conditions and socio-cultural evolution over time."
+        }
+      },
+
+      "media_assets": {
+        "images": [
+          {
+            "id": "IMG_D1_01",
+            "title": "Traditional Foods of Different Indian States",
+            "type": "real_world_photo",
+            "url": "https://cdn.school.com/images/indian_traditional_foods.jpg",
+            "instructional_purpose": "Show food diversity across regions"
+          },
+          {
+            "id": "IMG_D1_02",
+            "title": "Traditional Chulha vs Modern Gas Stove",
+            "type": "comparison_visual",
+            "url": "https://cdn.school.com/images/chulha_vs_gas.jpg",
+            "instructional_purpose": "Compare traditional and modern cooking methods"
+          }
+        ],
+        "videos": [
+          {
+            "id": "VID_D1_01",
+            "title": "Food Diversity in India",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_food_diversity",
+            "duration_seconds": 60,
+            "instructional_purpose": "Visual introduction to regional food diversity"
+          }
+        ]
+      }
+    },
+
+    {
+      "day": 2,
+      "micro_lesson_id": "SCI6_ME_W02_L03_D2",
+      "title": "Energy-Giving and Body-Building Nutrients",
+      "duration_minutes": 15,
+
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "Carbohydrates and fats give us energy. Proteins help us grow."
+        },
+        "standard": {
+          "concept_text": "Carbohydrates provide instant energy, fats store energy, and proteins help in growth and repair of the body."
+        },
+        "advanced": {
+          "concept_text": "Nutrients perform distinct physiological roles including metabolic energy release, tissue repair and structural development."
+        }
+      },
+
+      "media_assets": {
+        "images": [
+          {
+            "id": "IMG_D2_01",
+            "title": "Sources of Carbohydrates",
+            "type": "diagram",
+            "url": "https://cdn.school.com/images/carbohydrate_sources.jpg",
+            "instructional_purpose": "Identify common carbohydrate-rich foods"
+          },
+          {
+            "id": "IMG_D2_02",
+            "title": "Protein and Fat Rich Foods",
+            "type": "diagram",
+            "url": "https://cdn.school.com/images/protein_fat_sources.jpg",
+            "instructional_purpose": "Classify foods based on nutrients"
+          }
+        ],
+        "videos": [
+          {
+            "id": "VID_D2_01",
+            "title": "Understanding Nutrients in Food",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_nutrients_intro",
+            "duration_seconds": 75,
+            "instructional_purpose": "Explain role of carbohydrates, fats and proteins"
+          }
+        ]
+      }
+    },
+
+    {
+      "day": 3,
+      "micro_lesson_id": "SCI6_ME_W02_L03_D3",
+      "title": "Vitamins, Minerals and Deficiency Diseases",
+      "duration_minutes": 15,
+
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "Vitamins and minerals protect our body from diseases."
+        },
+        "standard": {
+          "concept_text": "Deficiency of vitamins and minerals can cause diseases such as scurvy, rickets, goitre and anaemia."
+        },
+        "advanced": {
+          "concept_text": "Protective nutrients regulate physiological processes and prevent systemic disorders caused by long-term deficiencies."
+        }
+      },
+
+      "media_assets": {
+        "images": [
+          {
+            "id": "IMG_D3_01",
+            "title": "Vitamin Sources Chart",
+            "type": "diagram",
+            "url": "https://cdn.school.com/images/vitamin_chart.jpg",
+            "instructional_purpose": "Visualize vitamin sources and functions"
+          },
+          {
+            "id": "IMG_D3_02",
+            "title": "Iodised Salt Packet",
+            "type": "real_world_photo",
+            "url": "https://cdn.school.com/images/iodised_salt.jpg",
+            "instructional_purpose": "Connect mineral supplementation to daily life"
+          }
+        ],
+        "videos": [
+          {
+            "id": "VID_D3_01",
+            "title": "Deficiency Diseases Explained",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_deficiency_diseases",
+            "duration_seconds": 70,
+            "instructional_purpose": "Explain impact of nutrient deficiencies"
+          }
+        ]
+      }
+    },
+
+    {
+      "day": 4,
+      "micro_lesson_id": "SCI6_ME_W02_L03_D4",
+      "title": "Testing Nutrients in Food",
+      "duration_minutes": 15,
+
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "We can test some nutrients like starch, fat and protein using simple experiments."
+        },
+        "standard": {
+          "concept_text": "Iodine test detects starch, oily patch test detects fats and copper sulphate test detects proteins."
+        },
+        "advanced": {
+          "concept_text": "Chemical reactions causing colour changes help identify the presence of specific macronutrients in food samples."
+        }
+      },
+
+      "media_assets": {
+        "images": [
+          {
+            "id": "IMG_D4_01",
+            "title": "Iodine Starch Test",
+            "type": "lab_activity_photo",
+            "url": "https://cdn.school.com/images/starch_test.jpg",
+            "instructional_purpose": "Demonstrate starch detection"
+          },
+          {
+            "id": "IMG_D4_02",
+            "title": "Protein Test Experiment",
+            "type": "lab_activity_photo",
+            "url": "https://cdn.school.com/images/protein_test.jpg",
+            "instructional_purpose": "Show violet colour indicating protein"
+          }
+        ],
+        "videos": [
+          {
+            "id": "VID_D4_01",
+            "title": "How to Test Nutrients in Food",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_food_testing",
+            "duration_seconds": 90,
+            "instructional_purpose": "Step-by-step lab demonstration"
+          }
+        ]
+      }
+    },
+
+    {
+      "day": 5,
+      "micro_lesson_id": "SCI6_ME_W02_L03_D5",
+      "title": "Balanced Diet, Millets and Food Miles",
+      "duration_minutes": 15,
+
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "A balanced diet contains all nutrients, roughage and water in the right amount."
+        },
+        "standard": {
+          "concept_text": "Millets are nutrition-rich cereals and junk foods contain high sugar and fat but low nutrients."
+        },
+        "advanced": {
+          "concept_text": "Sustainable food choices, reduced food miles and nutrient-dense diets contribute to long-term health and environmental balance."
+        }
+      },
+
+      "media_assets": {
+        "images": [
+          {
+            "id": "IMG_D5_01",
+            "title": "Balanced Diet Plate Model",
+            "type": "diagram",
+            "url": "https://cdn.school.com/images/balanced_diet_plate.jpg",
+            "instructional_purpose": "Illustrate components of balanced diet"
+          },
+          {
+            "id": "IMG_D5_02",
+            "title": "Millets Variety Display",
+            "type": "real_world_photo",
+            "url": "https://cdn.school.com/images/millets_variety.jpg",
+            "instructional_purpose": "Introduce nutri-cereals"
+          },
+          {
+            "id": "IMG_D5_03",
+            "title": "Farm to Plate Journey",
+            "type": "process_diagram",
+            "url": "https://cdn.school.com/images/farm_to_plate.jpg",
+            "instructional_purpose": "Explain food miles concept"
+          }
+        ],
+        "videos": [
+          {
+            "id": "VID_D5_01",
+            "title": "What is a Balanced Diet?",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_balanced_diet",
+            "duration_seconds": 70,
+            "instructional_purpose": "Explain healthy eating habits"
+          }
+        ]
+      }
+    }
+
+  ]
+}

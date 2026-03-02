@@ -1,0 +1,223 @@
+{
+  "chapter_title": "Materials Around Us",
+  "derived_focus": {
+    "primary_focus": "Develop deep conceptual understanding of material properties and build independent scientific thinking through guided observation, experimentation, reasoning and measurement in a self-paced AI learning environment.",
+    "supporting_themes": [
+      "Object–Material Relationship",
+      "Property-Based Classification",
+      "Experimental Testing and Evidence Recording",
+      "Light Interaction with Materials",
+      "Solubility and Mixing Behaviour",
+      "Mass, Volume and Formal Definition of Matter"
+    ],
+    "cognitive_target": [
+      "Conceptual Understanding",
+      "Procedural Skill",
+      "Analytical Reasoning",
+      "Application-Based",
+      "Instrument Handling",
+      "Data Interpretation",
+      "Logical Reasoning"
+    ],
+    "recommended_micro_lessons": {
+      "count": 5,
+      "segmentation_logic": "Observation → Property Identification → Experimental Validation → Measurement → Abstract Concept (Matter)"
+    },
+    "misconception_zones": [
+      "All shiny materials are metals",
+      "Hardness is absolute",
+      "Transparent means invisible",
+      "All substances dissolve in water",
+      "Mass and weight are identical",
+      "Air is not matter because it cannot be seen"
+    ],
+    "assessment_sensitivity_zones": [
+      "Precision in terminology",
+      "Evidence-based reasoning",
+      "Correct prediction before experiment",
+      "Unit formatting accuracy",
+      "Clear differentiation between mass and volume"
+    ]
+  },
+
+  "micro_lessons": [
+
+    {
+      "lesson_id": "ML1",
+      "title": "Objects and Materials – Observing the World Scientifically",
+      "duration_minutes": 15,
+      "learning_objectives": [
+        "Differentiate object and material",
+        "Understand that objects may use multiple materials",
+        "Develop classification logic"
+      ],
+      "ai_delivery_flow": {
+        "immersion_start": "Display high-resolution image grid of common household and classroom objects. Learner taps each object to reveal material composition.",
+        "guided_observation": "Interactive prompt: 'Select an object. Now select what it is made of.' AI records responses and provides instant correction.",
+        "concept_by_IQ": {
+          "foundation": "Material is the substance used to make an object. Example: Bottle → plastic or steel. Chair → wood or metal.",
+          "standard": "An object may use multiple materials based on function. Example: Pen = plastic body + metal tip + ink.",
+          "advanced": "Material selection depends on properties such as strength, flexibility, heat resistance and waterproof nature. Function determines material."
+        },
+        "interactive_activity": "Drag-and-drop classification task: Group 10 objects by material. Then regroup by function.",
+        "thinking_extension": "Scenario simulation: Design a tumbler. AI asks learner to choose materials and justifies suitability.",
+        "misconception_alerts": [
+          "Object is not the same as material",
+          "One object can have multiple materials"
+        ],
+        "checkpoint_quiz": "3 auto-graded reasoning MCQs with explanation layer.",
+        "bridge_forward": "Next: If materials differ, what properties make them different?"
+      }
+    },
+
+    {
+      "lesson_id": "ML2",
+      "title": "Appearance and Hardness – Testing and Comparing Properties",
+      "duration_minutes": 15,
+      "learning_objectives": [
+        "Identify lustrous and non-lustrous materials",
+        "Understand hardness and relativity"
+      ],
+      "ai_delivery_flow": {
+        "immersion_start": "3D rotating models of aluminium foil, copper wire, wood, rubber. Learner toggles light source to observe shine.",
+        "guided_experiment": "Virtual scratch test simulation. Learner selects tool and material; system shows resistance level.",
+        "concept_by_IQ": {
+          "foundation": "Lustrous materials shine. Hard materials resist scratching. Soft materials compress easily.",
+          "standard": "Not all shiny objects are metals. Polished plastic may appear shiny. Hardness depends on comparison.",
+          "advanced": "Hardness is relative: Rubber > sponge but < iron. Material properties are comparative, not absolute."
+        },
+        "interactive_activity": "Rank materials from softest to hardest using drag-scale interface.",
+        "thinking_extension": "Design a hammer. Select material based on required hardness and durability.",
+        "misconception_alerts": [
+          "All shiny materials are gold",
+          "Hard means unbreakable"
+        ],
+        "checkpoint_quiz": "Short reasoning: Why are tools made of metal instead of rubber?",
+        "bridge_forward": "Next: Can we see through all materials?"
+      }
+    },
+
+    {
+      "lesson_id": "ML3",
+      "title": "Transparency and Light – Understanding Visibility",
+      "duration_minutes": 15,
+      "learning_objectives": [
+        "Classify materials as transparent, translucent or opaque",
+        "Connect property to practical application"
+      ],
+      "ai_delivery_flow": {
+        "immersion_start": "Interactive hide-and-seek simulation. Learner selects hiding material and sees visibility outcome.",
+        "guided_visual_experiment": "Place object behind glass, butter paper and wood using virtual slider.",
+        "concept_by_IQ": {
+          "foundation": "Transparent → clear visibility. Opaque → cannot see through. Translucent → blurred visibility.",
+          "standard": "Material choice affects privacy and lighting. Example: Bathroom glass is translucent.",
+          "advanced": "Transparency depends on how light passes through material structure. Water can become opaque if impurities are added."
+        },
+        "interactive_activity": "Classify 8 items by transparency level.",
+        "thinking_extension": "Design a classroom window that balances light and privacy.",
+        "misconception_alerts": [
+          "Transparent means invisible",
+          "Opaque means dark in colour only"
+        ],
+        "checkpoint_quiz": "Explain why walls are opaque and windows are transparent.",
+        "bridge_forward": "Next: What happens when materials mix with water?"
+      }
+    },
+
+    {
+      "lesson_id": "ML4",
+      "title": "Solubility and Mass – Observing Change Scientifically",
+      "duration_minutes": 20,
+      "learning_objectives": [
+        "Differentiate soluble and insoluble materials",
+        "Understand prediction–observation method",
+        "Understand mass concept"
+      ],
+      "ai_delivery_flow": {
+        "immersion_start": "Virtual lab with five tumblers. Learner adds sugar, salt, sand, chalk powder and sawdust.",
+        "prediction_phase": "Learner predicts outcome before stirring.",
+        "experiment_phase": "AI simulates stirring and shows particle-level animation.",
+        "concept_by_IQ": {
+          "foundation": "Soluble materials dissolve. Insoluble materials do not.",
+          "standard": "Disappearance does not mean loss; dissolved substance is still present.",
+          "advanced": "Oxygen dissolves in water and supports aquatic life. Dissolved substances still contribute to mass."
+        },
+        "mass_activity": "Digital weighing balance simulation comparing sand, water and pebbles.",
+        "thinking_extension": "Explain why sugar solution still has mass even after sugar disappears.",
+        "misconception_alerts": [
+          "Dissolved substance vanishes completely",
+          "Heavier means bigger in size"
+        ],
+        "checkpoint_quiz": "Why does sand settle but sugar does not?",
+        "bridge_forward": "If materials have mass, do they occupy space?"
+      }
+    },
+
+    {
+      "lesson_id": "ML5",
+      "title": "Volume and Matter – From Observation to Definition",
+      "duration_minutes": 20,
+      "learning_objectives": [
+        "Understand volume as space occupied",
+        "Differentiate mass and volume",
+        "Define matter formally"
+      ],
+      "ai_delivery_flow": {
+        "immersion_start": "Two identical tumblers shown with different water levels. Learner measures volume using slider scale.",
+        "concept_by_IQ": {
+          "foundation": "Volume is space occupied. Mass is amount of matter.",
+          "standard": "Units: g, kg for mass; mL, L for volume. Proper unit formatting rules enforced interactively.",
+          "advanced": "Matter is anything that has mass and occupies space. Same volume objects may have different mass (cotton vs stone). Air is matter."
+        },
+        "interactive_conversion": "Convert 1 m3 to litres using digital calculator module.",
+        "thinking_extension": "Why could water not fully transfer into smaller bottle? Connect to volume.",
+        "misconception_alerts": [
+          "Air is not matter",
+          "Weight and mass are identical"
+        ],
+        "checkpoint_quiz": "Define matter in your own words.",
+        "bridge_forward": "Next level: Density and states of matter."
+      }
+    }
+
+  ],
+
+  "practice_bank": {
+    "easy": 15,
+    "medium": 15,
+    "moderate": 15,
+    "hard": 15,
+    "distribution_note": "Auto-generated adaptive questions linked to each micro lesson with explanation layer and instant feedback."
+  },
+
+  "mastery_layer": [
+    "Integrated project: Classify 25 household objects digitally and justify property-function link.",
+    "Design optimal chair material meeting 4 constraints.",
+    "Full solubility investigation with prediction and explanation.",
+    "Mass-volume comparative analysis table.",
+    "Design recyclable material sorting logic.",
+    "Explain dissolved substance mass retention.",
+    "Multi-property classification map creation.",
+    "Apply transparency concept to architectural design.",
+    "Design experiment to compare hardness levels.",
+    "Integrated case study: Plastic – property vs environmental impact."
+  ],
+
+  "olympiad_layer": [
+    "Explain density using same volume different mass concept.",
+    "Predict effect of temperature on solubility.",
+    "Explain why oil forms separate layer in water.",
+    "Analyze why metals lose lustre chemically (intro level).",
+    "Design smart privacy glass using property integration.",
+    "Explain buoyancy concept link to mass and volume.",
+    "Integrate solubility and environmental impact analysis.",
+    "Predict outcome if dissolved solution evaporates.",
+    "Explain particle-level transparency reasoning.",
+    "Design hardness ranking methodology.",
+    "Compare recyclable vs non-recyclable materials logically.",
+    "Integrate mass, volume and transparency in one analysis.",
+    "Evaluate plastic as boon or bane using property framework.",
+    "Explain difference between capacity and volume.",
+    "Develop cross-concept reasoning linking properties and matter."
+  ]
+}

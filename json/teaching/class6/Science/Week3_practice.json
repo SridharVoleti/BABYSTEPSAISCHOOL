@@ -1,0 +1,180 @@
+{
+  "day_5": {
+    "concept_name": "Understanding Biodiversity and Interdependence",
+    "total_questions": 15,
+
+    "easy": [
+      {"id": "D5_E1", "type": "mcq", "question": "Biodiversity means:", "options": ["Only trees", "Variety of living organisms", "Only insects", "Only mammals"], "correct_answer": 1, "explanation": "Biodiversity includes all living organisms."},
+      {"id": "D5_E2", "type": "true_false", "question": "Plants and animals depend on each other.", "correct_answer": true, "explanation": "They are interdependent."},
+      {"id": "D5_E3", "type": "image_mcq", "image_url": "https://cdn.school.com/images/bee_pollination.jpg", "question": "This shows:", "options": ["Interdependence", "Destruction", "Pollution", "Isolation"], "correct_answer": 0, "explanation": "Bee and flower interaction."},
+      {"id": "D5_E4", "type": "true_false", "question": "Loss of biodiversity affects environment.", "correct_answer": true, "explanation": "It disturbs balance."},
+      {"id": "D5_E5", "type": "mcq", "question": "Trees provide:", "options": ["Food and shelter", "Only water", "Only sunlight", "Nothing"], "correct_answer": 0, "explanation": "Trees support many organisms."}
+    ],
+
+    "medium": [
+      {"id": "D5_M1", "type": "short_answer", "question": "Give one example of interdependence.", "explanation": "Bee and flower."},
+      {"id": "D5_M2", "type": "mcq", "question": "If plants disappear, animals will:", "options": ["Increase", "Be affected", "Remain same", "Multiply"], "correct_answer": 1, "explanation": "Animals depend on plants."},
+      {"id": "D5_M3", "type": "true_false", "question": "Habitat destruction reduces biodiversity.", "correct_answer": true, "explanation": "Loss of habitat reduces variety."},
+      {"id": "D5_M4", "type": "numeric_fill", "question": "If 3 species disappear from 10 species, how many remain?", "correct_answer": 7, "explanation": "10 - 3 = 7."},
+      {"id": "D5_M5", "type": "mcq", "question": "Which helps protect biodiversity?", "options": ["Cutting forests", "Pollution", "Conservation", "Ignoring"], "correct_answer": 2, "explanation": "Conservation protects biodiversity."}
+    ],
+
+    "hard": [
+      {"id": "D5_H1", "type": "short_answer", "question": "Why is biodiversity important for survival?", "explanation": "Maintains ecological balance."},
+      {"id": "D5_H2", "type": "drag_order", "question": "Arrange chain of interdependence:", "items": ["Plants", "Herbivores", "Carnivores"], "correct_order": [0,1,2], "explanation": "Food chain sequence."},
+      {"id": "D5_H3", "type": "mcq", "question": "If biodiversity decreases, ecosystem will:", "options": ["Strengthen", "Collapse", "Remain unaffected", "Multiply"], "correct_answer": 1, "explanation": "Reduced stability."},
+      {"id": "D5_H4", "type": "true_false", "question": "Conservation helps maintain biodiversity.", "correct_answer": true, "explanation": "Protection maintains balance."},
+      {"id": "D5_H5", "type": "video_reflection", "video_url": "https://youtube.com/example_biodiversity_loss", "question": "What may happen if forests are destroyed?", "explanation": "Loss of species and imbalance."}
+    ]
+  }
+}
+{
+  "day_7": {
+    "concept_name": "Understanding Herbs",
+    "total_questions": 15,
+
+    "easy": [
+      {"id": "D7_E1", "type": "mcq", "question": "Herbs have:", "options": ["Woody stem", "Soft stem", "Metal stem", "Plastic stem"], "correct_answer": 1, "explanation": "Herbs have soft stems."},
+      {"id": "D7_E2", "type": "true_false", "question": "Grass is a herb.", "correct_answer": true, "explanation": "Grass has soft stem."},
+      {"id": "D7_E3", "type": "mcq", "question": "Tomato plant is a:", "options": ["Tree", "Shrub", "Herb", "Creeper"], "correct_answer": 2, "explanation": "Tomato has soft stem."},
+      {"id": "D7_E4", "type": "image_mcq", "image_url": "https://cdn.school.com/images/tomato_plant.jpg", "question": "This plant is likely a:", "options": ["Tree", "Herb", "Shrub", "Climber"], "correct_answer": 1, "explanation": "Soft green stem."},
+      {"id": "D7_E5", "type": "true_false", "question": "All tall plants are trees.", "correct_answer": false, "explanation": "Tall herbs exist."}
+    ],
+
+    "medium": [
+      {"id": "D7_M1", "type": "short_answer", "question": "Why is banana plant a herb?", "explanation": "Soft non-woody stem."},
+      {"id": "D7_M2", "type": "mcq", "question": "Main feature of herb:", "options": ["Height only", "Stem softness", "Leaf colour", "Flower size"], "correct_answer": 1, "explanation": "Stem softness matters."},
+      {"id": "D7_M3", "type": "true_false", "question": "Herbs do not have thick woody trunks.", "correct_answer": true, "explanation": "They lack woody trunk."},
+      {"id": "D7_M4", "type": "numeric_fill", "question": "If 2 out of 5 plants have soft stems, how many are herbs?", "correct_answer": 2, "explanation": "Soft stems indicate herbs."},
+      {"id": "D7_M5", "type": "mcq", "question": "Spinach is a:", "options": ["Shrub", "Tree", "Herb", "Creeper"], "correct_answer": 2, "explanation": "Soft stem plant."}
+    ],
+
+    "hard": [
+      {"id": "D7_H1", "type": "short_answer", "question": "Explain why height alone cannot classify herbs.", "explanation": "Stem type is more important."},
+      {"id": "D7_H2", "type": "drag_order", "question": "Arrange features of herbs:", "items": ["Soft stem", "Green stem", "Non-woody"], "correct_order": [0,1,2], "explanation": "Soft and non-woody."},
+      {"id": "D7_H3", "type": "mcq", "question": "Which plant is NOT herb?", "options": ["Grass", "Spinach", "Mango", "Tomato"], "correct_answer": 2, "explanation": "Mango has woody trunk."},
+      {"id": "D7_H4", "type": "true_false", "question": "Herbs are generally small plants.", "correct_answer": true, "explanation": "Usually small."},
+      {"id": "D7_H5", "type": "short_answer", "question": "Name two herbs.", "explanation": "Tomato, spinach, grass etc."}
+    ]
+  }
+}
+{
+  "day_7": {
+    "concept_name": "Understanding Herbs",
+    "total_questions": 15,
+
+    "easy": [
+      {"id": "D7_E1", "type": "mcq", "question": "Herbs have:", "options": ["Woody stem", "Soft stem", "Metal stem", "Plastic stem"], "correct_answer": 1, "explanation": "Herbs have soft stems."},
+      {"id": "D7_E2", "type": "true_false", "question": "Grass is a herb.", "correct_answer": true, "explanation": "Grass has soft stem."},
+      {"id": "D7_E3", "type": "mcq", "question": "Tomato plant is a:", "options": ["Tree", "Shrub", "Herb", "Creeper"], "correct_answer": 2, "explanation": "Tomato has soft stem."},
+      {"id": "D7_E4", "type": "image_mcq", "image_url": "https://cdn.school.com/images/tomato_plant.jpg", "question": "This plant is likely a:", "options": ["Tree", "Herb", "Shrub", "Climber"], "correct_answer": 1, "explanation": "Soft green stem."},
+      {"id": "D7_E5", "type": "true_false", "question": "All tall plants are trees.", "correct_answer": false, "explanation": "Tall herbs exist."}
+    ],
+
+    "medium": [
+      {"id": "D7_M1", "type": "short_answer", "question": "Why is banana plant a herb?", "explanation": "Soft non-woody stem."},
+      {"id": "D7_M2", "type": "mcq", "question": "Main feature of herb:", "options": ["Height only", "Stem softness", "Leaf colour", "Flower size"], "correct_answer": 1, "explanation": "Stem softness matters."},
+      {"id": "D7_M3", "type": "true_false", "question": "Herbs do not have thick woody trunks.", "correct_answer": true, "explanation": "They lack woody trunk."},
+      {"id": "D7_M4", "type": "numeric_fill", "question": "If 2 out of 5 plants have soft stems, how many are herbs?", "correct_answer": 2, "explanation": "Soft stems indicate herbs."},
+      {"id": "D7_M5", "type": "mcq", "question": "Spinach is a:", "options": ["Shrub", "Tree", "Herb", "Creeper"], "correct_answer": 2, "explanation": "Soft stem plant."}
+    ],
+
+    "hard": [
+      {"id": "D7_H1", "type": "short_answer", "question": "Explain why height alone cannot classify herbs.", "explanation": "Stem type is more important."},
+      {"id": "D7_H2", "type": "drag_order", "question": "Arrange features of herbs:", "items": ["Soft stem", "Green stem", "Non-woody"], "correct_order": [0,1,2], "explanation": "Soft and non-woody."},
+      {"id": "D7_H3", "type": "mcq", "question": "Which plant is NOT herb?", "options": ["Grass", "Spinach", "Mango", "Tomato"], "correct_answer": 2, "explanation": "Mango has woody trunk."},
+      {"id": "D7_H4", "type": "true_false", "question": "Herbs are generally small plants.", "correct_answer": true, "explanation": "Usually small."},
+      {"id": "D7_H5", "type": "short_answer", "question": "Name two herbs.", "explanation": "Tomato, spinach, grass etc."}
+    ]
+  }
+}
+{
+  "day_8": {
+    "concept_name": "Shrubs and Trees",
+    "total_questions": 15,
+
+    "easy": [
+      {"id": "D8_E1", "type": "mcq", "question": "Trees usually have:", "options": ["Soft stem", "One thick trunk", "Many soft stems", "No branches"], "correct_answer": 1, "explanation": "Trees have one main woody trunk."},
+      {"id": "D8_E2", "type": "true_false", "question": "Shrubs have branches near the ground.", "correct_answer": true, "explanation": "Shrubs branch close to ground."},
+      {"id": "D8_E3", "type": "mcq", "question": "Rose plant is a:", "options": ["Tree", "Herb", "Shrub", "Creeper"], "correct_answer": 2, "explanation": "Rose has woody stems near ground."},
+      {"id": "D8_E4", "type": "image_mcq", "image_url": "https://cdn.school.com/images/mango_tree.jpg", "question": "This plant is a:", "options": ["Herb", "Shrub", "Tree", "Climber"], "correct_answer": 2, "explanation": "Single thick trunk visible."},
+      {"id": "D8_E5", "type": "true_false", "question": "Trees have woody stems.", "correct_answer": true, "explanation": "Woody trunk is key feature."}
+    ],
+
+    "medium": [
+      {"id": "D8_M1", "type": "short_answer", "question": "State one difference between shrub and tree.", "explanation": "Branching pattern differs."},
+      {"id": "D8_M2", "type": "mcq", "question": "Main difference between shrub and tree:", "options": ["Height only", "Leaf colour", "Branching position", "Smell"], "correct_answer": 2, "explanation": "Branching pattern distinguishes them."},
+      {"id": "D8_M3", "type": "true_false", "question": "Height alone determines tree classification.", "correct_answer": false, "explanation": "Stem and branching also matter."},
+      {"id": "D8_M4", "type": "numeric_fill", "question": "If a shrub has 4 main stems, how many trunks does it have?", "correct_answer": 4, "explanation": "Shrubs have multiple stems."},
+      {"id": "D8_M5", "type": "image_mcq", "image_url": "https://cdn.school.com/images/rose_shrub.jpg", "question": "This plant shows:", "options": ["Single trunk", "Multiple stems", "Soft stem", "No branches"], "correct_answer": 1, "explanation": "Shrub characteristic."}
+    ],
+
+    "hard": [
+      {"id": "D8_H1", "type": "short_answer", "question": "Why is mango classified as tree?", "explanation": "Single thick woody trunk and high branches."},
+      {"id": "D8_H2", "type": "drag_order", "question": "Arrange tree features:", "items": ["Tall", "Woody trunk", "Branches higher above ground"], "correct_order": [0,1,2], "explanation": "Typical tree structure."},
+      {"id": "D8_H3", "type": "mcq", "question": "Which plant is shrub?", "options": ["Neem", "Rose", "Banyan", "Coconut"], "correct_answer": 1, "explanation": "Rose branches near ground."},
+      {"id": "D8_H4", "type": "true_false", "question": "Shrubs are generally medium-sized plants.", "correct_answer": true, "explanation": "Shrubs are medium height."},
+      {"id": "D8_H5", "type": "short_answer", "question": "Explain why height is not enough for classification.", "explanation": "Stem and branching pattern matter."}
+    ]
+  }
+}
+{
+  "day_9": {
+    "concept_name": "Climbers and Creepers",
+    "total_questions": 15,
+
+    "easy": [
+      {"id": "D9_E1", "type": "mcq", "question": "Climbers grow:", "options": ["Underground", "Upward with support", "In water", "Without support"], "correct_answer": 1, "explanation": "Climbers need support."},
+      {"id": "D9_E2", "type": "true_false", "question": "Creepers spread on the ground.", "correct_answer": true, "explanation": "They have weak stems."},
+      {"id": "D9_E3", "type": "mcq", "question": "Pumpkin plant is a:", "options": ["Tree", "Shrub", "Creeper", "Herb"], "correct_answer": 2, "explanation": "Spreads on ground."},
+      {"id": "D9_E4", "type": "image_mcq", "image_url": "https://cdn.school.com/images/money_plant.jpg", "question": "This plant is a:", "options": ["Tree", "Climber", "Shrub", "Herb"], "correct_answer": 1, "explanation": "Climbs with support."},
+      {"id": "D9_E5", "type": "true_false", "question": "Climbers have strong woody stems.", "correct_answer": false, "explanation": "They have weak stems."}
+    ],
+
+    "medium": [
+      {"id": "D9_M1", "type": "short_answer", "question": "Why do climbers need support?", "explanation": "They have weak stems."},
+      {"id": "D9_M2", "type": "mcq", "question": "Watermelon plant is a:", "options": ["Tree", "Shrub", "Creeper", "Climber"], "correct_answer": 2, "explanation": "Spreads along ground."},
+      {"id": "D9_M3", "type": "true_false", "question": "Both climbers and creepers have weak stems.", "correct_answer": true, "explanation": "Weak stems define them."},
+      {"id": "D9_M4", "type": "numeric_fill", "question": "If 3 plants spread on ground out of 5, how many are creepers?", "correct_answer": 3, "explanation": "Ground spread indicates creeper."},
+      {"id": "D9_M5", "type": "mcq", "question": "Pea plant is a:", "options": ["Shrub", "Tree", "Climber", "Herb"], "correct_answer": 2, "explanation": "Uses support to grow upward."}
+    ],
+
+    "hard": [
+      {"id": "D9_H1", "type": "short_answer", "question": "Differentiate climber and creeper.", "explanation": "Climbers grow upward; creepers spread on ground."},
+      {"id": "D9_H2", "type": "drag_order", "question": "Arrange growth types:", "items": ["Creeper spreads", "Climber climbs", "Tree stands upright"], "correct_order": [2,1,0], "explanation": "Tree upright → Climber climbs → Creeper spreads."},
+      {"id": "D9_H3", "type": "mcq", "question": "Which is NOT climber?", "options": ["Money plant", "Grapevine", "Pumpkin", "Pea plant"], "correct_answer": 2, "explanation": "Pumpkin is creeper."},
+      {"id": "D9_H4", "type": "true_false", "question": "Climbers depend on support structures.", "correct_answer": true, "explanation": "They need support."},
+      {"id": "D9_H5", "type": "short_answer", "question": "Why are creepers adapted to spread on ground?", "explanation": "Weak stems cannot stand upright."}
+    ]
+  }
+}
+{
+  "day_10": {
+    "concept_name": "Applying Plant Classification",
+    "total_questions": 15,
+
+    "easy": [
+      {"id": "D10_E1", "type": "mcq", "question": "A plant with one thick trunk is:", "options": ["Herb", "Shrub", "Tree", "Creeper"], "correct_answer": 2, "explanation": "Single trunk indicates tree."},
+      {"id": "D10_E2", "type": "true_false", "question": "Banana plant is a herb.", "correct_answer": true, "explanation": "Soft non-woody stem."},
+      {"id": "D10_E3", "type": "mcq", "question": "Rose plant is classified as:", "options": ["Tree", "Shrub", "Herb", "Creeper"], "correct_answer": 1, "explanation": "Multiple woody stems near ground."},
+      {"id": "D10_E4", "type": "true_false", "question": "Grass is a tree.", "correct_answer": false, "explanation": "Grass is herb."},
+      {"id": "D10_E5", "type": "mcq", "question": "Pumpkin is:", "options": ["Tree", "Shrub", "Climber", "Creeper"], "correct_answer": 3, "explanation": "Spreads on ground."}
+    ],
+
+    "medium": [
+      {"id": "D10_M1", "type": "short_answer", "question": "Classify mango plant and justify.", "explanation": "Tree due to single trunk."},
+      {"id": "D10_M2", "type": "mcq", "question": "A tall plant with soft stem is:", "options": ["Tree", "Shrub", "Herb", "Creeper"], "correct_answer": 2, "explanation": "Stem softness defines herb."},
+      {"id": "D10_M3", "type": "true_false", "question": "Multiple features should be used for classification.", "correct_answer": true, "explanation": "Scientific method."},
+      {"id": "D10_M4", "type": "numeric_fill", "question": "If 2 are trees, 2 shrubs and 1 herb, total plants are:", "correct_answer": 5, "explanation": "2 + 2 + 1 = 5."},
+      {"id": "D10_M5", "type": "mcq", "question": "Which feature is most reliable?", "options": ["Temporary colour", "Stem structure", "Flower smell", "Weather"], "correct_answer": 1, "explanation": "Stem structure is stable."}
+    ],
+
+    "hard": [
+      {"id": "D10_H1", "type": "short_answer", "question": "Why should height not be the only classification feature?", "explanation": "Stem and branching pattern matter."},
+      {"id": "D10_H2", "type": "drag_order", "question": "Arrange classification logic:", "items": ["Observe height", "Check stem type", "Check branching", "Classify"], "correct_order": [0,1,2,3], "explanation": "Multiple observations before classification."},
+      {"id": "D10_H3", "type": "mcq", "question": "Which is correctly classified?", "options": ["Mango – herb", "Rose – shrub", "Pumpkin – tree", "Grass – shrub"], "correct_answer": 1, "explanation": "Rose is shrub."},
+      {"id": "D10_H4", "type": "true_false", "question": "Scientific classification requires reasoning.", "correct_answer": true, "explanation": "Justification is necessary."},
+      {"id": "D10_H5", "type": "short_answer", "question": "Explain classification of banana plant.", "explanation": "Soft stem makes it herb despite height."}
+    ]
+  }
+}

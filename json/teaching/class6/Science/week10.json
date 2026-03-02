@@ -1,0 +1,216 @@
+{
+  "chapter_title": "Temperature and its Measurement",
+  "derived_focus": {
+    "primary_focus": "Developing deep conceptual clarity that temperature is an objective measurable physical quantity and building precision in selecting, using and interpreting different thermometers across body, laboratory and environmental contexts in a self-guided AI learning environment.",
+    "supporting_themes": [
+      "Limitations of sensory perception in judging hotness and coldness",
+      "Scientific meaning of temperature and its distinction from heat",
+      "Correct selection and safe use of clinical and laboratory thermometers",
+      "Understanding temperature scales and correct notation",
+      "Precision in reading scale, range and smallest division",
+      "Constant temperature during change of state and interpretation of temperature data"
+    ],
+    "cognitive_target": [
+      "Conceptual Understanding",
+      "Procedural Skill",
+      "Instrument Handling",
+      "Data Interpretation",
+      "Analytical Reasoning",
+      "Application-Based"
+    ],
+    "recommended_micro_lessons": {
+      "count": "8",
+      "segmentation_logic": "Concept progression from sensory misconception to temperature theory, instrument handling, scale systems, precision reading, state change and weather data interpretation to enable 15-minute deep interactive AI-guided learning segments."
+    },
+    "misconception_zones": [
+      "Touch can accurately measure temperature",
+      "Heat and temperature are identical concepts",
+      "All thermometers measure any temperature range",
+      "Boiling temperature keeps increasing",
+      "Normal body temperature must be exactly 37°C",
+      "Kelvin uses degree symbol"
+    ],
+    "assessment_sensitivity_zones": [
+      "Reading smallest division correctly",
+      "Choosing correct thermometer for given task",
+      "Celsius–Fahrenheit equivalence reasoning",
+      "Explaining constant temperature during state change",
+      "Interpreting temperature tables accurately"
+    ]
+  },
+  "micro_lessons": [
+    {
+      "day": 1,
+      "micro_lesson_id": "SCI6_TEMP_D1",
+      "title": "Why Your Sense of Touch Can Mislead You",
+      "duration_minutes": 15,
+      "learning_objectives": [
+        "Realize that touch is unreliable for measuring temperature",
+        "Develop scientific reasoning from observation",
+        "Shift from feeling-based to measurement-based thinking"
+      ],
+      "teaching_flow": {
+        "engage": "Imagine touching a metal railing and a wooden door in the same room. The metal feels colder. Are they actually at different temperatures? Pause and think before continuing.",
+        "concept_by_IQ": {
+          "foundation": {
+            "explanation": "Now imagine performing a simple activity at home. Place one hand in warm water and the other in ice-cold water for two minutes. Then place both hands in normal water. One hand feels cool and the other feels warm — even though the water is the same. This shows that your skin does not measure temperature. It only senses heat moving into or out of your body.",
+            "discussion_question": "Why did the same water feel different to each hand?"
+          },
+          "standard": {
+            "explanation": "Your skin contains temperature receptors. These receptors respond to changes in heat flow, not actual temperature value. When heat leaves your hand, you feel cool. When heat enters your hand, you feel warm. Therefore, temperature sensation depends on direction of heat transfer, not the true temperature.",
+            "discussion_question": "Does your skin measure temperature directly or heat flow?"
+          },
+          "advanced": {
+            "explanation": "Scientific measurement must be objective and independent of human bias. Sensory systems are relative detectors. True measurement requires calibrated instruments that give numerical values. This marks the shift from qualitative judgment to quantitative science.",
+            "analysis_question": "What errors would occur in science if we relied only on human senses?"
+          }
+        },
+        "application": "List three daily-life situations where touch may mislead you (example: tiled floor vs carpet, metal spoon vs wooden spoon).",
+        "misconceptions": [
+          "Cold-feeling object always has lower temperature",
+          "Touching forehead confirms fever accurately"
+        ],
+        "assessment_check": [
+          "State the conclusion of the warm–cold water activity.",
+          "Why is numerical measurement more reliable than sensation?"
+        ],
+        "bridge": "Since your senses can mislead you, you now need a reliable measuring tool called a thermometer."
+      }
+    },
+    {
+      "day": 2,
+      "micro_lesson_id": "SCI6_TEMP_D2",
+      "title": "What is Temperature? Understanding the Concept Clearly",
+      "duration_minutes": 15,
+      "learning_objectives": [
+        "Define temperature scientifically",
+        "Differentiate heat from temperature",
+        "Understand direction of heat transfer"
+      ],
+      "teaching_flow": {
+        "engage": "Consider two containers: a small cup of boiling water and a large bucket of warm water. Which one contains more heat? Think carefully before answering.",
+        "concept_by_IQ": {
+          "foundation": {
+            "explanation": "Temperature tells you how hot or cold something is using numbers. Instead of saying 'very hot', you say 40°C. Numbers allow comparison.",
+            "discussion_question": "Why are numbers more precise than words like ‘hot’?"
+          },
+          "standard": {
+            "explanation": "Temperature is a measurable quantity indicating degree of hotness or coldness. When two objects touch, heat flows from higher temperature to lower temperature until both reach the same temperature.",
+            "discussion_question": "If you place a hot spoon in cold water, what happens?"
+          },
+          "advanced": {
+            "explanation": "Temperature relates to the average kinetic energy of particles. Heat is total energy transferred. A bucket of warm water may contain more heat energy than a cup of boiling water, even if its temperature is lower.",
+            "analysis_question": "Can two objects have the same temperature but different amounts of heat energy?"
+          }
+        },
+        "application": "Draw a simple diagram showing direction of heat flow between two objects at different temperatures.",
+        "misconceptions": [
+          "Heat and temperature are the same thing",
+          "Higher temperature always means more heat energy"
+        ],
+        "assessment_check": [
+          "Define temperature in your own words.",
+          "Explain difference between heat and temperature."
+        ],
+        "bridge": "To measure temperature accurately, you will now explore thermometers."
+      }
+    },
+    {
+      "day": 3,
+      "micro_lesson_id": "SCI6_TEMP_D3",
+      "title": "Clinical Thermometer and Body Temperature",
+      "duration_minutes": 15,
+      "learning_objectives": [
+        "Understand structure and purpose of clinical thermometer",
+        "Interpret normal body temperature range",
+        "Follow correct usage procedure safely"
+      ],
+      "teaching_flow": {
+        "engage": "Is everyone’s normal body temperature exactly 37°C? Reflect on your answer.",
+        "concept_by_IQ": {
+          "foundation": {
+            "explanation": "A clinical thermometer measures body temperature. Normal adult temperature is about 37°C, but slight variation is normal.",
+            "discussion_question": "Why might your temperature change during the day?"
+          },
+          "standard": {
+            "explanation": "Normal body temperature is an average value. It varies due to age, time and activity. Digital thermometers replaced mercury ones because mercury is toxic.",
+            "discussion_question": "Why is it important to clean the thermometer before and after use?"
+          },
+          "advanced": {
+            "explanation": "Armpit readings are usually 0.5–1°C lower than oral readings. The concept of ‘normal’ is statistical, meaning there is a healthy range, not one exact value.",
+            "analysis_question": "Why is mercury dangerous if a thermometer breaks?"
+          }
+        },
+        "application": "Simulate recording temperature readings at three different times of the day and compare variation.",
+        "misconceptions": [
+          "Normal temperature must be exactly 37°C",
+          "Slight variation always means illness"
+        ],
+        "assessment_check": [
+          "State two precautions while using a clinical thermometer.",
+          "Why were mercury thermometers replaced?"
+        ],
+        "bridge": "Temperature can be measured using different scales. You will explore these next."
+      }
+    }
+  ],
+  "practice_bank": {
+    "easy": [
+      "Define temperature.",
+      "What is normal body temperature in °C?",
+      "Name the SI unit of temperature.",
+      "Which thermometer measures body temperature?",
+      "State one precaution while using a clinical thermometer."
+    ],
+    "medium": [
+      "Explain why touch is unreliable.",
+      "Differentiate between heat and temperature.",
+      "Why cannot clinical thermometer measure boiling water?",
+      "Explain smallest division of a thermometer.",
+      "Convert 20°C to Kelvin."
+    ],
+    "moderate": [
+      "Explain why boiling temperature remains constant.",
+      "Interpret a 3-day temperature table.",
+      "Explain parallax error while reading thermometer.",
+      "Compare Celsius and Kelvin scales.",
+      "Why might different students record slightly different boiling temperatures?"
+    ],
+    "hard": [
+      "Design an experiment to prove constant temperature during melting.",
+      "Explain concept of absolute zero.",
+      "Analyze effect of altitude on boiling point.",
+      "Explain particle motion in terms of temperature.",
+      "Interpret multi-day maximum–minimum air temperature data."
+    ]
+  },
+  "mastery_layer": [
+    "Analyze Vaishnavi’s temperature record and identify highest temperature.",
+    "Calculate smallest division if 50 divisions exist between 0°C and 100°C.",
+    "Explain why boiling temperature may differ slightly in different cities.",
+    "Interpret maximum and minimum air temperature data over 10 days.",
+    "Explain why laboratory thermometer cannot measure body temperature.",
+    "Convert multiple temperatures between Celsius and Kelvin.",
+    "Design safe procedure for measuring warm water temperature.",
+    "Explain difference between oral and armpit readings.",
+    "Interpret temperature-time pattern during illness.",
+    "Evaluate errors in incorrect thermometer usage diagram."
+  ],
+  "olympiad_layer": [
+    "Why does boiling temperature decrease at high altitude?",
+    "Explain concept of absolute zero in terms of particle motion.",
+    "Why is 0 K theoretically lowest possible temperature?",
+    "Explain working principle of infrared thermometers.",
+    "Analyze temperature-time graph for phase change.",
+    "Compare internal energy and temperature.",
+    "Design improved digital temperature sensor model.",
+    "Explain why metal feels colder than wood at same temperature.",
+    "Interpret planetary temperature versus distance trend.",
+    "Explain daily variation of air temperature.",
+    "Discuss safety reasons for replacing mercury.",
+    "Explain statistical meaning of ‘normal’ body temperature.",
+    "Compare laboratory and clinical thermometer limitations.",
+    "Design 7-day temperature observation journal.",
+    "Explain why temperature remains constant during state change."
+  ]
+}

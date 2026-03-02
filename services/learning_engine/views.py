@@ -543,8 +543,17 @@ class StudentDashboardView(APIView):
         self._update_streak(profile, user)
         profile.refresh_from_db()
 
-        # 2026-02-14: Get student grade from user profile
-        grade = getattr(user, 'grade', None) or 1
+        # 2026-02-20: Get name/grade/avatar from Student profile (not Django User)
+        try:
+            sp = user.student_profile  # 2026-02-20: OneToOne reverse relation
+            full_name = sp.full_name or ''
+            student_name = full_name.split()[0] if full_name else user.username
+            grade = sp.grade or 1
+            avatar_id = sp.avatar_id or 'avatar_01'
+        except AttributeError:
+            student_name = user.get_full_name() or user.username
+            grade = 1
+            avatar_id = 'avatar_01'
 
         # 2026-02-14: Get all progress records for this student (best attempt per concept)
         all_progress = MicroLessonProgress.objects.filter(
@@ -637,12 +646,9 @@ class StudentDashboardView(APIView):
             activity_date=today,
         )
 
-        # 2026-02-14: Determine avatar_id from user profile
-        avatar_id = getattr(user, 'avatar_id', 'boy_1') or 'boy_1'
-
         # 2026-02-14: Build response
         response_data = {
-            'student_name': user.get_full_name() or user.username,
+            'student_name': student_name,
             'avatar_id': avatar_id,
             'grade': grade,
             'current_streak': profile.current_streak_days,

@@ -1,0 +1,187 @@
+{
+  "lesson_id": "SCI6_CH02_OLYMPIAD_LAYER",
+  "difficulty_level": "olympiad",
+  "total_questions": 30,
+
+  "sections": [
+
+    {
+      "section_name": "Section A – Logical Plant Classification",
+      "questions": [
+
+        {
+          "id": "OL_A1",
+          "type": "mcq",
+          "question": "A plant is 3 meters tall but has soft green stem. It should be classified as:",
+          "options": ["Tree", "Shrub", "Herb", "Creeper"],
+          "correct_answer": 2,
+          "explanation": "Stem structure overrides height. Soft stem indicates herb."
+        },
+
+        {
+          "id": "OL_A2",
+          "type": "mcq",
+          "question": "A plant has woody stem and branches near ground. It is:",
+          "options": ["Tree", "Shrub", "Herb", "Monocot"],
+          "correct_answer": 1,
+          "explanation": "Branching near ground indicates shrub."
+        },
+
+        {
+          "id": "OL_A3",
+          "type": "assertion_reason",
+          "assertion": "All tall plants are trees.",
+          "reason": "Tree classification depends on woody trunk.",
+          "correct_answer": "Assertion false, Reason true",
+          "explanation": "Height alone is insufficient."
+        }
+      ]
+    },
+
+    {
+      "section_name": "Section B – Venation & Root Analytical Reasoning",
+      "questions": [
+
+        {
+          "id": "OL_B1",
+          "type": "mcq",
+          "question": "A plant shows parallel venation but has taproot. This is:",
+          "options": ["Correct classification", "Rare exception", "Incorrect pairing", "Impossible"],
+          "correct_answer": 2,
+          "explanation": "Parallel venation is linked to fibrous root."
+        },
+
+        {
+          "id": "OL_B2",
+          "type": "multi_select",
+          "question": "Which features together confirm dicot?",
+          "options": [
+            "Reticulate venation",
+            "Taproot",
+            "Two cotyledons",
+            "Fibrous root"
+          ],
+          "correct_answers": [0,1,2],
+          "explanation": "All three are dicot features."
+        },
+
+        {
+          "id": "OL_B3",
+          "type": "logic_chain",
+          "question": "If Plant A has fibrous roots and Plant B has taproot, which likely has reticulate venation?",
+          "answer": "Plant B",
+          "explanation": "Taproot correlates with reticulate venation."
+        }
+      ]
+    },
+
+    {
+      "section_name": "Section C – Adaptation Case Study",
+      "questions": [
+
+        {
+          "id": "OL_C1",
+          "type": "case_based",
+          "case": "A plant has thick fleshy stem, reduced leaves, and lives in dry sandy soil.",
+          "question": "Identify the habitat and adaptation type.",
+          "answer": "Desert; water storage adaptation",
+          "explanation": "Fleshy stem indicates desert survival."
+        },
+
+        {
+          "id": "OL_C2",
+          "type": "mcq",
+          "question": "Why do mountain trees have conical shape?",
+          "options": [
+            "Store water",
+            "Reduce snow accumulation",
+            "Increase height",
+            "Improve photosynthesis only"
+          ],
+          "correct_answer": 1,
+          "explanation": "Sloping shape helps snow slide off."
+        },
+
+        {
+          "id": "OL_C3",
+          "type": "short_answer",
+          "question": "Explain how camel’s long legs help desert survival."
+        }
+      ]
+    },
+
+    {
+      "section_name": "Section D – Data Interpretation",
+      "questions": [
+
+        {
+          "id": "OL_D1",
+          "type": "data_table",
+          "data": {
+            "Plant_A": ["Parallel venation", "Fibrous root"],
+            "Plant_B": ["Reticulate venation", "Taproot"],
+            "Plant_C": ["Parallel venation", "Taproot"]
+          },
+          "question": "Which plant shows incorrect feature pairing?",
+          "answer": "Plant_C",
+          "explanation": "Parallel should link to fibrous root."
+        },
+
+        {
+          "id": "OL_D2",
+          "type": "mcq",
+          "question": "If biodiversity decreases by 50% in a forest, what happens?",
+          "options": [
+            "Ecosystem becomes stronger",
+            "Food chains collapse",
+            "More adaptation",
+            "No impact"
+          ],
+          "correct_answer": 1,
+          "explanation": "Reduced biodiversity weakens ecosystem."
+        }
+      ]
+    },
+
+    {
+      "section_name": "Section E – Trick & Exception Thinking",
+      "questions": [
+
+        {
+          "id": "OL_E1",
+          "type": "mcq",
+          "question": "Banana is tall but classified as herb because:",
+          "options": [
+            "It has no leaves",
+            "It has soft non-woody stem",
+            "It grows in water",
+            "It is monocot"
+          ],
+          "correct_answer": 1,
+          "explanation": "Stem type overrides height."
+        },
+
+        {
+          "id": "OL_E2",
+          "type": "short_answer",
+          "question": "Why is classification based on multiple features more reliable?"
+        },
+
+        {
+          "id": "OL_E3",
+          "type": "mcq",
+          "question": "Which scenario shows logical error?",
+          "options": [
+            "Tall + Woody trunk = Tree",
+            "Soft stem + Tall = Herb",
+            "Parallel venation + Taproot = Monocot",
+            "Fibrous root + Parallel venation = Monocot"
+          ],
+          "correct_answer": 2,
+          "explanation": "Parallel venation does not link to taproot."
+        }
+      ]
+    }
+
+  ]
+}

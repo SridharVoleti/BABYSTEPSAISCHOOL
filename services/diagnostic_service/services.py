@@ -5,12 +5,18 @@ Purpose:
     Core diagnostic operations: start session, process responses,
     compute adaptive item selection, and generate final results.
     Delegates IRT math to the pure irt.py module.
+
+    Also contains IQReassessmentService (BS-DIA-003) for rolling
+    20-concept window evaluation and automated level adjustments.
 """
 
 import logging  # 2026-02-12: Logging
 
+from django.utils import timezone  # 2026-02-27: Timezone-aware timestamps
+
 from .models import (  # 2026-02-12: Models
     DiagnosticSession, DiagnosticResponse, DiagnosticResult,
+    IQReassessmentWindow, IQReassessmentEvent,  # 2026-02-27: Reassessment models
 )
 from .irt import (  # 2026-02-12: IRT functions
     load_question_bank, select_next_item, estimate_theta,
@@ -406,4 +412,339 @@ class DiagnosticService:
             'question': item['question'],
             'options': item['options'],
             'item_type': item.get('item_type', 'mcq'),
+        }
+
+
+class IQReassessmentService:
+    """
+    2026-02-27: Rolling 20-concept window IQ level reassessment (BS-DIA-003).
+
+    After every 20 mastered concepts a window is evaluated using three metrics:
+      - avg_stars: average best star rating from mastery practice (0-5)
+      - avg_reteaching: average attempts per concept (proxy for reteaching load)
+      - avg_comprehension: average comprehension score from DayProgress (0-100)
+
+    Upgrade (both consecutive windows must agree):
+      avg_stars >= 4.5 AND avg_reteaching <= 1.5 AND avg_comprehension >= 75
+    Downgrade (both consecutive windows must agree):
+      avg_stars <= 2.0 AND avg_reteaching >= 3.0
+
+    A confirmed upgrade/downgrade updates DiagnosticResult.overall_level and
+    creates an IQReassessmentEvent. Parent is mock-notified in dev.
+    """
+
+    WINDOW_SIZE = 20  # 2026-02-27: Concepts per evaluation window
+    UPGRADE_MIN_STARS = 4.5  # 2026-02-27: Minimum avg stars for upgrade
+    UPGRADE_MAX_RETEACH = 1.5  # 2026-02-27: Maximum avg reteaching for upgrade
+    UPGRADE_MIN_COMPREHENSION = 75.0  # 2026-02-27: Minimum avg comprehension for upgrade (0-100)
+    DOWNGRADE_MAX_STARS = 2.0  # 2026-02-27: Maximum avg stars for downgrade
+    DOWNGRADE_MIN_RETEACH = 3.0  # 2026-02-27: Minimum avg reteaching for downgrade
+    LEVEL_ORDER = ['foundation', 'standard', 'advanced']  # 2026-02-27: Ordered tiers
+
+    @classmethod
+    def check_and_evaluate(cls, student):
+        """
+        2026-02-27: Check if a new window is due and evaluate it.
+
+        Called each time a ConceptMastery is newly set to is_mastered=True.
+        A window is due when total mastered count is a multiple of WINDOW_SIZE.
+
+        Args:
+            student: Student model instance.
+
+        Returns:
+            dict or None: Evaluation result if a window was evaluated, else None.
+        """
+        from services.teaching_engine.models import ConceptMastery  # 2026-02-27: Avoid circular
+
+        # 2026-02-27: Count all mastered concepts for this student
+        total_mastered = ConceptMastery.objects.filter(
+            student=student, is_mastered=True
+        ).count()
+
+        if total_mastered == 0 or total_mastered % cls.WINDOW_SIZE != 0:
+            return None  # 2026-02-27: No window due yet
+
+        window_number = total_mastered // cls.WINDOW_SIZE  # 2026-02-27: Which window
+
+        # 2026-02-27: Guard against double-evaluation (e.g. concurrent requests)
+        if IQReassessmentWindow.objects.filter(
+            student=student, window_number=window_number
+        ).exists():
+            return None  # 2026-02-27: Already evaluated this window
+
+        # 2026-02-27: Require a baseline diagnostic result to compare against
+        result = DiagnosticResult.objects.filter(student=student).first()
+        if not result:
+            return None  # 2026-02-27: No diagnostic baseline — skip
+
+        level_before = result.overall_level  # 2026-02-27: Level at start of window
+
+        # 2026-02-27: Grab the most recently mastered WINDOW_SIZE concepts
+        recent_masteries = list(
+            ConceptMastery.objects.filter(
+                student=student, is_mastered=True
+            ).order_by('-updated_at')[:cls.WINDOW_SIZE]
+        )
+
+        # 2026-02-27: Compute aggregate metrics for the window
+        metrics = cls._compute_window_metrics(student, recent_masteries)
+
+        # 2026-02-27: Determine outcome (upgrade / downgrade / maintain)
+        outcome = cls._determine_outcome(
+            metrics['avg_stars'],
+            metrics['avg_reteaching'],
+            metrics['avg_comprehension'],
+            level_before,
+        )
+
+        # 2026-02-27: Compute what the level would be if this outcome applied
+        level_after = cls._apply_outcome_to_level(level_before, outcome)
+
+        # 2026-02-27: Persist the window record
+        IQReassessmentWindow.objects.create(
+            student=student,
+            window_number=window_number,
+            avg_stars=metrics['avg_stars'],
+            avg_reteaching=metrics['avg_reteaching'],
+            avg_comprehension=metrics['avg_comprehension'],
+            outcome=outcome,
+            level_before=level_before,
+            level_after=level_after,
+            concepts_in_window=metrics['concept_ids'],
+        )
+
+        # 2026-02-27: Check for 2 consecutive same-direction windows → apply change
+        if outcome != 'maintain':
+            prev_window = IQReassessmentWindow.objects.filter(
+                student=student, window_number=window_number - 1
+            ).first()
+            if prev_window and prev_window.outcome == outcome:
+                cls._apply_level_change(
+                    student, level_before, level_after, outcome, window_number
+                )
+
+        logger.info(  # 2026-02-27: Audit log
+            f"IQ reassessment window #{window_number} for {student.full_name}: "
+            f"stars={metrics['avg_stars']:.2f} reteach={metrics['avg_reteaching']:.2f} "
+            f"comprehension={metrics['avg_comprehension']:.1f} → {outcome} "
+            f"({level_before} → {level_after})"
+        )
+
+        return {  # 2026-02-27: Return evaluation result
+            'window_number': window_number,
+            'outcome': outcome,
+            'level_before': level_before,
+            'level_after': level_after,
+            'metrics': metrics,
+        }
+
+    @classmethod
+    def _compute_window_metrics(cls, student, masteries):
+        """
+        2026-02-27: Aggregate stars, reteaching, and comprehension for a concept window.
+
+        Args:
+            student: Student model instance.
+            masteries: List of ConceptMastery instances (most recent WINDOW_SIZE).
+
+        Returns:
+            dict: avg_stars, avg_reteaching, avg_comprehension (all floats),
+                  concept_ids (list of '<lesson_id>:day<N>' strings).
+        """
+        from services.teaching_engine.models import DayProgress  # 2026-02-27: Avoid circular
+
+        total_stars = 0.0
+        total_reteach = 0.0
+        total_comprehension = 0.0
+        concept_ids = []
+
+        for mastery in masteries:  # 2026-02-27: Accumulate per-concept metrics
+            total_stars += mastery.best_star_rating
+            total_reteach += mastery.attempts_count
+            concept_ids.append(
+                f"{mastery.lesson.lesson_id}:day{mastery.day_number}"
+            )
+
+            # 2026-02-27: Pull comprehension score from corresponding DayProgress
+            day_prog = DayProgress.objects.filter(
+                lesson_progress__student=student,
+                lesson_progress__lesson=mastery.lesson,
+                day_number=mastery.day_number,
+            ).first()
+            if day_prog:
+                total_comprehension += day_prog.comprehension_score
+
+        count = len(masteries)
+        if count == 0:  # 2026-02-27: Guard against empty window
+            return {
+                'avg_stars': 0.0,
+                'avg_reteaching': 0.0,
+                'avg_comprehension': 0.0,
+                'concept_ids': [],
+            }
+
+        return {  # 2026-02-27: Rounded averages
+            'avg_stars': round(total_stars / count, 2),
+            'avg_reteaching': round(total_reteach / count, 2),
+            'avg_comprehension': round(total_comprehension / count, 1),
+            'concept_ids': concept_ids,
+        }
+
+    @classmethod
+    def _determine_outcome(cls, avg_stars, avg_reteaching, avg_comprehension, current_level):
+        """
+        2026-02-27: Apply threshold rules to decide window outcome.
+
+        Upgrade requires ALL three conditions:
+          avg_stars >= UPGRADE_MIN_STARS
+          avg_reteaching <= UPGRADE_MAX_RETEACH
+          avg_comprehension >= UPGRADE_MIN_COMPREHENSION
+
+        Downgrade requires BOTH:
+          avg_stars <= DOWNGRADE_MAX_STARS
+          avg_reteaching >= DOWNGRADE_MIN_RETEACH
+
+        Boundary: 'advanced' cannot upgrade; 'foundation' cannot downgrade.
+
+        Args:
+            avg_stars: Average best star rating across window (0-5).
+            avg_reteaching: Average reteaching attempts across window.
+            avg_comprehension: Average comprehension score (0-100).
+            current_level: Current IQ level ('foundation'|'standard'|'advanced').
+
+        Returns:
+            str: 'upgrade', 'downgrade', or 'maintain'.
+        """
+        # 2026-02-27: Test upgrade conditions first (exceptional performance)
+        if (
+            avg_stars >= cls.UPGRADE_MIN_STARS
+            and avg_reteaching <= cls.UPGRADE_MAX_RETEACH
+            and avg_comprehension >= cls.UPGRADE_MIN_COMPREHENSION
+        ):
+            if current_level == 'advanced':  # 2026-02-27: Already at ceiling
+                return 'maintain'
+            return 'upgrade'
+
+        # 2026-02-27: Test downgrade conditions (persistent struggle)
+        if (
+            avg_stars <= cls.DOWNGRADE_MAX_STARS
+            and avg_reteaching >= cls.DOWNGRADE_MIN_RETEACH
+        ):
+            if current_level == 'foundation':  # 2026-02-27: Already at floor
+                return 'maintain'
+            return 'downgrade'
+
+        return 'maintain'  # 2026-02-27: Default
+
+    @classmethod
+    def _apply_outcome_to_level(cls, current_level, outcome):
+        """
+        2026-02-27: Compute the projected level after this window outcome.
+
+        Does NOT change DiagnosticResult — that requires 2 consecutive windows.
+
+        Args:
+            current_level: Current IQ level string.
+            outcome: 'upgrade', 'downgrade', or 'maintain'.
+
+        Returns:
+            str: Projected level string.
+        """
+        idx = cls.LEVEL_ORDER.index(current_level)  # 2026-02-27: Positional index
+        if outcome == 'upgrade':
+            return cls.LEVEL_ORDER[min(idx + 1, len(cls.LEVEL_ORDER) - 1)]
+        if outcome == 'downgrade':
+            return cls.LEVEL_ORDER[max(idx - 1, 0)]
+        return current_level  # 2026-02-27: 'maintain'
+
+    @classmethod
+    def _apply_level_change(cls, student, old_level, new_level, direction, window_number):
+        """
+        2026-02-27: Apply a confirmed level change to DiagnosticResult and record event.
+
+        Called only when two consecutive windows share the same direction.
+        Updates DiagnosticResult.overall_level and creates IQReassessmentEvent.
+        Mock-notifies parent (log only in dev).
+
+        Args:
+            student: Student model instance.
+            old_level: Level before change.
+            new_level: Level after change.
+            direction: 'upgrade' or 'downgrade'.
+            window_number: Window number that triggered the change (second of the pair).
+        """
+        # 2026-02-27: Update diagnostic result overall level
+        result = DiagnosticResult.objects.filter(student=student).first()
+        if result:
+            result.overall_level = new_level
+            result.save()
+
+        # 2026-02-27: Record the level-change event
+        IQReassessmentEvent.objects.create(
+            student=student,
+            old_level=old_level,
+            new_level=new_level,
+            direction=direction,
+            triggering_window=window_number,
+            parent_notified=True,  # 2026-02-27: Mock: mark as notified immediately
+            parent_notified_at=timezone.now(),
+        )
+
+        logger.info(  # 2026-02-27: Audit log
+            f"IQ level CHANGED for {student.full_name}: {old_level} → {new_level} "
+            f"({direction}, triggered by window #{window_number})"
+        )
+
+    @classmethod
+    def get_history(cls, student):
+        """
+        2026-02-27: Retrieve reassessment windows and events for a student.
+
+        Args:
+            student: Student model instance.
+
+        Returns:
+            dict: Windows list, events list, and total mastered concept count.
+        """
+        from services.teaching_engine.models import ConceptMastery  # 2026-02-27: Avoid circular
+
+        total_mastered = ConceptMastery.objects.filter(
+            student=student, is_mastered=True
+        ).count()
+
+        windows_data = [  # 2026-02-27: Serialize each window
+            {
+                'window_number': w.window_number,
+                'avg_stars': w.avg_stars,
+                'avg_reteaching': w.avg_reteaching,
+                'avg_comprehension': w.avg_comprehension,
+                'outcome': w.outcome,
+                'level_before': w.level_before,
+                'level_after': w.level_after,
+                'created_at': w.created_at.isoformat(),
+            }
+            for w in IQReassessmentWindow.objects.filter(student=student)
+        ]
+
+        events_data = [  # 2026-02-27: Serialize each event
+            {
+                'old_level': e.old_level,
+                'new_level': e.new_level,
+                'direction': e.direction,
+                'triggering_window': e.triggering_window,
+                'parent_notified': e.parent_notified,
+                'created_at': e.created_at.isoformat(),
+            }
+            for e in IQReassessmentEvent.objects.filter(student=student)
+        ]
+
+        return {  # 2026-02-27: Full history payload
+            'success': True,
+            'total_mastered_concepts': total_mastered,
+            'next_window_at': (
+                (total_mastered // cls.WINDOW_SIZE + 1) * cls.WINDOW_SIZE
+            ),
+            'windows': windows_data,
+            'events': events_data,
         }

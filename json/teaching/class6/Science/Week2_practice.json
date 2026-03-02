@@ -1,0 +1,155 @@
+{
+  "lesson_id": "SCI6_DLW_W01_L02",
+  "total_questions": 75,
+  "practice_bank": {
+
+    "day_1": {
+      "concept_name": "What is Diversity Around Us?",
+      "total_questions": 15,
+
+      "easy": [
+        {"id": "D1_E1", "type": "mcq", "question": "Diversity means:", "options": ["Sameness", "Variety", "Silence", "Colour"], "correct_answer": 1, "explanation": "Diversity means variety."},
+        {"id": "D1_E2", "type": "true_false", "question": "Biodiversity includes only animals.", "correct_answer": false, "explanation": "It includes plants and animals."},
+        {"id": "D1_E3", "type": "mcq", "question": "Which shows biodiversity?", "options": ["Single tree", "Many different plants", "Empty land", "One bird"], "correct_answer": 1, "explanation": "Many different plants show diversity."},
+        {"id": "D1_E4", "type": "true_false", "question": "Different birds in a park show diversity.", "correct_answer": true, "explanation": "Different types indicate variety."},
+        {"id": "D1_E5", "type": "mcq", "question": "Biodiversity means:", "options": ["Variety of living organisms", "Only insects", "Only trees", "Only mammals"], "correct_answer": 0, "explanation": "It includes all living organisms."}
+      ],
+
+      "medium": [
+        {"id": "D1_M1", "type": "mcq", "question": "Which is NOT an example of biodiversity?", "options": ["Different flowers", "Different birds", "Same plant repeated", "Different insects"], "correct_answer": 2, "explanation": "Same plant repeated is not variety."},
+        {"id": "D1_M2", "type": "short_answer", "question": "Name three living organisms around you.", "explanation": "Any three valid examples."},
+        {"id": "D1_M3", "type": "image_mcq", "image_url": "https://cdn.school.com/images/forest_biodiversity.jpg", "question": "This image represents:", "options": ["Habitat loss", "Biodiversity", "Desert", "Single species"], "correct_answer": 1, "explanation": "Many organisms visible."},
+        {"id": "D1_M4", "type": "true_false", "question": "A garden with only one type of flower has high biodiversity.", "correct_answer": false, "explanation": "Low variety means low biodiversity."},
+        {"id": "D1_M5", "type": "mcq", "question": "Which area likely has higher biodiversity?", "options": ["Dense forest", "Concrete road", "Empty land", "Deserted building"], "correct_answer": 0, "explanation": "Forests support many organisms."}
+      ],
+
+      "hard": [
+        {"id": "D1_H1", "type": "short_answer", "question": "Explain why biodiversity is important.", "explanation": "Maintains balance and supports life."},
+        {"id": "D1_H2", "type": "drag_order", "question": "Arrange steps to understand diversity:", "items": ["Observe", "Compare", "Identify variety"], "correct_order": [0, 1, 2], "explanation": "Observation leads to comparison."},
+        {"id": "D1_H3", "type": "mcq", "question": "If all animals disappeared from a forest, biodiversity would:", "options": ["Increase", "Decrease", "Remain same", "Double"], "correct_answer": 1, "explanation": "Loss reduces variety."},
+        {"id": "D1_H4", "type": "video_reflection", "video_url": "https://youtube.com/example_biodiversity_intro", "question": "What did the video show about diversity?", "explanation": "Students reflect on visual examples."},
+        {"id": "D1_H5", "type": "short_answer", "question": "Why does a forest have more diversity than a classroom?", "explanation": "More living organisms exist in forest."}
+      ]
+    },
+
+    "day_2": {
+      "concept_name": "Observing Features of Plants",
+      "total_questions": 15,
+
+      "easy": [
+        {"id": "D2_E1", "type": "mcq", "question": "Plants differ in:", "options": ["Stem type", "Noise", "Voice", "Speed"], "correct_answer": 0, "explanation": "Stem type is structural feature."},
+        {"id": "D2_E2", "type": "true_false", "question": "All plants have soft stems.", "correct_answer": false, "explanation": "Some have woody stems."},
+        {"id": "D2_E3", "type": "mcq", "question": "Leaves can differ in:", "options": ["Shape", "Sound", "Smell of sky", "Wind"], "correct_answer": 0, "explanation": "Leaf shape varies."},
+        {"id": "D2_E4", "type": "image_mcq", "image_url": "https://cdn.school.com/images/woody_stem.jpg", "question": "This stem appears:", "options": ["Soft", "Woody", "Plastic", "Rubber"], "correct_answer": 1, "explanation": "Thick brown stem indicates woody."},
+        {"id": "D2_E5", "type": "true_false", "question": "Flower colour is a plant feature.", "correct_answer": true, "explanation": "Flower colour varies among plants."}
+      ],
+
+      "medium": [
+        {"id": "D2_M1", "type": "short_answer", "question": "Name two plant features you can observe.", "explanation": "Stem, leaf, flower etc."},
+        {"id": "D2_M2", "type": "mcq", "question": "Scientific observation means:", "options": ["Guessing", "Careful watching", "Ignoring details", "Sleeping"], "correct_answer": 1, "explanation": "Observation is careful watching."},
+        {"id": "D2_M3", "type": "true_false", "question": "Leaf arrangement can vary between plants.", "correct_answer": true, "explanation": "Plants differ in arrangement."},
+        {"id": "D2_M4", "type": "numeric_fill", "question": "How many plant parts are commonly observed: stem, leaf, flower?", "correct_answer": 3, "explanation": "There are three listed."},
+        {"id": "D2_M5", "type": "image_mcq", "image_url": "https://cdn.school.com/images/soft_stem.jpg", "question": "The stem shown is likely:", "options": ["Woody", "Hard", "Soft", "Metal"], "correct_answer": 2, "explanation": "Green flexible stem."}
+      ],
+
+      "hard": [
+        {"id": "D2_H1", "type": "short_answer", "question": "Why is observation important in plant study?", "explanation": "Helps identify differences."},
+        {"id": "D2_H2", "type": "drag_order", "question": "Arrange plant observation steps:", "items": ["Observe stem", "Observe leaves", "Observe flowers"], "correct_order": [0,1,2], "explanation": "Systematic observation."},
+        {"id": "D2_H3", "type": "mcq", "question": "Which feature is most useful for study?", "options": ["Colour only", "Height only", "Multiple features", "Guessing"], "correct_answer": 2, "explanation": "Multiple features give better understanding."},
+        {"id": "D2_H4", "type": "true_false", "question": "Two plants can have same flower colour but different stems.", "correct_answer": true, "explanation": "Different structural features possible."},
+        {"id": "D2_H5", "type": "short_answer", "question": "Give one difference between two plants you have seen.", "explanation": "Any valid structural difference."}
+      ]
+    }
+
+  }
+}
+{
+  "day_3": {
+    "concept_name": "Observing Features of Animals",
+    "total_questions": 15,
+
+    "easy": [
+      {"id": "D3_E1", "type": "mcq", "question": "Fish move using:", "options": ["Legs", "Wings", "Fins", "Claws"], "correct_answer": 2, "explanation": "Fish swim using fins."},
+      {"id": "D3_E2", "type": "true_false", "question": "Birds use wings to fly.", "correct_answer": true, "explanation": "Wings help birds fly."},
+      {"id": "D3_E3", "type": "mcq", "question": "Goats move using:", "options": ["Fins", "Wings", "Legs", "Tail"], "correct_answer": 2, "explanation": "Goats walk using legs."},
+      {"id": "D3_E4", "type": "image_mcq", "image_url": "https://cdn.school.com/images/fish_swimming.jpg", "question": "This animal lives in:", "options": ["Water", "Air", "Desert", "Mountain"], "correct_answer": 0, "explanation": "Fish live in water."},
+      {"id": "D3_E5", "type": "true_false", "question": "All animals move in the same way.", "correct_answer": false, "explanation": "Animals move differently."}
+    ],
+
+    "medium": [
+      {"id": "D3_M1", "type": "short_answer", "question": "Name two animals that fly.", "explanation": "Birds, bats etc."},
+      {"id": "D3_M2", "type": "mcq", "question": "Which animal uses fins?", "options": ["Crow", "Fish", "Goat", "Ant"], "correct_answer": 1, "explanation": "Fish use fins."},
+      {"id": "D3_M3", "type": "true_false", "question": "Movement is a feature used to observe animals.", "correct_answer": true, "explanation": "Movement helps classification."},
+      {"id": "D3_M4", "type": "numeric_fill", "question": "How many movement types are these: walking, flying, swimming?", "correct_answer": 3, "explanation": "There are three types listed."},
+      {"id": "D3_M5", "type": "image_mcq", "image_url": "https://cdn.school.com/images/bird_flying.jpg", "question": "This movement is:", "options": ["Swimming", "Flying", "Walking", "Crawling"], "correct_answer": 1, "explanation": "Bird is flying."}
+    ],
+
+    "hard": [
+      {"id": "D3_H1", "type": "short_answer", "question": "Why do fish not use legs for movement?", "explanation": "They are adapted to water; fins help swimming."},
+      {"id": "D3_H2", "type": "drag_order", "question": "Arrange animals by movement from land to air:", "items": ["Goat", "Fish", "Eagle"], "correct_order": [1,0,2], "explanation": "Fish (water), Goat (land), Eagle (air)."},
+      {"id": "D3_H3", "type": "mcq", "question": "Which feature helps birds fly?", "options": ["Fins", "Wings", "Horns", "Claws"], "correct_answer": 1, "explanation": "Wings enable flight."},
+      {"id": "D3_H4", "type": "true_false", "question": "Animals in water usually have body parts adapted for swimming.", "correct_answer": true, "explanation": "Adaptation for habitat."},
+      {"id": "D3_H5", "type": "short_answer", "question": "Explain one difference between fish and goat movement.", "explanation": "Fish swim; goats walk."}
+    ]
+  }
+}
+{
+  "day_4": {
+    "concept_name": "Similarities and Differences",
+    "total_questions": 15,
+
+    "easy": [
+      {"id": "D4_E1", "type": "mcq", "question": "Comparing helps us to:", "options": ["Ignore", "Understand differences", "Sleep", "Guess"], "correct_answer": 1, "explanation": "Comparison highlights similarities and differences."},
+      {"id": "D4_E2", "type": "true_false", "question": "All birds are exactly the same.", "correct_answer": false, "explanation": "Birds differ in size and colour."},
+      {"id": "D4_E3", "type": "mcq", "question": "One similarity between crow and pigeon is:", "options": ["Both swim", "Both fly", "Both crawl", "Both live in water"], "correct_answer": 1, "explanation": "Both use wings to fly."},
+      {"id": "D4_E4", "type": "image_mcq", "image_url": "https://cdn.school.com/images/crow_pigeon.jpg", "question": "These animals belong to:", "options": ["Fish", "Birds", "Reptiles", "Insects"], "correct_answer": 1, "explanation": "Both are birds."},
+      {"id": "D4_E5", "type": "true_false", "question": "Plants can differ in leaf shape.", "correct_answer": true, "explanation": "Leaf shape varies."}
+    ],
+
+    "medium": [
+      {"id": "D4_M1", "type": "short_answer", "question": "Give one similarity between two plants you know.", "explanation": "Any valid structural similarity."},
+      {"id": "D4_M2", "type": "mcq", "question": "Two plants may differ in:", "options": ["Stem type", "Air", "Sun", "Soil only"], "correct_answer": 0, "explanation": "Stem type differs."},
+      {"id": "D4_M3", "type": "true_false", "question": "Observing similarities helps grouping.", "correct_answer": true, "explanation": "Grouping is based on similarities."},
+      {"id": "D4_M4", "type": "numeric_fill", "question": "If you compare stem, leaf and flower, how many features are you observing?", "correct_answer": 3, "explanation": "Three features listed."},
+      {"id": "D4_M5", "type": "mcq", "question": "Which is a difference?", "options": ["Both fly", "Different size", "Both walk", "Both eat"], "correct_answer": 1, "explanation": "Size difference is variation."}
+    ],
+
+    "hard": [
+      {"id": "D4_H1", "type": "short_answer", "question": "Why is comparison important before grouping?", "explanation": "It identifies consistent patterns."},
+      {"id": "D4_H2", "type": "drag_order", "question": "Arrange comparison steps:", "items": ["Observe", "Note similarities", "Note differences"], "correct_order": [0,1,2], "explanation": "Observation first."},
+      {"id": "D4_H3", "type": "mcq", "question": "Which best shows difference?", "options": ["Two identical plants", "One tall and one short plant", "Two same birds", "Two same leaves"], "correct_answer": 1, "explanation": "Height difference shows variation."},
+      {"id": "D4_H4", "type": "true_false", "question": "Grouping is possible without comparing.", "correct_answer": false, "explanation": "Comparison is necessary."},
+      {"id": "D4_H5", "type": "short_answer", "question": "Explain one difference between fish and bird.", "explanation": "Fish swim; birds fly."}
+    ]
+  }
+}
+{
+  "day_5": {
+    "concept_name": "Understanding Biodiversity and Interdependence",
+    "total_questions": 15,
+
+    "easy": [
+      {"id": "D5_E1", "type": "mcq", "question": "Biodiversity means:", "options": ["Only trees", "Variety of living organisms", "Only insects", "Only mammals"], "correct_answer": 1, "explanation": "Biodiversity includes all living organisms."},
+      {"id": "D5_E2", "type": "true_false", "question": "Plants and animals depend on each other.", "correct_answer": true, "explanation": "They are interdependent."},
+      {"id": "D5_E3", "type": "image_mcq", "image_url": "https://cdn.school.com/images/bee_pollination.jpg", "question": "This shows:", "options": ["Interdependence", "Destruction", "Pollution", "Isolation"], "correct_answer": 0, "explanation": "Bee and flower interaction."},
+      {"id": "D5_E4", "type": "true_false", "question": "Loss of biodiversity affects environment.", "correct_answer": true, "explanation": "It disturbs balance."},
+      {"id": "D5_E5", "type": "mcq", "question": "Trees provide:", "options": ["Food and shelter", "Only water", "Only sunlight", "Nothing"], "correct_answer": 0, "explanation": "Trees support many organisms."}
+    ],
+
+    "medium": [
+      {"id": "D5_M1", "type": "short_answer", "question": "Give one example of interdependence.", "explanation": "Bee and flower."},
+      {"id": "D5_M2", "type": "mcq", "question": "If plants disappear, animals will:", "options": ["Increase", "Be affected", "Remain same", "Multiply"], "correct_answer": 1, "explanation": "Animals depend on plants."},
+      {"id": "D5_M3", "type": "true_false", "question": "Habitat destruction reduces biodiversity.", "correct_answer": true, "explanation": "Loss of habitat reduces variety."},
+      {"id": "D5_M4", "type": "numeric_fill", "question": "If 3 species disappear from 10 species, how many remain?", "correct_answer": 7, "explanation": "10 - 3 = 7."},
+      {"id": "D5_M5", "type": "mcq", "question": "Which helps protect biodiversity?", "options": ["Cutting forests", "Pollution", "Conservation", "Ignoring"], "correct_answer": 2, "explanation": "Conservation protects biodiversity."}
+    ],
+
+    "hard": [
+      {"id": "D5_H1", "type": "short_answer", "question": "Why is biodiversity important for survival?", "explanation": "Maintains ecological balance."},
+      {"id": "D5_H2", "type": "drag_order", "question": "Arrange chain of interdependence:", "items": ["Plants", "Herbivores", "Carnivores"], "correct_order": [0,1,2], "explanation": "Food chain sequence."},
+      {"id": "D5_H3", "type": "mcq", "question": "If biodiversity decreases, ecosystem will:", "options": ["Strengthen", "Collapse", "Remain unaffected", "Multiply"], "correct_answer": 1, "explanation": "Reduced stability."},
+      {"id": "D5_H4", "type": "true_false", "question": "Conservation helps maintain biodiversity.", "correct_answer": true, "explanation": "Protection maintains balance."},
+      {"id": "D5_H5", "type": "video_reflection", "video_url": "https://youtube.com/example_biodiversity_loss", "question": "What may happen if forests are destroyed?", "explanation": "Loss of species and imbalance."}
+    ]
+  }
+}

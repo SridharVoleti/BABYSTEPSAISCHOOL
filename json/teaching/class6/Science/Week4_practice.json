@@ -1,0 +1,148 @@
+{
+  "day_11": {
+    "concept_name": "Leaf Venation",
+    "total_questions": 15,
+
+    "easy": [
+      {"id": "D11_E1", "type": "mcq", "question": "Venation means:", "options": ["Leaf colour", "Pattern of veins", "Root type", "Flower shape"], "correct_answer": 1, "explanation": "Venation refers to vein pattern."},
+      {"id": "D11_E2", "type": "true_false", "question": "Leaves have veins.", "correct_answer": true, "explanation": "Veins transport food and water."},
+      {"id": "D11_E3", "type": "mcq", "question": "Net-like veins indicate:", "options": ["Parallel venation", "Reticulate venation", "No venation", "Fibrous root"], "correct_answer": 1, "explanation": "Net pattern is reticulate."},
+      {"id": "D11_E4", "type": "image_mcq", "image_url": "https://cdn.school.com/images/banana_parallel.jpg", "question": "This leaf shows:", "options": ["Reticulate", "Parallel", "No veins", "Circular veins"], "correct_answer": 1, "explanation": "Parallel lines visible."},
+      {"id": "D11_E5", "type": "true_false", "question": "Grass has parallel venation.", "correct_answer": true, "explanation": "Grass shows parallel veins."}
+    ],
+
+    "medium": [
+      {"id": "D11_M1", "type": "short_answer", "question": "Name two plants with reticulate venation.", "explanation": "Mango, hibiscus etc."},
+      {"id": "D11_M2", "type": "mcq", "question": "Which shows reticulate venation?", "options": ["Banana", "Grass", "Mustard", "Wheat"], "correct_answer": 2, "explanation": "Mustard shows reticulate."},
+      {"id": "D11_M3", "type": "true_false", "question": "Parallel venation forms a net-like pattern.", "correct_answer": false, "explanation": "Net-like is reticulate."},
+      {"id": "D11_M4", "type": "numeric_fill", "question": "How many main venation types are there?", "correct_answer": 2, "explanation": "Reticulate and parallel."},
+      {"id": "D11_M5", "type": "image_mcq", "image_url": "https://cdn.school.com/images/hibiscus_reticulate.jpg", "question": "This venation type is:", "options": ["Parallel", "Reticulate", "Fibrous", "Taproot"], "correct_answer": 1, "explanation": "Net-like structure visible."}
+    ],
+
+    "hard": [
+      {"id": "D11_H1", "type": "short_answer", "question": "Why is venation useful for classification?", "explanation": "It is a stable structural feature."},
+      {"id": "D11_H2", "type": "drag_order", "question": "Arrange identification steps:", "items": ["Observe veins", "Identify pattern", "Classify type"], "correct_order": [0,1,2], "explanation": "Observation first."},
+      {"id": "D11_H3", "type": "mcq", "question": "Which plant is likely monocot?", "options": ["Mango", "Hibiscus", "Grass", "Mustard"], "correct_answer": 2, "explanation": "Parallel venation."},
+      {"id": "D11_H4", "type": "true_false", "question": "Venation relates to root type.", "correct_answer": true, "explanation": "Parallel → fibrous; Reticulate → taproot."},
+      {"id": "D11_H5", "type": "short_answer", "question": "Differentiate reticulate and parallel venation.", "explanation": "Net-like vs straight parallel veins."}
+    ]
+  }
+}
+{
+  "day_12": {
+    "concept_name": "Taproot and Fibrous Root",
+    "total_questions": 15,
+
+    "easy": [
+      {"id": "D12_E1", "type": "mcq", "question": "Taproot has:", "options": ["One main root", "Many equal roots", "No roots", "Only leaves"], "correct_answer": 0, "explanation": "Taproot has one main root."},
+      {"id": "D12_E2", "type": "true_false", "question": "Grass has fibrous roots.", "correct_answer": true, "explanation": "Grass has fibrous root system."},
+      {"id": "D12_E3", "type": "mcq", "question": "Mustard plant has:", "options": ["Fibrous root", "Taproot", "No root", "Air root"], "correct_answer": 1, "explanation": "Mustard has taproot."},
+      {"id": "D12_E4", "type": "image_mcq", "image_url": "https://cdn.school.com/images/grass_fibrous.jpg", "question": "This root system is:", "options": ["Taproot", "Fibrous", "No root", "Branch root"], "correct_answer": 1, "explanation": "Many thin roots visible."},
+      {"id": "D12_E5", "type": "true_false", "question": "Taproots grow deep into soil.", "correct_answer": true, "explanation": "Main root penetrates deeply."}
+    ],
+
+    "medium": [
+      {"id": "D12_M1", "type": "short_answer", "question": "State one difference between taproot and fibrous root.", "explanation": "Single main root vs many thin roots."},
+      {"id": "D12_M2", "type": "mcq", "question": "Which plant has fibrous roots?", "options": ["Hibiscus", "Mustard", "Wheat", "Rose"], "correct_answer": 2, "explanation": "Wheat has fibrous root."},
+      {"id": "D12_M3", "type": "true_false", "question": "Taproot system provides strong anchorage.", "correct_answer": true, "explanation": "Deep root anchors plant."},
+      {"id": "D12_M4", "type": "numeric_fill", "question": "If one root branches into 4 smaller roots, total roots visible are:", "correct_answer": 5, "explanation": "1 main + 4 branches."},
+      {"id": "D12_M5", "type": "image_mcq", "image_url": "https://cdn.school.com/images/mustard_taproot.jpg", "question": "This root type is:", "options": ["Fibrous", "Taproot", "Creeper", "Climber"], "correct_answer": 1, "explanation": "Single main root visible."}
+    ],
+
+    "hard": [
+      {"id": "D12_H1", "type": "short_answer", "question": "Why are fibrous roots useful in grasses?", "explanation": "Prevent soil erosion and spread widely."},
+      {"id": "D12_H2", "type": "drag_order", "question": "Arrange root identification:", "items": ["Observe root shape", "Check number of main roots", "Classify root type"], "correct_order": [0,1,2], "explanation": "Systematic identification."},
+      {"id": "D12_H3", "type": "mcq", "question": "Which combination is correct?", "options": ["Grass – Taproot", "Mustard – Fibrous", "Wheat – Fibrous", "Hibiscus – Fibrous"], "correct_answer": 2, "explanation": "Wheat has fibrous roots."},
+      {"id": "D12_H4", "type": "true_false", "question": "Root type is linked to venation.", "correct_answer": true, "explanation": "Parallel → fibrous."},
+      {"id": "D12_H5", "type": "short_answer", "question": "Explain why taproot provides stability.", "explanation": "Deep penetration into soil."}
+    ]
+  }
+}
+{
+  "day_12": {
+    "concept_name": "Taproot and Fibrous Root",
+    "total_questions": 15,
+
+    "easy": [
+      {"id": "D12_E1", "type": "mcq", "question": "Taproot has:", "options": ["One main root", "Many equal roots", "No roots", "Only leaves"], "correct_answer": 0, "explanation": "Taproot has one main root."},
+      {"id": "D12_E2", "type": "true_false", "question": "Grass has fibrous roots.", "correct_answer": true, "explanation": "Grass has fibrous root system."},
+      {"id": "D12_E3", "type": "mcq", "question": "Mustard plant has:", "options": ["Fibrous root", "Taproot", "No root", "Air root"], "correct_answer": 1, "explanation": "Mustard has taproot."},
+      {"id": "D12_E4", "type": "image_mcq", "image_url": "https://cdn.school.com/images/grass_fibrous.jpg", "question": "This root system is:", "options": ["Taproot", "Fibrous", "No root", "Branch root"], "correct_answer": 1, "explanation": "Many thin roots visible."},
+      {"id": "D12_E5", "type": "true_false", "question": "Taproots grow deep into soil.", "correct_answer": true, "explanation": "Main root penetrates deeply."}
+    ],
+
+    "medium": [
+      {"id": "D12_M1", "type": "short_answer", "question": "State one difference between taproot and fibrous root.", "explanation": "Single main root vs many thin roots."},
+      {"id": "D12_M2", "type": "mcq", "question": "Which plant has fibrous roots?", "options": ["Hibiscus", "Mustard", "Wheat", "Rose"], "correct_answer": 2, "explanation": "Wheat has fibrous root."},
+      {"id": "D12_M3", "type": "true_false", "question": "Taproot system provides strong anchorage.", "correct_answer": true, "explanation": "Deep root anchors plant."},
+      {"id": "D12_M4", "type": "numeric_fill", "question": "If one root branches into 4 smaller roots, total roots visible are:", "correct_answer": 5, "explanation": "1 main + 4 branches."},
+      {"id": "D12_M5", "type": "image_mcq", "image_url": "https://cdn.school.com/images/mustard_taproot.jpg", "question": "This root type is:", "options": ["Fibrous", "Taproot", "Creeper", "Climber"], "correct_answer": 1, "explanation": "Single main root visible."}
+    ],
+
+    "hard": [
+      {"id": "D12_H1", "type": "short_answer", "question": "Why are fibrous roots useful in grasses?", "explanation": "Prevent soil erosion and spread widely."},
+      {"id": "D12_H2", "type": "drag_order", "question": "Arrange root identification:", "items": ["Observe root shape", "Check number of main roots", "Classify root type"], "correct_order": [0,1,2], "explanation": "Systematic identification."},
+      {"id": "D12_H3", "type": "mcq", "question": "Which combination is correct?", "options": ["Grass – Taproot", "Mustard – Fibrous", "Wheat – Fibrous", "Hibiscus – Fibrous"], "correct_answer": 2, "explanation": "Wheat has fibrous roots."},
+      {"id": "D12_H4", "type": "true_false", "question": "Root type is linked to venation.", "correct_answer": true, "explanation": "Parallel → fibrous."},
+      {"id": "D12_H5", "type": "short_answer", "question": "Explain why taproot provides stability.", "explanation": "Deep penetration into soil."}
+    ]
+  }
+}
+{
+  "day_13": {
+    "concept_name": "Relation Between Venation and Roots",
+    "total_questions": 15,
+
+    "easy": [
+      {"id": "D13_E1", "type": "mcq", "question": "Reticulate venation is usually linked to:", "options": ["Fibrous root", "Taproot", "No root", "Air root"], "correct_answer": 1},
+      {"id": "D13_E2", "type": "true_false", "question": "Parallel venation is usually associated with fibrous roots.", "correct_answer": true},
+      {"id": "D13_E3", "type": "mcq", "question": "Grass likely has:", "options": ["Taproot", "Fibrous root", "No root", "Thick trunk"], "correct_answer": 1},
+      {"id": "D13_E4", "type": "true_false", "question": "Venation and root type are unrelated.", "correct_answer": false},
+      {"id": "D13_E5", "type": "mcq", "question": "Mustard plant has:", "options": ["Parallel + Fibrous", "Reticulate + Taproot", "Parallel + Taproot", "None"], "correct_answer": 1}
+    ],
+
+    "medium": [
+      {"id": "D13_M1", "type": "short_answer", "question": "State the general rule linking venation and root type."},
+      {"id": "D13_M2", "type": "mcq", "question": "Which plant follows reticulate + taproot?", "options": ["Mango", "Grass", "Wheat", "Maize"], "correct_answer": 0},
+      {"id": "D13_M3", "type": "true_false", "question": "Monocots usually show parallel venation.", "correct_answer": true},
+      {"id": "D13_M4", "type": "numeric_fill", "question": "If 3 plants have parallel venation, how many likely have fibrous roots?", "correct_answer": 3},
+      {"id": "D13_M5", "type": "mcq", "question": "Which is incorrect pair?", "options": ["Grass – Fibrous", "Mustard – Taproot", "Banana – Fibrous", "Wheat – Taproot"], "correct_answer": 3}
+    ],
+
+    "hard": [
+      {"id": "D13_H1", "type": "short_answer", "question": "Why is venation useful to predict root type?"},
+      {"id": "D13_H2", "type": "drag_order", "question": "Arrange logic:", "items": ["Observe venation", "Predict root type", "Confirm classification"], "correct_order": [0,1,2]},
+      {"id": "D13_H3", "type": "mcq", "question": "A plant has parallel venation. It likely has:", "options": ["Taproot", "Fibrous root", "No root", "Air root"], "correct_answer": 1},
+      {"id": "D13_H4", "type": "true_false", "question": "All dicots show reticulate venation.", "correct_answer": true},
+      {"id": "D13_H5", "type": "short_answer", "question": "Give one example supporting venation-root relation."}
+    ]
+  }
+}
+
+{
+  "day_15": {
+    "concept_name": "Integrated Plant Classification",
+    "total_questions": 15,
+    "easy": [
+      {"id": "D15_E1", "type": "mcq", "question": "Parallel venation + fibrous root indicates:", "options": ["Dicot", "Monocot", "Tree", "Shrub"], "correct_answer": 1},
+      {"id": "D15_E2", "type": "true_false", "question": "Dicots have reticulate venation.", "correct_answer": true},
+      {"id": "D15_E3", "type": "mcq", "question": "Hibiscus is:", "options": ["Monocot", "Dicot", "Creeper", "Shrub"], "correct_answer": 1},
+      {"id": "D15_E4", "type": "true_false", "question": "Grass is monocot.", "correct_answer": true},
+      {"id": "D15_E5", "type": "mcq", "question": "Mustard has:", "options": ["Parallel + Fibrous", "Reticulate + Taproot", "Fibrous only", "None"], "correct_answer": 1}
+    ],
+    "medium": [
+      {"id": "D15_M1", "type": "short_answer", "question": "Classify wheat with justification."},
+      {"id": "D15_M2", "type": "mcq", "question": "Which is monocot?", "options": ["Mango", "Rice", "Bean", "Hibiscus"], "correct_answer": 1},
+      {"id": "D15_M3", "type": "true_false", "question": "Classification requires multiple features.", "correct_answer": true},
+      {"id": "D15_M4", "type": "numeric_fill", "question": "If 2 monocots and 3 dicots are present, total plants are:", "correct_answer": 5},
+      {"id": "D15_M5", "type": "mcq", "question": "Which is dicot?", "options": ["Maize", "Wheat", "Mustard", "Grass"], "correct_answer": 2}
+    ],
+    "hard": [
+      {"id": "D15_H1", "type": "short_answer", "question": "Explain integrated classification logic."},
+      {"id": "D15_H2", "type": "drag_order", "question": "Arrange classification steps:", "items": ["Check venation", "Check root", "Check cotyledon", "Classify"], "correct_order": [0,1,2,3]},
+      {"id": "D15_H3", "type": "mcq", "question": "Parallel + Taproot indicates:", "options": ["Monocot", "Dicot", "Incorrect pairing", "Tree"], "correct_answer": 2},
+      {"id": "D15_H4", "type": "true_false", "question": "All monocots have fibrous roots.", "correct_answer": true},
+      {"id": "D15_H5", "type": "short_answer", "question": "Give one example where features must be cross-checked."}
+    ]
+  }
+}

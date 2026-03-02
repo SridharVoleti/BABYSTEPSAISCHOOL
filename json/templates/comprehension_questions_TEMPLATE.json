@@ -1,0 +1,71 @@
+{
+  "_comment": "BS-CMP comprehension_questions template — add this array to each day in week{N}.json. marks ∈ {2, 3, 5}. key_points length MUST equal marks. 1-mark MCQs go in practice_questions, NOT here.",
+
+  "comprehension_questions": [
+
+    {
+      "_comment_2mark": "2-Mark: student states 2 distinct key points (speak or type)",
+      "id": "D1_CQ1",
+      "marks": 2,
+      "type": "articulation",
+      "question": "Explain what [concept] is in your own words.",
+      "key_points": [
+        "Key point 1 — one clear, distinct idea",
+        "Key point 2 — second clear, distinct idea"
+      ],
+      "model_answer": "Full ideal answer in 1-2 sentences covering both key points. Used by the LLM as a gold standard for calibration.",
+      "explanation": "Marking guide: a full 2-mark answer covers both the [aspect A] AND [aspect B].",
+      "media": []
+    },
+
+    {
+      "_comment_3mark": "3-Mark: student states 3 distinct key points (speak or type)",
+      "id": "D1_CQ2",
+      "marks": 3,
+      "type": "articulation",
+      "question": "Describe three important [features / steps / reasons] related to [concept].",
+      "key_points": [
+        "Key point 1",
+        "Key point 2",
+        "Key point 3"
+      ],
+      "model_answer": "Full ideal answer covering all 3 key points in 2-3 sentences.",
+      "explanation": "Marking guide: a full 3-mark answer must identify all three: [A], [B], and [C].",
+      "media": [
+        {"type": "image", "src": "subject/classN/concept_overview.jpg", "caption": "Caption describing the image"}
+      ]
+    },
+
+    {
+      "_comment_5mark": "5-Mark: extended articulation with 5 distinct key points",
+      "id": "D2_CQ1",
+      "marks": 5,
+      "type": "articulation",
+      "question": "Elaborate on [topic]. Give valid reasons or examples.",
+      "key_points": [
+        "Key point 1",
+        "Key point 2",
+        "Key point 3",
+        "Key point 4",
+        "Key point 5"
+      ],
+      "model_answer": "Full ideal answer — 4-5 sentences covering all 5 key points with supporting examples.",
+      "explanation": "Marking guide: a 5-mark answer requires 5 distinct, well-reasoned points covering different aspects.",
+      "media": [
+        {"type": "image", "src": "subject/classN/topic_overview.jpg", "caption": "Overview diagram"},
+        {"type": "video", "src": "subject/classN/topic_explained.mp4", "caption": "Explanation video"}
+      ]
+    }
+
+  ],
+
+  "_rules": {
+    "marks_values": "Only 2, 3, or 5. Never 1 (MCQs go in practice_questions).",
+    "key_points_count": "MUST equal marks. 2 marks → 2 key_points, 3 marks → 3 key_points, 5 marks → 5 key_points.",
+    "id_format": "D{day_number}_CQ{sequence}. Example: D1_CQ1, D1_CQ2, D3_CQ1.",
+    "model_answer": "Write the ideal answer the LLM uses to calibrate evaluation. Be specific and complete.",
+    "media_src": "Relative path under MEDIA_ROOT (media/ directory). Frontend constructs full URL as {DJANGO_BASE_URL}/media/{src}.",
+    "media_optional": "Set media to [] if no media is needed.",
+    "key_points_withheld": "key_points are NOT sent to the frontend before submission. Only revealed in the evaluation response."
+  }
+}

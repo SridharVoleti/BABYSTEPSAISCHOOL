@@ -45,6 +45,10 @@ class ParentalControls(models.Model):
     ai_log_enabled = models.BooleanField(  # 2026-02-19: Parent can view AI chat log
         default=True
     )
+    leaderboard_opt_in = models.BooleanField(  # 2026-02-27: Consent for leaderboard participation
+        default=False,
+        help_text='Allow child to appear on class and regional leaderboards',
+    )
     created_at = models.DateTimeField(auto_now_add=True)  # 2026-02-19: Created
     updated_at = models.DateTimeField(auto_now=True)  # 2026-02-19: Last updated
 

@@ -288,8 +288,16 @@ class StudentAuthViewSet(viewsets.ViewSet):
     @action(detail=False, methods=['get'], url_path=r'lookup/(?P<phone>[^/.]+)')
     def lookup_by_phone(self, request, phone=None):
         """2026-02-12: Look up students by parent phone (public, returns minimal info)."""
+        # 2026-02-20: Normalize phone — strip non-digits, prepend +91 for 10-digit Indian numbers
+        digits = ''.join(c for c in (phone or '') if c.isdigit())
+        if len(digits) == 10:
+            normalized = f'+91{digits}'
+        elif len(digits) == 12 and digits.startswith('91'):
+            normalized = f'+{digits}'
+        else:
+            normalized = phone  # 2026-02-20: Use as-is (already +91... or unknown format)
         try:
-            parent = Parent.objects.get(phone=phone)  # 2026-02-12: Find parent
+            parent = Parent.objects.get(phone=normalized)  # 2026-02-20: Normalized lookup
         except Parent.DoesNotExist:
             return Response(
                 {'students': [], 'message': 'No account found.'},

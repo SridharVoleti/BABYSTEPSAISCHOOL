@@ -1,0 +1,94 @@
+{
+  "exam_id": "SCI6_CH02_NATIONAL_OLYMPIAD_MOCK_01",
+  "total_questions": 50,
+  "time_limit_minutes": 60,
+  "difficulty_level": "national_olympiad",
+
+  "sections": [
+
+    {
+      "section_name": "Section A – Conceptual Precision (20 Questions)",
+      "questions": [
+
+        {"id": "Q1", "type": "mcq", "question": "A tall plant with soft stem is:", "options": ["Tree", "Shrub", "Herb", "Creeper"], "correct_answer": 2},
+        {"id": "Q2", "type": "mcq", "question": "Reticulate venation is usually linked with:", "options": ["Fibrous root", "Taproot", "Air root", "No root"], "correct_answer": 1},
+        {"id": "Q3", "type": "mcq", "question": "Grass belongs to:", "options": ["Dicot", "Monocot", "Shrub", "Tree"], "correct_answer": 1},
+        {"id": "Q4", "type": "mcq", "question": "Rose plant is classified as:", "options": ["Tree", "Shrub", "Herb", "Monocot"], "correct_answer": 1},
+        {"id": "Q5", "type": "mcq", "question": "Cactus adaptation mainly helps in:", "options": ["Cold resistance", "Water storage", "Climbing", "Flying"], "correct_answer": 1},
+
+        {"id": "Q6", "type": "mcq", "question": "Parallel venation + fibrous root indicates:", "options": ["Dicot", "Monocot", "Shrub", "Tree"], "correct_answer": 1},
+        {"id": "Q7", "type": "mcq", "question": "Mustard plant is:", "options": ["Monocot", "Dicot", "Creeper", "Climber"], "correct_answer": 1},
+        {"id": "Q8", "type": "mcq", "question": "Branches near ground indicate:", "options": ["Tree", "Shrub", "Herb", "Climber"], "correct_answer": 1},
+        {"id": "Q9", "type": "mcq", "question": "A plant spreading on ground is:", "options": ["Climber", "Tree", "Creeper", "Shrub"], "correct_answer": 2},
+        {"id": "Q10", "type": "mcq", "question": "Camel adaptation helps survive in:", "options": ["Forest", "Desert", "Ocean", "Mountain"], "correct_answer": 1},
+
+        {"id": "Q11", "type": "mcq", "question": "Hibiscus shows:", "options": ["Parallel venation", "Reticulate venation", "Fibrous root", "No venation"], "correct_answer": 1},
+        {"id": "Q12", "type": "mcq", "question": "Which is monocot?", "options": ["Rice", "Bean", "Mustard", "Mango"], "correct_answer": 0},
+        {"id": "Q13", "type": "mcq", "question": "Mountain trees are conical to:", "options": ["Grow faster", "Store water", "Shed snow", "Climb rocks"], "correct_answer": 2},
+        {"id": "Q14", "type": "mcq", "question": "Taproot provides:", "options": ["Weak anchorage", "Strong anchorage", "Climbing ability", "Water loss"], "correct_answer": 1},
+        {"id": "Q15", "type": "mcq", "question": "Tiger reserves help:", "options": ["Pollution", "Deforestation", "Conservation", "Urbanization"], "correct_answer": 2},
+
+        {"id": "Q16", "type": "mcq", "question": "Banana plant is classified as herb because:", "options": ["It is short", "It has soft stem", "It is monocot", "It has leaves"], "correct_answer": 1},
+        {"id": "Q17", "type": "mcq", "question": "Fibrous roots are common in:", "options": ["Dicots", "Monocots", "Shrubs", "Trees"], "correct_answer": 1},
+        {"id": "Q18", "type": "mcq", "question": "Which is correct pairing?", "options": ["Parallel + Taproot", "Reticulate + Taproot", "Parallel + Two cotyledons", "Reticulate + Fibrous"], "correct_answer": 1},
+        {"id": "Q19", "type": "mcq", "question": "Webbed feet help animals to:", "options": ["Fly", "Swim", "Climb", "Store fat"], "correct_answer": 1},
+        {"id": "Q20", "type": "mcq", "question": "Biodiversity decrease leads to:", "options": ["Balance", "Imbalance", "Growth", "More species"], "correct_answer": 1}
+      ]
+    },
+
+    {
+      "section_name": "Section B – Analytical Reasoning (15 Questions)",
+      "questions": [
+
+        {"id": "Q21", "type": "mcq", "question": "Plant X: Parallel venation + Taproot. This is:", "options": ["Correct", "Exception", "Incorrect pairing", "Monocot"], "correct_answer": 2},
+        {"id": "Q22", "type": "mcq", "question": "A plant has two cotyledons and fibrous roots. This is:", "options": ["Dicot", "Monocot", "Incorrect pairing", "Shrub"], "correct_answer": 2},
+        {"id": "Q23", "type": "mcq", "question": "If plant has taproot, likely venation is:", "options": ["Parallel", "Reticulate", "No veins", "Mixed"], "correct_answer": 1},
+        {"id": "Q24", "type": "mcq", "question": "Which combination is fully dicot?", "options": ["Parallel + Fibrous + One cotyledon", "Reticulate + Taproot + Two cotyledons", "Parallel + Taproot + Two cotyledons", "Reticulate + Fibrous + One cotyledon"], "correct_answer": 1},
+        {"id": "Q25", "type": "mcq", "question": "Which trait overrides height in classification?", "options": ["Colour", "Stem type", "Flower size", "Leaf size"], "correct_answer": 1},
+
+        {"id": "Q26", "type": "mcq", "question": "If venation is parallel, plant cannot have:", "options": ["Fibrous root", "Taproot", "One cotyledon", "Narrow leaves"], "correct_answer": 1},
+        {"id": "Q27", "type": "mcq", "question": "Which feature is most reliable for plant grouping?", "options": ["Temporary colour", "Stem structure", "Flower smell", "Season"], "correct_answer": 1},
+        {"id": "Q28", "type": "mcq", "question": "Creepers are adapted because:", "options": ["Strong trunk", "Weak stem", "Woody stem", "Parallel veins"], "correct_answer": 1},
+        {"id": "Q29", "type": "mcq", "question": "Conservation mainly protects:", "options": ["Buildings", "Vehicles", "Habitats", "Factories"], "correct_answer": 2},
+        {"id": "Q30", "type": "mcq", "question": "Mountain goat adaptation relates to:", "options": ["Heat resistance", "Climbing ability", "Swimming", "Flying"], "correct_answer": 1},
+
+        {"id": "Q31", "type": "mcq", "question": "If all trees removed from forest, biodiversity will:", "options": ["Increase", "Decrease", "Remain same", "Double"], "correct_answer": 1},
+        {"id": "Q32", "type": "mcq", "question": "Parallel venation strongly indicates:", "options": ["Dicot", "Monocot", "Shrub", "Tree"], "correct_answer": 1},
+        {"id": "Q33", "type": "mcq", "question": "Which is exception thinking?", "options": ["Tall herb", "Woody tree", "Soft shrub", "Climbing plant"], "correct_answer": 0},
+        {"id": "Q34", "type": "mcq", "question": "Camel hump stores:", "options": ["Water", "Fat", "Air", "Salt"], "correct_answer": 1},
+        {"id": "Q35", "type": "mcq", "question": "Which plant is likely dicot?", "options": ["Wheat", "Rice", "Bean", "Grass"], "correct_answer": 2}
+      ]
+    },
+
+    {
+      "section_name": "Section C – Case Based & Data Interpretation (10 Questions)",
+      "questions": [
+
+        {"id": "Q36", "type": "case_based", "case": "Plant A: Reticulate venation; Plant B: Parallel venation.", "question": "Which likely has fibrous root?", "answer": "Plant B"},
+        {"id": "Q37", "type": "case_based", "case": "Plant grows in desert with fleshy stem.", "question": "Identify adaptation.", "answer": "Water storage adaptation"},
+        {"id": "Q38", "type": "data_logic", "question": "If 6 plants are monocots and 4 dicots, total plants are:", "answer": "10"},
+        {"id": "Q39", "type": "case_based", "case": "Animal with webbed feet and streamlined body.", "question": "Habitat?", "answer": "Aquatic"},
+        {"id": "Q40", "type": "case_based", "case": "Forest loses 60% of species.", "question": "Impact?", "answer": "Severe ecological imbalance"},
+
+        {"id": "Q41", "type": "data_logic", "question": "If 3 plants show incorrect venation-root pairing, they are:", "answer": "Misclassified"},
+        {"id": "Q42", "type": "case_based", "case": "Plant with fibrous root and one cotyledon.", "question": "Classification?", "answer": "Monocot"},
+        {"id": "Q43", "type": "case_based", "case": "Animal in Arctic with thick fur.", "question": "Purpose?", "answer": "Insulation"},
+        {"id": "Q44", "type": "case_based", "case": "Shrub mistaken for tree due to height.", "question": "Error source?", "answer": "Height-only classification"},
+        {"id": "Q45", "type": "data_logic", "question": "If 2 habitats destroyed out of 5, percentage loss is:", "answer": "40%"}
+      ]
+    },
+
+    {
+      "section_name": "Section D – Assertion–Reason (5 Questions)",
+      "questions": [
+
+        {"id": "Q46", "type": "assertion_reason", "assertion": "All monocots have fibrous roots.", "reason": "Monocots show parallel venation.", "correct_answer": "Both true, reason correct explanation"},
+        {"id": "Q47", "type": "assertion_reason", "assertion": "Height alone determines tree classification.", "reason": "Stem structure is important.", "correct_answer": "Assertion false, Reason true"},
+        {"id": "Q48", "type": "assertion_reason", "assertion": "Cactus leaves are modified to spines.", "reason": "To reduce water loss.", "correct_answer": "Both true, reason correct explanation"},
+        {"id": "Q49", "type": "assertion_reason", "assertion": "Parallel venation is found in dicots.", "reason": "Dicots have two cotyledons.", "correct_answer": "Assertion false, Reason true"},
+        {"id": "Q50", "type": "assertion_reason", "assertion": "Conservation maintains biodiversity.", "reason": "Protection of habitat supports species survival.", "correct_answer": "Both true, reason correct explanation"}
+      ]
+    }
+
+  ]
+}

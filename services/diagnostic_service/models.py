@@ -155,3 +155,112 @@ class DiagnosticResult(models.Model):
     def __str__(self):
         """2026-02-12: String representation."""
         return f"Result: {self.student.full_name} -> {self.overall_level}"
+
+
+class IQReassessmentWindow(models.Model):
+    """
+    2026-02-27: Tracks a rolling 20-concept window for IQ level reassessment (BS-DIA-003).
+
+    Created every time a student's total mastered concept count is a multiple of 20.
+    Stores aggregated metrics for that window and the outcome determination.
+    """
+
+    OUTCOME_CHOICES = [  # 2026-02-27: Window outcome
+        ("upgrade", "Upgrade"),
+        ("downgrade", "Downgrade"),
+        ("maintain", "Maintain"),
+    ]
+
+    LEVEL_CHOICES = [  # 2026-02-27: Level choices
+        ("foundation", "Foundation"),
+        ("standard", "Standard"),
+        ("advanced", "Advanced"),
+    ]
+
+    id = models.UUIDField(  # 2026-02-27: UUID primary key
+        primary_key=True, default=uuid.uuid4, editable=False
+    )
+    student = models.ForeignKey(  # 2026-02-27: Student link
+        Student, on_delete=models.CASCADE,
+        related_name="iq_reassessment_windows"
+    )
+    window_number = models.IntegerField()  # 2026-02-27: Which window (1-based)
+    avg_stars = models.FloatField(default=0.0)  # 2026-02-27: Avg star rating in window
+    avg_reteaching = models.FloatField(default=0.0)  # 2026-02-27: Avg reteach attempts
+    avg_comprehension = models.FloatField(default=0.0)  # 2026-02-27: Avg comprehension score
+    outcome = models.CharField(  # 2026-02-27: Window outcome
+        max_length=20, choices=OUTCOME_CHOICES, default="maintain"
+    )
+    level_before = models.CharField(  # 2026-02-27: Level at start of window
+        max_length=20, choices=LEVEL_CHOICES
+    )
+    level_after = models.CharField(  # 2026-02-27: Level after window (same unless changed)
+        max_length=20, choices=LEVEL_CHOICES
+    )
+    concepts_in_window = models.JSONField(  # 2026-02-27: List of concept IDs in window
+        default=list
+    )
+    created_at = models.DateTimeField(auto_now_add=True)  # 2026-02-27: When evaluated
+
+    class Meta:
+        """2026-02-27: Model metadata."""
+
+        unique_together = [["student", "window_number"]]  # 2026-02-27: One per window
+        ordering = ["-window_number"]  # 2026-02-27: Latest first
+
+    def __str__(self):
+        """2026-02-27: String representation."""
+        return f"Window #{self.window_number} for {self.student.full_name}: {self.outcome}"
+
+
+class IQReassessmentEvent(models.Model):
+    """
+    2026-02-27: Records an actual learning level change triggered by consecutive windows.
+
+    Created when two consecutive IQReassessmentWindows have the same non-maintain outcome.
+    Updates DiagnosticResult.overall_level and notifies parent (mock in dev).
+    """
+
+    DIRECTION_CHOICES = [  # 2026-02-27: Change direction
+        ("upgrade", "Upgrade"),
+        ("downgrade", "Downgrade"),
+    ]
+
+    LEVEL_CHOICES = [  # 2026-02-27: Level choices
+        ("foundation", "Foundation"),
+        ("standard", "Standard"),
+        ("advanced", "Advanced"),
+    ]
+
+    id = models.UUIDField(  # 2026-02-27: UUID primary key
+        primary_key=True, default=uuid.uuid4, editable=False
+    )
+    student = models.ForeignKey(  # 2026-02-27: Student link
+        Student, on_delete=models.CASCADE,
+        related_name="iq_reassessment_events"
+    )
+    old_level = models.CharField(  # 2026-02-27: Level before change
+        max_length=20, choices=LEVEL_CHOICES
+    )
+    new_level = models.CharField(  # 2026-02-27: Level after change
+        max_length=20, choices=LEVEL_CHOICES
+    )
+    direction = models.CharField(  # 2026-02-27: upgrade or downgrade
+        max_length=20, choices=DIRECTION_CHOICES
+    )
+    triggering_window = models.IntegerField()  # 2026-02-27: Window number that triggered change
+    parent_notified = models.BooleanField(default=False)  # 2026-02-27: Notification sent
+    parent_notified_at = models.DateTimeField(null=True, blank=True)  # 2026-02-27: When notified
+    created_at = models.DateTimeField(auto_now_add=True)  # 2026-02-27: When created
+
+    class Meta:
+        """2026-02-27: Model metadata."""
+
+        ordering = ["-created_at"]  # 2026-02-27: Latest first
+
+    def __str__(self):
+        """2026-02-27: String representation."""
+        return (
+            f"{self.student.full_name}: {self.old_level} -> {self.new_level} "
+            f"(window #{self.triggering_window})"
+        )

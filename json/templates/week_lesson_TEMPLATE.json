@@ -1,0 +1,590 @@
+{
+  "lesson_id": "TODO_ENG1_BOOK_W01",
+  "class": 1,
+  "subject": "TODO_English",
+  "chapter_id": "TODO_BOOK_CH01",
+  "chapter_title": "TODO: Chapter title as in textbook",
+  "character": "TODO: Character name (e.g. Ollie the Owl)",
+  "week_number": 1,
+  "learning_objectives": [
+    "TODO: Identify [key vocabulary words from this week]",
+    "TODO: Explain [main concept] in simple terms",
+    "TODO: Use [target word] in a short sentence",
+    "TODO: Retell [story/concept] in simple sentences",
+    "TODO: Pronounce [N] new vocabulary words with recognisable accuracy"
+  ],
+  "micro_lessons": [
+    {
+      "day": 1,
+      "micro_lesson_id": "TODO_ENG1_BOOK_W01_D1",
+      "title": "TODO: Day 1 title",
+      "duration_minutes": 10,
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "TODO: Slow, simple text. Spell new words letter-by-letter. Short sentences. End with 3x repetition of key words. Example style: 'This is a CAT. Say it: CAT. C-A-T. Cat. A cat says meow. Say MEOW.'",
+          "pacing": "slow",
+          "repetition_count": 3,
+          "tts_rate": 0.7
+        },
+        "standard": {
+          "concept_text": "TODO: Normal grade-level text. Clear explanation of the concept. 2-3 example sentences. One connecting question at the end.",
+          "pacing": "normal",
+          "repetition_count": 2,
+          "tts_rate": 0.9,
+          "media": [
+            {"type": "image", "src": "TODO_subject/classN/TODO_concept.jpg", "caption": "TODO: Describe what this image shows"},
+            {"type": "video", "src": "TODO_subject/classN/TODO_concept.mp4", "caption": "TODO: Describe what this video shows"}
+          ]
+        },
+        "advanced": {
+          "concept_text": "TODO: Richer vocabulary, deeper explanation, real-life connection. End with an open-ended reflection question for the child.",
+          "pacing": "fast",
+          "repetition_count": 1,
+          "tts_rate": 1.1
+        }
+      },
+      "vocabulary": [
+        {"word": "TODO_word1", "definition": "TODO: Child-friendly definition (max 12 words).", "image_hint": "TODO_word1.png"},
+        {"word": "TODO_word2", "definition": "TODO: Child-friendly definition (max 12 words).", "image_hint": "TODO_word2.png"},
+        {"word": "TODO_word3", "definition": "TODO: Child-friendly definition (max 12 words).", "image_hint": "TODO_word3.png"}
+      ],
+      "dialogue_flow": [
+        {"stage": "greeting", "text": "TODO: Character introduces themselves and hooks the child. Max 2 sentences."},
+        {"stage": "concept",  "text": "TODO: Character previews what they will learn today. Max 2 sentences."},
+        {"stage": "activity", "text": "TODO: Character invites the child to try the activity. Max 2 sentences."},
+        {"stage": "wrapup",   "text": "TODO: Character celebrates and previews tomorrow's lesson. Max 2 sentences."}
+      ],
+      "activities": [
+        {
+          "id": "D1_A1",
+          "type": "matching",
+          "instructions": "TODO: Activity instruction for child",
+          "items": [
+            {"word": "TODO_word1", "match": "TODO_meaning_or_image_label1"},
+            {"word": "TODO_word2", "match": "TODO_meaning_or_image_label2"},
+            {"word": "TODO_word3", "match": "TODO_meaning_or_image_label3"}
+          ],
+          "scoring": {"correct_xp": 5}
+        }
+      ],
+      "practice_questions": [
+        {
+          "id": "D1_Q1",
+          "type": "mcq",
+          "question": "TODO: Simple recall question about Day 1 concept?",
+          "options": ["TODO_correct_answer", "TODO_wrong1", "TODO_wrong2"],
+          "correct_answer": 0,
+          "hint": "TODO: Hint pointing toward the answer without giving it away."
+        },
+        {
+          "id": "D1_Q2",
+          "type": "mcq",
+          "question": "TODO: Second recall question?",
+          "options": ["TODO_wrong1", "TODO_correct_answer", "TODO_wrong2"],
+          "correct_answer": 1,
+          "hint": "TODO: Hint."
+        },
+        {
+          "id": "D1_Q3",
+          "type": "mcq",
+          "question": "TODO: Third recall question (can be vocabulary meaning)?",
+          "options": ["TODO_wrong1", "TODO_wrong2", "TODO_correct_answer"],
+          "correct_answer": 2,
+          "hint": "TODO: Hint."
+        }
+      ],
+      "read_along": {
+        "English": {
+          "sentences": [
+            "TODO: Sentence 1 from the lesson's core idea.",
+            "TODO: Sentence 2.",
+            "TODO: Sentence 3.",
+            "TODO: Sentence 4."
+          ],
+          "transliterations": []
+        },
+        "Hindi": {
+          "sentences": [
+            "TODO: Hindi sentence 1 (Devanagari script).",
+            "TODO: Hindi sentence 2.",
+            "TODO: Hindi sentence 3.",
+            "TODO: Hindi sentence 4."
+          ],
+          "transliterations": [
+            "TODO: Romanized phonetic for Hindi sentence 1.",
+            "TODO: Romanized phonetic for Hindi sentence 2.",
+            "TODO: Romanized phonetic for Hindi sentence 3.",
+            "TODO: Romanized phonetic for Hindi sentence 4."
+          ]
+        },
+        "Telugu": {
+          "sentences": [
+            "TODO: Telugu sentence 1 (Telugu script).",
+            "TODO: Telugu sentence 2.",
+            "TODO: Telugu sentence 3.",
+            "TODO: Telugu sentence 4."
+          ],
+          "transliterations": [
+            "TODO: Romanized phonetic for Telugu sentence 1.",
+            "TODO: Romanized phonetic for Telugu sentence 2.",
+            "TODO: Romanized phonetic for Telugu sentence 3.",
+            "TODO: Romanized phonetic for Telugu sentence 4."
+          ]
+        }
+      },
+      "comprehension_questions": [
+        {
+          "id": "D1_CQ1",
+          "marks": 2,
+          "type": "articulation",
+          "question": "TODO: Open-ended question requiring 2 key points. Ask student to explain or describe in their own words.",
+          "key_points": [
+            "TODO: Key point 1 — one distinct idea the student should cover",
+            "TODO: Key point 2 — second distinct idea the student should cover"
+          ],
+          "model_answer": "TODO: Full ideal answer written in 2-3 sentences. Used by LLM as gold standard for evaluation.",
+          "explanation": "TODO: Marking guide — what makes a complete 2-mark answer.",
+          "media": []
+        },
+        {
+          "id": "D1_CQ2",
+          "marks": 3,
+          "type": "articulation",
+          "question": "TODO: Open-ended question requiring 3 key points. Use 'describe three...' or 'explain how...' phrasing.",
+          "key_points": [
+            "TODO: Key point 1",
+            "TODO: Key point 2",
+            "TODO: Key point 3"
+          ],
+          "model_answer": "TODO: Full ideal answer covering all 3 points.",
+          "explanation": "TODO: Marking guide — what a full 3-mark answer must include.",
+          "media": [
+            {"type": "image", "src": "TODO_subject/classN/TODO_image.jpg", "caption": "TODO: Caption"}
+          ]
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "micro_lesson_id": "TODO_ENG1_BOOK_W01_D2",
+      "title": "TODO: Day 2 title",
+      "duration_minutes": 10,
+      "revision_prompts": {
+        "foundation": [
+          "TODO: Recall prompt 1 for Day 1 — single word/fact.",
+          "TODO: Recall prompt 2 for Day 1 — single word/fact.",
+          "TODO: Recall prompt 3 for Day 1 — single word/fact."
+        ],
+        "standard": [
+          "TODO: Slightly broader recall question about Day 1.",
+          "TODO: Second recall question."
+        ],
+        "advanced": [
+          "TODO: Synthesis question connecting Day 1 to real life or asking for a sentence."
+        ]
+      },
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "TODO: Foundation text for Day 2 concept.",
+          "pacing": "slow",
+          "repetition_count": 3,
+          "tts_rate": 0.7
+        },
+        "standard": {
+          "concept_text": "TODO: Standard text for Day 2 concept.",
+          "pacing": "normal",
+          "repetition_count": 2,
+          "tts_rate": 0.9
+        },
+        "advanced": {
+          "concept_text": "TODO: Advanced text for Day 2 concept.",
+          "pacing": "fast",
+          "repetition_count": 1,
+          "tts_rate": 1.1
+        }
+      },
+      "vocabulary": [
+        {"word": "TODO_word4", "definition": "TODO: Definition.", "image_hint": "TODO_word4.png"},
+        {"word": "TODO_word5", "definition": "TODO: Definition.", "image_hint": "TODO_word5.png"},
+        {"word": "TODO_word6", "definition": "TODO: Definition.", "image_hint": "TODO_word6.png"}
+      ],
+      "dialogue_flow": [
+        {"stage": "greeting", "text": "TODO: Character welcomes back the child and references yesterday."},
+        {"stage": "concept",  "text": "TODO: Character introduces today's new concept."},
+        {"stage": "activity", "text": "TODO: Character invites the child to do the activity."},
+        {"stage": "wrapup",   "text": "TODO: Character wraps up and previews Day 3."}
+      ],
+      "activities": [
+        {
+          "id": "D2_A1",
+          "type": "sequencing",
+          "instructions": "TODO: Put these events/steps in the correct order",
+          "items": [
+            {"position": 1, "text": "TODO: First event/step"},
+            {"position": 2, "text": "TODO: Second event/step"},
+            {"position": 3, "text": "TODO: Third event/step"},
+            {"position": 4, "text": "TODO: Fourth event/step"}
+          ],
+          "scoring": {"correct_xp": 10}
+        }
+      ],
+      "practice_questions": [
+        {
+          "id": "D2_Q1",
+          "type": "mcq",
+          "question": "TODO: Question about Day 2 concept?",
+          "options": ["TODO_correct", "TODO_wrong1", "TODO_wrong2"],
+          "correct_answer": 0,
+          "hint": "TODO: Hint."
+        },
+        {
+          "id": "D2_Q2",
+          "type": "mcq",
+          "question": "TODO: Second question?",
+          "options": ["TODO_wrong1", "TODO_correct", "TODO_wrong2"],
+          "correct_answer": 1,
+          "hint": "TODO: Hint."
+        },
+        {
+          "id": "D2_Q3",
+          "type": "mcq",
+          "question": "TODO: Vocabulary meaning question?",
+          "options": ["TODO_wrong1", "TODO_wrong2", "TODO_correct"],
+          "correct_answer": 2,
+          "hint": "TODO: Hint."
+        }
+      ],
+      "read_along": {
+        "English": {
+          "sentences": [
+            "TODO: Sentence 1.", "TODO: Sentence 2.", "TODO: Sentence 3.", "TODO: Sentence 4."
+          ],
+          "transliterations": []
+        },
+        "Hindi": {
+          "sentences": [
+            "TODO: Hindi 1.", "TODO: Hindi 2.", "TODO: Hindi 3.", "TODO: Hindi 4."
+          ],
+          "transliterations": [
+            "TODO: Roman 1.", "TODO: Roman 2.", "TODO: Roman 3.", "TODO: Roman 4."
+          ]
+        },
+        "Telugu": {
+          "sentences": [
+            "TODO: Telugu 1.", "TODO: Telugu 2.", "TODO: Telugu 3.", "TODO: Telugu 4."
+          ],
+          "transliterations": [
+            "TODO: Roman 1.", "TODO: Roman 2.", "TODO: Roman 3.", "TODO: Roman 4."
+          ]
+        }
+      }
+    },
+    {
+      "day": 3,
+      "micro_lesson_id": "TODO_ENG1_BOOK_W01_D3",
+      "title": "TODO: Day 3 title",
+      "duration_minutes": 10,
+      "revision_prompts": {
+        "foundation": [
+          "TODO: Recall Day 2 word/fact 1.",
+          "TODO: Recall Day 2 word/fact 2.",
+          "TODO: Recall Day 2 word/fact 3."
+        ],
+        "standard": [
+          "TODO: Broader Day 2 recall question.",
+          "TODO: Second question."
+        ],
+        "advanced": [
+          "TODO: Application question connecting Days 1 and 2."
+        ]
+      },
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "TODO: Foundation text for Day 3.",
+          "pacing": "slow",
+          "repetition_count": 3,
+          "tts_rate": 0.7
+        },
+        "standard": {
+          "concept_text": "TODO: Standard text for Day 3.",
+          "pacing": "normal",
+          "repetition_count": 2,
+          "tts_rate": 0.9
+        },
+        "advanced": {
+          "concept_text": "TODO: Advanced text for Day 3.",
+          "pacing": "fast",
+          "repetition_count": 1,
+          "tts_rate": 1.1
+        }
+      },
+      "vocabulary": [
+        {"word": "TODO_word7",  "definition": "TODO: Definition.", "image_hint": "TODO_word7.png"},
+        {"word": "TODO_word8",  "definition": "TODO: Definition.", "image_hint": "TODO_word8.png"},
+        {"word": "TODO_word9",  "definition": "TODO: Definition.", "image_hint": "TODO_word9.png"}
+      ],
+      "dialogue_flow": [
+        {"stage": "greeting", "text": "TODO: Greeting."},
+        {"stage": "concept",  "text": "TODO: Concept intro."},
+        {"stage": "activity", "text": "TODO: Activity prompt."},
+        {"stage": "wrapup",   "text": "TODO: Wrapup + preview Day 4."}
+      ],
+      "activities": [
+        {
+          "id": "D3_A1",
+          "type": "matching",
+          "instructions": "TODO: Match each word to its meaning",
+          "items": [
+            {"word": "TODO_word7", "match": "TODO_meaning7"},
+            {"word": "TODO_word8", "match": "TODO_meaning8"},
+            {"word": "TODO_word9", "match": "TODO_meaning9"}
+          ],
+          "scoring": {"correct_xp": 5}
+        }
+      ],
+      "practice_questions": [
+        {
+          "id": "D3_Q1",
+          "type": "mcq",
+          "question": "TODO: Question about Day 3 concept?",
+          "options": ["TODO_correct", "TODO_wrong1", "TODO_wrong2"],
+          "correct_answer": 0,
+          "hint": "TODO: Hint."
+        },
+        {
+          "id": "D3_Q2",
+          "type": "mcq",
+          "question": "TODO: Second question?",
+          "options": ["TODO_wrong1", "TODO_correct", "TODO_wrong2"],
+          "correct_answer": 1,
+          "hint": "TODO: Hint."
+        },
+        {
+          "id": "D3_Q3",
+          "type": "mcq",
+          "question": "TODO: Third question?",
+          "options": ["TODO_wrong1", "TODO_wrong2", "TODO_correct"],
+          "correct_answer": 2,
+          "hint": "TODO: Hint."
+        }
+      ],
+      "read_along": {
+        "English": {
+          "sentences": [
+            "TODO: Sentence 1.", "TODO: Sentence 2.", "TODO: Sentence 3.", "TODO: Sentence 4."
+          ],
+          "transliterations": []
+        },
+        "Hindi": {
+          "sentences": ["TODO: 1.", "TODO: 2.", "TODO: 3.", "TODO: 4."],
+          "transliterations": ["TODO: 1.", "TODO: 2.", "TODO: 3.", "TODO: 4."]
+        },
+        "Telugu": {
+          "sentences": ["TODO: 1.", "TODO: 2.", "TODO: 3.", "TODO: 4."],
+          "transliterations": ["TODO: 1.", "TODO: 2.", "TODO: 3.", "TODO: 4."]
+        }
+      }
+    },
+    {
+      "day": 4,
+      "micro_lesson_id": "TODO_ENG1_BOOK_W01_D4",
+      "title": "TODO: Day 4 title — usually 'Putting it All Together' or the moral/summary",
+      "duration_minutes": 10,
+      "revision_prompts": {
+        "foundation": [
+          "TODO: Recap all 3 previous key words.",
+          "TODO: Recall fact 2.",
+          "TODO: Recall fact 3."
+        ],
+        "standard": [
+          "TODO: Summary question across the week.",
+          "TODO: Application question."
+        ],
+        "advanced": [
+          "TODO: Deep synthesis question or real-life connection."
+        ]
+      },
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "TODO: Foundation — bring it all together. Revisit all key words. End with 'I am/I can...' affirmation.",
+          "pacing": "slow",
+          "repetition_count": 3,
+          "tts_rate": 0.7
+        },
+        "standard": {
+          "concept_text": "TODO: Standard — synthesise the week's learning. Restate the moral/main concept.",
+          "pacing": "normal",
+          "repetition_count": 2,
+          "tts_rate": 0.9
+        },
+        "advanced": {
+          "concept_text": "TODO: Advanced — deeper synthesis, cross-curricular connection, or reflection on how to apply the learning in life.",
+          "pacing": "fast",
+          "repetition_count": 1,
+          "tts_rate": 1.1
+        }
+      },
+      "vocabulary": [
+        {"word": "TODO_word10", "definition": "TODO: Definition.", "image_hint": "TODO_word10.png"},
+        {"word": "TODO_word11", "definition": "TODO: Definition.", "image_hint": "TODO_word11.png"},
+        {"word": "TODO_word12", "definition": "TODO: Definition.", "image_hint": "TODO_word12.png"}
+      ],
+      "dialogue_flow": [
+        {"stage": "greeting", "text": "TODO: 'Last lesson this week! Let's bring it all together.'"},
+        {"stage": "concept",  "text": "TODO: Character summarises the week."},
+        {"stage": "activity", "text": "TODO: 'Now let's use all our new words!'"},
+        {"stage": "wrapup",   "text": "TODO: 'Amazing work! Tomorrow is quiz day. Show me what you've learned!'"}
+      ],
+      "activities": [
+        {
+          "id": "D4_A1",
+          "type": "matching",
+          "instructions": "Match each vocabulary word to its meaning",
+          "items": [
+            {"word": "TODO_word1",  "match": "TODO_meaning1"},
+            {"word": "TODO_word2",  "match": "TODO_meaning2"},
+            {"word": "TODO_word4",  "match": "TODO_meaning4"},
+            {"word": "TODO_word7",  "match": "TODO_meaning7"},
+            {"word": "TODO_word10", "match": "TODO_meaning10"}
+          ],
+          "scoring": {"correct_xp": 15}
+        }
+      ],
+      "practice_questions": [
+        {
+          "id": "D4_Q1",
+          "type": "mcq",
+          "question": "TODO: Synthesis question about the week's main concept?",
+          "options": ["TODO_correct", "TODO_wrong1", "TODO_wrong2"],
+          "correct_answer": 0,
+          "hint": "TODO: Hint."
+        },
+        {
+          "id": "D4_Q2",
+          "type": "mcq",
+          "question": "TODO: Application question (how would you...)?",
+          "options": ["TODO_wrong1", "TODO_correct", "TODO_wrong2"],
+          "correct_answer": 1,
+          "hint": "TODO: Hint."
+        },
+        {
+          "id": "D4_Q3",
+          "type": "mcq",
+          "question": "TODO: Vocabulary question about a Day 4 word?",
+          "options": ["TODO_wrong1", "TODO_wrong2", "TODO_correct"],
+          "correct_answer": 2,
+          "hint": "TODO: Hint."
+        }
+      ],
+      "read_along": {
+        "English": {
+          "sentences": [
+            "TODO: Summary sentence 1.", "TODO: Summary sentence 2.",
+            "TODO: Moral/lesson sentence.", "TODO: Closing affirmation."
+          ],
+          "transliterations": []
+        },
+        "Hindi": {
+          "sentences": ["TODO: 1.", "TODO: 2.", "TODO: 3.", "TODO: 4."],
+          "transliterations": ["TODO: 1.", "TODO: 2.", "TODO: 3.", "TODO: 4."]
+        },
+        "Telugu": {
+          "sentences": ["TODO: 1.", "TODO: 2.", "TODO: 3.", "TODO: 4."],
+          "transliterations": ["TODO: 1.", "TODO: 2.", "TODO: 3.", "TODO: 4."]
+        }
+      }
+    }
+  ],
+  "weekly_assessment": {
+    "assessment_id": "TODO_ENG1_BOOK_W01_ASSESS",
+    "title": "TODO: Week 1 Assessment: {Chapter Title}",
+    "time_limit_minutes": 15,
+    "questions": [
+      {
+        "id": "WA_Q1",
+        "type": "mcq",
+        "question": "TODO: Vocabulary recall — What does '[word]' mean?",
+        "options": ["TODO_correct", "TODO_wrong1", "TODO_wrong2", "TODO_wrong3"],
+        "correct_answer": 0,
+        "points": 2
+      },
+      {
+        "id": "WA_Q2",
+        "type": "mcq",
+        "question": "TODO: Vocabulary recall — What is a '[word]'?",
+        "options": ["TODO_wrong1", "TODO_correct", "TODO_wrong2", "TODO_wrong3"],
+        "correct_answer": 1,
+        "points": 2
+      },
+      {
+        "id": "WA_Q3",
+        "type": "mcq",
+        "question": "TODO: Vocabulary recall — Which word means '[definition]'?",
+        "options": ["TODO_wrong1", "TODO_wrong2", "TODO_correct", "TODO_wrong3"],
+        "correct_answer": 2,
+        "points": 2
+      },
+      {
+        "id": "WA_Q4",
+        "type": "mcq",
+        "question": "TODO: Vocabulary recall 4.",
+        "options": ["TODO_wrong1", "TODO_wrong2", "TODO_wrong3", "TODO_correct"],
+        "correct_answer": 3,
+        "points": 2
+      },
+      {
+        "id": "WA_Q5",
+        "type": "mcq",
+        "question": "TODO: Comprehension — [question about story/concept]?",
+        "options": ["TODO_wrong1", "TODO_correct", "TODO_wrong2", "TODO_wrong3"],
+        "correct_answer": 1,
+        "points": 2
+      },
+      {
+        "id": "WA_Q6",
+        "type": "mcq",
+        "question": "TODO: Comprehension — Why did [character] [action]?",
+        "options": ["TODO_correct", "TODO_wrong1", "TODO_wrong2", "TODO_wrong3"],
+        "correct_answer": 0,
+        "points": 2
+      },
+      {
+        "id": "WA_Q7",
+        "type": "mcq",
+        "question": "TODO: Comprehension — How did [character] [do something]?",
+        "options": ["TODO_wrong1", "TODO_wrong2", "TODO_correct", "TODO_wrong3"],
+        "correct_answer": 2,
+        "points": 2
+      },
+      {
+        "id": "WA_Q8",
+        "type": "mcq",
+        "question": "TODO: Application — What would you do if [situation from the lesson]?",
+        "options": ["TODO_wrong1", "TODO_correct", "TODO_wrong2", "TODO_wrong3"],
+        "correct_answer": 1,
+        "points": 2
+      },
+      {
+        "id": "WA_Q9",
+        "type": "mcq",
+        "question": "TODO: Application — Which of these shows [concept from the lesson]?",
+        "options": ["TODO_wrong1", "TODO_wrong2", "TODO_wrong3", "TODO_correct"],
+        "correct_answer": 3,
+        "points": 2
+      },
+      {
+        "id": "WA_Q10",
+        "type": "mcq",
+        "question": "TODO: Moral/Synthesis — What is the main lesson/moral of [chapter title]?",
+        "options": ["TODO_wrong1", "TODO_correct", "TODO_wrong2", "TODO_wrong3"],
+        "correct_answer": 1,
+        "points": 2
+      }
+    ],
+    "star_thresholds": {
+      "one_star": 40,
+      "two_stars": 60,
+      "three_stars": 80
+    }
+  }
+}

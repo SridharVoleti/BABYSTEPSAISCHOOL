@@ -1,0 +1,263 @@
+{
+  "chapter_title": "Methods of Separation in Everyday Life",
+  "derived_focus": {
+    "primary_focus": "Develop the ability to identify physical properties of components in a mixture and select appropriate separation methods based on size, weight, solubility, magnetism, and settling behavior.",
+    "supporting_themes": [
+      "Purpose of separating substances",
+      "Physical properties guiding separation",
+      "Solid–solid separation methods",
+      "Solid–liquid separation methods",
+      "Role of evaporation and solubility",
+      "Magnetic properties and technological applications"
+    ],
+    "cognitive_target": [
+      "Conceptual Understanding",
+      "Procedural Skill",
+      "Analytical Reasoning",
+      "Data Interpretation",
+      "Application-Based",
+      "Instrument Handling"
+    ],
+    "recommended_micro_lessons": {
+      "count": 5,
+      "segmentation_logic": "Grouped by property-based separation logic: size & visibility, weight & air, solubility & evaporation, settling & filtration, and special properties like magnetism and density."
+    },
+    "misconception_zones": [
+      "Confusing sedimentation with filtration",
+      "Believing evaporation removes both solute and solvent",
+      "Assuming all mixtures can be separated by a single method",
+      "Thinking decantation gives complete separation",
+      "Misunderstanding that sieving works regardless of pore size"
+    ],
+    "assessment_sensitivity_zones": [
+      "Incorrect method selection for given mixtures",
+      "Improper sequencing in multi-step separation",
+      "Confusing soluble and insoluble components",
+      "Failure to justify reasoning using physical properties",
+      "Mixing up residue and filtrate definitions"
+    ]
+  },
+  "micro_lessons": [
+    {
+      "day": 1,
+      "micro_lesson_id": "MSL1",
+      "title": "Why and When Do We Separate Substances?",
+      "duration_minutes": 15,
+      "learning_objectives": [
+        "Understand purpose of separation",
+        "Identify mixtures in daily life",
+        "Relate physical properties to separation choice"
+      ],
+      "teaching_flow": {
+        "engage": "Look around you. Your food, water, soil, air — many are mixtures. Pause and think: why do we separate things before using them?",
+        "concept_by_IQ": {
+          "foundation": {
+            "explanation": "A mixture contains two or more substances combined physically. Sometimes one component is unwanted, like stones in rice. Sometimes both components are useful but need separation, like butter from curd. Separation helps make substances safe, pure, or usable. It depends on visible differences like size or color. You naturally separate items daily, such as removing seeds from fruit. These are simple separation processes.",
+            "reflection_prompt": "Name three mixtures at home and identify why separation is needed."
+          },
+          "standard": {
+            "explanation": "Separation depends on physical properties such as size, weight, solubility, and magnetism. When components differ clearly, simple physical methods work. If a component is present in small quantity and visibly distinct, handpicking is effective. If differences are based on particle size, sieving may work. Proper identification of mixture type is essential before choosing method.",
+            "reflection_prompt": "Which property would you observe first before selecting a separation method?"
+          },
+          "advanced": {
+            "explanation": "Separation is a decision-making process based on analyzing properties. Ask: Are components soluble? Do they differ in density? Are they magnetic? Effective separation often requires sequencing methods logically. In complex mixtures, order matters. Selecting the wrong first step may complicate the process.",
+            "analysis_prompt": "Why is identifying solubility important before applying filtration?"
+          }
+        },
+        "application": "Classify five household mixtures and propose suitable separation methods.",
+        "misconceptions": [
+          "All mixtures require complex machines",
+          "Separation always removes waste only"
+        ],
+        "assessment_check": [
+          "Define mixture",
+          "State two purposes of separation"
+        ],
+        "bridge": "Next, explore size-based separation methods."
+      }
+    },
+    {
+      "day": 2,
+      "micro_lesson_id": "MSL2",
+      "title": "Separation Based on Size and Weight",
+      "duration_minutes": 15,
+      "learning_objectives": [
+        "Understand handpicking, threshing, winnowing, sieving",
+        "Differentiate size and weight-based methods"
+      ],
+      "teaching_flow": {
+        "engage": "Imagine separating husk from grains without touching each grain individually. How would you do it?",
+        "concept_by_IQ": {
+          "foundation": {
+            "explanation": "Handpicking works when unwanted particles are few and visible. Sieving works when particle sizes differ. Winnowing separates lighter and heavier components using wind. Threshing separates grains from stalks by beating. Each method uses a simple property difference.",
+            "reflection_prompt": "Which method would you use to separate pebbles from sand?"
+          },
+          "standard": {
+            "explanation": "Sieving depends on pore size. If pores are larger than particles, separation fails. Winnowing depends on weight difference and air flow. Threshing uses mechanical force to detach grains. Each method is chosen based on property analysis.",
+            "reflection_prompt": "Why would sieving fail if hole size is incorrect?"
+          },
+          "advanced": {
+            "explanation": "Particle size distribution and density influence separation efficiency. Wind velocity affects winnowing outcome. Mechanical threshers combine multiple actions. Understanding physical forces enhances method selection.",
+            "analysis_prompt": "How does density influence winnowing efficiency?"
+          }
+        },
+        "application": "Simulate separation of puffed rice and chana dal.",
+        "misconceptions": [
+          "Winnowing works in closed rooms",
+          "Sieving removes dissolved substances"
+        ],
+        "assessment_check": [
+          "Define winnowing",
+          "State factor affecting sieving"
+        ],
+        "bridge": "Now explore separating dissolved substances."
+      }
+    },
+    {
+      "day": 3,
+      "micro_lesson_id": "MSL3",
+      "title": "Evaporation and Solubility-Based Separation",
+      "duration_minutes": 15,
+      "learning_objectives": [
+        "Understand evaporation",
+        "Differentiate dissolved and insoluble substances"
+      ],
+      "teaching_flow": {
+        "engage": "Spread salt water on a plate and leave it in sunlight. What remains?",
+        "concept_by_IQ": {
+          "foundation": {
+            "explanation": "When salt dissolves in water, it forms a solution. Evaporation removes water, leaving salt behind. Sunlight speeds up evaporation. Only liquid changes to vapour; solid remains.",
+            "reflection_prompt": "Where does water go during evaporation?"
+          },
+          "standard": {
+            "explanation": "Evaporation is conversion of liquid to vapour. It separates dissolved solids from liquids. Heating increases rate. Care is needed while heating to avoid accidents.",
+            "reflection_prompt": "Why can't filtration separate dissolved salt?"
+          },
+          "advanced": {
+            "explanation": "Solubility determines method choice. If solute is non-volatile, evaporation works. If both components are volatile, different methods are required. Understanding state changes is essential.",
+            "analysis_prompt": "Can evaporation recover water? Why or why not?"
+          }
+        },
+        "application": "Design a method to obtain salt from seawater.",
+        "misconceptions": [
+          "Evaporation removes salt",
+          "Boiling and evaporation are identical"
+        ],
+        "assessment_check": [
+          "Define evaporation",
+          "Explain why salt remains"
+        ],
+        "bridge": "Next, understand settling and filtration."
+      }
+    },
+    {
+      "day": 4,
+      "micro_lesson_id": "MSL4",
+      "title": "Sedimentation, Decantation and Filtration",
+      "duration_minutes": 15,
+      "learning_objectives": [
+        "Understand sedimentation and decantation",
+        "Differentiate filtration"
+      ],
+      "teaching_flow": {
+        "engage": "Leave muddy water undisturbed. What do you observe after some time?",
+        "concept_by_IQ": {
+          "foundation": {
+            "explanation": "Heavier particles settle at bottom. This is sedimentation. Pouring clear liquid gently is decantation. Filtration uses filter to remove solids.",
+            "reflection_prompt": "Why is decantation incomplete?"
+          },
+          "standard": {
+            "explanation": "Sedimentation depends on density difference. Filtration depends on pore size. Residue remains on filter, filtrate passes through.",
+            "reflection_prompt": "Define residue and filtrate."
+          },
+          "advanced": {
+            "explanation": "Particle size, settling velocity, and pore size determine efficiency. Fine particles require finer filters. Combining sedimentation and filtration improves clarity.",
+            "analysis_prompt": "Why combine sedimentation before filtration?"
+          }
+        },
+        "application": "Design multi-layer cloth filter.",
+        "misconceptions": [
+          "Sedimentation works for dissolved solids",
+          "Decantation gives pure liquid"
+        ],
+        "assessment_check": [
+          "Define sedimentation",
+          "Compare filtration and decantation"
+        ],
+        "bridge": "Finally, explore magnetic and density-based separation."
+      }
+    },
+    {
+      "day": 5,
+      "micro_lesson_id": "MSL5",
+      "title": "Churning and Magnetic Separation",
+      "duration_minutes": 15,
+      "learning_objectives": [
+        "Understand churning",
+        "Understand magnetic separation"
+      ],
+      "teaching_flow": {
+        "engage": "Why does butter float when curd is churned?",
+        "concept_by_IQ": {
+          "foundation": {
+            "explanation": "Churning separates butter from curd. Butter is lighter and floats. Magnetic separation uses magnet to attract iron.",
+            "reflection_prompt": "Name two magnetic substances."
+          },
+          "standard": {
+            "explanation": "Magnetic separation depends on magnetic property difference. Used in recycling. Churning uses density difference.",
+            "reflection_prompt": "Why doesn’t sand stick to magnet?"
+          },
+          "advanced": {
+            "explanation": "Magnetic force acts selectively. Density and immiscibility determine floating behavior. Industrial cranes use magnets for scrap separation.",
+            "analysis_prompt": "How would you separate iron from a six-component mixture?"
+          }
+        },
+        "application": "Design separation plan for mixed iron nails and sawdust.",
+        "misconceptions": [
+          "All metals are magnetic",
+          "Churning works for all liquids"
+        ],
+        "assessment_check": [
+          "Define magnetic separation",
+          "Explain churning principle"
+        ],
+        "bridge": "You are now ready for complex mixture challenges."
+      }
+    }
+  ],
+  "practice_bank": {
+    "easy": ["15 questions covering definitions, examples, and identification"],
+    "medium": ["15 application-based conceptual questions"],
+    "moderate": ["15 reasoning and comparison questions"],
+    "hard": ["15 multi-step analytical and scenario-based questions"]
+  },
+  "mastery_layer": [
+    "Design full separation plan for mixture of sand, salt, iron, and water",
+    "Analyze multi-step separation of oil, water, and mud",
+    "Sequence-based separation reasoning problems",
+    "Density-based explanation problems",
+    "Pore size analysis case",
+    "Evaporation rate comparison",
+    "Magnetic recycling scenario",
+    "Industrial application reasoning",
+    "Water purification design",
+    "Agricultural threshing optimization"
+  ],
+  "olympiad_layer": [
+    "Multi-concept separation of six-component mixture",
+    "Density and solubility comparative reasoning",
+    "Design low-cost filtration system",
+    "Analyze evaporation vs distillation logic",
+    "Industrial magnetic sorting case",
+    "Wind velocity optimization in winnowing",
+    "Particle size distribution challenge",
+    "Sequential error detection problem",
+    "Solubility-temperature reasoning",
+    "Residue-filtrate mass balance",
+    "Advanced mixture logic puzzle",
+    "Real-world pollution filtration case",
+    "Recycling process optimization",
+    "Complex agricultural separation case",
+    "Property-based decision tree construction"
+  ]
+}

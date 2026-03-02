@@ -89,6 +89,11 @@ INSTALLED_APPS = [
     'services.teaching_engine',  # 2026-02-17: AI Teaching Engine module (BS-AIE)
     'services.parent_dashboard',  # 2026-02-19: Parent Dashboard module (BS-PAR)
     'services.read_along_service',  # 2026-02-19: Read-Along & Mimic Engine (BS-RAM)
+    'services.comprehension_service',  # 2026-02-19: Comprehension Capture Engine (BS-CMP)
+    'services.vocabulary_service',  # 2026-02-20: Vocabulary Acquisition System (BS-LNG)
+    'services.gamification_service',  # 2026-02-20: Gamification Engine (BS-GAM)
+    'services.spaced_repetition_service',  # 2026-02-27: Spaced Repetition Service (BS-SPC)
+    'services.story_mode_service',  # 2026-02-27: Story Mode Service (BS-GAM-003)
 ]
 
 MIDDLEWARE = [

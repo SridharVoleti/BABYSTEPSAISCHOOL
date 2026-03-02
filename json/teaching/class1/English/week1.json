@@ -127,7 +127,36 @@
             "Telivainadi ante charya teesukunne mundu jaagrattagaa aalochinchatadam."
           ]
         }
-      }
+      },
+      "comprehension_questions": [
+        {
+          "id": "D1_CQ1",
+          "marks": 2,
+          "type": "articulation",
+          "question": "In your own words, explain what it means to be wise like Ollie.",
+          "key_points": [
+            "Being wise means thinking carefully before acting or speaking",
+            "Wise people listen to others and use good judgement to make decisions"
+          ],
+          "model_answer": "Being wise means thinking carefully before you act or speak. A wise person like Ollie listens to others and uses good judgement when making decisions.",
+          "explanation": "A 2-mark answer must cover both the idea of careful thinking AND good judgement or listening.",
+          "media": []
+        },
+        {
+          "id": "D1_CQ2",
+          "marks": 3,
+          "type": "articulation",
+          "question": "Describe three things you learned about Ollie the Owl today.",
+          "key_points": [
+            "Ollie is an owl who lives in a forest",
+            "Ollie sits on a high branch and watches all the animals at night",
+            "Ollie is called wise because Ollie listens and thinks before speaking"
+          ],
+          "model_answer": "Ollie is an owl who lives in a forest. Every night, Ollie sits on a high branch and watches all the animals below. The animals call Ollie wise because Ollie always listens carefully and thinks before speaking.",
+          "explanation": "A 3-mark answer must mention: (1) Ollie is an owl in a forest, (2) watching from a high branch at night, and (3) why Ollie is called wise.",
+          "media": []
+        }
+      ]
     },
     {
       "day": 2,

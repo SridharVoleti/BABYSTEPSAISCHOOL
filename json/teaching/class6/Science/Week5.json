@@ -1,0 +1,259 @@
+{
+  "lesson_id": "SCI6_DLW_W04_L02",
+  "class": 6,
+  "subject": "Science",
+  "chapter_id": "SCI6_CH02",
+  "chapter_title": "Diversity in the Living World",
+  "week_number": 4,
+  "focus": "Animal Grouping, Habitat and Adaptation",
+  "micro_lessons": [
+
+    {
+      "day": 16,
+      "micro_lesson_id": "SCI6_DLW_W04_L02_D16",
+      "title": "Grouping Animals Based on Movement",
+      "duration_minutes": 15,
+
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "Animals move in different ways. Some walk, some fly, some swim."
+        },
+        "standard": {
+          "concept_text": "Animals can be grouped based on movement and body parts used, such as wings, fins and legs."
+        },
+        "advanced": {
+          "concept_text": "Movement-based grouping reflects structural adaptations to habitat conditions."
+        }
+      },
+
+      "media_assets": {
+        "images": [
+          {
+            "id": "IMG_D16_01",
+            "title": "Fish Swimming",
+            "type": "real_world_photo",
+            "url": "https://cdn.school.com/images/fish_swimming.jpg",
+            "instructional_purpose": "Show fins used for movement"
+          },
+          {
+            "id": "IMG_D16_02",
+            "title": "Bird Flying",
+            "type": "real_world_photo",
+            "url": "https://cdn.school.com/images/bird_flying.jpg",
+            "instructional_purpose": "Show wings used for movement"
+          },
+          {
+            "id": "IMG_D16_03",
+            "title": "Goat Walking",
+            "type": "real_world_photo",
+            "url": "https://cdn.school.com/images/goat_walking.jpg",
+            "instructional_purpose": "Show legs used for walking"
+          }
+        ],
+        "videos": [
+          {
+            "id": "VID_D16_01",
+            "title": "Different Types of Animal Movement",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_animal_movement_types",
+            "duration_seconds": 60,
+            "instructional_purpose": "Compare walking, flying and swimming"
+          }
+        ]
+      }
+    },
+
+    {
+      "day": 17,
+      "micro_lesson_id": "SCI6_DLW_W04_L02_D17",
+      "title": "Habitats – Where Do Plants and Animals Live?",
+      "duration_minutes": 15,
+
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "The place where a plant or animal lives is called its habitat."
+        },
+        "standard": {
+          "concept_text": "Habitats provide food, water, air and shelter. Habitats can be terrestrial or aquatic."
+        },
+        "advanced": {
+          "concept_text": "Habitat determines survival conditions and shapes biodiversity of a region."
+        }
+      },
+
+      "media_assets": {
+        "images": [
+          {
+            "id": "IMG_D17_01",
+            "title": "Forest Habitat",
+            "type": "real_world_photo",
+            "url": "https://cdn.school.com/images/forest_habitat.jpg",
+            "instructional_purpose": "Example of terrestrial habitat"
+          },
+          {
+            "id": "IMG_D17_02",
+            "title": "Ocean Habitat",
+            "type": "real_world_photo",
+            "url": "https://cdn.school.com/images/ocean_habitat.jpg",
+            "instructional_purpose": "Example of aquatic habitat"
+          }
+        ],
+        "videos": [
+          {
+            "id": "VID_D17_01",
+            "title": "Types of Habitats Explained",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_habitats",
+            "duration_seconds": 60,
+            "instructional_purpose": "Explain terrestrial vs aquatic habitats"
+          }
+        ]
+      }
+    },
+
+    {
+      "day": 18,
+      "micro_lesson_id": "SCI6_DLW_W04_L02_D18",
+      "title": "Adaptation – Surviving in Different Regions",
+      "duration_minutes": 15,
+
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "Special features that help plants and animals survive are called adaptations."
+        },
+        "standard": {
+          "concept_text": "Desert plants store water. Mountain trees have sloping branches to shed snow."
+        },
+        "advanced": {
+          "concept_text": "Adaptations are structural or behavioural features shaped by environmental conditions."
+        }
+      },
+
+      "media_assets": {
+        "images": [
+          {
+            "id": "IMG_D18_01",
+            "title": "Cactus in Desert",
+            "type": "real_world_photo",
+            "url": "https://cdn.school.com/images/cactus_desert.jpg",
+            "instructional_purpose": "Show water-storing stem"
+          },
+          {
+            "id": "IMG_D18_02",
+            "title": "Deodar Tree in Mountains",
+            "type": "real_world_photo",
+            "url": "https://cdn.school.com/images/deodar_tree.jpg",
+            "instructional_purpose": "Show conical shape adaptation"
+          }
+        ],
+        "videos": [
+          {
+            "id": "VID_D18_01",
+            "title": "Plant Adaptations in Desert and Mountains",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_plant_adaptation",
+            "duration_seconds": 60,
+            "instructional_purpose": "Explain environmental adaptation"
+          }
+        ]
+      }
+    },
+
+    {
+      "day": 19,
+      "micro_lesson_id": "SCI6_DLW_W04_L02_D19",
+      "title": "Animal Adaptations – Camel and Mountain Goat",
+      "duration_minutes": 15,
+
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "Animals also have special features to survive."
+        },
+        "standard": {
+          "concept_text": "Desert camels have long legs and store fat in humps. Mountain goats have strong hooves for climbing."
+        },
+        "advanced": {
+          "concept_text": "Animal morphology reflects environmental pressures such as heat, cold and terrain."
+        }
+      },
+
+      "media_assets": {
+        "images": [
+          {
+            "id": "IMG_D19_01",
+            "title": "Camel in Hot Desert",
+            "type": "real_world_photo",
+            "url": "https://cdn.school.com/images/camel_hot_desert.jpg",
+            "instructional_purpose": "Show long legs and hump"
+          },
+          {
+            "id": "IMG_D19_02",
+            "title": "Mountain Goat",
+            "type": "real_world_photo",
+            "url": "https://cdn.school.com/images/mountain_goat.jpg",
+            "instructional_purpose": "Show strong hooves adaptation"
+          }
+        ],
+        "videos": [
+          {
+            "id": "VID_D19_01",
+            "title": "Camel Adaptations Explained",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_camel_adaptation",
+            "duration_seconds": 60,
+            "instructional_purpose": "Explain desert survival features"
+          }
+        ]
+      }
+    },
+
+    {
+      "day": 20,
+      "micro_lesson_id": "SCI6_DLW_W04_L02_D20",
+      "title": "Habitat Destruction and Conservation",
+      "duration_minutes": 15,
+
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "When habitats are damaged, plants and animals lose their homes."
+        },
+        "standard": {
+          "concept_text": "Habitat destruction reduces biodiversity. Conservation protects living organisms."
+        },
+        "advanced": {
+          "concept_text": "Conservation efforts maintain ecological balance and protect endangered species."
+        }
+      },
+
+      "media_assets": {
+        "images": [
+          {
+            "id": "IMG_D20_01",
+            "title": "Deforestation Area",
+            "type": "real_world_photo",
+            "url": "https://cdn.school.com/images/deforestation.jpg",
+            "instructional_purpose": "Show habitat destruction"
+          },
+          {
+            "id": "IMG_D20_02",
+            "title": "Tiger Conservation Area",
+            "type": "real_world_photo",
+            "url": "https://cdn.school.com/images/tiger_conservation.jpg",
+            "instructional_purpose": "Show biodiversity protection"
+          }
+        ],
+        "videos": [
+          {
+            "id": "VID_D20_01",
+            "title": "Why Biodiversity Conservation Matters",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_conservation",
+            "duration_seconds": 60,
+            "instructional_purpose": "Explain importance of conservation"
+          }
+        ]
+      }
+    }
+
+  ]
+}

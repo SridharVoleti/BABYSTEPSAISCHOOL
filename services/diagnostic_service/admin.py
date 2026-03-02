@@ -9,6 +9,7 @@ from django.contrib import admin  # 2026-02-12: Django admin
 
 from .models import (  # 2026-02-12: Models
     DiagnosticSession, DiagnosticResponse, DiagnosticResult,
+    IQReassessmentWindow, IQReassessmentEvent,  # 2026-02-27: Reassessment models
 )
 
 
@@ -37,5 +38,31 @@ class DiagnosticResultAdmin(admin.ModelAdmin):
 
     list_display = ['student', 'overall_level', 'theta_final', 'created_at']
     list_filter = ['overall_level']
+    search_fields = ['student__full_name']
+    readonly_fields = ['id', 'created_at']
+
+
+@admin.register(IQReassessmentWindow)
+class IQReassessmentWindowAdmin(admin.ModelAdmin):
+    """2026-02-27: Admin config for IQReassessmentWindow model."""
+
+    list_display = [
+        'student', 'window_number', 'avg_stars', 'avg_reteaching',
+        'avg_comprehension', 'outcome', 'level_before', 'level_after', 'created_at',
+    ]
+    list_filter = ['outcome', 'level_before', 'level_after']
+    search_fields = ['student__full_name']
+    readonly_fields = ['id', 'created_at']
+
+
+@admin.register(IQReassessmentEvent)
+class IQReassessmentEventAdmin(admin.ModelAdmin):
+    """2026-02-27: Admin config for IQReassessmentEvent model."""
+
+    list_display = [
+        'student', 'old_level', 'new_level', 'direction',
+        'triggering_window', 'parent_notified', 'created_at',
+    ]
+    list_filter = ['direction', 'old_level', 'new_level', 'parent_notified']
     search_fields = ['student__full_name']
     readonly_fields = ['id', 'created_at']

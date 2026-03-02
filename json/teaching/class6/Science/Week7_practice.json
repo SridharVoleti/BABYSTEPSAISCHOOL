@@ -1,0 +1,245 @@
+{
+  "lesson_id": "SCI6_MAG_W01_L04",
+  "practice_bank": {
+
+    "day_1": {
+      "concept_id": "SCI6_MAG_W01_L04_D1",
+      "concept_name": "Magnetic and Non-Magnetic Materials",
+      "questions": {
+        "easy": [
+          {
+            "id": "W01_D1_P_E1",
+            "type": "mcq",
+            "question": "Which material is attracted by a magnet?",
+            "options": ["Wood", "Plastic", "Iron", "Rubber"],
+            "correct_answer": 2,
+            "explanation": "Iron is a magnetic material."
+          },
+          {
+            "id": "W01_D1_P_E2",
+            "type": "mcq",
+            "question": "Materials not attracted by magnets are called:",
+            "options": ["Magnetic", "Non-magnetic", "Metallic", "Electric"],
+            "correct_answer": 1,
+            "explanation": "Non-magnetic materials are not attracted to magnets."
+          },
+          {
+            "id": "W01_D1_P_E3",
+            "type": "image_mcq",
+            "image_url": "https://cdn.school.com/images/magnet_shapes.jpg",
+            "question": "Which of these is a ring magnet?",
+            "options": ["Straight bar", "Horseshoe", "Circular with hole", "Flat strip"],
+            "correct_answer": 2,
+            "explanation": "Ring magnets are circular with a hole in the center."
+          },
+          {
+            "id": "W01_D1_P_E4",
+            "type": "true_false",
+            "question": "All metals are magnetic.",
+            "correct_answer": false,
+            "explanation": "Only some metals like iron, nickel and cobalt are magnetic."
+          }
+        ],
+        "medium": [
+          {
+            "id": "W01_D1_P_M1",
+            "type": "video_reflection",
+            "video_url": "https://youtube.com/example_magnetic_materials",
+            "question": "Name two objects from the video that were attracted by a magnet.",
+            "explanation": "Students should identify iron-based objects."
+          },
+          {
+            "id": "W01_D1_P_M2",
+            "type": "mcq",
+            "question": "Nickel and cobalt are:",
+            "options": ["Non-metals", "Magnetic metals", "Plastics", "Liquids"],
+            "correct_answer": 1,
+            "explanation": "Nickel and cobalt are magnetic metals."
+          },
+          {
+            "id": "W01_D1_P_M3",
+            "type": "classification",
+            "question": "Classify the following as magnetic or non-magnetic: Iron nail, Glass, Copper coin, Steel pin.",
+            "explanation": "Iron nail and steel pin are magnetic; glass and copper are non-magnetic."
+          }
+        ],
+        "moderate": [
+          {
+            "id": "W01_D1_P_MD1",
+            "type": "short_answer",
+            "question": "Why does a magnet not attract a wooden pencil?",
+            "explanation": "Wood is a non-magnetic material."
+          },
+          {
+            "id": "W01_D1_P_MD2",
+            "type": "experiment_based",
+            "question": "Explain how you would test whether a coin is magnetic.",
+            "explanation": "Bring a magnet near the coin and observe attraction."
+          }
+        ],
+        "hard": [
+          {
+            "id": "W01_D1_P_H1",
+            "type": "reasoning",
+            "question": "A steel spoon is attracted to a magnet but an aluminium spoon is not. Why?",
+            "explanation": "Steel contains iron which is magnetic; aluminium is non-magnetic."
+          },
+          {
+            "id": "W01_D1_P_H2",
+            "type": "application",
+            "question": "Design a simple experiment to separate iron filings from sand.",
+            "explanation": "Use a magnet to attract iron filings from the mixture."
+          }
+        ]
+      }
+    },
+
+    "day_2": {
+      "concept_id": "SCI6_MAG_W01_L04_D2",
+      "concept_name": "Poles of a Magnet",
+      "questions": {
+        "easy": [
+          {
+            "id": "W01_D2_P_E1",
+            "type": "mcq",
+            "question": "A magnet has how many poles?",
+            "options": ["One", "Two", "Three", "Four"],
+            "correct_answer": 1,
+            "explanation": "A magnet has two poles."
+          },
+          {
+            "id": "W01_D2_P_E2",
+            "type": "true_false",
+            "question": "Iron filings stick mostly at the middle of a magnet.",
+            "correct_answer": false,
+            "explanation": "Iron filings stick mostly at the poles."
+          }
+        ],
+        "medium": [
+          {
+            "id": "W01_D2_P_M1",
+            "type": "image_mcq",
+            "image_url": "https://cdn.school.com/images/iron_filings_magnet.jpg",
+            "question": "Where are iron filings concentrated?",
+            "options": ["Middle", "Ends", "All parts equally", "Nowhere"],
+            "correct_answer": 1,
+            "explanation": "Magnetic strength is maximum at poles."
+          },
+          {
+            "id": "W01_D2_P_M2",
+            "type": "mcq",
+            "question": "If a magnet is broken, each piece will have:",
+            "options": ["One pole", "No poles", "Two poles", "Three poles"],
+            "correct_answer": 2,
+            "explanation": "Each piece still has both North and South poles."
+          }
+        ],
+        "moderate": [
+          {
+            "id": "W01_D2_P_MD1",
+            "type": "short_answer",
+            "question": "Why can a single magnetic pole not exist?",
+            "explanation": "Magnetic poles always exist in pairs."
+          }
+        ],
+        "hard": [
+          {
+            "id": "W01_D2_P_H1",
+            "type": "reasoning",
+            "question": "Explain why iron filings form patterns near the poles.",
+            "explanation": "Magnetic force is strongest at poles."
+          }
+        ]
+      }
+    },
+
+    "day_3": {
+      "concept_id": "SCI6_MAG_W01_L04_D3",
+      "concept_name": "Finding Directions and Magnetic Compass",
+      "questions": {
+        "easy": [
+          {
+            "id": "W01_D3_P_E1",
+            "type": "mcq",
+            "question": "A freely suspended magnet aligns in which direction?",
+            "options": ["East-West", "North-South", "Up-Down", "Random"],
+            "correct_answer": 1,
+            "explanation": "It aligns in the north-south direction."
+          }
+        ],
+        "medium": [
+          {
+            "id": "W01_D3_P_M1",
+            "type": "image_mcq",
+            "image_url": "https://cdn.school.com/images/compass_structure.jpg",
+            "question": "The red end of the compass needle points to:",
+            "options": ["South", "North", "East", "West"],
+            "correct_answer": 1,
+            "explanation": "The red end indicates North."
+          }
+        ],
+        "moderate": [
+          {
+            "id": "W01_D3_P_MD1",
+            "type": "experiment_based",
+            "question": "Describe how to make a simple compass using a needle and cork.",
+            "explanation": "Magnetize needle, float it on cork in water, observe alignment."
+          }
+        ],
+        "hard": [
+          {
+            "id": "W01_D3_P_H1",
+            "type": "reasoning",
+            "question": "Why does an iron rod not align north-south like a magnet?",
+            "explanation": "It is not magnetized."
+          }
+        ]
+      }
+    },
+
+    "day_4": {
+      "concept_id": "SCI6_MAG_W01_L04_D4",
+      "concept_name": "Attraction and Repulsion Between Magnets",
+      "questions": {
+        "easy": [
+          {
+            "id": "W01_D4_P_E1",
+            "type": "mcq",
+            "question": "Like poles of magnets:",
+            "options": ["Attract", "Repel", "Disappear", "Stick permanently"],
+            "correct_answer": 1,
+            "explanation": "Like poles repel each other."
+          }
+        ],
+        "medium": [
+          {
+            "id": "W01_D4_P_M1",
+            "type": "image_mcq",
+            "image_url": "https://cdn.school.com/images/unlike_poles_attract.jpg",
+            "question": "What interaction is shown?",
+            "options": ["Repulsion", "Attraction", "No force", "Melting"],
+            "correct_answer": 1,
+            "explanation": "Unlike poles attract each other."
+          }
+        ],
+        "moderate": [
+          {
+            "id": "W01_D4_P_MD1",
+            "type": "short_answer",
+            "question": "Why is repulsion considered a test of magnetism?",
+            "explanation": "Only magnets can repel; iron cannot repel."
+          }
+        ],
+        "hard": [
+          {
+            "id": "W01_D4_P_H1",
+            "type": "application",
+            "question": "How would you identify a magnet among three identical bars?",
+            "explanation": "Use repulsion test between bars."
+          }
+        ]
+      }
+    }
+
+  }
+}

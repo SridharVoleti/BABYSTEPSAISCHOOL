@@ -119,6 +119,7 @@ class TeachingContentLoader:
             'dialogue_flow': day_data.get('dialogue_flow', []),
             'activities': day_data.get('activities', []),
             'practice_questions': day_data.get('practice_questions', []),
+            'comprehension_questions': day_data.get('comprehension_questions', []),  # 2026-02-21: BS-CMP marks-based questions
             'character': data.get('character', ''),
         }
 

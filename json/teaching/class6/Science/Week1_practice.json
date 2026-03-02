@@ -1,0 +1,128 @@
+{
+  "lesson_id": "SCI6_CURIOSITY_CH01_W01",
+  "practice_bank": {
+
+    "distribution_summary": {
+      "total_questions": 60,
+      "mcq_total": 44,
+      "true_false_total": 12,
+      "drag_order_total": 2,
+      "numeric_total": 2,
+      "mcq_correct_index_distribution": {
+        "0": 11,
+        "1": 11,
+        "2": 11,
+        "3": 11
+      }
+    },
+
+    "day_1": {
+      "concept_name": "What is Science?",
+      "questions": {
+        "easy": [
+          {"id":"D1E1","type":"mcq","question":"Science mainly helps us understand the:","options":["Stories","Natural world","Dreams","Games"],"correct_answer":1},
+          {"id":"D1E2","type":"true_false","question":"Science is only done in laboratories.","correct_answer":false},
+          {"id":"D1E3","type":"mcq","question":"Curiosity means:","options":["Fear","Silence","Desire to learn","Anger"],"correct_answer":2},
+          {"id":"D1E4","type":"true_false","question":"Scientific ideas never change.","correct_answer":false},
+          {"id":"D1E5","type":"mcq","question":"Science is a way of:","options":["Sleeping","Playing","Thinking","Guessing randomly"],"correct_answer":2}
+        ],
+        "medium": [
+          {"id":"D1M1","type":"mcq","question":"Which shows scientific thinking?","options":["Ignoring a problem","Complaining","Asking why something happened","Sleeping"],"correct_answer":2},
+          {"id":"D1M2","type":"numeric_fill","question":"How many teaching levels are used in this lesson?","correct_answer":3},
+          {"id":"D1M3","type":"mcq","question":"Science improves when:","options":["Magic happens","Evidence appears","Stories spread","People guess"],"correct_answer":1},
+          {"id":"D1M4","type":"true_false","question":"Science helps us understand daily life.","correct_answer":true},
+          {"id":"D1M5","type":"mcq","question":"Which word relates to science?","options":["Luck","Discovery","Fear","Magic"],"correct_answer":1}
+        ],
+        "hard": [
+          {"id":"D1H1","type":"drag_order","question":"Arrange correctly:","items":["thinking","Science","is","a way of"],"correct_order":[1,2,3,0]},
+          {"id":"D1H2","type":"mcq","question":"Why can scientific knowledge change?","options":["Because of stories","Because of evidence","Because of guessing","Because of magic"],"correct_answer":1},
+          {"id":"D1H3","type":"mcq","question":"A plant grows taller near a window. What shows scientific thinking?","options":["Ignore it","Investigate why","Guess randomly","Move it away"],"correct_answer":1},
+          {"id":"D1H4","type":"mcq","question":"Why is science self-correcting?","options":["Books change","Scientists guess","Evidence improves ideas","Opinions differ"],"correct_answer":2},
+          {"id":"D1H5","type":"mcq","question":"How should students resolve disagreement scientifically?","options":["Argue","Vote","Test ideas","Ignore"],"correct_answer":2}
+        ]
+      }
+    },
+
+    "day_2": {
+      "concept_name": "Curiosity and Questions",
+      "questions": {
+        "easy": [
+          {"id":"D2E1","type":"mcq","question":"Curiosity leads to:","options":["Questions","Silence","Confusion","Fear"],"correct_answer":0},
+          {"id":"D2E2","type":"true_false","question":"Scientific questions begin with why or how.","correct_answer":true},
+          {"id":"D2E3","type":"mcq","question":"To observe means to:","options":["Ignore","Notice carefully","Forget","Guess"],"correct_answer":1},
+          {"id":"D2E4","type":"true_false","question":"Curiosity stops discovery.","correct_answer":false},
+          {"id":"D2E5","type":"mcq","question":"Inquiry means:","options":["Magic","Search","Sleep","Luck"],"correct_answer":1}
+        ],
+        "medium": [
+          {"id":"D2M1","type":"mcq","question":"Which is scientific?","options":["Why is the sky blue?","Is blue pretty?","Do I like blue?","Is blue lucky?"],"correct_answer":0},
+          {"id":"D2M2","type":"true_false","question":"Scientific questions must be based on observation.","correct_answer":true},
+          {"id":"D2M3","type":"mcq","question":"Which shows curiosity?","options":["Ignore","Ask why","Throw away","Sleep"],"correct_answer":1},
+          {"id":"D2M4","type":"mcq","question":"Inquiry helps us:","options":["Stay confused","Avoid learning","Find answers","Guess"],"correct_answer":2},
+          {"id":"D2M5","type":"true_false","question":"All questions are scientific.","correct_answer":false}
+        ],
+        "hard": [
+          {"id":"D2H1","type":"mcq","question":"Most scientific question?","options":["Why plants grow toward sunlight?","Are plants nice?","Do I like plants?","Are plants beautiful?"],"correct_answer":0},
+          {"id":"D2H2","type":"mcq","question":"Student wonders why metal feels cold. First step?","options":["Ignore","Form clear question","Guess","Argue"],"correct_answer":1},
+          {"id":"D2H3","type":"true_false","question":"Curiosity without investigation cannot lead to discovery.","correct_answer":true},
+          {"id":"D2H4","type":"mcq","question":"Why avoid opinions in science?","options":["Cannot be tested","Fun","Teacher dislikes","Easy"],"correct_answer":0},
+          {"id":"D2H5","type":"mcq","question":"Which shows inquiry?","options":["Argue","Test bread molding","Ignore","Assume"],"correct_answer":1}
+        ]
+      }
+    },
+
+    "day_3": {
+      "concept_name": "Scientific Method",
+      "questions": {
+        "easy": [
+          {"id":"D3E1","type":"mcq","question":"First step:","options":["Observation","Experiment","Conclusion","Hypothesis"],"correct_answer":0},
+          {"id":"D3E2","type":"true_false","question":"Hypothesis is an educated guess.","correct_answer":true},
+          {"id":"D3E3","type":"mcq","question":"Experiment is used to:","options":["Sleep","Test hypothesis","Guess","Ignore"],"correct_answer":1},
+          {"id":"D3E4","type":"true_false","question":"Conclusion comes before experiment.","correct_answer":false},
+          {"id":"D3E5","type":"mcq","question":"Final step:","options":["Observation","Conclusion","Hypothesis","Question"],"correct_answer":1}
+        ],
+        "medium": [
+          {"id":"D3M1","type":"drag_order","question":"Arrange steps","items":["Observation","Hypothesis","Experiment","Conclusion"],"correct_order":[0,1,2,3]},
+          {"id":"D3M2","type":"mcq","question":"If hypothesis is wrong:","options":["Ignore","Revise","Argue","Quit"],"correct_answer":1},
+          {"id":"D3M3","type":"true_false","question":"Experiments must be repeatable.","correct_answer":true},
+          {"id":"D3M4","type":"mcq","question":"After hypothesis comes:","options":["Experiment","Observation","Conclusion","Guess"],"correct_answer":0},
+          {"id":"D3M5","type":"mcq","question":"Conclusions based on:","options":["Opinion","Evidence","Guess","Emotion"],"correct_answer":1}
+        ],
+        "hard": [
+          {"id":"D3H1","type":"mcq","question":"Why repeat experiments?","options":["Confirm reliability","Waste time","Entertain","Confuse"],"correct_answer":0},
+          {"id":"D3H2","type":"mcq","question":"If evidence contradicts hypothesis:","options":["Ignore","Change hypothesis","Blame","Stop"],"correct_answer":1},
+          {"id":"D3H3","type":"true_false","question":"Scientific method prevents random guessing.","correct_answer":true},
+          {"id":"D3H4","type":"mcq","question":"Hypothesis is:","options":["Final answer","Observation","Testable explanation","Random idea"],"correct_answer":2},
+          {"id":"D3H5","type":"mcq","question":"Evidence is important because:","options":["Proves reliability","Entertains","Colorful","Easy"],"correct_answer":0}
+        ]
+      }
+    },
+
+    "day_4": {
+      "concept_name": "Science in Daily Life",
+      "questions": {
+        "easy": [
+          {"id":"D4E1","type":"mcq","question":"Science is used in:","options":["Daily life","Only space","Only school","Only labs"],"correct_answer":0},
+          {"id":"D4E2","type":"true_false","question":"Fixing a tyre uses science.","correct_answer":true},
+          {"id":"D4E3","type":"mcq","question":"Evidence helps:","options":["Guess","Support conclusions","Sleep","Ignore"],"correct_answer":1},
+          {"id":"D4E4","type":"true_false","question":"Science is useless daily.","correct_answer":false},
+          {"id":"D4E5","type":"mcq","question":"Scientific thinking requires:","options":["Logic","Fear","Magic","Luck"],"correct_answer":0}
+        ],
+        "medium": [
+          {"id":"D4M1","type":"mcq","question":"Reflects science?","options":["Test spoiled milk","Ignore","Argue","Guess"],"correct_answer":0},
+          {"id":"D4M2","type":"true_false","question":"Science improves decisions.","correct_answer":true},
+          {"id":"D4M3","type":"mcq","question":"Analysis means:","options":["Careful study","Guess","Sleep","Magic"],"correct_answer":0},
+          {"id":"D4M4","type":"mcq","question":"Method means:","options":["Step process","Emotion","Fear","Luck"],"correct_answer":0},
+          {"id":"D4M5","type":"true_false","question":"Anyone can think scientifically.","correct_answer":true}
+        ],
+        "hard": [
+          {"id":"D4H1","type":"mcq","question":"Scientific literacy helps:","options":["Make informed decisions","Spread rumors","Entertain","Replace logic"],"correct_answer":0},
+          {"id":"D4H2","type":"mcq","question":"Two solutions proposed. Science suggests:","options":["Test with evidence","Pick random","Argue","Follow opinion"],"correct_answer":0},
+          {"id":"D4H3","type":"true_false","question":"Scientific thinking discourages blind belief.","correct_answer":true},
+          {"id":"D4H4","type":"mcq","question":"Daily scientific thinking example:","options":["Test water temperature","Ignore","Guess","Close eyes"],"correct_answer":0},
+          {"id":"D4H5","type":"mcq","question":"Scientific collaboration is important because:","options":["Combines ideas","Confuses","Wastes time","Avoids thinking"],"correct_answer":0}
+        ]
+      }
+    }
+
+  }
+}

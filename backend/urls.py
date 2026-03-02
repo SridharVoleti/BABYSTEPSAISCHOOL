@@ -83,4 +83,24 @@ urlpatterns = [
     # 2026-02-19: Read-Along & Mimic Engine endpoints (BS-RAM module)
     # Mounted at: http://localhost:8000/api/v1/read-along/
     path('api/v1/read-along/', include('services.read_along_service.urls')),
+
+    # 2026-02-19: Comprehension Capture Engine endpoints (BS-CMP module)
+    # Mounted at: http://localhost:8000/api/v1/comprehension/
+    path('api/v1/comprehension/', include('services.comprehension_service.urls')),
+
+    # 2026-02-20: Vocabulary Acquisition System endpoints (BS-LNG module)
+    # Mounted at: http://localhost:8000/api/v1/vocabulary/
+    path('api/v1/vocabulary/', include('services.vocabulary_service.urls')),
+
+    # 2026-02-20: Gamification Engine endpoints (BS-GAM module)
+    # Mounted at: http://localhost:8000/api/v1/gamification/
+    path('api/v1/gamification/', include('services.gamification_service.urls')),
+
+    # 2026-02-27: Spaced Repetition Service endpoints (BS-SPC module)
+    # Mounted at: http://localhost:8000/api/v1/spaced-repetition/
+    path('api/v1/spaced-repetition/', include('services.spaced_repetition_service.urls')),
+
+    # 2026-02-27: Story Mode Service endpoints (BS-GAM-003 module)
+    # Mounted at: http://localhost:8000/api/v1/story/
+    path('api/v1/story/', include('services.story_mode_service.urls')),
 ]

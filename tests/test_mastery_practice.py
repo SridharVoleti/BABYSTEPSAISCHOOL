@@ -534,15 +534,17 @@ class TestMasteryPracticeService:
         assert mastery.best_star_rating == 5
 
         # 2026-02-18: Verify DayProgress updated
+        # 2026-02-19: BS-CMP: mastery now sets 'comprehension_check' (not 'completed')
+        # Day unlock happens in ComprehensionService after comprehension check passes
         day_prog = DayProgress.objects.get(
             lesson_progress=lesson_progress, day_number=1
         )
-        assert day_prog.status == 'completed'
+        assert day_prog.status == 'comprehension_check'  # 2026-02-19: BS-CMP new flow
         assert day_prog.mastery_passed is True
 
-        # 2026-02-18: Verify lesson progress advanced
+        # 2026-02-19: BS-CMP: current_day NOT yet advanced — comprehension check needed first
         lesson_progress.refresh_from_db()
-        assert lesson_progress.current_day == 2
+        assert lesson_progress.current_day == 1  # 2026-02-19: Still day 1, awaiting comprehension
 
     def test_session_with_all_incorrect(self, student_user, published_lesson,
                                          lesson_progress, day_progress_mastery):

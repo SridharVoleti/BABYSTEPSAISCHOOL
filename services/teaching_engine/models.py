@@ -159,6 +159,8 @@ class DayProgress(models.Model):
         ('teaching', 'In Teaching'),
         ('practice', 'In Practice'),
         ('mastery_practice', 'Mastery Practice'),  # 2026-02-17: Post-practice mastery session
+        ('comprehension_check', 'Comprehension Check'),  # 2026-02-19: BS-CMP comprehension step
+        ('day_complete', 'Day Complete'),  # 2026-02-19: BS-CMP all checks passed
         ('completed', 'Completed'),
     ]
 
@@ -184,6 +186,10 @@ class DayProgress(models.Model):
         default=0, validators=[MinValueValidator(0), MaxValueValidator(5)]
     )
     mastery_passed = models.BooleanField(default=False)  # 2026-02-17: Mastery gate passed (≥3 stars)
+    comprehension_score = models.FloatField(default=0.0)  # 2026-02-19: BS-CMP comprehension mean score
+    weighted_star_rating = models.IntegerField(  # 2026-02-19: BS-CMP final weighted star rating (0-5)
+        default=0, validators=[MinValueValidator(0), MaxValueValidator(5)]
+    )
     started_at = models.DateTimeField(null=True, blank=True)  # 2026-02-17: Day started
     completed_at = models.DateTimeField(null=True, blank=True)  # 2026-02-17: Day completed
     created_at = models.DateTimeField(auto_now_add=True)  # 2026-02-17: Created

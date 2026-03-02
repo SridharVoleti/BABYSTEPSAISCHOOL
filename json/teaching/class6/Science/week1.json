@@ -1,0 +1,577 @@
+{
+  "lesson_id": "SCI6_CURIOSITY_CH01_W01",
+  "class": 6,
+  "subject": "Science",
+  "character": "Dr. Saina the Science Explorer",
+  "chapter_id": "CURIOSITY_CH01",
+  "chapter_title": "The Wonderful World of Science",
+  "week_number": 1,
+
+  "learning_objectives": [
+    "Define science in your own words",
+    "Explain why curiosity is important",
+    "Describe the steps of the scientific method",
+    "Apply scientific thinking in daily life"
+  ],
+
+  "micro_lessons": [
+
+    {
+      "day": 1,
+      "micro_lesson_id": "SCI6_CURIOSITY_CH01_W01_D1",
+      "title": "What is Science?",
+      "duration_minutes": 15,
+
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "Science is not just a school subject. Science is a way of thinking about the world. When you look at something carefully and ask why it happens, you are thinking like a scientist. Curiosity makes us ask questions. If your pen stops writing and you try to find out why, that is science. Science helps us understand nature and everyday life.",
+          "pacing": "slow",
+          "repetition_count": 3,
+          "tts_rate": 0.7
+        },
+        "standard": {
+          "concept_text": "Science is a systematic way of understanding the natural world. It begins with curiosity and observation. When we notice something interesting, we ask questions. We investigate those questions and find answers based on evidence. Scientific knowledge grows as discoveries improve our understanding.",
+          "pacing": "normal",
+          "repetition_count": 2,
+          "tts_rate": 0.9
+        },
+        "advanced": {
+          "concept_text": "Science is an evolving and evidence-based process of inquiry. It builds reliable knowledge through observation, reasoning and experimentation. Scientific explanations may change when new evidence provides better understanding. This self-correcting nature makes science powerful.",
+          "pacing": "fast",
+          "repetition_count": 1,
+          "tts_rate": 1.1
+        }
+      },
+
+      "vocabulary": [
+        {"word": "science", "definition": "Systematic study of the natural world.", "image_hint": "science.png"},
+        {"word": "curiosity", "definition": "Desire to learn more.", "image_hint": "curiosity.png"},
+        {"word": "discovery", "definition": "Finding new knowledge.", "image_hint": "discovery.png"}
+      ],
+
+      "dialogue_flow": [
+        {"stage": "greeting", "text": "Hello! I am Dr. Saina. Let us explore what science really means."},
+        {"stage": "concept", "text": "Today we understand science as a way of thinking."},
+        {"stage": "activity", "text": "Let us connect important science words with their meanings."},
+        {"stage": "wrapup", "text": "Wonderful start! Tomorrow we explore curiosity and questions."}
+      ],
+
+      "activities": [
+        {
+          "id": "D1_A1",
+          "type": "matching",
+          "instructions": "Match each word with its correct meaning.",
+          "items": [
+            {"word": "science", "match": "Systematic study of the natural world"},
+            {"word": "curiosity", "match": "Desire to learn more"},
+            {"word": "discovery", "match": "Finding new knowledge"}
+          ],
+          "scoring": {"correct_xp": 5}
+        }
+      ],
+
+      "practice_questions": [
+        {
+          "id": "D1_Q1",
+          "type": "mcq",
+          "question": "Science mainly helps us understand the:",
+          "options": ["Natural world", "Only machines", "Only stories"],
+          "correct_answer": 0,
+          "hint": "Think about what science studies."
+        },
+        {
+          "id": "D1_Q2",
+          "type": "mcq",
+          "question": "Curiosity means:",
+          "options": ["Fear", "Desire to learn", "Ignoring questions"],
+          "correct_answer": 1,
+          "hint": "Curious people want to know more."
+        },
+        {
+          "id": "D1_Q3",
+          "type": "mcq",
+          "question": "Science is mainly a way of:",
+          "options": ["Sleeping", "Guessing", "Thinking systematically"],
+          "correct_answer": 2,
+          "hint": "Science involves careful thinking."
+        }
+      ],
+
+      "read_along": {
+        "English": {
+          "sentences": [
+            "Science is a way of thinking.",
+            "Curiosity leads to discovery.",
+            "Science helps us understand nature.",
+            "Scientific ideas can change."
+          ],
+          "transliterations": []
+        },
+        "Hindi": {
+          "sentences": [
+            "विज्ञान सोचने का एक तरीका है।",
+            "जिज्ञासा खोज की ओर ले जाती है।",
+            "विज्ञान हमें प्रकृति को समझने में मदद करता है।",
+            "वैज्ञानिक विचार बदल सकते हैं।"
+          ],
+          "transliterations": [
+            "Vigyan sochne ka ek tareeka hai.",
+            "Jigyasa khoj ki aur le jaati hai.",
+            "Vigyan hamein prakriti ko samajhne mein madad karta hai.",
+            "Vaigyanik vichar badal sakte hain."
+          ]
+        },
+        "Telugu": {
+          "sentences": [
+            "శాస్త్రం అనేది ఆలోచించే విధానం.",
+            "ఆసక్తి ఆవిష్కరణకు దారి తీస్తుంది.",
+            "శాస్త్రం ప్రకృతిని అర్థం చేసుకోవడంలో సహాయపడుతుంది.",
+            "శాస్త్రీయ ఆలోచనలు మారవచ్చు."
+          ],
+          "transliterations": [
+            "Shastram anedi alochinche vidhanam.",
+            "Aasakti avishkaranaku daari teesstundi.",
+            "Shastram prakrutini artham chesukovadamlO sahayapadutundi.",
+            "Shastriya alochanalu maaravacchu."
+          ]
+        }
+      }
+    },
+
+    {
+      "day": 2,
+      "micro_lesson_id": "SCI6_CURIOSITY_CH01_W01_D2",
+      "title": "Curiosity and Questions",
+      "duration_minutes": 15,
+
+      "revision_prompts": {
+        "foundation": [
+          "What is science?",
+          "What does curiosity mean?",
+          "Science helps us understand what?"
+        ],
+        "standard": [
+          "Why is curiosity important?",
+          "Can science exist without questions?"
+        ],
+        "advanced": [
+          "Explain how curiosity leads to discovery."
+        ]
+      },
+
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "Curiosity makes us ask questions. Questions often begin with why or how. When we ask questions, we try to understand the world better. Asking questions is the beginning of scientific thinking.",
+          "pacing": "slow",
+          "repetition_count": 3,
+          "tts_rate": 0.7
+        },
+        "standard": {
+          "concept_text": "Curiosity is the starting point of science. Observation makes us notice something interesting. That observation leads to questions. These questions guide investigation and discovery.",
+          "pacing": "normal",
+          "repetition_count": 2,
+          "tts_rate": 0.9
+        },
+        "advanced": {
+          "concept_text": "Scientific inquiry begins with meaningful and testable questions. Strong questions are based on observation and can be answered through evidence.",
+          "pacing": "fast",
+          "repetition_count": 1,
+          "tts_rate": 1.1
+        }
+      },
+
+      "vocabulary": [
+        {"word": "observe", "definition": "To notice carefully.", "image_hint": "observe.png"},
+        {"word": "question", "definition": "Something asked to get information.", "image_hint": "question.png"},
+        {"word": "inquiry", "definition": "Search for knowledge.", "image_hint": "inquiry.png"}
+      ],
+
+      "dialogue_flow": [
+        {"stage": "greeting", "text": "Welcome back! Let us explore how curiosity creates questions."},
+        {"stage": "concept", "text": "Today we understand how questions guide science."},
+        {"stage": "activity", "text": "Let us match new vocabulary words."},
+        {"stage": "wrapup", "text": "Great work! Tomorrow we explore the scientific method."}
+      ],
+
+      "activities": [
+        {
+          "id": "D2_A1",
+          "type": "matching",
+          "instructions": "Match the word with its meaning.",
+          "items": [
+            {"word": "observe", "match": "Notice carefully"},
+            {"word": "question", "match": "Ask to get information"},
+            {"word": "inquiry", "match": "Search for knowledge"}
+          ],
+          "scoring": {"correct_xp": 5}
+        }
+      ],
+
+      "practice_questions": [
+        {
+          "id": "D2_Q1",
+          "type": "mcq",
+          "question": "Curiosity leads to:",
+          "options": ["Questions", "Silence", "Confusion"],
+          "correct_answer": 0,
+          "hint": "Curious people ask something."
+        },
+        {
+          "id": "D2_Q2",
+          "type": "mcq",
+          "question": "To observe means to:",
+          "options": ["Ignore", "Notice carefully", "Sleep"],
+          "correct_answer": 1,
+          "hint": "It means looking carefully."
+        },
+        {
+          "id": "D2_Q3",
+          "type": "mcq",
+          "question": "Scientific questions must be based on:",
+          "options": ["Magic", "Stories", "Evidence"],
+          "correct_answer": 2,
+          "hint": "They must relate to observation."
+        }
+      ],
+
+      "read_along": {
+        "English": {
+          "sentences": [
+            "Curiosity makes us ask questions.",
+            "Observation leads to inquiry.",
+            "Scientific questions are testable.",
+            "Questions guide discovery."
+          ],
+          "transliterations": []
+        },
+        "Hindi": {
+          "sentences": [
+            "जिज्ञासा हमें प्रश्न पूछने के लिए प्रेरित करती है।",
+            "अवलोकन से जांच शुरू होती है।",
+            "वैज्ञानिक प्रश्न परखे जा सकते हैं।",
+            "प्रश्न खोज की ओर ले जाते हैं।"
+          ],
+          "transliterations": [
+            "Jigyasa hamein prashn poochne ke liye prerit karti hai.",
+            "Avalokan se jaanch shuru hoti hai.",
+            "Vaigyanik prashn parkhe ja sakte hain.",
+            "Prashn khoj ki aur le jaate hain."
+          ]
+        },
+        "Telugu": {
+          "sentences": [
+            "ఆసక్తి ప్రశ్నలకు దారి తీస్తుంది.",
+            "పరిశీలన విచారణను ప్రారంభిస్తుంది.",
+            "శాస్త్రీయ ప్రశ్నలు పరీక్షించదగినవి.",
+            "ప్రశ్నలు ఆవిష్కరణకు దారి తీస్తాయి."
+          ],
+          "transliterations": [
+            "Aasakti prashnalaku daari teesstundi.",
+            "Pariseelana vicharananu prarambhistundi.",
+            "Shastriya prashnalu pareekshinchedaginavi.",
+            "Prashnalu avishkaranaku daari teesstayi."
+          ]
+        }
+      }
+    },
+
+    {
+      "day": 3,
+      "micro_lesson_id": "SCI6_CURIOSITY_CH01_W01_D3",
+      "title": "The Scientific Method",
+      "duration_minutes": 15,
+
+      "revision_prompts": {
+        "foundation": [
+          "What is curiosity?",
+          "What does observe mean?",
+          "Why do we ask questions?"
+        ],
+        "standard": [
+          "What makes a question scientific?",
+          "How does observation help inquiry?"
+        ],
+        "advanced": [
+          "How does a hypothesis connect observation and experiment?"
+        ]
+      },
+
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "The scientific method follows steps. First we observe. Then we ask a question. Next we form a hypothesis. After that we test it. Finally we conclude.",
+          "pacing": "slow",
+          "repetition_count": 3,
+          "tts_rate": 0.7
+        },
+        "standard": {
+          "concept_text": "The scientific method is a step-by-step way to solve problems. It includes observation, forming a hypothesis, conducting an experiment and drawing conclusions.",
+          "pacing": "normal",
+          "repetition_count": 2,
+          "tts_rate": 0.9
+        },
+        "advanced": {
+          "concept_text": "The scientific method ensures logical, repeatable and evidence-based investigation. Hypotheses must be testable, and conclusions must be based on results.",
+          "pacing": "fast",
+          "repetition_count": 1,
+          "tts_rate": 1.1
+        }
+      },
+
+      "vocabulary": [
+        {"word": "hypothesis", "definition": "An educated guess.", "image_hint": "hypothesis.png"},
+        {"word": "experiment", "definition": "Test to check a hypothesis.", "image_hint": "experiment.png"},
+        {"word": "conclusion", "definition": "Final answer after testing.", "image_hint": "conclusion.png"}
+      ],
+
+      "dialogue_flow": [
+        {"stage": "greeting", "text": "Today we explore the steps scientists follow."},
+        {"stage": "concept", "text": "Let us understand the scientific method."},
+        {"stage": "activity", "text": "Arrange the steps in correct order."},
+        {"stage": "wrapup", "text": "Excellent! Tomorrow we connect science to daily life."}
+      ],
+
+      "activities": [
+        {
+          "id": "D3_A1",
+          "type": "sequencing",
+          "instructions": "Arrange the scientific method steps in correct order.",
+          "items": [
+            {"position": 1, "text": "Observation"},
+            {"position": 2, "text": "Hypothesis"},
+            {"position": 3, "text": "Experiment"},
+            {"position": 4, "text": "Conclusion"}
+          ],
+          "scoring": {"correct_xp": 10}
+        }
+      ],
+
+      "practice_questions": [
+        {
+          "id": "D3_Q1",
+          "type": "mcq",
+          "question": "First step of scientific method:",
+          "options": ["Observation", "Experiment", "Conclusion"],
+          "correct_answer": 0,
+          "hint": "What comes before everything else?"
+        },
+        {
+          "id": "D3_Q2",
+          "type": "mcq",
+          "question": "A hypothesis is:",
+          "options": ["Result", "An educated guess", "Observation"],
+          "correct_answer": 1,
+          "hint": "It is a possible explanation."
+        },
+        {
+          "id": "D3_Q3",
+          "type": "mcq",
+          "question": "An experiment is used to:",
+          "options": ["Sleep", "Guess randomly", "Test a hypothesis"],
+          "correct_answer": 2,
+          "hint": "Experiments check something."
+        }
+      ],
+
+      "read_along": {
+        "English": {
+          "sentences": [
+            "Scientists follow steps to solve problems.",
+            "A hypothesis is an educated guess.",
+            "Experiments test ideas.",
+            "Conclusions are based on results."
+          ],
+          "transliterations": []
+        },
+        "Hindi": {
+          "sentences": [
+            "वैज्ञानिक समस्याओं को हल करने के लिए कदम उठाते हैं।",
+            "परिकल्पना एक शिक्षित अनुमान है।",
+            "प्रयोग विचारों की जांच करते हैं।",
+            "निष्कर्ष परिणामों पर आधारित होते हैं।"
+          ],
+          "transliterations": [
+            "Vaigyanik samasyaon ko hal karne ke liye kadam uthate hain.",
+            "Parikalpana ek shikshit anumaan hai.",
+            "Prayog vicharon ki jaanch karte hain.",
+            "Nishkarsh parinaamon par aadharit hote hain."
+          ]
+        },
+        "Telugu": {
+          "sentences": [
+            "శాస్త్రవేత్తలు సమస్యలను పరిష్కరించడానికి దశలను అనుసరిస్తారు.",
+            "హైపోతిసిస్ అనేది విద్యావంతమైన అంచనా.",
+            "ప్రయోగాలు ఆలోచనలను పరీక్షిస్తాయి.",
+            "నిష్కర్షలు ఫలితాలపై ఆధారపడతాయి."
+          ],
+          "transliterations": [
+            "Shastravettalu samasyalanu parishkarinchadaniki dashalanu anusaristaru.",
+            "Hypothesis anedi vidyavantamaina anchanā.",
+            "Prayogalu alochanalanu pareekshistayi.",
+            "Nishkarshalu phalitalapai aadharapaḍatai."
+          ]
+        }
+      }
+    },
+
+    {
+      "day": 4,
+      "micro_lesson_id": "SCI6_CURIOSITY_CH01_W01_D4",
+      "title": "Science in Daily Life",
+      "duration_minutes": 15,
+
+      "revision_prompts": {
+        "foundation": [
+          "What is a hypothesis?",
+          "What is an experiment?",
+          "Why do we conclude?"
+        ],
+        "standard": [
+          "How does scientific method solve problems?",
+          "Why is evidence important?"
+        ],
+        "advanced": [
+          "How does scientific thinking improve society?"
+        ]
+      },
+
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "We use science every day. When we try to fix something or find out why something happened, we use scientific thinking. Anyone can think like a scientist.",
+          "pacing": "slow",
+          "repetition_count": 3,
+          "tts_rate": 0.7
+        },
+        "standard": {
+          "concept_text": "Science is not limited to laboratories. From cooking food to fixing a tyre, we apply observation, questioning and testing. Scientific thinking helps us solve daily life problems logically.",
+          "pacing": "normal",
+          "repetition_count": 2,
+          "tts_rate": 0.9
+        },
+        "advanced": {
+          "concept_text": "Scientific literacy empowers individuals to make informed and evidence-based decisions. Collaboration and critical thinking strengthen scientific discovery and benefit society.",
+          "pacing": "fast",
+          "repetition_count": 1,
+          "tts_rate": 1.1
+        }
+      },
+
+      "vocabulary": [
+        {"word": "evidence", "definition": "Facts that support a claim.", "image_hint": "evidence.png"},
+        {"word": "method", "definition": "Step-by-step procedure.", "image_hint": "method.png"},
+        {"word": "analysis", "definition": "Careful study of results.", "image_hint": "analysis.png"}
+      ],
+
+      "dialogue_flow": [
+        {"stage": "greeting", "text": "Let us see how science works in everyday life."},
+        {"stage": "concept", "text": "Science helps us solve real problems."},
+        {"stage": "activity", "text": "Match the final vocabulary words."},
+        {"stage": "wrapup", "text": "Amazing work! Get ready for your weekly assessment."}
+      ],
+
+      "activities": [
+        {
+          "id": "D4_A1",
+          "type": "matching",
+          "instructions": "Match the word with its meaning.",
+          "items": [
+            {"word": "evidence", "match": "Facts that support a claim"},
+            {"word": "method", "match": "Step-by-step process"},
+            {"word": "analysis", "match": "Careful study of results"}
+          ],
+          "scoring": {"correct_xp": 5}
+        }
+      ],
+
+      "practice_questions": [
+        {
+          "id": "D4_Q1",
+          "type": "mcq",
+          "question": "Science helps us solve:",
+          "options": ["Problems", "Stories", "Dreams"],
+          "correct_answer": 0,
+          "hint": "Science is practical."
+        },
+        {
+          "id": "D4_Q2",
+          "type": "mcq",
+          "question": "Evidence is:",
+          "options": ["Guess", "Facts", "Magic"],
+          "correct_answer": 1,
+          "hint": "It supports a claim."
+        },
+        {
+          "id": "D4_Q3",
+          "type": "mcq",
+          "question": "Scientific thinking requires:",
+          "options": ["Fear", "Luck", "Logic"],
+          "correct_answer": 2,
+          "hint": "It involves reasoning."
+        }
+      ],
+
+      "read_along": {
+        "English": {
+          "sentences": [
+            "Science helps us solve problems.",
+            "Evidence supports conclusions.",
+            "Scientific thinking uses logic.",
+            "Anyone can think like a scientist."
+          ],
+          "transliterations": []
+        },
+        "Hindi": {
+          "sentences": [
+            "विज्ञान हमें समस्याओं को हल करने में मदद करता है।",
+            "प्रमाण निष्कर्षों का समर्थन करते हैं।",
+            "वैज्ञानिक सोच तर्क का उपयोग करती है।",
+            "कोई भी वैज्ञानिक की तरह सोच सकता है।"
+          ],
+          "transliterations": [
+            "Vigyan hamein samasyaon ko hal karne mein madad karta hai.",
+            "Pramaan nishkarshon ka samarthan karte hain.",
+            "Vaigyanik soch tark ka upyog karti hai.",
+            "Koi bhi vaigyanik ki tarah soch sakta hai."
+          ]
+        },
+        "Telugu": {
+          "sentences": [
+            "శాస్త్రం సమస్యలను పరిష్కరించడంలో సహాయపడుతుంది.",
+            "సాక్ష్యాలు నిష్కర్షలను మద్దతు ఇస్తాయి.",
+            "శాస్త్రీయ ఆలోచన తార్కికతను ఉపయోగిస్తుంది.",
+            "ఎవరైనా శాస్త్రవేత్తలా ఆలోచించవచ్చు."
+          ],
+          "transliterations": [
+            "Shastram samasyalanu parishkarinchadamlO sahayapadutundi.",
+            "Saakshyalu nishkarshalanu maddatu istayi.",
+            "Shastriya alochana tarkikatanu upayogistundi.",
+            "Evaraina shastravettala alochinchavacchu."
+          ]
+        }
+      }
+    }
+
+  ],
+
+  "weekly_assessment": {
+    "assessment_id": "SCI6_CURIOSITY_CH01_W01_ASSESS",
+    "title": "Week 1 Assessment",
+    "time_limit_minutes": 20,
+    "questions": [
+      {"id":"WA_Q1","type":"mcq","question":"Science is a way of:","options":["Thinking","Sleeping","Guessing","Imagining"],"correct_answer":0,"points":2},
+      {"id":"WA_Q2","type":"mcq","question":"Curiosity leads to:","options":["Answers","Questions","Silence","Fear"],"correct_answer":1,"points":2},
+      {"id":"WA_Q3","type":"mcq","question":"A hypothesis is:","options":["Observation","Experiment","Conclusion","Educated guess"],"correct_answer":3,"points":2},
+      {"id":"WA_Q4","type":"mcq","question":"First step of scientific method:","options":["Conclusion","Observation","Guess","Test"],"correct_answer":1,"points":2},
+      {"id":"WA_Q5","type":"mcq","question":"Science helps solve:","options":["Problems","Stories","Dreams","Jokes"],"correct_answer":0,"points":2},
+      {"id":"WA_Q6","type":"mcq","question":"Evidence means:","options":["Guess","Facts","Magic","Opinion"],"correct_answer":1,"points":2},
+      {"id":"WA_Q7","type":"mcq","question":"An experiment is used to:","options":["Test a hypothesis","Sleep","Dance","Ignore"],"correct_answer":0,"points":2},
+      {"id":"WA_Q8","type":"mcq","question":"Scientific thinking requires:","options":["Logic","Luck","Fear","Magic"],"correct_answer":0,"points":2},
+      {"id":"WA_Q9","type":"mcq","question":"Observation means to:","options":["Notice carefully","Sleep","Guess","Forget"],"correct_answer":0,"points":2},
+      {"id":"WA_Q10","type":"mcq","question":"Science improves when:","options":["Evidence appears","Stories spread","People guess","Magic happens"],"correct_answer":0,"points":2}
+    ],
+    "star_thresholds": {
+      "one_star": 40,
+      "two_stars": 60,
+      "three_stars": 80
+    }
+  }
+}

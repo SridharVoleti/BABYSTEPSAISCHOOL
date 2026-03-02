@@ -13,7 +13,7 @@ from rest_framework.views import APIView  # 2026-02-12: Class-based views
 
 from services.auth_service.models import Student  # 2026-02-12: Student model
 from .serializers import DiagnosticRespondSerializer  # 2026-02-12: Serializers
-from .services import DiagnosticService  # 2026-02-12: Business logic
+from .services import DiagnosticService, IQReassessmentService  # 2026-02-12/27: Business logic
 
 
 def _get_student(request):
@@ -126,3 +126,25 @@ class DiagnosticResultView(APIView):
         if result['success']:  # 2026-02-12: Success
             return Response(result, status=status.HTTP_200_OK)
         return Response(result, status=status.HTTP_404_NOT_FOUND)
+
+
+class IQReassessmentHistoryView(APIView):
+    """
+    2026-02-27: Get rolling IQ reassessment windows and level-change events.
+
+    GET /api/v1/diagnostic/reassessment/history/
+
+    Returns all evaluation windows and confirmed level-change events for the
+    authenticated student, plus current mastery count and next window threshold.
+    """
+
+    permission_classes = [IsAuthenticated]  # 2026-02-27: Student auth required
+
+    def get(self, request):
+        """2026-02-27: Return reassessment history for the student."""
+        student, error = _get_student(request)  # 2026-02-27: Verify student
+        if error:
+            return error
+
+        result = IQReassessmentService.get_history(student)  # 2026-02-27: Business logic
+        return Response(result, status=status.HTTP_200_OK)

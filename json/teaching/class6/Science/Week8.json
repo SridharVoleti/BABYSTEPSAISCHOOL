@@ -1,0 +1,366 @@
+{
+  "lesson_id": "SCI6_MLM_W02_L05",
+  "class": 6,
+  "subject": "Science",
+  "chapter_id": "SCI6_CH05",
+  "chapter_title": "Measurement of Length and Motion",
+  "week_number": 2,
+  "focus": "Understanding Measurement Precision and Types of Motion",
+  "micro_lessons": [
+
+    {
+      "day": 1,
+      "micro_lesson_id": "SCI6_MLM_W02_L05_D1",
+      "title": "Why Do We Need Standard Units?",
+      "duration_minutes": 15,
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "People once measured length using handspan, foot or arm length."
+        },
+        "standard": {
+          "concept_text": "Different people get different measurements using body parts because their sizes vary."
+        },
+        "advanced": {
+          "concept_text": "A unit must be uniform and accepted universally to avoid variation in measurement."
+        }
+      },
+      "media_assets": {
+        "images": [
+          {
+            "id": "IMG_D1_01",
+            "title": "Measuring with Handspan",
+            "type": "concept_visual",
+            "url": "https://cdn.school.com/images/handspan_measure.jpg",
+            "instructional_purpose": "Show variation in body-based measurement"
+          },
+          {
+            "id": "IMG_D1_02",
+            "title": "Different Hand Sizes Comparison",
+            "type": "comparison_visual",
+            "url": "https://cdn.school.com/images/hand_size_variation.jpg",
+            "instructional_purpose": "Explain inconsistency in non-standard units"
+          }
+        ],
+        "videos": [
+          {
+            "id": "VID_D1_01",
+            "title": "Why Standard Units Are Important",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_standard_units_intro",
+            "duration_seconds": 60,
+            "instructional_purpose": "Introduce need for standard measurement"
+          }
+        ]
+      }
+    },
+
+    {
+      "day": 2,
+      "micro_lesson_id": "SCI6_MLM_W02_L05_D2",
+      "title": "SI Units of Length and Conversions",
+      "duration_minutes": 15,
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "The SI unit of length is metre (m)."
+        },
+        "standard": {
+          "concept_text": "1 km = 1000 m, 1 m = 100 cm, 1 cm = 10 mm."
+        },
+        "advanced": {
+          "concept_text": "Unit conversion requires understanding of decimal shifts and unit hierarchy."
+        }
+      },
+      "media_assets": {
+        "images": [
+          {
+            "id": "IMG_D2_01",
+            "title": "Unit Conversion Ladder",
+            "type": "diagram",
+            "url": "https://cdn.school.com/images/unit_ladder.jpg",
+            "instructional_purpose": "Visualize km-m-cm-mm relationship"
+          },
+          {
+            "id": "IMG_D2_02",
+            "title": "Metre Scale with Markings",
+            "type": "real_world_photo",
+            "url": "https://cdn.school.com/images/metre_scale.jpg",
+            "instructional_purpose": "Show scale divisions clearly"
+          }
+        ],
+        "videos": [
+          {
+            "id": "VID_D2_01",
+            "title": "How to Convert Units of Length",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_length_conversion",
+            "duration_seconds": 70,
+            "instructional_purpose": "Demonstrate step-by-step conversion"
+          }
+        ]
+      }
+    },
+
+    {
+      "day": 3,
+      "micro_lesson_id": "SCI6_MLM_W02_L05_D3",
+      "title": "Measuring Tools and Least Count",
+      "duration_minutes": 15,
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "We use a scale, metre rod or measuring tape to measure length."
+        },
+        "standard": {
+          "concept_text": "The smallest measurement readable on a scale is called its least count."
+        },
+        "advanced": {
+          "concept_text": "Measurement accuracy depends on selecting appropriate tools and understanding least count."
+        }
+      },
+      "media_assets": {
+        "images": [
+          {
+            "id": "IMG_D3_01",
+            "title": "15 cm Scale Close View",
+            "type": "real_world_photo",
+            "url": "https://cdn.school.com/images/15cm_scale.jpg",
+            "instructional_purpose": "Show mm markings clearly"
+          },
+          {
+            "id": "IMG_D3_02",
+            "title": "Flexible Measuring Tape",
+            "type": "real_world_photo",
+            "url": "https://cdn.school.com/images/measuring_tape.jpg",
+            "instructional_purpose": "Explain flexible measurement"
+          }
+        ],
+        "videos": [
+          {
+            "id": "VID_D3_01",
+            "title": "Understanding Least Count",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_least_count",
+            "duration_seconds": 65,
+            "instructional_purpose": "Explain measurement precision"
+          }
+        ]
+      }
+    },
+
+    {
+      "day": 4,
+      "micro_lesson_id": "SCI6_MLM_W02_L05_D4",
+      "title": "Correct Measurement Technique and Errors",
+      "duration_minutes": 15,
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "Place the scale correctly along the object."
+        },
+        "standard": {
+          "concept_text": "Eye position must be vertically above the reading to avoid parallax error."
+        },
+        "advanced": {
+          "concept_text": "If zero mark is damaged, subtract initial reading from final reading to get correct length."
+        }
+      },
+      "media_assets": {
+        "images": [
+          {
+            "id": "IMG_D4_01",
+            "title": "Correct Eye Position",
+            "type": "diagram",
+            "url": "https://cdn.school.com/images/parallax_error.jpg",
+            "instructional_purpose": "Explain parallax error visually"
+          },
+          {
+            "id": "IMG_D4_02",
+            "title": "Broken Scale Measurement",
+            "type": "concept_visual",
+            "url": "https://cdn.school.com/images/broken_scale_method.jpg",
+            "instructional_purpose": "Show subtraction method"
+          }
+        ],
+        "videos": [
+          {
+            "id": "VID_D4_01",
+            "title": "Common Measurement Mistakes",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_measurement_errors",
+            "duration_seconds": 70,
+            "instructional_purpose": "Highlight errors and corrections"
+          }
+        ]
+      }
+    },
+
+    {
+      "day": 5,
+      "micro_lesson_id": "SCI6_MLM_W02_L05_D5",
+      "title": "Measuring Curved Lines and Indirect Measurement",
+      "duration_minutes": 15,
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "Curved lines cannot be measured directly using a rigid scale."
+        },
+        "standard": {
+          "concept_text": "Use thread or flexible tape to measure curved surfaces."
+        },
+        "advanced": {
+          "concept_text": "Indirect measurement methods help estimate quantities like thickness of paper."
+        }
+      },
+      "media_assets": {
+        "images": [
+          {
+            "id": "IMG_D5_01",
+            "title": "Thread Measuring Curve",
+            "type": "concept_visual",
+            "url": "https://cdn.school.com/images/thread_measure.jpg",
+            "instructional_purpose": "Show curved line measurement"
+          }
+        ],
+        "videos": [
+          {
+            "id": "VID_D5_01",
+            "title": "How to Measure a Curve",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_curved_measurement",
+            "duration_seconds": 60,
+            "instructional_purpose": "Demonstrate curved measurement technique"
+          }
+        ]
+      }
+    },
+
+    {
+      "day": 6,
+      "micro_lesson_id": "SCI6_MLM_W02_L05_D6",
+      "title": "Reference Point and Describing Position",
+      "duration_minutes": 15,
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "Distance is measured from a fixed point called a reference point."
+        },
+        "standard": {
+          "concept_text": "The same object can appear closer or farther depending on the chosen reference point."
+        },
+        "advanced": {
+          "concept_text": "Position is always described relative to a defined reference frame."
+        }
+      },
+      "media_assets": {
+        "images": [
+          {
+            "id": "IMG_D6_01",
+            "title": "Kilometre Stone Example",
+            "type": "real_world_photo",
+            "url": "https://cdn.school.com/images/km_stone.jpg",
+            "instructional_purpose": "Explain reference point concept"
+          }
+        ],
+        "videos": [
+          {
+            "id": "VID_D6_01",
+            "title": "Understanding Reference Points",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_reference_point",
+            "duration_seconds": 65,
+            "instructional_purpose": "Clarify relative distance concept"
+          }
+        ]
+      }
+    },
+
+    {
+      "day": 7,
+      "micro_lesson_id": "SCI6_MLM_W02_L05_D7",
+      "title": "Motion and Rest",
+      "duration_minutes": 15,
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "An object is in motion if its position changes with time."
+        },
+        "standard": {
+          "concept_text": "Motion and rest depend on the reference point."
+        },
+        "advanced": {
+          "concept_text": "Motion is relative and depends on the observer’s frame of reference."
+        }
+      },
+      "media_assets": {
+        "images": [
+          {
+            "id": "IMG_D7_01",
+            "title": "Passengers Inside Moving Bus",
+            "type": "concept_visual",
+            "url": "https://cdn.school.com/images/bus_motion_reference.jpg",
+            "instructional_purpose": "Show relativity of motion"
+          }
+        ],
+        "videos": [
+          {
+            "id": "VID_D7_01",
+            "title": "Motion and Rest Explained",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_motion_rest",
+            "duration_seconds": 70,
+            "instructional_purpose": "Explain motion with examples"
+          }
+        ]
+      }
+    },
+
+    {
+      "day": 8,
+      "micro_lesson_id": "SCI6_MLM_W02_L05_D8",
+      "title": "Types of Motion",
+      "duration_minutes": 15,
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "Objects move in different ways."
+        },
+        "standard": {
+          "concept_text": "Motion can be linear, circular or oscillatory."
+        },
+        "advanced": {
+          "concept_text": "Circular and oscillatory motions are periodic because they repeat after equal intervals of time."
+        }
+      },
+      "media_assets": {
+        "images": [
+          {
+            "id": "IMG_D8_01",
+            "title": "Linear Motion Example",
+            "type": "real_world_photo",
+            "url": "https://cdn.school.com/images/linear_motion.jpg",
+            "instructional_purpose": "Show straight-line motion"
+          },
+          {
+            "id": "IMG_D8_02",
+            "title": "Circular Motion Example",
+            "type": "real_world_photo",
+            "url": "https://cdn.school.com/images/circular_motion.jpg",
+            "instructional_purpose": "Show circular motion"
+          },
+          {
+            "id": "IMG_D8_03",
+            "title": "Oscillatory Motion Example",
+            "type": "real_world_photo",
+            "url": "https://cdn.school.com/images/oscillatory_motion.jpg",
+            "instructional_purpose": "Show to-and-fro motion"
+          }
+        ],
+        "videos": [
+          {
+            "id": "VID_D8_01",
+            "title": "Types of Motion Explained",
+            "platform": "youtube",
+            "url": "https://youtube.com/example_types_of_motion",
+            "duration_seconds": 80,
+            "instructional_purpose": "Compare motion types visually"
+          }
+        ]
+      }
+    }
+
+  ]
+}

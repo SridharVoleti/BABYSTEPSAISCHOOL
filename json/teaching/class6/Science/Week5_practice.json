@@ -1,0 +1,154 @@
+{
+  "day_16": {
+    "concept_name": "Grouping Animals Based on Movement",
+    "total_questions": 15,
+
+    "easy": [
+      {"id": "D16_E1", "type": "mcq", "question": "Fish move using:", "options": ["Legs", "Fins", "Wings", "Tail only"], "correct_answer": 1},
+      {"id": "D16_E2", "type": "true_false", "question": "Birds use wings for flying.", "correct_answer": true},
+      {"id": "D16_E3", "type": "mcq", "question": "Goat moves using:", "options": ["Wings", "Legs", "Fins", "Flippers"], "correct_answer": 1},
+      {"id": "D16_E4", "type": "true_false", "question": "All animals move in the same way.", "correct_answer": false},
+      {"id": "D16_E5", "type": "mcq", "question": "Swimming is common in:", "options": ["Fish", "Crow", "Goat", "Camel"], "correct_answer": 0}
+    ],
+
+    "medium": [
+      {"id": "D16_M1", "type": "short_answer", "question": "Name two animals that fly."},
+      {"id": "D16_M2", "type": "mcq", "question": "Which body part helps birds fly?", "options": ["Fins", "Wings", "Legs", "Horns"], "correct_answer": 1},
+      {"id": "D16_M3", "type": "true_false", "question": "Movement helps classify animals.", "correct_answer": true},
+      {"id": "D16_M4", "type": "numeric_fill", "question": "If 3 animals swim and 2 walk, total animals are:", "correct_answer": 5},
+      {"id": "D16_M5", "type": "mcq", "question": "Which animal crawls?", "options": ["Snake", "Eagle", "Fish", "Goat"], "correct_answer": 0}
+    ],
+
+    "hard": [
+      {"id": "D16_H1", "type": "short_answer", "question": "Why is movement important for survival?"},
+      {"id": "D16_H2", "type": "drag_order", "question": "Arrange from water to air:", "items": ["Fish", "Goat", "Eagle"], "correct_order": [0,1,2]},
+      {"id": "D16_H3", "type": "mcq", "question": "Which animal shows adaptation for flying?", "options": ["Fish", "Goat", "Eagle", "Camel"], "correct_answer": 2},
+      {"id": "D16_H4", "type": "true_false", "question": "Animals move to search for food.", "correct_answer": true},
+      {"id": "D16_H5", "type": "short_answer", "question": "Differentiate swimming and flying movement."}
+    ]
+  }
+}
+
+{
+  "day_17": {
+    "concept_name": "Habitats",
+    "total_questions": 15,
+
+    "easy": [
+      {"id": "D17_E1", "type": "mcq", "question": "Habitat means:", "options": ["Food", "Home of organism", "Leaf", "Root"], "correct_answer": 1},
+      {"id": "D17_E2", "type": "true_false", "question": "Forest is a terrestrial habitat.", "correct_answer": true},
+      {"id": "D17_E3", "type": "mcq", "question": "Ocean is:", "options": ["Terrestrial", "Aquatic", "Mountain", "Desert"], "correct_answer": 1},
+      {"id": "D17_E4", "type": "true_false", "question": "Fish live in aquatic habitat.", "correct_answer": true},
+      {"id": "D17_E5", "type": "mcq", "question": "Camel lives in:", "options": ["Ocean", "Forest", "Desert", "River"], "correct_answer": 2}
+    ],
+
+    "medium": [
+      {"id": "D17_M1", "type": "short_answer", "question": "Name two terrestrial habitats."},
+      {"id": "D17_M2", "type": "mcq", "question": "Which is aquatic habitat?", "options": ["River", "Forest", "Desert", "Mountain"], "correct_answer": 0},
+      {"id": "D17_M3", "type": "true_false", "question": "Habitat provides food and shelter.", "correct_answer": true},
+      {"id": "D17_M4", "type": "numeric_fill", "question": "If 4 animals live in water and 3 on land, total animals are:", "correct_answer": 7},
+      {"id": "D17_M5", "type": "mcq", "question": "Polar bear lives in:", "options": ["Desert", "Arctic region", "Ocean floor", "Forest"], "correct_answer": 1}
+    ],
+
+    "hard": [
+      {"id": "D17_H1", "type": "short_answer", "question": "Why does habitat affect biodiversity?"},
+      {"id": "D17_H2", "type": "drag_order", "question": "Arrange habitat types:", "items": ["Desert", "Forest", "Ocean"], "correct_order": [1,0,2]},
+      {"id": "D17_H3", "type": "mcq", "question": "Loss of habitat leads to:", "options": ["Increase biodiversity", "Decrease biodiversity", "No change", "More species"], "correct_answer": 1},
+      {"id": "D17_H4", "type": "true_false", "question": "Animals adapt to their habitat.", "correct_answer": true},
+      {"id": "D17_H5", "type": "short_answer", "question": "Give one example of habitat and animal."}
+    ]
+  }
+}
+
+{
+  "day_18": {
+    "concept_name": "Plant Adaptations",
+    "total_questions": 15,
+
+    "easy": [
+      {"id": "D18_E1", "type": "mcq", "question": "Cactus lives in:", "options": ["Forest", "Desert", "Ocean", "River"], "correct_answer": 1},
+      {"id": "D18_E2", "type": "true_false", "question": "Cactus stores water in stem.", "correct_answer": true},
+      {"id": "D18_E3", "type": "mcq", "question": "Mountain trees are usually:", "options": ["Flat", "Conical", "Round", "Short"], "correct_answer": 1},
+      {"id": "D18_E4", "type": "true_false", "question": "Adaptation helps survival.", "correct_answer": true},
+      {"id": "D18_E5", "type": "mcq", "question": "Spines in cactus reduce:", "options": ["Water loss", "Height", "Sunlight", "Root growth"], "correct_answer": 0}
+    ],
+
+    "medium": [
+      {"id": "D18_M1", "type": "short_answer", "question": "Name one plant adaptation in mountains."},
+      {"id": "D18_M2", "type": "mcq", "question": "Which plant survives in desert?", "options": ["Cactus", "Rose", "Grass", "Lotus"], "correct_answer": 0},
+      {"id": "D18_M3", "type": "true_false", "question": "Adaptation is permanent structural feature.", "correct_answer": true},
+      {"id": "D18_M4", "type": "numeric_fill", "question": "If 2 plants adapt to desert and 3 to mountain, total plants are:", "correct_answer": 5},
+      {"id": "D18_M5", "type": "mcq", "question": "Sloping branches help:", "options": ["Snow fall off", "Store water", "Climb", "Spread"], "correct_answer": 0}
+    ],
+
+    "hard": [
+      {"id": "D18_H1", "type": "short_answer", "question": "Explain desert adaptation in cactus."},
+      {"id": "D18_H2", "type": "drag_order", "question": "Arrange adaptation steps:", "items": ["Environment pressure", "Structural change", "Survival advantage"], "correct_order": [0,1,2]},
+      {"id": "D18_H3", "type": "mcq", "question": "Which feature helps mountain trees survive?", "options": ["Flat leaves", "Conical shape", "Long roots only", "Soft stem"], "correct_answer": 1},
+      {"id": "D18_H4", "type": "true_false", "question": "Adaptations are related to habitat.", "correct_answer": true},
+      {"id": "D18_H5", "type": "short_answer", "question": "Why are leaves reduced to spines in cactus?"}
+    ]
+  }
+}
+
+{
+  "day_19": {
+    "concept_name": "Animal Adaptations",
+    "total_questions": 15,
+
+    "easy": [
+      {"id": "D19_E1", "type": "mcq", "question": "Camel lives in:", "options": ["Ocean", "Desert", "Forest", "Arctic"], "correct_answer": 1},
+      {"id": "D19_E2", "type": "true_false", "question": "Camel stores fat in hump.", "correct_answer": true},
+      {"id": "D19_E3", "type": "mcq", "question": "Mountain goat has:", "options": ["Fins", "Strong hooves", "Wings", "Horns only"], "correct_answer": 1},
+      {"id": "D19_E4", "type": "true_false", "question": "Adaptation helps animals survive.", "correct_answer": true},
+      {"id": "D19_E5", "type": "mcq", "question": "Polar bear has thick fur to:", "options": ["Fly", "Stay warm", "Swim fast", "Climb"], "correct_answer": 1}
+    ],
+
+    "medium": [
+      {"id": "D19_M1", "type": "short_answer", "question": "Name one desert adaptation in camel."},
+      {"id": "D19_M2", "type": "mcq", "question": "Which animal adapts to cold?", "options": ["Camel", "Polar bear", "Goat", "Fish"], "correct_answer": 1},
+      {"id": "D19_M3", "type": "true_false", "question": "Webbed feet help swimming.", "correct_answer": true},
+      {"id": "D19_M4", "type": "numeric_fill", "question": "If 3 animals adapt to desert and 2 to mountain, total animals are:", "correct_answer": 5},
+      {"id": "D19_M5", "type": "mcq", "question": "Long legs in camel help:", "options": ["Jump", "Walk on hot sand", "Swim", "Fly"], "correct_answer": 1}
+    ],
+
+    "hard": [
+      {"id": "D19_H1", "type": "short_answer", "question": "Explain camel adaptation to desert."},
+      {"id": "D19_H2", "type": "drag_order", "question": "Arrange adaptation logic:", "items": ["Harsh climate", "Body adaptation", "Survival"], "correct_order": [0,1,2]},
+      {"id": "D19_H3", "type": "mcq", "question": "Which feature helps mountain goat climb?", "options": ["Fins", "Strong hooves", "Wings", "Hump"], "correct_answer": 1},
+      {"id": "D19_H4", "type": "true_false", "question": "Adaptation is random.", "correct_answer": false},
+      {"id": "D19_H5", "type": "short_answer", "question": "Why do polar bears have thick fur?"}
+    ]
+  }
+}
+
+{
+  "day_20": {
+    "concept_name": "Conservation",
+    "total_questions": 15,
+
+    "easy": [
+      {"id": "D20_E1", "type": "mcq", "question": "Conservation means:", "options": ["Destroying forests", "Protecting nature", "Cutting trees", "Ignoring animals"], "correct_answer": 1},
+      {"id": "D20_E2", "type": "true_false", "question": "Deforestation reduces biodiversity.", "correct_answer": true},
+      {"id": "D20_E3", "type": "mcq", "question": "Tiger reserves help:", "options": ["Hunting", "Conservation", "Pollution", "Urbanization"], "correct_answer": 1},
+      {"id": "D20_E4", "type": "true_false", "question": "Habitat destruction harms animals.", "correct_answer": true},
+      {"id": "D20_E5", "type": "mcq", "question": "Planting trees helps:", "options": ["Reduce biodiversity", "Increase biodiversity", "Stop rain", "Pollute air"], "correct_answer": 1}
+    ],
+
+    "medium": [
+      {"id": "D20_M1", "type": "short_answer", "question": "Give one example of conservation."},
+      {"id": "D20_M2", "type": "mcq", "question": "Which reduces biodiversity?", "options": ["Afforestation", "Pollution", "Protection", "Conservation"], "correct_answer": 1},
+      {"id": "D20_M3", "type": "true_false", "question": "Conservation maintains ecological balance.", "correct_answer": true},
+      {"id": "D20_M4", "type": "numeric_fill", "question": "If 4 species survive out of 6 after deforestation, how many disappeared?", "correct_answer": 2},
+      {"id": "D20_M5", "type": "mcq", "question": "Wildlife sanctuaries are for:", "options": ["Hunting", "Protection", "Mining", "Factories"], "correct_answer": 1}
+    ],
+
+    "hard": [
+      {"id": "D20_H1", "type": "short_answer", "question": "Why is conservation important?"},
+      {"id": "D20_H2", "type": "drag_order", "question": "Arrange conservation impact:", "items": ["Protect habitat", "Increase biodiversity", "Maintain balance"], "correct_order": [0,1,2]},
+      {"id": "D20_H3", "type": "mcq", "question": "Loss of biodiversity causes:", "options": ["Stable ecosystem", "Imbalance", "Growth", "More species"], "correct_answer": 1},
+      {"id": "D20_H4", "type": "true_false", "question": "Human activities affect biodiversity.", "correct_answer": true},
+      {"id": "D20_H5", "type": "short_answer", "question": "Suggest one way to protect biodiversity."}
+    ]
+  }
+}

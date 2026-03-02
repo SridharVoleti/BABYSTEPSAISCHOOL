@@ -638,7 +638,7 @@ class MasteryPracticeService:
                 'code': 'DAY_NOT_READY',
             }
 
-        if day_progress.status == 'completed':  # 2026-02-18: Already completed
+        if day_progress.status in ('completed', 'comprehension_check', 'day_complete'):  # 2026-02-18/2026-02-19: Already past mastery
             return {
                 'success': False,
                 'error': f'Day {day_number} already completed.',
@@ -980,6 +980,7 @@ class MasteryPracticeService:
 
         # 2026-02-18: Update or create ConceptMastery
         lesson = session.lesson_progress.lesson  # 2026-02-18: Get lesson
+        already_mastered_before = False  # 2026-02-27: Track pre-update mastery state
         mastery, created = ConceptMastery.objects.get_or_create(
             student=session.student,
             lesson=lesson,
@@ -992,12 +993,38 @@ class MasteryPracticeService:
         )
 
         if not created:  # 2026-02-18: Update existing
+            already_mastered_before = mastery.is_mastered  # 2026-02-27: Capture before update
             mastery.attempts_count += 1
             if star_rating > mastery.best_star_rating:  # 2026-02-18: New best
                 mastery.best_star_rating = star_rating
             if is_passed:  # 2026-02-18: Mastered
                 mastery.is_mastered = True
             mastery.save()
+
+        # 2026-02-27: Fire IQ reassessment check on first-ever mastery of this concept
+        newly_mastered = is_passed and not already_mastered_before
+        if newly_mastered:  # 2026-02-27: Only on new mastery, not repeat passes
+            try:
+                from services.diagnostic_service.services import IQReassessmentService  # 2026-02-27: Lazy import
+                IQReassessmentService.check_and_evaluate(session.student)
+            except Exception as exc:  # 2026-02-27: Non-fatal — don't break the mastery flow
+                logger.warning(
+                    f"IQ reassessment check failed for student {session.student.id}: {exc}"
+                )
+
+            # 2026-02-27: Schedule spaced repetition review for newly mastered concept (BS-SPC)
+            try:
+                from services.spaced_repetition_service.services import SpacedRepetitionService  # 2026-02-27: Lazy import
+                SpacedRepetitionService.schedule_first_review(session.student, mastery)
+            except Exception as exc:  # 2026-02-27: Non-fatal — don't break the mastery flow
+                logger.warning(f"SPC schedule failed: {exc}")
+
+            # 2026-02-27: Unlock narrative story scene for newly mastered concept (BS-GAM-003)
+            try:
+                from services.story_mode_service.services import StoryModeService  # 2026-02-27: Lazy import
+                StoryModeService.unlock_scene(session.student, lesson, session.day_number, star_rating)
+            except Exception as exc:  # 2026-02-27: Non-fatal — don't break the mastery flow
+                logger.warning(f"Story unlock failed: {exc}")
 
         # 2026-02-18: Update DayProgress
         day_progress = DayProgress.objects.filter(
@@ -1010,24 +1037,16 @@ class MasteryPracticeService:
                 day_progress.mastery_star_rating = star_rating
             day_progress.mastery_passed = mastery.is_mastered
 
-            # 2026-02-18: If mastered, advance to next day
+            # 2026-02-18: If mastered, advance to comprehension_check (not day complete yet)
+            # 2026-02-19: BS-CMP: day unlock now happens in ComprehensionService, not here
             if mastery.is_mastered:
-                day_progress.status = 'completed'
-                day_progress.completed_at = timezone.now()
+                day_progress.status = 'comprehension_check'  # 2026-02-19: Await comprehension
                 day_progress.save()
 
-                # 2026-02-18: Advance lesson progress
+                # 2026-02-19: Update day_statuses but do NOT advance current_day yet
                 progress = session.lesson_progress
                 statuses = progress.day_statuses or {}
-                statuses[str(session.day_number)] = 'completed'
-
-                if session.day_number < 4:  # 2026-02-18: More days
-                    progress.current_day = session.day_number + 1
-                    statuses[str(session.day_number + 1)] = 'not_started'
-                else:  # 2026-02-18: Day 4 done, unlock assessment
-                    progress.current_day = 5
-                    statuses['5'] = 'not_started'
-
+                statuses[str(session.day_number)] = 'comprehension_check'  # 2026-02-19: Awaiting
                 progress.day_statuses = statuses
                 progress.save()
             else:
