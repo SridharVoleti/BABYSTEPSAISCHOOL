@@ -2,7 +2,7 @@
 Analytics Service URL Configuration
 
 Date: 2025-12-11
-Author: BabySteps Development Team
+Author: Sridhar Voleti
 
 Purpose:
     Define URL routing for analytics service API endpoints.

@@ -1,5 +1,5 @@
 # 2025-10-31: Curriculum Loader Service - Django Admin Configuration
-# Author: BabySteps Development Team
+# Author: Sridhar Voleti
 # Purpose: Admin interface for curriculum management
 # Last Modified: 2025-10-31
 

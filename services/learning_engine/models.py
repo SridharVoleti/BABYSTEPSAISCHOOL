@@ -1,5 +1,5 @@
 # 2025-12-18: Learning Engine Models - Student Progress and Mastery Tracking
-# Author: BabySteps Development Team
+# Author: Sridhar Voleti
 # Purpose: Django models for micro-lesson learning system
 # Last Modified: 2025-12-18
 

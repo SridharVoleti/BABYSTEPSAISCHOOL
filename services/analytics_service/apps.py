@@ -2,7 +2,7 @@
 Analytics Service Django App Configuration
 
 Date: 2025-12-11
-Author: BabySteps Development Team
+Author: Sridhar Voleti
 
 Purpose:
     Configure the analytics service Django application.

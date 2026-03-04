@@ -2,7 +2,7 @@
 Analytics Service Permissions
 
 Date: 2025-12-11
-Author: BabySteps Development Team
+Author: Sridhar Voleti
 
 Purpose:
     Define custom permissions for analytics API endpoints.

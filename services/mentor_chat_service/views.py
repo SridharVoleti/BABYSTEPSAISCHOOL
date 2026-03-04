@@ -1,5 +1,5 @@
 # 2025-11-26: Mentor Chat Service - Django REST Views (Ollama-backed with resilience)
-# Author: BabySteps Development Team
+# Author: Sridhar Voleti
 # Updated: 2025-11-26 - Added robust Ollama client with connection pooling and retry logic
 
 from rest_framework.decorators import api_view

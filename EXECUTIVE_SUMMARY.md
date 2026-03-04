@@ -324,7 +324,7 @@ Phase 5 (Months 13-15): Global Expansion
 5. ✅ **VC interest** - EdTech funding at all-time high
 
 ### **Technology Readiness**
-1. ✅ **LLMs mature** - GPT-4, Claude available and affordable
+1. ✅ **LLMs mature** - GPT-4, Anthropic models available and affordable
 2. ✅ **Cloud scalable** - Can handle millions of users
 3. ✅ **Tools available** - Fast development possible
 4. ✅ **Team ready** - Proven track record

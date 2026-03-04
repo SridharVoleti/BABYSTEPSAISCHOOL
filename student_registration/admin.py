@@ -1,6 +1,6 @@
 """
 Student Registration Admin Configuration
-Author: Cascade AI
+Author: Sridhar Voleti
 Date: 2025-12-13
 Description: Django admin interface for managing student registrations
 """

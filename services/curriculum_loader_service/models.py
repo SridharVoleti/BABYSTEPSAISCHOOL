@@ -1,5 +1,5 @@
 # 2025-10-31: Curriculum Loader Service Models
-# Author: BabySteps Development Team
+# Author: Sridhar Voleti
 # Purpose: Define data models for curriculum management
 # Last Modified: 2025-10-31
 

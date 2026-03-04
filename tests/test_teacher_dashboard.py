@@ -9,7 +9,7 @@ This module contains comprehensive tests for teacher dashboard features includin
 - Student progress monitoring
 - Intervention recommendations
 
-Author: BabySteps Development Team
+Author: Sridhar Voleti
 Date: December 12, 2025
 Test Coverage Target: 99%
 """

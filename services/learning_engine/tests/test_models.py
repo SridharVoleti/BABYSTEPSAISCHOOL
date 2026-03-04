@@ -1,5 +1,5 @@
 # 2025-12-18: Learning Engine Model Tests
-# Author: BabySteps Development Team
+# Author: Sridhar Voleti
 # Purpose: TDD tests for learning engine models
 # Last Modified: 2025-12-18
 

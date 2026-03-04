@@ -2,7 +2,7 @@
 LLM Service Package
 
 Date: 2025-12-11
-Author: BabySteps Development Team
+Author: Sridhar Voleti
 
 Purpose:
     Generic LLM provider abstraction layer for the BabySteps platform.
@@ -37,7 +37,7 @@ Adding New Provider:
 __version__ = "1.0.0"
 
 # Package metadata
-__author__ = "BabySteps Development Team"
+__author__ = "Sridhar Voleti"
 __email__ = "dev@babystepsdigitalschool.com"
 
 # Default Django app configuration

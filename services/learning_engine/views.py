@@ -1,5 +1,5 @@
 # 2025-12-18: Learning Engine Views
-# Author: BabySteps Development Team
+# Author: Sridhar Voleti
 # Purpose: DRF views for learning engine API endpoints
 # Last Modified: 2025-12-18
 

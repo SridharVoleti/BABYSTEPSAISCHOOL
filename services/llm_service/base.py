@@ -2,7 +2,7 @@
 LLM Provider Base Classes and Interfaces
 
 Date: 2025-12-11
-Author: BabySteps Development Team
+Author: Sridhar Voleti
 
 Purpose:
     Define abstract base class and interfaces for LLM providers.

@@ -2,7 +2,7 @@
 LLM Provider Factory
 
 Date: 2025-12-11
-Author: BabySteps Development Team
+Author: Sridhar Voleti
 
 Purpose:
     Factory pattern for creating LLM provider instances.
@@ -66,7 +66,7 @@ class LLMFactory:
     Supported Providers:
         - ollama: Local Ollama models (default)
         - openai: OpenAI GPT models
-        - anthropic: Anthropic Claude models
+        - anthropic: Anthropic LLM models
         - google: Google Gemini models
     
     Configuration:

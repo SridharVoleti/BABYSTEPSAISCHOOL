@@ -2,7 +2,7 @@
 Analytics Service API Serializers
 
 Date: 2025-12-11
-Author: BabySteps Development Team
+Author: Sridhar Voleti
 
 Purpose:
     Django REST Framework serializers for analytics models.

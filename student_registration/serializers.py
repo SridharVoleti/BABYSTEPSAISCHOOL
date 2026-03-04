@@ -1,6 +1,6 @@
 """
 Student Registration Serializers
-Author: Cascade AI
+Author: Sridhar Voleti
 Date: 2025-12-13
 Description: DRF serializers for StudentRegistration model API
 """

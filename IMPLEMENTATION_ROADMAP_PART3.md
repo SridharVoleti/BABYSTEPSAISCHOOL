@@ -550,7 +550,7 @@
 #### **Risk 1: AI Model Performance**
 - **Impact**: HIGH | **Probability**: MEDIUM
 - **Mitigation**:
-  - Use proven LLMs (GPT-4, Claude)
+  - Use proven LLMs (GPT-4, Anthropic)
   - Extensive testing with real students
   - Fallback to rule-based systems
   - Continuous model monitoring

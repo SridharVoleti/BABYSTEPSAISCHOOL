@@ -1,6 +1,6 @@
 """
 Student Registration Tests
-Author: Cascade AI
+Author: Sridhar Voleti
 Date: 2025-12-13
 Description: TDD tests for student registration and admin approval workflow
 """

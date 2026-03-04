@@ -2,7 +2,7 @@
 Mastery Tracking Models Test Suite
 
 Date: 2025-12-11
-Author: BabySteps Development Team
+Author: Sridhar Voleti
 
 Purpose:
     Comprehensive test suite for mastery tracking models.

@@ -2,7 +2,7 @@
 Ollama LLM Provider Implementation
 
 Date: 2025-12-11
-Author: BabySteps Development Team
+Author: Sridhar Voleti
 
 Purpose:
     Concrete implementation of LLMProvider for Ollama.

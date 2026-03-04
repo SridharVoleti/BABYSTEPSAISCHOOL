@@ -1,5 +1,5 @@
 # 2025-12-11: Curriculum Loader Service API Tests
-# Author: BabySteps Development Team
+# Author: Sridhar Voleti
 # Purpose: Comprehensive automated tests for curriculum API endpoints
 # Coverage: All curriculum endpoints with edge cases
 

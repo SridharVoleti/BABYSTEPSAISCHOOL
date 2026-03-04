@@ -2,7 +2,7 @@
 Analytics Service Signal Handlers
 
 Date: 2025-12-11
-Author: BabySteps Development Team
+Author: Sridhar Voleti
 
 Purpose:
     Django signal handlers for analytics service.

@@ -569,7 +569,7 @@ Complete AI-enabled education platform with:
 **Description**: Always-available AI assistant for homework questions
 
 **Technical Requirements**:
-- Enhanced LLM integration (GPT-4 or Claude)
+- Enhanced LLM integration (GPT-4 or Anthropic)
 - Multi-subject knowledge base
 - Step-by-step explanation generator
 - Image recognition (for photos of problems)

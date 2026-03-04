@@ -1,5 +1,5 @@
 # 2025-12-18: Management Command to Load Sample Micro-Lessons
-# Author: BabySteps Development Team
+# Author: Sridhar Voleti
 # Purpose: Load sample micro-lesson data for testing and development
 # Last Modified: 2025-12-18
 

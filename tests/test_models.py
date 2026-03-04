@@ -1,5 +1,5 @@
 # 2025-12-11: Curriculum Models Tests
-# Author: BabySteps Development Team
+# Author: Sridhar Voleti
 # Purpose: Comprehensive automated tests for curriculum data models
 # Coverage: All model validations, relationships, and constraints
 

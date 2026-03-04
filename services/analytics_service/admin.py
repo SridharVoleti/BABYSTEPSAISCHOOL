@@ -2,7 +2,7 @@
 Analytics Service Admin Configuration
 
 Date: 2025-12-11
-Author: BabySteps Development Team
+Author: Sridhar Voleti
 
 Purpose:
     Configure Django admin interface for analytics models.

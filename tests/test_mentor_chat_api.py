@@ -1,5 +1,5 @@
 # 2025-12-11: Mentor Chat Service API Tests
-# Author: BabySteps Development Team
+# Author: Sridhar Voleti
 # Purpose: Comprehensive automated tests for mentor chat API endpoints
 # Coverage: Chat endpoint, health check, Ollama integration
 

@@ -1,5 +1,5 @@
 # 2025-12-11: Pytest configuration and fixtures
-# Author: BabySteps Development Team
+# Author: Sridhar Voleti
 # Purpose: Shared test fixtures and configuration
 
 import pytest

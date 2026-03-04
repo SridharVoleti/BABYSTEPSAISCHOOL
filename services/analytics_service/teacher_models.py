@@ -7,7 +7,7 @@ This module contains models for teacher dashboard features including:
 - Assignments
 - Teacher notes and recommendations
 
-Author: BabySteps Development Team
+Author: Sridhar Voleti
 Date: December 12, 2025
 Version: 1.0
 """

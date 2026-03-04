@@ -1,5 +1,5 @@
 # 2025-12-18: Learning Engine Admin Configuration
-# Author: BabySteps Development Team
+# Author: Sridhar Voleti
 # Purpose: Django admin interface for learning engine models
 # Last Modified: 2025-12-18
 

@@ -1,5 +1,5 @@
 # 2025-12-18: Learning Engine Serializers
-# Author: BabySteps Development Team
+# Author: Sridhar Voleti
 # Purpose: DRF serializers for learning engine API
 # Last Modified: 2025-12-18
 

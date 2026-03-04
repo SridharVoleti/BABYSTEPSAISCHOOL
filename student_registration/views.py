@@ -1,6 +1,6 @@
 """
 Student Registration Views
-Author: Cascade AI
+Author: Sridhar Voleti
 Date: 2025-12-13
 Description: API views for student registration and admin approval workflow
 """

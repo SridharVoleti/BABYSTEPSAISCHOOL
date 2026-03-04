@@ -2,7 +2,7 @@
 Adaptive Difficulty Adjustment Algorithm
 
 Date: 2025-12-11
-Author: BabySteps Development Team
+Author: Sridhar Voleti
 
 Purpose:
     Algorithms for real-time difficulty adjustment based on student performance.

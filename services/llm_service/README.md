@@ -34,7 +34,7 @@ The LLM Service provides a **plug-and-play abstraction layer** for Large Languag
 LLMProvider (Abstract Base Class)
 ├── OllamaProvider (Ollama models: llama3.2, mistral, etc.)
 ├── OpenAIProvider (GPT-4, GPT-3.5-turbo)
-├── AnthropicProvider (Claude 3, Claude 2)
+├── AnthropicProvider (Anthropic models)
 └── GoogleProvider (Gemini Pro, Gemini Ultra)
 ```
 
@@ -195,10 +195,10 @@ LLM_CONFIG = {
 }
 ```
 
-### 3. Anthropic (Claude) 📝 **TEMPLATE PROVIDED**
+### 3. Anthropic 📝 **TEMPLATE PROVIDED**
 
 **Status**: Template implementation ready  
-**Models**: Claude 3 Opus, Sonnet, Haiku  
+**Models**: Anthropic Opus, Sonnet, Haiku  
 **Cost**: Pay-per-token  
 **Setup**: Get API key from Anthropic
 

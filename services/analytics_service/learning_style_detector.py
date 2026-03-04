@@ -2,7 +2,7 @@
 Learning Style Detection Algorithm
 
 Date: 2025-12-11
-Author: BabySteps Development Team
+Author: Sridhar Voleti
 
 Purpose:
     Algorithms to detect student learning styles from behavioral data.

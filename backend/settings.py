@@ -254,7 +254,7 @@ LLM_CONFIG = {
 #     'timeout': 60,
 # }
 
-# 2026-03-04: To switch to Anthropic Claude — install SDK: pip install anthropic>=0.20
+# 2026-03-04: To switch to the Anthropic provider — install SDK: pip install anthropic>=0.20
 # LLM_PROVIDER = 'anthropic'
 # LLM_CONFIG = {
 #     'model_name': 'claude-haiku-4-5-20251001',    # fast + cheap; or 'claude-sonnet-4-6'

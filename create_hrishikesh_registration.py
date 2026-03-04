@@ -1,6 +1,6 @@
 """
 Script to create student registration for Hrishikesh - Class 5
-Author: Cascade AI
+Author: Sridhar Voleti
 Date: 2025-12-13
 """
 

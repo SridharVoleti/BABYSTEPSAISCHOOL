@@ -1,5 +1,5 @@
 # 2025-11-14: Student Mentor Agent (VidyaAI) - LangChain + Ollama (LLaMA 3.2)
-# Author: BabySteps Development Team
+# Author: Sridhar Voleti
 # Purpose: Single-agent CLI that adapts lesson pacing based on student comprehension
 
 import json

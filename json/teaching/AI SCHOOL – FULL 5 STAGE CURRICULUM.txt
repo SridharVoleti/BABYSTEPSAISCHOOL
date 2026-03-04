@@ -1,0 +1,175 @@
+AI SCHOOL – FULL 5 STAGE CURRICULUM PIPELINE
+
+You are designing a World-Class AI Digital School curriculum.
+
+A chapter PDF has been uploaded.
+
+You must internally execute 5 structured stages and produce ONE final JSON output.
+
+You are NOT allowed to summarize the chapter.
+You must extract instructional design intent and generate the complete lesson package.
+
+You must NOT show intermediate stages.
+You must output ONLY the final JSON.
+
+========================================================
+STAGE 1 – STRUCTURAL EXTRACTION
+========================================================
+
+Silently analyze the PDF:
+
+- Introduction/context story
+- Section headings
+- Logical flow of topics
+- Activities and experiments
+- Instruments and procedures
+- Highlighted notes
+- Summary
+- Keywords
+- End-of-chapter questions
+
+Identify:
+- Core conceptual shifts
+- Skill development expectations
+- Instrument/procedure precision
+- Data interpretation requirements
+- Common misconception zones
+- Assessment patterns
+
+Do NOT summarize.
+Extract teaching intent.
+
+========================================================
+STAGE 2 – DERIVE INSTRUCTIONAL FOCUS
+========================================================
+
+Generate:
+
+- Primary Focus (concept + skill combined)
+- Supporting Themes (4–6)
+- Cognitive Target Types (choose from list below)
+- Micro Lesson Segmentation Strategy (optimized count)
+- Misconception Zones
+- Assessment Sensitivity Zones
+
+Cognitive Target Types:
+- Conceptual Understanding
+- Procedural Skill
+- Analytical Reasoning
+- Application-Based
+- Instrument Handling
+- Data Interpretation
+- Graphical Interpretation
+- Logical Reasoning
+
+========================================================
+STAGE 3 – GENERATE MICRO LESSONS
+========================================================
+
+For each micro lesson:
+
+- Duration: 15–20 minutes
+- Clear Learning Objectives
+- Structured Teaching Flow:
+    engage
+    concept_by_IQ:
+        foundation
+        standard
+        advanced
+    application
+    misconceptions
+    assessment_check
+    bridge
+
+IQ Segmentation Rules:
+
+FOUNDATION:
+- Concrete explanation
+- Real-life example
+- No heavy abstraction
+
+STANDARD:
+- Grade-level terminology
+- Clear logical explanation
+
+ADVANCED:
+- Analytical depth
+- Cross-linking
+- “Why” and “What if” reasoning
+
+Each micro lesson must be deep enough for direct classroom delivery.
+
+========================================================
+STAGE 4 – PRACTICE & MASTERY LAYER
+========================================================
+
+Generate:
+
+1. Concept-wise Practice Bank
+   - 60 questions total
+   - Distributed across micro lessons
+   - Divided into:
+       Easy
+       Medium
+       Moderate
+       Hard
+   - Mix of MCQ, short answer, reasoning, application
+
+2. Mastery Layer
+   - 10 multi-step problems
+   - Integrative
+   - Concept + skill combined
+
+========================================================
+STAGE 5 – OLYMPIAD / HIGHER ORDER LAYER
+========================================================
+
+Generate:
+
+- 15 advanced analytical questions
+- Concept extension beyond textbook
+- Real-world reasoning
+- Early exposure to higher-grade thinking
+- At least 5 multi-concept integration questions
+
+========================================================
+FINAL OUTPUT FORMAT (STRICT JSON ONLY)
+========================================================
+
+{
+  "chapter_title": "",
+  "derived_focus": {
+    "primary_focus": "",
+    "supporting_themes": [],
+    "cognitive_target": [],
+    "recommended_micro_lessons": {
+      "count": "",
+      "segmentation_logic": ""
+    },
+    "misconception_zones": [],
+    "assessment_sensitivity_zones": []
+  },
+  "micro_lessons": [],
+  "practice_bank": {
+    "easy": [],
+    "medium": [],
+    "moderate": [],
+    "hard": []
+  },
+  "mastery_layer": [],
+  "olympiad_layer": []
+}
+
+========================================================
+CRITICAL RULES
+========================================================
+
+- Do NOT summarize chapter content.
+- Do NOT repeat textbook paragraphs.
+- Extract instructional intent.
+- Maintain subject accuracy.
+- Maintain grade alignment.
+- Avoid generic explanations.
+- Each micro lesson must support 15-minute teaching.
+- Output ONLY valid JSON.
+- No commentary outside JSON.

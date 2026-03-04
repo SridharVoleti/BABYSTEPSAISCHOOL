@@ -1,5 +1,5 @@
 # 2025-10-31: Curriculum Loader Service Package Initialization
-# Author: BabySteps Development Team
+# Author: Sridhar Voleti
 # Purpose: Initialize curriculum loader microservice for loading JSON lessons
 
 """
@@ -13,4 +13,4 @@ This microservice is responsible for:
 """
 
 __version__ = "1.0.0"
-__author__ = "BabySteps Development Team"
+__author__ = "Sridhar Voleti"

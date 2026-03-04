@@ -7,7 +7,7 @@
 
 ## 🎯 Overview
 
-Your BabySteps platform now has a **plug-and-play LLM abstraction layer**. This means you can switch between different AI providers (Ollama, OpenAI, Claude, etc.) by **just changing configuration** - no code changes needed!
+Your BabySteps platform now has a **plug-and-play LLM abstraction layer**. This means you can switch between different AI providers (Ollama, OpenAI, Anthropic, etc.) by **just changing configuration** - no code changes needed!
 
 ---
 
@@ -68,7 +68,7 @@ from .openai_provider import OpenAIProvider  # Uncomment this line
 
 **That's it!** All your AI features now use GPT-4 instead of Ollama.
 
-### Option 3: Switch to Anthropic (Claude)
+### Option 3: Switch to Anthropic
 
 **Step 1**: Install Anthropic SDK
 ```bash
@@ -100,7 +100,7 @@ LLM_CONFIG = {
 from .anthropic_provider import AnthropicProvider  # Uncomment this line
 ```
 
-**Done!** All AI features now use Claude.
+**Done!** All AI features now use Anthropic.
 
 ---
 
@@ -159,11 +159,11 @@ print(f"Latency: {response.latency_ms}ms")
 - **Setup**: Just API key
 - **Best for**: Production, highest quality responses
 
-### Anthropic (Claude)
+### Anthropic
 - **Cost**: Pay-per-token
-  - Claude 3 Haiku: ~$0.0025 per 1K tokens
-  - Claude 3 Sonnet: ~$0.015 per 1K tokens
-  - Claude 3 Opus: ~$0.075 per 1K tokens
+  - Anthropic Haiku: ~$0.0025 per 1K tokens
+  - Anthropic Sonnet: ~$0.015 per 1K tokens
+  - Anthropic Opus: ~$0.075 per 1K tokens
 - **Speed**: Fast (API)
 - **Privacy**: Data sent to Anthropic
 - **Setup**: Just API key

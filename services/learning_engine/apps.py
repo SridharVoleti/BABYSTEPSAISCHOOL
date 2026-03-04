@@ -1,5 +1,5 @@
 # 2025-12-18: Learning Engine Django App Configuration
-# Author: BabySteps Development Team
+# Author: Sridhar Voleti
 # Purpose: Django app configuration for learning engine service
 # Last Modified: 2025-12-18
 

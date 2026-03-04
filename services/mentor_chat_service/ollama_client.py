@@ -1,5 +1,5 @@
 # 2025-11-26: Robust Ollama Client with Connection Pooling and Retry Logic
-# Author: BabySteps Development Team
+# Author: Sridhar Voleti
 # Purpose: Reliable Ollama LLM connectivity with resilience patterns
 
 import os

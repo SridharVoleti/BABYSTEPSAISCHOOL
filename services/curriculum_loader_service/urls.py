@@ -1,5 +1,5 @@
 # 2025-10-31: Curriculum Loader Service - URL Configuration
-# Author: BabySteps Development Team
+# Author: Sridhar Voleti
 # Purpose: URL routing for curriculum API endpoints
 # Last Modified: 2025-10-31
 

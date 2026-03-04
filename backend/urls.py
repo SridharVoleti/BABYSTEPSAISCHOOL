@@ -1,5 +1,5 @@
 # 2025-10-31: URL configuration for BabySteps Digital School backend
-# Author: BabySteps Development Team
+# Author: Sridhar Voleti
 # Last Modified: 2025-10-31
 
 """

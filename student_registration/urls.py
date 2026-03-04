@@ -1,6 +1,6 @@
 """
 Student Registration URLs
-Author: Cascade AI
+Author: Sridhar Voleti
 Date: 2025-12-13
 Description: URL routing for student registration API endpoints
 """

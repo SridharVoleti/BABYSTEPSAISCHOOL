@@ -2,7 +2,7 @@
 Mastery Tracking Models
 
 Date: 2025-12-11
-Author: BabySteps Development Team
+Author: Sridhar Voleti
 
 Purpose:
     Models for skill-based mastery tracking system.

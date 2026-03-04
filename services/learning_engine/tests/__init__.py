@@ -1,5 +1,5 @@
 # 2025-12-18: Learning Engine Tests Package
-# Author: BabySteps Development Team
+# Author: Sridhar Voleti
 # Purpose: Test suite for learning engine service
 # Last Modified: 2025-12-18
 

@@ -2,7 +2,7 @@
 LLM Service Django App Configuration
 
 Date: 2025-12-11
-Author: BabySteps Development Team
+Author: Sridhar Voleti
 
 Purpose:
     Django application configuration for the LLM service.

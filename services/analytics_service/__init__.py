@@ -2,7 +2,7 @@
 Analytics Service Package Initialization
 
 Date: 2025-12-11
-Author: BabySteps Development Team
+Author: Sridhar Voleti
 
 Purpose:
     Analytics service for tracking student learning behavior, progress,
@@ -29,7 +29,7 @@ Services Provided:
 __version__ = '1.0.0'
 
 # Package metadata
-__author__ = 'BabySteps Development Team'
+__author__ = 'Sridhar Voleti'
 __date__ = '2025-12-11'
 
 # Import key components for easy access

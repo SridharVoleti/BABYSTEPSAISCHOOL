@@ -1,5 +1,5 @@
 # 2025-10-31: Curriculum Loader Service - API Views
-# Author: BabySteps Development Team
+# Author: Sridhar Voleti
 # Purpose: REST API endpoints for curriculum access
 # Last Modified: 2025-10-31
 

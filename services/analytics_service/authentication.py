@@ -2,7 +2,7 @@
 Custom Authentication Classes for Analytics Service
 
 Date: 2025-12-12
-Author: BabySteps Development Team
+Author: Sridhar Voleti
 
 Purpose:
     Provide custom authentication that returns 401 Unauthorized

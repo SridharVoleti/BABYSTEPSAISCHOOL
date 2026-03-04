@@ -1,5 +1,5 @@
 # 2025-12-18: Learning Engine Service - Micro-Lesson Learning System
-# Author: BabySteps Development Team
+# Author: Sridhar Voleti
 # Purpose: Core learning engine implementing Duolingo-style micro-lesson progression
 # Last Modified: 2025-12-18
 

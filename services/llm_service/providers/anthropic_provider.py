@@ -1,8 +1,8 @@
 """
-2026-03-04: Anthropic Claude LLM Provider implementation.
+2026-03-04: Anthropic LLM Provider implementation.
 
 Purpose:
-    Concrete LLMProvider for Anthropic Claude models (claude-opus-4-6,
+    Concrete LLMProvider for Anthropic models (claude-opus-4-6,
     claude-sonnet-4-6, claude-haiku-4-5, etc.)
     Uses the anthropic SDK (anthropic.Anthropic client).
 
@@ -44,19 +44,19 @@ logger = logging.getLogger(__name__)  # 2026-03-04: Module logger
 
 class AnthropicProvider(LLMProvider):
     """
-    2026-03-04: Anthropic Claude provider.
+    2026-03-04: Anthropic LLM provider.
 
     Purpose:
-        Provide a standardized LLM interface for Claude models.
-        Supports the full Claude 4.x/3.x model family.
+        Provide a standardized LLM interface for Anthropic models.
+        Supports the full Anthropic 4.x/3.x model family.
 
     Design:
         - Uses anthropic.Anthropic() client (SDK v0.20+).
-        - Claude requires max_tokens; defaults to 1024 if not specified.
+        - Anthropic API requires max_tokens; defaults to 1024 if not specified.
         - Raises LLMError on failure.
 
     Configuration (via settings.LLM_CONFIG):
-        model_name: Claude model id (default: claude-haiku-4-5-20251001)
+        model_name: Anthropic model id (default: claude-haiku-4-5-20251001)
         api_key: Anthropic API key (or ANTHROPIC_API_KEY env var)
         timeout: Request timeout seconds (default: 60)
     """
@@ -72,7 +72,7 @@ class AnthropicProvider(LLMProvider):
         2026-03-04: Initialize the Anthropic provider.
 
         Args:
-            model_name: Claude model id (e.g. 'claude-haiku-4-5-20251001').
+            model_name: Anthropic model id (e.g. 'claude-haiku-4-5-20251001').
             api_key: API key. Falls back to ANTHROPIC_API_KEY env var if None.
             timeout: HTTP request timeout in seconds.
             **kwargs: Absorbed for forward-compatibility.
@@ -113,13 +113,13 @@ class AnthropicProvider(LLMProvider):
         **kwargs,
     ) -> LLMResponse:
         """
-        2026-03-04: Generate a response from Claude.
+        2026-03-04: Generate a response from the Anthropic API.
 
         Args:
             message: User message.
-            system_prompt: Optional system context (Claude 'system' param).
+            system_prompt: Optional system context (Anthropic 'system' param).
             temperature: Sampling temperature (0.0–1.0).
-            max_tokens: Max output tokens (Claude requires this; default 1024).
+            max_tokens: Max output tokens (Anthropic API requires this; default 1024).
             **kwargs: Extra params forwarded to the API.
 
         Returns:
@@ -130,7 +130,7 @@ class AnthropicProvider(LLMProvider):
         """
         self._validate_parameters(temperature=temperature, max_tokens=max_tokens)
 
-        if max_tokens is None:  # 2026-03-04: Claude requires max_tokens
+        if max_tokens is None:  # 2026-03-04: Anthropic API requires max_tokens
             max_tokens = 1024
 
         start_time = time.time()  # 2026-03-04: Start latency timer
@@ -144,7 +144,7 @@ class AnthropicProvider(LLMProvider):
                 'messages': [{'role': 'user', 'content': message}],
                 **kwargs,
             }
-            if system_prompt:  # 2026-03-04: Claude uses top-level 'system' param
+            if system_prompt:  # 2026-03-04: Anthropic API uses top-level 'system' param
                 api_kwargs['system'] = system_prompt
 
             response = self._client.messages.create(**api_kwargs)  # 2026-03-04: API call
@@ -210,15 +210,15 @@ class AnthropicProvider(LLMProvider):
 
     def get_available_models(self) -> List[str]:  # 2026-03-04: List known models
         """
-        2026-03-04: Return the known Claude model catalogue.
+        2026-03-04: Return the known Anthropic model catalogue.
 
         Anthropic does not expose a REST models-list endpoint, so we return
         a static list of current production models.
 
         Returns:
-            List[str]: Known Claude model ids.
+            List[str]: Known Anthropic model ids.
         """
-        return [  # 2026-03-04: Current Claude models (March 2026)
+        return [  # 2026-03-04: Current Anthropic models (March 2026)
             'claude-opus-4-6',
             'claude-sonnet-4-6',
             'claude-haiku-4-5-20251001',

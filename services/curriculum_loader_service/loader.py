@@ -1,5 +1,5 @@
 # 2025-10-31: Curriculum Loader Service - Core Loader Module
-# Author: BabySteps Development Team
+# Author: Sridhar Voleti
 # Purpose: Load, parse, and validate curriculum JSON files
 # Last Modified: 2025-10-31
 

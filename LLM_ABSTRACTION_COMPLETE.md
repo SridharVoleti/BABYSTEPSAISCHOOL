@@ -8,7 +8,7 @@
 
 ## 🎯 What Was Built
 
-A **complete LLM provider abstraction layer** that allows you to switch between different AI providers (Ollama, OpenAI, Claude, Gemini, etc.) by **changing only configuration** - zero code changes required!
+A **complete LLM provider abstraction layer** that allows you to switch between different AI providers (Ollama, OpenAI, Anthropic, Gemini, etc.) by **changing only configuration** - zero code changes required!
 
 ---
 
@@ -81,7 +81,7 @@ A **complete LLM provider abstraction layer** that allows you to switch between 
    - Uncomment to activate
 
 8. **`services/llm_service/providers/anthropic_provider.py`** (252 lines)
-   - Anthropic Claude template (READY)
+   - Anthropic template (READY)
    - Complete implementation
    - Uncomment to activate
 
@@ -143,7 +143,7 @@ OpenAIProvider(LLMProvider) [TEMPLATE]
 └── Ready to use
 
 AnthropicProvider(LLMProvider) [TEMPLATE]
-├── Claude 3 support
+├── Anthropic model support
 ├── Long context windows
 └── Ready to use
 ```

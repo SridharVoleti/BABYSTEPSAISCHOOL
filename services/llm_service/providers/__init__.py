@@ -8,7 +8,7 @@ Purpose:
 Available Providers:
     - OllamaProvider : Local Ollama server (llama3.2, mistral, phi3, …)
     - OpenAIProvider : OpenAI API (GPT-4o, GPT-4o-mini, GPT-3.5-turbo, …)
-    - AnthropicProvider: Anthropic API (Claude Haiku / Sonnet / Opus)
+    - AnthropicProvider: Anthropic API (Haiku / Sonnet / Opus)
     - MockLLMProvider : Deterministic mock for automated tests
 
 Switching providers:

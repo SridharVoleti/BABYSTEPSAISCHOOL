@@ -3,7 +3,7 @@
 All models for analytics service including Phase 1 and Phase 2 features.
 
 Date: December 12, 2025
-Author: BabySteps Development Team
+Author: Sridhar Voleti
 """
 
 from django.db import models
