@@ -98,6 +98,9 @@ INSTALLED_APPS = [
     'services.math_service',  # 2026-03-02: Mathematics Module (BS-MTH)
     'services.pod_service',  # 2026-03-04: Pod Management & AI Monitoring (BS-POD + BS-MON)
     'services.passkey_service',  # 2026-03-04: Passkey / WebAuthn authentication (BS-AUTH-002)
+    'services.attendance_service',  # 2026-03-04: Attendance tracking (BS-ATT)
+    'services.monitor_tools_service',  # 2026-03-04: Teacher tools: gradebook, homework, timetable (BS-MON-005/006/007)
+    'services.communication_service',  # 2026-03-04: Messaging, announcements, reports (BS-COM + BS-PAR-006)
 ]
 
 MIDDLEWARE = [

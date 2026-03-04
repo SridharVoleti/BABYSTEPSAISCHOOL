@@ -119,4 +119,16 @@ urlpatterns = [
     # 2026-03-04: Passkey / WebAuthn endpoints (BS-AUTH-002)
     # Mounted at: http://localhost:8000/api/v1/passkeys/
     path('api/v1/passkeys/', include('services.passkey_service.urls')),
+
+    # 2026-03-04: Attendance tracking endpoints (BS-ATT)
+    # Mounted at: http://localhost:8000/api/v1/attendance/
+    path('api/v1/attendance/', include('services.attendance_service.urls')),
+
+    # 2026-03-04: Monitor Teacher Tools endpoints (BS-MON-005/006/007)
+    # Mounted at: http://localhost:8000/api/v1/monitor-tools/
+    path('api/v1/monitor-tools/', include('services.monitor_tools_service.urls')),
+
+    # 2026-03-04: Communication Service endpoints (BS-COM-001/002/003 + BS-PAR-006)
+    # Mounted at: http://localhost:8000/api/v1/comms/
+    path('api/v1/comms/', include('services.communication_service.urls')),
 ]
