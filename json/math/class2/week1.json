@@ -1,0 +1,380 @@
+{
+  "lesson_id": "MATH2_W01",
+  "class": 2,
+  "subject": "Math",
+  "topic": "Addition/Subtraction within 100 and Place Value",
+  "week_number": 1,
+  "character": "Dino the Detective",
+  "learning_objectives": [
+    "Understand tens and ones place value",
+    "Add two-digit numbers with and without carrying",
+    "Subtract two-digit numbers with and without borrowing"
+  ],
+  "days": [
+    {
+      "day": 1,
+      "title": "Place Value: Tens and Ones",
+      "teaching_summary": "Every 2-digit number has a tens place and a ones place. 34 means 3 tens and 4 ones = 30 + 4.",
+      "worked_examples": [
+        {
+          "problem": "What is the value of the digit 5 in 57?",
+          "solution_steps": ["57 has 5 in the tens place and 7 in the ones place", "Tens place value = 5 \u00d7 10 = 50"],
+          "answer": "50"
+        }
+      ],
+      "problems": {
+        "easy": [
+          {
+            "id": "MATH2_W01_D1_E1",
+            "type": "mcq",
+            "question": "In the number 46, how many tens are there?",
+            "options": ["4", "6", "40", "60"],
+            "correct_answer": 0,
+            "worked_solution": {
+              "steps": ["46 = 4 tens + 6 ones", "Number of tens = 4"],
+              "answer": "4",
+              "explanation": "In 46, the digit 4 is in the tens place, so there are 4 tens."
+            },
+            "hint": "Look at the first (left) digit. That is the tens digit."
+          },
+          {
+            "id": "MATH2_W01_D1_E2",
+            "type": "mcq",
+            "question": "What is the ones digit of 73?",
+            "options": ["7", "3", "70", "30"],
+            "correct_answer": 1,
+            "worked_solution": {
+              "steps": ["73 = 7 tens + 3 ones", "Ones digit = 3"],
+              "answer": "3",
+              "explanation": "In 73, the digit 3 is in the ones place."
+            },
+            "hint": "Look at the last (right) digit. That is the ones digit."
+          }
+        ],
+        "medium": [
+          {
+            "id": "MATH2_W01_D1_M1",
+            "type": "numeric_fill",
+            "question": "Write the number: 6 tens and 8 ones = ?",
+            "correct_answer": 68,
+            "worked_solution": {
+              "steps": ["6 tens = 60", "8 ones = 8", "60 + 8 = 68"],
+              "answer": "68",
+              "explanation": "6 tens and 8 ones means 60 + 8 = 68."
+            },
+            "hint": "Multiply the tens by 10, then add the ones."
+          },
+          {
+            "id": "MATH2_W01_D1_M2",
+            "type": "numeric_fill",
+            "question": "What is the value of digit 9 in 92?",
+            "correct_answer": 90,
+            "worked_solution": {
+              "steps": ["9 is in the tens place", "Value = 9 \u00d7 10 = 90"],
+              "answer": "90",
+              "explanation": "The digit 9 in 92 is worth 90 (nine tens)."
+            },
+            "hint": "Is 9 in the tens or ones place? Multiply accordingly."
+          }
+        ],
+        "hard": [
+          {
+            "id": "MATH2_W01_D1_H1",
+            "type": "word_problem",
+            "question": "A box has 4 bundles of 10 pencils and 7 single pencils. How many pencils in total?",
+            "correct_answer": 47,
+            "worked_solution": {
+              "steps": [
+                "4 bundles of 10 = 4 \u00d7 10 = 40 pencils",
+                "7 single pencils = 7",
+                "Total = 40 + 7 = 47 pencils"
+              ],
+              "answer": "47",
+              "key_concepts": ["place value", "tens and ones", "addition"],
+              "explanation": "4 tens + 7 ones = 47."
+            },
+            "hint": "Each bundle is 10 pencils. Multiply 4 \u00d7 10, then add 7."
+          }
+        ]
+      }
+    },
+    {
+      "day": 2,
+      "title": "Addition without Carrying",
+      "teaching_summary": "Add ones with ones and tens with tens. No carrying needed when the ones sum is less than 10.",
+      "worked_examples": [
+        {
+          "problem": "23 + 41 = ?",
+          "solution_steps": ["Ones: 3 + 1 = 4", "Tens: 2 + 4 = 6", "Answer: 64"],
+          "answer": "64"
+        }
+      ],
+      "problems": {
+        "easy": [
+          {
+            "id": "MATH2_W01_D2_E1",
+            "type": "mcq",
+            "question": "What is 31 + 24?",
+            "options": ["44", "54", "55", "65"],
+            "correct_answer": 2,
+            "worked_solution": {
+              "steps": ["Ones: 1 + 4 = 5", "Tens: 3 + 2 = 5", "Answer: 55"],
+              "answer": "55",
+              "explanation": "31 + 24 = 55. Add ones first (1+4=5) then tens (3+2=5)."
+            },
+            "hint": "Add the ones digits first, then the tens digits."
+          },
+          {
+            "id": "MATH2_W01_D2_E2",
+            "type": "mcq",
+            "question": "What is 50 + 30?",
+            "options": ["70", "80", "90", "100"],
+            "correct_answer": 1,
+            "worked_solution": {
+              "steps": ["Both numbers have only tens", "5 tens + 3 tens = 8 tens = 80"],
+              "answer": "80",
+              "explanation": "50 + 30 = 80. Five tens plus three tens = eight tens."
+            },
+            "hint": "How many tens in total? 5 tens + 3 tens = ?"
+          }
+        ],
+        "medium": [
+          {
+            "id": "MATH2_W01_D2_M1",
+            "type": "numeric_fill",
+            "question": "45 + 32 = __",
+            "correct_answer": 77,
+            "worked_solution": {
+              "steps": ["Ones: 5 + 2 = 7", "Tens: 4 + 3 = 7", "Answer: 77"],
+              "answer": "77",
+              "explanation": "45 + 32 = 77."
+            },
+            "hint": "Add ones (5+2), then add tens (4+3)."
+          },
+          {
+            "id": "MATH2_W01_D2_M2",
+            "type": "numeric_fill",
+            "question": "62 + __ = 85",
+            "correct_answer": 23,
+            "worked_solution": {
+              "steps": ["85 \u2212 62 = ?", "Ones: 5 \u2212 2 = 3", "Tens: 8 \u2212 6 = 2", "Answer: 23"],
+              "answer": "23",
+              "explanation": "62 + 23 = 85."
+            },
+            "hint": "What do you add to 62 to get 85? Think ones: 5-2, tens: 8-6."
+          }
+        ],
+        "hard": [
+          {
+            "id": "MATH2_W01_D2_H1",
+            "type": "word_problem",
+            "question": "On Monday 34 students came to school. On Tuesday 45 students came. How many students came over both days?",
+            "correct_answer": 79,
+            "worked_solution": {
+              "steps": [
+                "Monday: 34 students",
+                "Tuesday: 45 students",
+                "Both days together: ADD",
+                "Ones: 4 + 5 = 9",
+                "Tens: 3 + 4 = 7",
+                "Total: 79 students"
+              ],
+              "answer": "79",
+              "key_concepts": ["two-digit addition", "combining"],
+              "explanation": "34 + 45 = 79 students in total over both days."
+            },
+            "hint": "Add both days' attendance. Add ones then tens."
+          }
+        ]
+      }
+    },
+    {
+      "day": 3,
+      "title": "Addition with Carrying",
+      "teaching_summary": "When ones add up to 10 or more, we carry 1 ten to the tens column.",
+      "worked_examples": [
+        {
+          "problem": "37 + 25 = ?",
+          "solution_steps": [
+            "Ones: 7 + 5 = 12. Write 2, carry 1",
+            "Tens: 3 + 2 + 1(carry) = 6",
+            "Answer: 62"
+          ],
+          "answer": "62"
+        }
+      ],
+      "problems": {
+        "easy": [
+          {
+            "id": "MATH2_W01_D3_E1",
+            "type": "mcq",
+            "question": "What is 18 + 15?",
+            "options": ["23", "33", "34", "43"],
+            "correct_answer": 1,
+            "worked_solution": {
+              "steps": ["Ones: 8 + 5 = 13. Write 3, carry 1", "Tens: 1 + 1 + 1 = 3", "Answer: 33"],
+              "answer": "33",
+              "explanation": "18 + 15 = 33. The ones add to 13, so we carry 1 ten."
+            },
+            "hint": "Add the ones: 8 + 5. Is it 10 or more? If so, carry 1 to the tens."
+          },
+          {
+            "id": "MATH2_W01_D3_E2",
+            "type": "mcq",
+            "question": "What is 46 + 37?",
+            "options": ["73", "83", "84", "93"],
+            "correct_answer": 1,
+            "worked_solution": {
+              "steps": ["Ones: 6 + 7 = 13. Write 3, carry 1", "Tens: 4 + 3 + 1 = 8", "Answer: 83"],
+              "answer": "83",
+              "explanation": "46 + 37 = 83."
+            },
+            "hint": "6 + 7 = 13, so write 3 and carry 1 to the tens."
+          }
+        ],
+        "medium": [
+          {
+            "id": "MATH2_W01_D3_M1",
+            "type": "numeric_fill",
+            "question": "29 + 54 = __",
+            "correct_answer": 83,
+            "worked_solution": {
+              "steps": ["Ones: 9 + 4 = 13. Write 3, carry 1", "Tens: 2 + 5 + 1 = 8", "Answer: 83"],
+              "answer": "83",
+              "explanation": "29 + 54 = 83."
+            },
+            "hint": "9 + 4 = 13. Write 3, carry the 1."
+          },
+          {
+            "id": "MATH2_W01_D3_M2",
+            "type": "numeric_fill",
+            "question": "58 + 35 = __",
+            "correct_answer": 93,
+            "worked_solution": {
+              "steps": ["Ones: 8 + 5 = 13. Write 3, carry 1", "Tens: 5 + 3 + 1 = 9", "Answer: 93"],
+              "answer": "93",
+              "explanation": "58 + 35 = 93."
+            },
+            "hint": "Add the ones first: 8 + 5 = 13."
+          }
+        ],
+        "hard": [
+          {
+            "id": "MATH2_W01_D3_H1",
+            "type": "word_problem",
+            "question": "A shop sold 47 apples in the morning and 36 apples in the evening. How many apples were sold in all?",
+            "correct_answer": 83,
+            "worked_solution": {
+              "steps": [
+                "Morning: 47 apples",
+                "Evening: 36 apples",
+                "In all: ADD",
+                "Ones: 7 + 6 = 13 \u2192 write 3, carry 1",
+                "Tens: 4 + 3 + 1 = 8",
+                "Total: 83 apples"
+              ],
+              "answer": "83",
+              "key_concepts": ["two-digit addition with carrying"],
+              "explanation": "47 + 36 = 83 apples sold in all."
+            },
+            "hint": "Add morning and evening sales. Remember to carry if ones exceed 9."
+          }
+        ]
+      }
+    },
+    {
+      "day": 4,
+      "title": "Subtraction of Two-Digit Numbers",
+      "teaching_summary": "Subtract ones from ones and tens from tens. Borrow from tens when the ones digit of the top number is smaller.",
+      "worked_examples": [
+        {
+          "problem": "52 \u2212 27 = ?",
+          "solution_steps": [
+            "Ones: 2 < 7, borrow 1 ten. 12 \u2212 7 = 5",
+            "Tens: 5 \u2212 1(borrowed) \u2212 2 = 2",
+            "Answer: 25"
+          ],
+          "answer": "25"
+        }
+      ],
+      "problems": {
+        "easy": [
+          {
+            "id": "MATH2_W01_D4_E1",
+            "type": "mcq",
+            "question": "What is 74 \u2212 32?",
+            "options": ["32", "42", "43", "52"],
+            "correct_answer": 1,
+            "worked_solution": {
+              "steps": ["Ones: 4 \u2212 2 = 2", "Tens: 7 \u2212 3 = 4", "Answer: 42"],
+              "answer": "42",
+              "explanation": "74 \u2212 32 = 42. Subtract ones, then tens."
+            },
+            "hint": "Subtract the ones (4-2), then the tens (7-3)."
+          },
+          {
+            "id": "MATH2_W01_D4_E2",
+            "type": "mcq",
+            "question": "What is 90 \u2212 50?",
+            "options": ["30", "40", "50", "60"],
+            "correct_answer": 1,
+            "worked_solution": {
+              "steps": ["9 tens \u2212 5 tens = 4 tens = 40"],
+              "answer": "40",
+              "explanation": "90 \u2212 50 = 40."
+            },
+            "hint": "How many tens in total after subtracting? 9 tens \u2212 5 tens = ?"
+          }
+        ],
+        "medium": [
+          {
+            "id": "MATH2_W01_D4_M1",
+            "type": "numeric_fill",
+            "question": "63 \u2212 28 = __",
+            "correct_answer": 35,
+            "worked_solution": {
+              "steps": ["Ones: 3 < 8, borrow 1 ten: 13 \u2212 8 = 5", "Tens: 6 \u2212 1 \u2212 2 = 3", "Answer: 35"],
+              "answer": "35",
+              "explanation": "63 \u2212 28 = 35. We borrow from the tens."
+            },
+            "hint": "3 is smaller than 8, so borrow from the tens place."
+          },
+          {
+            "id": "MATH2_W01_D4_M2",
+            "type": "numeric_fill",
+            "question": "85 \u2212 __ = 47",
+            "correct_answer": 38,
+            "worked_solution": {
+              "steps": ["85 \u2212 ? = 47", "? = 85 \u2212 47", "Ones: 15 \u2212 7 = 8 (borrow), Tens: 7 \u2212 4 = 3", "Answer: 38"],
+              "answer": "38",
+              "explanation": "85 \u2212 47 = 38, so the missing number is 38."
+            },
+            "hint": "What must be subtracted from 85 to get 47? Try 85 \u2212 47."
+          }
+        ],
+        "hard": [
+          {
+            "id": "MATH2_W01_D4_H1",
+            "type": "word_problem",
+            "question": "A basket had 72 oranges. The shopkeeper sold 45 oranges. How many oranges remain?",
+            "correct_answer": 27,
+            "worked_solution": {
+              "steps": [
+                "Start: 72 oranges",
+                "Sold: 45 oranges",
+                "Remaining = 72 \u2212 45",
+                "Ones: 2 < 5, borrow: 12 \u2212 5 = 7",
+                "Tens: 7 \u2212 1 \u2212 4 = 2",
+                "Answer: 27 oranges"
+              ],
+              "answer": "27",
+              "key_concepts": ["two-digit subtraction with borrowing"],
+              "explanation": "72 \u2212 45 = 27 oranges remain."
+            },
+            "hint": "Sold means subtracted. 72 \u2212 45 = ? Remember to borrow if needed."
+          }
+        ]
+      }
+    }
+  ]
+}

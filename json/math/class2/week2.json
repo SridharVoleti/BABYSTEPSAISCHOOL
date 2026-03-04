@@ -1,0 +1,367 @@
+{
+  "lesson_id": "MATH2_W02",
+  "class": 2,
+  "subject": "Math",
+  "topic": "Multiplication Tables 2, 5 and 10",
+  "week_number": 2,
+  "character": "Dino the Detective",
+  "learning_objectives": [
+    "Understand multiplication as repeated addition",
+    "Memorise and apply tables of 2, 5 and 10",
+    "Solve simple multiplication word problems"
+  ],
+  "days": [
+    {
+      "day": 1,
+      "title": "Multiplication as Repeated Addition",
+      "teaching_summary": "Multiplication is a shortcut for adding the same number many times. 3 \u00d7 4 means 4 + 4 + 4.",
+      "worked_examples": [
+        {
+          "problem": "3 \u00d7 4 = ?",
+          "solution_steps": ["3 groups of 4: 4 + 4 + 4", "Count: 8, 12", "Answer: 12"],
+          "answer": "12"
+        }
+      ],
+      "problems": {
+        "easy": [
+          {
+            "id": "MATH2_W02_D1_E1",
+            "type": "mcq",
+            "question": "2 + 2 + 2 is the same as?",
+            "options": ["2 \u00d7 2", "3 \u00d7 2", "2 \u00d7 3", "both B and C"],
+            "correct_answer": 3,
+            "worked_solution": {
+              "steps": ["2 + 2 + 2 has 3 twos", "3 twos = 3 \u00d7 2 = 6", "Also written as 2 \u00d7 3 = 6"],
+              "answer": "both B and C",
+              "explanation": "Three 2s can be written as 3\u00d72 or 2\u00d73 (multiplication is commutative)."
+            },
+            "hint": "How many 2s are added? That count is one factor."
+          },
+          {
+            "id": "MATH2_W02_D1_E2",
+            "type": "mcq",
+            "question": "5 + 5 + 5 = ?",
+            "options": ["10", "15", "20", "25"],
+            "correct_answer": 1,
+            "worked_solution": {
+              "steps": ["3 fives = 3 \u00d7 5 = 15"],
+              "answer": "15",
+              "explanation": "5 + 5 + 5 = 15. Three groups of five."
+            },
+            "hint": "Add 5 three times, or think 3 \u00d7 5."
+          }
+        ],
+        "medium": [
+          {
+            "id": "MATH2_W02_D1_M1",
+            "type": "numeric_fill",
+            "question": "4 \u00d7 3 = __",
+            "correct_answer": 12,
+            "worked_solution": {
+              "steps": ["4 groups of 3: 3+3+3+3", "3+3=6, 6+3=9, 9+3=12", "Answer: 12"],
+              "answer": "12",
+              "explanation": "4 \u00d7 3 = 12."
+            },
+            "hint": "Add 3 four times: 3+3+3+3."
+          },
+          {
+            "id": "MATH2_W02_D1_M2",
+            "type": "numeric_fill",
+            "question": "How many total legs do 4 chairs have if each chair has 4 legs?",
+            "correct_answer": 16,
+            "worked_solution": {
+              "steps": ["4 chairs, each with 4 legs", "4 \u00d7 4 = 16", "Answer: 16 legs"],
+              "answer": "16",
+              "explanation": "4 \u00d7 4 = 16 total legs."
+            },
+            "hint": "Multiply number of chairs by legs per chair."
+          }
+        ],
+        "hard": [
+          {
+            "id": "MATH2_W02_D1_H1",
+            "type": "word_problem",
+            "question": "Each box contains 6 chocolates. There are 5 boxes. How many chocolates are there altogether?",
+            "correct_answer": 30,
+            "worked_solution": {
+              "steps": [
+                "Boxes: 5",
+                "Chocolates per box: 6",
+                "Total = 5 \u00d7 6 = 30",
+                "Check: 6+6+6+6+6 = 30"
+              ],
+              "answer": "30",
+              "key_concepts": ["multiplication", "equal groups"],
+              "explanation": "5 boxes \u00d7 6 chocolates = 30 chocolates."
+            },
+            "hint": "Equal groups mean we multiply. Boxes \u00d7 chocolates per box."
+          }
+        ]
+      }
+    },
+    {
+      "day": 2,
+      "title": "Table of 2",
+      "teaching_summary": "The 2 times table: every answer is even. Skip count by 2: 2, 4, 6, 8, 10, 12 ...",
+      "worked_examples": [
+        {
+          "problem": "7 \u00d7 2 = ?",
+          "solution_steps": ["Skip count 7 twos: 2,4,6,8,10,12,14", "Answer: 14"],
+          "answer": "14"
+        }
+      ],
+      "problems": {
+        "easy": [
+          {
+            "id": "MATH2_W02_D2_E1",
+            "type": "mcq",
+            "question": "3 \u00d7 2 = ?",
+            "options": ["4", "5", "6", "7"],
+            "correct_answer": 2,
+            "worked_solution": {
+              "steps": ["3 twos: 2, 4, 6", "Answer: 6"],
+              "answer": "6",
+              "explanation": "3 \u00d7 2 = 6."
+            },
+            "hint": "Count by 2 three times: 2, 4, 6."
+          },
+          {
+            "id": "MATH2_W02_D2_E2",
+            "type": "mcq",
+            "question": "8 \u00d7 2 = ?",
+            "options": ["12", "14", "16", "18"],
+            "correct_answer": 2,
+            "worked_solution": {
+              "steps": ["Skip count 8 twos: 2,4,6,8,10,12,14,16", "Answer: 16"],
+              "answer": "16",
+              "explanation": "8 \u00d7 2 = 16."
+            },
+            "hint": "Count by 2 eight times."
+          }
+        ],
+        "medium": [
+          {
+            "id": "MATH2_W02_D2_M1",
+            "type": "numeric_fill",
+            "question": "__ \u00d7 2 = 18",
+            "correct_answer": 9,
+            "worked_solution": {
+              "steps": ["18 \u00f7 2 = 9", "Check: 9 \u00d7 2 = 18"],
+              "answer": "9",
+              "explanation": "9 \u00d7 2 = 18."
+            },
+            "hint": "How many 2s make 18? Count: 2,4,6,...18."
+          },
+          {
+            "id": "MATH2_W02_D2_M2",
+            "type": "numeric_fill",
+            "question": "6 \u00d7 2 = __",
+            "correct_answer": 12,
+            "worked_solution": {
+              "steps": ["6 twos: 2,4,6,8,10,12", "Answer: 12"],
+              "answer": "12",
+              "explanation": "6 \u00d7 2 = 12."
+            },
+            "hint": "Count by 2 six times."
+          }
+        ],
+        "hard": [
+          {
+            "id": "MATH2_W02_D2_H1",
+            "type": "word_problem",
+            "question": "A bicycle has 2 wheels. How many wheels do 9 bicycles have?",
+            "correct_answer": 18,
+            "worked_solution": {
+              "steps": [
+                "Each bicycle: 2 wheels",
+                "9 bicycles: 9 \u00d7 2",
+                "9 \u00d7 2 = 18",
+                "Answer: 18 wheels"
+              ],
+              "answer": "18",
+              "key_concepts": ["table of 2", "multiplication"],
+              "explanation": "9 bicycles \u00d7 2 wheels each = 18 wheels."
+            },
+            "hint": "Each bicycle has 2 wheels. Multiply 9 by 2."
+          }
+        ]
+      }
+    },
+    {
+      "day": 3,
+      "title": "Table of 5",
+      "teaching_summary": "The 5 times table: answers always end in 0 or 5. Skip count by 5: 5, 10, 15, 20 ...",
+      "worked_examples": [
+        {
+          "problem": "6 \u00d7 5 = ?",
+          "solution_steps": ["Skip count 6 fives: 5,10,15,20,25,30", "Answer: 30"],
+          "answer": "30"
+        }
+      ],
+      "problems": {
+        "easy": [
+          {
+            "id": "MATH2_W02_D3_E1",
+            "type": "mcq",
+            "question": "4 \u00d7 5 = ?",
+            "options": ["15", "20", "25", "30"],
+            "correct_answer": 1,
+            "worked_solution": {
+              "steps": ["4 fives: 5,10,15,20", "Answer: 20"],
+              "answer": "20",
+              "explanation": "4 \u00d7 5 = 20."
+            },
+            "hint": "Count by 5 four times: 5, 10, 15, 20."
+          },
+          {
+            "id": "MATH2_W02_D3_E2",
+            "type": "mcq",
+            "question": "7 \u00d7 5 = ?",
+            "options": ["30", "35", "40", "45"],
+            "correct_answer": 1,
+            "worked_solution": {
+              "steps": ["7 fives: 5,10,15,20,25,30,35", "Answer: 35"],
+              "answer": "35",
+              "explanation": "7 \u00d7 5 = 35."
+            },
+            "hint": "Count by 5 seven times."
+          }
+        ],
+        "medium": [
+          {
+            "id": "MATH2_W02_D3_M1",
+            "type": "numeric_fill",
+            "question": "__ \u00d7 5 = 40",
+            "correct_answer": 8,
+            "worked_solution": {
+              "steps": ["40 \u00f7 5 = 8", "Check: 8 \u00d7 5 = 40"],
+              "answer": "8",
+              "explanation": "8 \u00d7 5 = 40."
+            },
+            "hint": "Count by 5 until you reach 40: 5,10,...40. How many steps?"
+          },
+          {
+            "id": "MATH2_W02_D3_M2",
+            "type": "numeric_fill",
+            "question": "9 \u00d7 5 = __",
+            "correct_answer": 45,
+            "worked_solution": {
+              "steps": ["9 fives: 5,10,15,20,25,30,35,40,45", "Answer: 45"],
+              "answer": "45",
+              "explanation": "9 \u00d7 5 = 45."
+            },
+            "hint": "Count by 5 nine times."
+          }
+        ],
+        "hard": [
+          {
+            "id": "MATH2_W02_D3_H1",
+            "type": "word_problem",
+            "question": "A hand has 5 fingers. How many fingers do 8 hands have?",
+            "correct_answer": 40,
+            "worked_solution": {
+              "steps": [
+                "Fingers per hand: 5",
+                "Number of hands: 8",
+                "Total = 8 \u00d7 5 = 40",
+                "Answer: 40 fingers"
+              ],
+              "answer": "40",
+              "key_concepts": ["table of 5", "equal groups"],
+              "explanation": "8 hands \u00d7 5 fingers = 40 fingers."
+            },
+            "hint": "Each hand has 5 fingers. Multiply 8 by 5."
+          }
+        ]
+      }
+    },
+    {
+      "day": 4,
+      "title": "Table of 10",
+      "teaching_summary": "The 10 times table: just add a zero to the number. 7 \u00d7 10 = 70.",
+      "worked_examples": [
+        {
+          "problem": "8 \u00d7 10 = ?",
+          "solution_steps": ["8 tens = 80", "Answer: 80"],
+          "answer": "80"
+        }
+      ],
+      "problems": {
+        "easy": [
+          {
+            "id": "MATH2_W02_D4_E1",
+            "type": "mcq",
+            "question": "5 \u00d7 10 = ?",
+            "options": ["15", "50", "55", "100"],
+            "correct_answer": 1,
+            "worked_solution": {
+              "steps": ["5 tens = 50"],
+              "answer": "50",
+              "explanation": "5 \u00d7 10 = 50. Add a zero to 5."
+            },
+            "hint": "Multiply by 10 means add a zero to the end."
+          },
+          {
+            "id": "MATH2_W02_D4_E2",
+            "type": "mcq",
+            "question": "9 \u00d7 10 = ?",
+            "options": ["19", "81", "90", "99"],
+            "correct_answer": 2,
+            "worked_solution": {
+              "steps": ["9 tens = 90"],
+              "answer": "90",
+              "explanation": "9 \u00d7 10 = 90."
+            },
+            "hint": "Add a zero after 9."
+          }
+        ],
+        "medium": [
+          {
+            "id": "MATH2_W02_D4_M1",
+            "type": "numeric_fill",
+            "question": "__ \u00d7 10 = 60",
+            "correct_answer": 6,
+            "worked_solution": {
+              "steps": ["60 \u00f7 10 = 6", "Check: 6 \u00d7 10 = 60"],
+              "answer": "6",
+              "explanation": "6 \u00d7 10 = 60."
+            },
+            "hint": "Remove the zero from 60. That is the answer."
+          },
+          {
+            "id": "MATH2_W02_D4_M2",
+            "type": "numeric_fill",
+            "question": "3 \u00d7 10 = __",
+            "correct_answer": 30,
+            "worked_solution": {
+              "steps": ["3 tens = 30"],
+              "answer": "30",
+              "explanation": "3 \u00d7 10 = 30."
+            },
+            "hint": "Add a zero to 3."
+          }
+        ],
+        "hard": [
+          {
+            "id": "MATH2_W02_D4_H1",
+            "type": "word_problem",
+            "question": "A packet holds 10 biscuits. If there are 7 packets, how many biscuits are there? If Meera eats 15 biscuits, how many are left?",
+            "correct_answer": 55,
+            "worked_solution": {
+              "steps": [
+                "Biscuits total: 7 \u00d7 10 = 70",
+                "Meera eats: 15",
+                "Remaining: 70 \u2212 15 = 55",
+                "Answer: 55 biscuits"
+              ],
+              "answer": "55",
+              "key_concepts": ["table of 10", "multi-step problem", "subtraction"],
+              "explanation": "7\u00d710=70 biscuits. After Meera eats 15: 70\u221215=55."
+            },
+            "hint": "First find total biscuits (7\u00d710), then subtract what Meera ate."
+          }
+        ]
+      }
+    }
+  ]
+}

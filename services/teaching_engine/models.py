@@ -190,6 +190,19 @@ class DayProgress(models.Model):
     weighted_star_rating = models.IntegerField(  # 2026-02-19: BS-CMP final weighted star rating (0-5)
         default=0, validators=[MinValueValidator(0), MaxValueValidator(5)]
     )
+    read_along_score = models.FloatField(  # 2026-03-02: BS-CMP-003 best ReadAlongSession overall_score (0-1)
+        default=0.0,
+        help_text='Best ReadAlongSession.overall_score (0.0-1.0) for this lesson+day',
+    )
+    self_explanation_score = models.FloatField(  # 2026-03-02: BS-CMP-003 ComprehensionEvaluation mean (0-100)
+        default=0.0,
+        help_text='ComprehensionEvaluation.comprehension_score mean (0-100)',
+    )
+    phase2_star_rating = models.IntegerField(  # 2026-03-02: BS-CMP-003 Phase 2 weighted star rating (0-5)
+        default=0,
+        validators=[MinValueValidator(0), MaxValueValidator(5)],
+        help_text='Phase 2 weighted composite star rating (0-5)',
+    )
     started_at = models.DateTimeField(null=True, blank=True)  # 2026-02-17: Day started
     completed_at = models.DateTimeField(null=True, blank=True)  # 2026-02-17: Day completed
     created_at = models.DateTimeField(auto_now_add=True)  # 2026-02-17: Created

@@ -1,0 +1,780 @@
+{
+  "lesson_id": "SST6_EARTH_CH01_W01",
+  "class": 6,
+  "subject": "Social",
+  "chapter_id": "SST6_EARTH_CH01",
+  "chapter_title": "The Earth in the Solar System",
+  "character": "Explorer Arjun",
+  "week_number": 1,
+  "learning_objectives": [
+    "Name the eight planets of the solar system in order from the Sun",
+    "Explain the three layers of the Earth's interior with their characteristics",
+    "Identify the seven continents and five oceans on a map",
+    "Explain the concepts of latitude and longitude and their use in locating places",
+    "Apply geographic vocabulary: orbit, mantle, continent, equator, meridian"
+  ],
+  "micro_lessons": [
+    {
+      "day": 1,
+      "micro_lesson_id": "SST6_EARTH_CH01_W01_D1",
+      "title": "Our Solar System",
+      "duration_minutes": 20,
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "The Solar System is our neighbourhood in space. At the centre is the SUN — a giant star that gives us heat and light. Around the Sun move eight PLANETS. They move in paths called ORBITS. The planets in order from the Sun are: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune. A helpful way to remember: 'My Very Educated Mother Just Served Us Noodles'. Our Earth is the third planet from the Sun. Earth is special — it has WATER and AIR that support life. The Moon moves around the Earth — it is Earth's natural SATELLITE. The Solar System also has comets, asteroids, and meteors.",
+          "pacing": "slow",
+          "repetition_count": 3,
+          "tts_rate": 0.75
+        },
+        "standard": {
+          "concept_text": "The Solar System consists of the Sun and all the celestial bodies that orbit it. The Sun contains 99.86% of the Solar System's total mass. The eight planets orbit the Sun in elliptical paths: Mercury (closest, fastest orbit), Venus (hottest), Earth (only known life), Mars (the Red Planet), Jupiter (largest), Saturn (ring system), Uranus (rotates sideways), Neptune (farthest, strongest winds). Planets are categorised as Inner Rocky Planets (Mercury to Mars) and Outer Gas Giants (Jupiter to Neptune). The asteroid belt lies between Mars and Jupiter. A satellite is a body that orbits a planet; the Moon is Earth's only natural satellite. Earth's tilt of 23.5° causes seasons.",
+          "pacing": "normal",
+          "repetition_count": 2,
+          "tts_rate": 0.9
+        },
+        "advanced": {
+          "concept_text": "The Solar System formed ~4.6 billion years ago from a solar nebula. The Sun is a G-type main-sequence star (yellow dwarf). Planetary motion is governed by Kepler's Laws: (1) Planets move in ellipses with the Sun at one focus, (2) A planet sweeps equal areas in equal times, (3) T² ∝ r³ (orbital period squared proportional to semi-major axis cubed). The habitable zone (Goldilocks zone) around the Sun spans from ~0.95 to ~1.37 AU. Earth's unique features: liquid water, magnetic field (shielding cosmic rays), oxygen-nitrogen atmosphere, tectonic activity. Beyond Neptune: Kuiper Belt (Pluto, other dwarf planets) and Oort Cloud (source of long-period comets).",
+          "pacing": "fast",
+          "repetition_count": 1,
+          "tts_rate": 1.1
+        }
+      },
+      "vocabulary": [
+        {
+          "word": "orbit",
+          "definition": "The curved path of a celestial body around a star, planet, or other body.",
+          "image_hint": "orbit.png"
+        },
+        {
+          "word": "satellite",
+          "definition": "A natural or artificial body that orbits a planet. The Moon is Earth's natural satellite.",
+          "image_hint": "satellite.png"
+        },
+        {
+          "word": "solar system",
+          "definition": "The Sun and all the celestial objects (planets, moons, asteroids) that orbit it.",
+          "image_hint": "solar_system.png"
+        }
+      ],
+      "dialogue_flow": [
+        {
+          "stage": "greeting",
+          "text": "Namaste, young explorers! I am Arjun, your Explorer guide. Today we zoom out to the biggest neighbourhood of all — our SOLAR SYSTEM! Ready to blast off?"
+        },
+        {
+          "stage": "concept",
+          "text": "Eight planets orbit our Sun. Remember the mnemonic: 'My Very Educated Mother Just Served Us Noodles' — Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune!"
+        },
+        {
+          "stage": "activity",
+          "text": "Which planet do you think is special and why? Think about water, air, and the right temperature for life!"
+        },
+        {
+          "stage": "wrapup",
+          "text": "Fantastic, explorers! Our Earth is the third planet — just the right distance for life. Tomorrow we go INSIDE Earth to explore its layers!"
+        }
+      ],
+      "activities": [
+        {
+          "id": "D1_A1",
+          "type": "sequencing",
+          "instructions": "Arrange the planets in order from the Sun (nearest to farthest)",
+          "items": ["Jupiter", "Earth", "Mercury", "Mars", "Saturn", "Venus", "Neptune", "Uranus"],
+          "correct_order": [2, 5, 1, 3, 0, 4, 7, 6],
+          "scoring": {"correct_xp": 5}
+        }
+      ],
+      "practice_questions": [
+        {
+          "id": "D1_Q1",
+          "type": "mcq",
+          "question": "Which planet is third from the Sun?",
+          "options": ["Mars", "Venus", "Earth", "Mercury"],
+          "correct_answer": 2,
+          "hint": "It is our home planet."
+        },
+        {
+          "id": "D1_Q2",
+          "type": "mcq",
+          "question": "What is the path of a planet around the Sun called?",
+          "options": ["Axis", "Orbit", "Revolution", "Rotation"],
+          "correct_answer": 1,
+          "hint": "Planets move in this curved path."
+        },
+        {
+          "id": "D1_Q3",
+          "type": "mcq",
+          "question": "Which is the largest planet in the Solar System?",
+          "options": ["Saturn", "Uranus", "Earth", "Jupiter"],
+          "correct_answer": 3,
+          "hint": "It has a famous storm called the Great Red Spot."
+        }
+      ],
+      "read_along": {
+        "English": {
+          "sentences": [
+            "The Solar System consists of the Sun and eight planets that orbit around it.",
+            "The planets in order from the Sun are Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune.",
+            "Earth is the third planet from the Sun and the only known planet with life.",
+            "The Moon is Earth's natural satellite and orbits our planet every 27 days."
+          ],
+          "transliterations": []
+        },
+        "Hindi": {
+          "sentences": [
+            "सौर मंडल में सूर्य और आठ ग्रह हैं जो सूर्य के चारों ओर परिक्रमा करते हैं।",
+            "सूर्य से क्रम में ग्रह हैं: बुध, शुक्र, पृथ्वी, मंगल, बृहस्पति, शनि, अरुण और वरुण।",
+            "पृथ्वी सूर्य से तीसरा ग्रह है और एकमात्र ज्ञात ग्रह है जहाँ जीवन है।",
+            "चंद्रमा पृथ्वी का प्राकृतिक उपग्रह है और हर 27 दिनों में पृथ्वी की परिक्रमा करता है।"
+          ],
+          "transliterations": [
+            "Saur mandal mein Surya aur aath grah hain jo Surya ke chaaron or parikrama karte hain.",
+            "Surya se kram mein grah hain: Budh, Shukra, Prithvi, Mangal, Brihaspati, Shani, Arun aur Varun.",
+            "Prithvi Surya se teesra grah hai aur ekmaatra gyaat grah hai jahan jeevan hai.",
+            "Chandrama Prithvi ka praakritik upagrah hai aur har 27 dinon mein Prithvi ki parikrama karta hai."
+          ]
+        },
+        "Telugu": {
+          "sentences": [
+            "సౌర వ్యవస్థలో సూర్యుడు మరియు అతని చుట్టూ పరిభ్రమించే ఎనిమిది గ్రహాలు ఉన్నాయి.",
+            "సూర్యుడి నుండి క్రమంలో గ్రహాలు: బుధుడు, శుక్రుడు, భూమి, అంగారకుడు, గురుడు, శని, యురేనస్ మరియు నెప్ట్యూన్.",
+            "భూమి సూర్యుడి నుండి మూడవ గ్రహం మరియు జీవం ఉన్న ఏకైక గ్రహంగా తెలుసు.",
+            "చంద్రుడు భూమి యొక్క సహజ ఉపగ్రహం మరియు ప్రతి 27 రోజులకు భూమిని చుట్టుముడతాడు."
+          ],
+          "transliterations": [
+            "Saura vyavasthalo Suryudu mariyu atani chuttuu paribhramimche enimidi grahaalu unnaayi.",
+            "Suryudi nundi kramamlo grahaalu: Budhudi, Shukrudu, Bhuumi, Angaarakudu, Gurudu, Shani, Uranus mariyu Neptune.",
+            "Bhuumi Suryudi nundi muudava graham mariyu jeevam unna ekaina grahamgaa telusu.",
+            "Chandrudu bhuumi yokka sahaja upagrahamu mariyu prati 27 roojalku bhumini chuttumudataadu."
+          ]
+        }
+      },
+      "comprehension_questions": [
+        {
+          "id": "D1_CQ1",
+          "marks": 3,
+          "type": "articulation",
+          "question": "Name the eight planets of the Solar System in order from the Sun and state which one supports life.",
+          "key_points": [
+            "Mercury, Venus, Earth, Mars are the inner four planets",
+            "Jupiter, Saturn, Uranus, Neptune are the outer four planets",
+            "Earth is the third planet and the only one known to support life"
+          ],
+          "model_answer": "The eight planets in order from the Sun are: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune. Earth is the third planet from the Sun and is the only planet in our solar system known to support life, because it has liquid water, an oxygen-rich atmosphere, and the right temperature range.",
+          "explanation": "A 3-mark answer must list all 8 planets in correct order (2 marks) and explain why Earth supports life (1 mark).",
+          "media": []
+        },
+        {
+          "id": "D1_CQ2",
+          "marks": 2,
+          "type": "articulation",
+          "question": "What is the difference between a planet and a satellite?",
+          "key_points": [
+            "A planet orbits a star (the Sun) and has cleared its orbital neighbourhood",
+            "A satellite orbits a planet — the Moon is Earth's natural satellite"
+          ],
+          "model_answer": "A planet is a large celestial body that orbits a star (like the Sun) and has cleared its orbital neighbourhood of other objects. A satellite is a body that orbits a planet — the Moon is Earth's natural satellite.",
+          "explanation": "A 2-mark answer must distinguish orbit of planet (around star) from satellite (around planet) with one example.",
+          "media": []
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "micro_lesson_id": "SST6_EARTH_CH01_W01_D2",
+      "title": "Inside the Earth — Layers of Our Planet",
+      "duration_minutes": 20,
+      "revision_prompts": {
+        "foundation": [
+          "Yesterday we learned about the Solar System. How many planets are there? EIGHT!",
+          "What is the third planet from the Sun? EARTH!",
+          "What do we call the path a planet takes around the Sun? ORBIT!"
+        ],
+        "standard": [
+          "Name the four inner planets and four outer planets in order from the Sun.",
+          "What makes Earth unique compared to other planets in the Solar System?"
+        ],
+        "advanced": [
+          "Explain Kepler's first law and how it applies to Earth's orbit around the Sun."
+        ]
+      },
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "The Earth is like a hard-boiled egg with different layers. The outermost layer is called the CRUST — it is the thin solid shell we live on. Beneath the crust is the MANTLE — this is the thick middle layer made of hot, semi-molten rock. The CORE is at the very centre of the Earth. The OUTER CORE is liquid metal (iron and nickel). The INNER CORE is solid metal and very, very hot (about 5,000°C). The layers of Earth from outside to inside are: CRUST → MANTLE → OUTER CORE → INNER CORE. Volcanoes happen when hot molten rock from the mantle, called MAGMA, comes up to the surface.",
+          "pacing": "slow",
+          "repetition_count": 3,
+          "tts_rate": 0.75
+        },
+        "standard": {
+          "concept_text": "Earth's interior is divided into layers based on composition and physical state. The Crust is the outermost solid layer (5-70 km thick); oceanic crust (~5 km) is denser than continental crust (~35 km). The Mantle (2,900 km thick) is the largest layer, made of silicate rock that flows slowly (convection currents drive plate tectonics). The Outer Core (~2,200 km thick) is liquid iron-nickel; its movement generates Earth's magnetic field. The Inner Core (~1,220 km radius) is solid iron-nickel at ~5,000-6,000°C under extreme pressure. Seismic waves (P and S waves) from earthquakes are used to study Earth's interior indirectly. The Moho discontinuity marks the crust-mantle boundary.",
+          "pacing": "normal",
+          "repetition_count": 2,
+          "tts_rate": 0.9
+        },
+        "advanced": {
+          "concept_text": "Earth's internal structure was deduced from seismic wave analysis. Primary (P) waves are compressional and travel through solids and liquids; Secondary (S) waves are shear and travel only through solids. S-waves don't reach the 'shadow zone' on the opposite side of earthquakes, proving the outer core is liquid. The Gutenberg discontinuity marks the mantle-outer core boundary; the Lehmann discontinuity separates outer from inner core. Mantle convection drives plate tectonics: plates move ~2-10 cm/year. The geomagnetic field generated by outer core dynamo protects Earth from solar wind. Isostasy explains the floating equilibrium of crustal blocks on the mantle.",
+          "pacing": "fast",
+          "repetition_count": 1,
+          "tts_rate": 1.1
+        }
+      },
+      "vocabulary": [
+        {
+          "word": "crust",
+          "definition": "The outermost solid layer of the Earth, ranging from 5 to 70 km thick.",
+          "image_hint": "earth_crust.png"
+        },
+        {
+          "word": "mantle",
+          "definition": "The thick middle layer of the Earth between the crust and the core, made of hot semi-molten rock.",
+          "image_hint": "earth_mantle.png"
+        },
+        {
+          "word": "core",
+          "definition": "The innermost part of the Earth, consisting of an outer liquid layer and inner solid layer of iron and nickel.",
+          "image_hint": "earth_core.png"
+        }
+      ],
+      "dialogue_flow": [
+        {
+          "stage": "greeting",
+          "text": "Welcome back, explorers! Yesterday we flew through space. Today we drill DOWN — into the Earth itself! Grab your imaginary drilling machine!"
+        },
+        {
+          "stage": "concept",
+          "text": "Think of the Earth like a hard-boiled egg. The shell is the crust. The white is the mantle. The yolk is the core. Crust → Mantle → Outer Core → Inner Core!"
+        },
+        {
+          "stage": "activity",
+          "text": "The outer core is liquid iron and nickel. This swirling liquid creates our magnetic field — without it, harmful solar wind would strip away our atmosphere!"
+        },
+        {
+          "stage": "wrapup",
+          "text": "Incredible work! You now know what's inside Earth. Tomorrow: continents and oceans — the geography of our amazing planet's surface!"
+        }
+      ],
+      "activities": [
+        {
+          "id": "D2_A1",
+          "type": "matching",
+          "instructions": "Match each Earth layer to its key characteristic",
+          "items": [
+            {"word": "Crust", "match": "Thin solid shell we live on"},
+            {"word": "Mantle", "match": "Thickest layer, semi-molten rock"},
+            {"word": "Outer Core", "match": "Liquid iron-nickel, generates magnetic field"},
+            {"word": "Inner Core", "match": "Solid, hottest layer"}
+          ],
+          "scoring": {"correct_xp": 5}
+        }
+      ],
+      "practice_questions": [
+        {
+          "id": "D2_Q1",
+          "type": "mcq",
+          "question": "Which layer of the Earth do we live on?",
+          "options": ["Mantle", "Outer Core", "Crust", "Inner Core"],
+          "correct_answer": 2,
+          "hint": "It is the outermost solid layer."
+        },
+        {
+          "id": "D2_Q2",
+          "type": "mcq",
+          "question": "Which layer of the Earth generates its magnetic field?",
+          "options": ["Crust", "Mantle", "Outer Core", "Inner Core"],
+          "correct_answer": 2,
+          "hint": "It is liquid and made of iron and nickel."
+        },
+        {
+          "id": "D2_Q3",
+          "type": "mcq",
+          "question": "What is molten rock called when it erupts out of a volcano?",
+          "options": ["Magma", "Lava", "Mantle", "Sediment"],
+          "correct_answer": 1,
+          "hint": "When magma reaches the surface, it changes its name."
+        }
+      ],
+      "read_along": {
+        "English": {
+          "sentences": [
+            "The Earth has four main layers: the crust, mantle, outer core, and inner core.",
+            "The crust is the thin outermost layer where we live, mountains rise, and oceans sit.",
+            "The mantle is the thickest layer, made of hot semi-molten rock that flows very slowly.",
+            "The outer core is liquid iron and nickel whose movement creates Earth's magnetic field."
+          ],
+          "transliterations": []
+        },
+        "Hindi": {
+          "sentences": [
+            "पृथ्वी की चार मुख्य परतें हैं: भूपर्पटी, मेंटल, बाहरी कोर और आंतरिक कोर।",
+            "भूपर्पटी सबसे पतली बाहरी परत है जहाँ हम रहते हैं, पहाड़ ऊँचे होते हैं और महासागर हैं।",
+            "मेंटल सबसे मोटी परत है, जो गर्म अर्ध-पिघली चट्टानों से बनी है जो बहुत धीरे-धीरे बहती है।",
+            "बाहरी कोर तरल लोहे और निकेल का है जिसकी गति पृथ्वी का चुंबकीय क्षेत्र बनाती है।"
+          ],
+          "transliterations": [
+            "Prithvi ki chaar mukhya paraten hain: Bhuuparpati, Mantle, Baahri Core aur Aantrik Core.",
+            "Bhuuparpati sabse patali baahri parat hai jahan ham rahte hain, pahaad uunche hote hain aur mahaasaagar hain.",
+            "Mantle sabse moti parat hai, jo garam ardha-pighal chattanon se bani hai jo bahut dheere-dheere bahti hai.",
+            "Baahri Core taral lohe aur nikal ka hai jiski gati Prithvi ka chumbakiy kshetra banati hai."
+          ]
+        },
+        "Telugu": {
+          "sentences": [
+            "భూమికి నాలుగు ప్రధాన పొరలు ఉన్నాయి: క్రస్ట్, మాంటిల్, బాహ్య కోర్ మరియు అంతర కోర్.",
+            "క్రస్ట్ అనేది మనం నివసించే పాత బాహ్య పొర, పర్వతాలు ఎత్తులో ఉంటాయి మరియు సముద్రాలు ఉన్నాయి.",
+            "మాంటిల్ అత్యంత మందమైన పొర, చాలా నెమ్మదిగా ప్రవహించే వేడి అర్ధ-కరిగిన శిలలతో తయారైంది.",
+            "బాహ్య కోర్ ద్రవ ఇనుము మరియు నికెల్తో తయారైంది, దీని కదలిక భూమి యొక్క అయస్కాంత క్షేత్రాన్ని సృష్టిస్తుంది."
+          ],
+          "transliterations": [
+            "Bhumiki naalugu pradhaana poralu unnaayi: Crust, Mantle, Baahya Core mariyu Antara Core.",
+            "Crust anedi manam nivasimche paata baahya pora, parvatalu ettulo untayi mariyu samudralu unnaayi.",
+            "Mantle atyanta mandamaina pora, chaala nemmadiga pravahimche vedi ardha-karigina shilalato tayaaraindi.",
+            "Baahya Core drava inumu mariyu nikel to tayaaraindi, deeni kadali bhuumi yokka ayaskaanta kshetaanni srushtistundi."
+          ]
+        }
+      },
+      "comprehension_questions": [
+        {
+          "id": "D2_CQ1",
+          "marks": 3,
+          "type": "articulation",
+          "question": "Describe the four layers of the Earth from outermost to innermost, mentioning the state and composition of each.",
+          "key_points": [
+            "Crust: outermost solid layer, 5-70 km thick, rocks and minerals",
+            "Mantle: thickest layer, semi-molten silicate rock, drives plate tectonics",
+            "Outer Core: liquid iron-nickel, generates the magnetic field",
+            "Inner Core: solid iron-nickel, extremely hot (~5000 degrees C)"
+          ],
+          "model_answer": "The Earth has four layers. (1) Crust: the outermost solid layer (5-70 km) made of rocks and minerals — the land and ocean floor. (2) Mantle: the thickest layer (~2,900 km), made of semi-molten silicate rock that flows slowly due to convection. (3) Outer Core: liquid iron and nickel (~2,200 km thick); its movement creates Earth's magnetic field. (4) Inner Core: solid iron and nickel (~1,220 km radius), at ~5,000°C under extreme pressure.",
+          "explanation": "A 3-mark answer must describe all four layers with their state (solid/liquid) and at least one key property each.",
+          "media": []
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "micro_lesson_id": "SST6_EARTH_CH01_W01_D3",
+      "title": "Continents and Oceans",
+      "duration_minutes": 20,
+      "revision_prompts": {
+        "foundation": [
+          "Which layer of Earth do we live on? THE CRUST!",
+          "Which layer is the thickest? THE MANTLE!",
+          "What is the hottest layer at the centre? THE INNER CORE!"
+        ],
+        "standard": [
+          "How are P-waves and S-waves used to study Earth's interior?",
+          "What is the Moho discontinuity and what does it mark?"
+        ],
+        "advanced": [
+          "Explain how the movement of the outer core creates Earth's magnetic field and why this is important for life."
+        ]
+      },
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "The Earth's surface is divided into large areas of land called CONTINENTS and large bodies of water called OCEANS. There are SEVEN CONTINENTS: Asia, Africa, North America, South America, Europe, Australia (Oceania), and Antarctica. A helpful sentence: 'A Apple and Nice South Europe Australia Ant' or 'Eat An Apple As A Nice Snack'. The five OCEANS are: Pacific Ocean (largest), Atlantic Ocean, Indian Ocean, Arctic Ocean, and Southern Ocean (Antarctic Ocean). ASIA is the largest continent. AUSTRALIA is also a continent (it is a country and continent). Antarctica is the coldest continent. The Pacific Ocean is the largest and deepest ocean.",
+          "pacing": "slow",
+          "repetition_count": 3,
+          "tts_rate": 0.75
+        },
+        "standard": {
+          "concept_text": "Earth's surface is divided into seven continents and five oceans. Continents by size (largest to smallest): Asia (44.6M km²), Africa (30.4M), North America (24.7M), South America (17.8M), Antarctica (14M), Europe (10.5M), Australia/Oceania (8.5M). The five oceans: Pacific (155.6M km², largest and deepest — Mariana Trench 11km), Atlantic (106.4M), Indian (68.5M), Southern/Antarctic (21.9M), Arctic (15.6M, smallest). Continents and oceans are interconnected through the water cycle, ocean currents, and atmospheric circulation. The concept of Pangaea (Alfred Wegener, 1912) explains that current continents were once joined into one supercontinent.",
+          "pacing": "normal",
+          "repetition_count": 2,
+          "tts_rate": 0.9
+        },
+        "advanced": {
+          "concept_text": "Plate tectonics explains the movement of continents. Earth's lithosphere (crust + upper mantle) is broken into about 15 major tectonic plates. Plates move 2-10 cm/year due to mantle convection. Plate boundaries: convergent (collision, creates mountains/subduction), divergent (spreading, creates rift valleys/mid-ocean ridges), and transform (sliding, creates earthquakes). The Himalayan range formed ~50 million years ago when the Indian plate collided with the Eurasian plate. Continental drift evidence: matching coastlines, fossil records (Mesosaurus found in South America and Africa), rock sequences, and glacial evidence. The Indian Ocean is geopolitically significant — India Ocean Region (IOR) strategy.",
+          "pacing": "fast",
+          "repetition_count": 1,
+          "tts_rate": 1.1
+        }
+      },
+      "vocabulary": [
+        {
+          "word": "continent",
+          "definition": "One of the seven large landmasses on Earth: Asia, Africa, North America, South America, Europe, Australia, Antarctica.",
+          "image_hint": "continents.png"
+        },
+        {
+          "word": "ocean",
+          "definition": "A vast body of salt water covering most of the Earth's surface. There are five oceans.",
+          "image_hint": "ocean.png"
+        },
+        {
+          "word": "Pangaea",
+          "definition": "The supercontinent that existed about 335 million years ago, which broke apart to form today's continents.",
+          "image_hint": "pangaea.png"
+        }
+      ],
+      "dialogue_flow": [
+        {
+          "stage": "greeting",
+          "text": "Explorers, welcome to Day 3! Today we look at the Earth's SURFACE — seven great continents and five mighty oceans!"
+        },
+        {
+          "stage": "concept",
+          "text": "Seven continents: Asia (largest), Africa, North America, South America, Europe, Australia, Antarctica (coldest). Five oceans: Pacific (biggest), Atlantic, Indian, Southern, Arctic."
+        },
+        {
+          "stage": "activity",
+          "text": "Imagine the continents were once all joined together as one giant land called Pangaea! Over millions of years, they drifted apart. Incredible, isn't it?"
+        },
+        {
+          "stage": "wrapup",
+          "text": "Outstanding! You now know Earth's surface geography. Tomorrow: how do we FIND any place on Earth? We will learn about latitudes and longitudes!"
+        }
+      ],
+      "activities": [
+        {
+          "id": "D3_A1",
+          "type": "sequencing",
+          "instructions": "Arrange the continents from largest to smallest by area",
+          "items": ["Europe", "Africa", "Australia", "Asia", "North America", "South America", "Antarctica"],
+          "correct_order": [3, 1, 4, 5, 6, 0, 2],
+          "scoring": {"correct_xp": 5}
+        }
+      ],
+      "practice_questions": [
+        {
+          "id": "D3_Q1",
+          "type": "mcq",
+          "question": "Which is the largest continent by area?",
+          "options": ["Africa", "North America", "Asia", "Europe"],
+          "correct_answer": 2,
+          "hint": "India and China are in this continent."
+        },
+        {
+          "id": "D3_Q2",
+          "type": "mcq",
+          "question": "Which is the largest ocean?",
+          "options": ["Atlantic", "Indian", "Arctic", "Pacific"],
+          "correct_answer": 3,
+          "hint": "It borders Asia, Australia, and the Americas."
+        },
+        {
+          "id": "D3_Q3",
+          "type": "mcq",
+          "question": "How many continents are there on Earth?",
+          "options": ["Five", "Six", "Seven", "Eight"],
+          "correct_answer": 2,
+          "hint": "Think: Asia, Africa, Americas (2), Europe, Australia, Antarctica."
+        }
+      ],
+      "read_along": {
+        "English": {
+          "sentences": [
+            "Earth has seven continents: Asia, Africa, North America, South America, Europe, Australia, and Antarctica.",
+            "Asia is the largest continent, while Australia is both a country and a continent.",
+            "There are five oceans: the Pacific, Atlantic, Indian, Southern, and Arctic Oceans.",
+            "The Pacific Ocean is the largest and deepest ocean on Earth."
+          ],
+          "transliterations": []
+        },
+        "Hindi": {
+          "sentences": [
+            "पृथ्वी पर सात महाद्वीप हैं: एशिया, अफ्रीका, उत्तरी अमेरिका, दक्षिण अमेरिका, यूरोप, ऑस्ट्रेलिया और अंटार्कटिका।",
+            "एशिया सबसे बड़ा महाद्वीप है, जबकि ऑस्ट्रेलिया एक देश और महाद्वीप दोनों है।",
+            "पाँच महासागर हैं: प्रशांत, अटलांटिक, हिंद, दक्षिणी और आर्कटिक महासागर।",
+            "प्रशांत महासागर पृथ्वी का सबसे बड़ा और सबसे गहरा महासागर है।"
+          ],
+          "transliterations": [
+            "Prithvi par saat mahaadveep hain: Asia, Africa, Uttari America, Dakshin America, Europe, Australia aur Antarctica.",
+            "Asia sabse bada mahaadveep hai, jabki Australia ek desh aur mahaadveep dono hai.",
+            "Paanch mahaasaagar hain: Prashaant, Atlantic, Hind, Dakshinee aur Aarktic mahaasaagar.",
+            "Prashaant mahaasaagar Prithvi ka sabse bada aur sabse gehra mahaasaagar hai."
+          ]
+        },
+        "Telugu": {
+          "sentences": [
+            "భూమిపై ఏడు ఖండాలు ఉన్నాయి: ఆసియా, ఆఫ్రికా, ఉత్తర అమెరికా, దక్షిణ అమెరికా, యూరప్, ఆస్ట్రేలియా మరియు అంటార్కటికా.",
+            "ఆసియా అతిపెద్ద ఖండం, ఆస్ట్రేలియా ఒక దేశం మరియు ఖండం రెండూ.",
+            "ఐదు మహాసముద్రాలు ఉన్నాయి: పసిఫిక్, అట్లాంటిక్, హిందూ, దక్షిణ మరియు ఆర్కటిక్ మహాసముద్రాలు.",
+            "పసిఫిక్ మహాసముద్రం భూమిపై అతిపెద్ద మరియు అత్యంత లోతైన మహాసముద్రం."
+          ],
+          "transliterations": [
+            "Bhumipai edu khandaalu unnaayi: Asia, Africa, Uttara America, Dakshina America, Europe, Australia mariyu Antarctica.",
+            "Asia atipedda khandam, Australia oka desham mariyu khandam rendu.",
+            "Aidu mahasamudraalu unnaayi: Pacific, Atlantic, Hindu, Dakshina mariyu Arctic mahasamudraalu.",
+            "Pacific mahasamudram bhumipai atipedda mariyu atyanta lootaina mahasamudram."
+          ]
+        }
+      },
+      "comprehension_questions": [
+        {
+          "id": "D3_CQ1",
+          "marks": 3,
+          "type": "articulation",
+          "question": "Name all seven continents and five oceans. Which continent is the largest and which ocean is the largest?",
+          "key_points": [
+            "Seven continents: Asia, Africa, North America, South America, Europe, Australia, Antarctica",
+            "Five oceans: Pacific, Atlantic, Indian, Southern, Arctic",
+            "Asia is the largest continent; Pacific is the largest and deepest ocean"
+          ],
+          "model_answer": "The seven continents are Asia, Africa, North America, South America, Europe, Australia (Oceania), and Antarctica. The five oceans are the Pacific, Atlantic, Indian, Southern, and Arctic Oceans. Asia is the largest continent by area, and the Pacific Ocean is the largest and deepest ocean on Earth.",
+          "explanation": "A 3-mark answer must list all continents and oceans (1 mark each group) and correctly identify largest continent and ocean (1 mark).",
+          "media": []
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "micro_lesson_id": "SST6_EARTH_CH01_W01_D4",
+      "title": "Latitudes and Longitudes",
+      "duration_minutes": 20,
+      "revision_prompts": {
+        "foundation": [
+          "How many continents are there? SEVEN!",
+          "Which is the largest continent? ASIA!",
+          "Which is the largest ocean? PACIFIC OCEAN!"
+        ],
+        "standard": [
+          "Explain the theory of Pangaea and what evidence supports continental drift.",
+          "What are the three types of plate boundaries and what happens at each?"
+        ],
+        "advanced": [
+          "How did the Indian plate's collision with the Eurasian plate form the Himalayas? Explain the plate tectonics involved."
+        ]
+      },
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "To find any place on Earth, we use an ADDRESS system called LATITUDE and LONGITUDE. Imagine a grid drawn on the Earth. LATITUDE lines run EAST-WEST around the Earth (like the rungs of a ladder). The most important latitude line is the EQUATOR (0°). Latitudes go from 0° at the equator to 90° at the North Pole and South Pole. LONGITUDE lines run NORTH-SOUTH from pole to pole (like the slices of an orange). The most important longitude line is the PRIME MERIDIAN (0°) which passes through Greenwich, England. Longitudes go from 0° to 180° East and West. When we use BOTH latitude and longitude together, we can find ANY place on Earth! For example, Delhi is approximately 28°N latitude and 77°E longitude.",
+          "pacing": "slow",
+          "repetition_count": 3,
+          "tts_rate": 0.75
+        },
+        "standard": {
+          "concept_text": "Latitude and longitude form an imaginary grid system (graticule) to locate any point on Earth. Latitude: horizontal lines (parallels) measuring angular distance north or south of the equator (0°). Key parallels: Equator (0°), Tropic of Cancer (23.5°N), Tropic of Capricorn (23.5°S), Arctic Circle (66.5°N), Antarctic Circle (66.5°S). Longitude: vertical lines (meridians) measuring angular distance east or west of the Prime Meridian (0°) passing through Greenwich. Each degree = 111 km at the equator. Time zones are based on longitude: every 15° longitude = 1 hour difference (360°/24 hours). India Standard Time (IST) = 82.5°E (UTC+5:30). The International Date Line runs along 180° meridian.",
+          "pacing": "normal",
+          "repetition_count": 2,
+          "tts_rate": 0.9
+        },
+        "advanced": {
+          "concept_text": "Geographic coordinates use the sexagesimal (base-60) system: degrees (°), minutes ('), seconds (\"). GPS (Global Positioning System) provides coordinates accurate to metres. The equator (0° lat) divides Earth into Northern and Southern hemispheres; Prime Meridian (0° long) divides into Eastern and Western hemispheres. Solar noon varies with longitude; India uses a single time zone (IST, 82.5°E) despite spanning ~30° of longitude. The relationship: 1° latitude ≈ 111 km; 1° longitude varies from 111 km at equator to 0 at poles (111 × cos(latitude)). Great Circle routes (shortest path on a sphere) are used in aviation and navigation. Mercator projection distorts high latitudes.",
+          "pacing": "fast",
+          "repetition_count": 1,
+          "tts_rate": 1.1
+        }
+      },
+      "vocabulary": [
+        {
+          "word": "latitude",
+          "definition": "Imaginary horizontal lines on Earth measuring angular distance north or south of the equator.",
+          "image_hint": "latitude.png"
+        },
+        {
+          "word": "longitude",
+          "definition": "Imaginary vertical lines on Earth measuring angular distance east or west of the Prime Meridian.",
+          "image_hint": "longitude.png"
+        },
+        {
+          "word": "equator",
+          "definition": "The imaginary line at 0° latitude that divides Earth into the Northern and Southern hemispheres.",
+          "image_hint": "equator.png"
+        }
+      ],
+      "dialogue_flow": [
+        {
+          "stage": "greeting",
+          "text": "Final day, explorers! Today we master the ultimate skill — finding ANY place on Earth using LATITUDE and LONGITUDE. This is how GPS works!"
+        },
+        {
+          "stage": "concept",
+          "text": "Latitude = horizontal lines = left-right. Longitude = vertical lines = up-down. Together they give an exact address! The equator is 0° latitude. The Prime Meridian is 0° longitude."
+        },
+        {
+          "stage": "activity",
+          "text": "Can you find India on a globe? It is roughly 8°N to 37°N latitude and 68°E to 97°E longitude. That is why India has such variety — from tropical south to Himalayan north!"
+        },
+        {
+          "stage": "wrapup",
+          "text": "Brilliant, explorers! You have completed Week 1! You know the Solar System, Earth's layers, continents, oceans, and now how to find any location on Earth. Get ready for your Weekly Assessment!"
+        }
+      ],
+      "activities": [
+        {
+          "id": "D4_A1",
+          "type": "matching",
+          "instructions": "Match each line to its correct description",
+          "items": [
+            {"word": "Equator", "match": "0° Latitude — divides Earth into N and S hemispheres"},
+            {"word": "Prime Meridian", "match": "0° Longitude — passes through Greenwich, England"},
+            {"word": "Tropic of Cancer", "match": "23.5°N — northernmost sun overhead position"},
+            {"word": "Tropic of Capricorn", "match": "23.5°S — southernmost sun overhead position"}
+          ],
+          "scoring": {"correct_xp": 5}
+        }
+      ],
+      "practice_questions": [
+        {
+          "id": "D4_Q1",
+          "type": "mcq",
+          "question": "What is the latitude of the Equator?",
+          "options": ["90°N", "45°N", "0°", "23.5°N"],
+          "correct_answer": 2,
+          "hint": "It is the starting point of latitude measurement."
+        },
+        {
+          "id": "D4_Q2",
+          "type": "mcq",
+          "question": "Through which city does the Prime Meridian (0° longitude) pass?",
+          "options": ["New Delhi", "Paris", "Greenwich (London)", "New York"],
+          "correct_answer": 2,
+          "hint": "It is a suburb of London, England."
+        },
+        {
+          "id": "D4_Q3",
+          "type": "mcq",
+          "question": "What does a change of 15° in longitude correspond to?",
+          "options": ["1 day", "1 week", "1 hour", "1 minute"],
+          "correct_answer": 2,
+          "hint": "The Earth rotates 360° in 24 hours. 360/24 = ?"
+        }
+      ],
+      "read_along": {
+        "English": {
+          "sentences": [
+            "Latitude and longitude are imaginary lines that form a grid to locate any place on Earth.",
+            "The Equator is the line at 0° latitude that divides Earth into the Northern and Southern hemispheres.",
+            "The Prime Meridian at 0° longitude passes through Greenwich, England.",
+            "Every 15 degrees of longitude equals one hour of time difference around the world."
+          ],
+          "transliterations": []
+        },
+        "Hindi": {
+          "sentences": [
+            "अक्षांश और देशांतर काल्पनिक रेखाएं हैं जो पृथ्वी पर किसी भी स्थान का पता लगाने के लिए एक जाल बनाती हैं।",
+            "भूमध्य रेखा 0° अक्षांश पर है जो पृथ्वी को उत्तरी और दक्षिणी गोलार्द्धों में विभाजित करती है।",
+            "प्रधान मध्याह्न रेखा 0° देशांतर पर है जो इंग्लैंड के ग्रीनविच से गुजरती है।",
+            "देशांतर के प्रत्येक 15 डिग्री पर दुनिया भर में एक घंटे का समय अंतर होता है।"
+          ],
+          "transliterations": [
+            "Akshaansh aur deshaantar kalpnik rekhaen hain jo Prithvi par kisi bhi sthan ka pata lagane ke liye ek jaal banati hain.",
+            "Bhoomadhya rekha 0° akshaansh par hai jo Prithvi ko uttaree aur dakshinee golaarddhon mein vibhajit karti hai.",
+            "Pradhaan madhyaahn rekha 0° deshaantar par hai jo England ke Greenwich se gujarti hai.",
+            "Deshaantar ke pratyek 15 degree par duniya bhar mein ek ghante ka samay antar hota hai."
+          ]
+        },
+        "Telugu": {
+          "sentences": [
+            "అక్షాంశాలు మరియు రేఖాంశాలు భూమిపై ఏ స్థలాన్నైనా గుర్తించడానికి గ్రిడ్ ఏర్పరుస్తాయి.",
+            "భూమధ్యరేఖ 0° అక్షాంశం వద్ద ఉంది మరియు భూమిని ఉత్తర మరియు దక్షిణ అర్ధగోళాలుగా విభజిస్తుంది.",
+            "ప్రైమ్ మెరిడియన్ 0° రేఖాంశం వద్ద ఉంది మరియు ఇంగ్లాండ్‌లోని గ్రీన్‌విచ్ గుండా వెళుతుంది.",
+            "రేఖాంశంలో ప్రతి 15 డిగ్రీలు ప్రపంచవ్యాప్తంగా ఒక గంట సమయ వ్యత్యాసానికి సమానం."
+          ],
+          "transliterations": [
+            "Akshaamshalu mariyu rekhaamshaalu bhumipai e sthalannaainaa gurtiMchadam ki Grid erparastayi.",
+            "Bhuumadhyarekha 0° akshaamsham vad untundi mariyu bhumini uttara mariyu dakshina ardhagolaaluugaa vibhajisTundi.",
+            "Prime Meridian 0° rekhaamsham vad untundi mariyu Inglandu lo Greenwich gunda veLuTundi.",
+            "Rekhaamshamlo prati 15 digriilu prapanchavyaptamgaa oka ghanta samaya vyatyaasaaniki samaanam."
+          ]
+        }
+      },
+      "comprehension_questions": [
+        {
+          "id": "D4_CQ1",
+          "marks": 5,
+          "type": "articulation",
+          "question": "Explain what latitude and longitude are, and how they are used to locate a place on Earth. Give an example.",
+          "key_points": [
+            "Latitude: horizontal lines measuring angular distance north or south of the equator (0°)",
+            "Longitude: vertical lines measuring angular distance east or west of the Prime Meridian (0°)",
+            "Together, latitude and longitude provide a unique address for every location on Earth",
+            "The Equator is at 0° latitude; the Prime Meridian is at 0° longitude",
+            "Example: Delhi is approximately 28 degrees N latitude and 77 degrees E longitude"
+          ],
+          "model_answer": "Latitude refers to imaginary horizontal lines (parallels) that measure angular distance north or south of the Equator (0°). Longitude refers to imaginary vertical lines (meridians) that measure angular distance east or west of the Prime Meridian (0°) at Greenwich. Together they form a coordinate system: every location has a unique latitude and longitude address. For example, Delhi is approximately 28°N latitude and 77°E longitude, meaning it is 28 degrees north of the equator and 77 degrees east of the Prime Meridian.",
+          "explanation": "A 5-mark answer needs: definition of latitude (1), definition of longitude (1), how they work together (1), key reference lines (1), correct example (1).",
+          "media": []
+        }
+      ]
+    }
+  ],
+  "weekly_assessment": {
+    "assessment_id": "SST6_EARTH_CH01_W01_ASSESS",
+    "title": "Week 1 Assessment: The Earth in the Solar System",
+    "time_limit_minutes": 20,
+    "star_thresholds": {"5": 90, "4": 75, "3": 60, "2": 40, "1": 0},
+    "questions": [
+      {
+        "id": "WA_Q1",
+        "type": "mcq",
+        "question": "Which planet is third from the Sun?",
+        "options": ["Mars", "Venus", "Earth", "Mercury"],
+        "correct_answer": 2,
+        "points": 2
+      },
+      {
+        "id": "WA_Q2",
+        "type": "mcq",
+        "question": "What is the path a planet takes around the Sun called?",
+        "options": ["Axis", "Orbit", "Revolution", "Rotation"],
+        "correct_answer": 1,
+        "points": 2
+      },
+      {
+        "id": "WA_Q3",
+        "type": "mcq",
+        "question": "Which layer of Earth generates its magnetic field?",
+        "options": ["Crust", "Mantle", "Outer Core", "Inner Core"],
+        "correct_answer": 2,
+        "points": 2
+      },
+      {
+        "id": "WA_Q4",
+        "type": "mcq",
+        "question": "Which is the largest continent by area?",
+        "options": ["Africa", "North America", "Asia", "Europe"],
+        "correct_answer": 2,
+        "points": 2
+      },
+      {
+        "id": "WA_Q5",
+        "type": "mcq",
+        "question": "Which is the largest and deepest ocean?",
+        "options": ["Atlantic", "Indian", "Arctic", "Pacific"],
+        "correct_answer": 3,
+        "points": 2
+      },
+      {
+        "id": "WA_Q6",
+        "type": "mcq",
+        "question": "What is the latitude of the Equator?",
+        "options": ["90°N", "45°N", "0°", "23.5°N"],
+        "correct_answer": 2,
+        "points": 2
+      },
+      {
+        "id": "WA_Q7",
+        "type": "mcq",
+        "question": "Through which city does the Prime Meridian pass?",
+        "options": ["New Delhi", "Paris", "Greenwich", "New York"],
+        "correct_answer": 2,
+        "points": 2
+      },
+      {
+        "id": "WA_Q8",
+        "type": "mcq",
+        "question": "What is the outermost layer of the Earth called?",
+        "options": ["Mantle", "Outer Core", "Crust", "Inner Core"],
+        "correct_answer": 2,
+        "points": 2
+      },
+      {
+        "id": "WA_Q9",
+        "type": "mcq",
+        "question": "Which planet is the largest in the Solar System?",
+        "options": ["Saturn", "Uranus", "Earth", "Jupiter"],
+        "correct_answer": 3,
+        "points": 2
+      },
+      {
+        "id": "WA_Q10",
+        "type": "mcq",
+        "question": "How many continents are there on Earth?",
+        "options": ["Five", "Six", "Seven", "Eight"],
+        "correct_answer": 2,
+        "points": 2
+      }
+    ]
+  }
+}

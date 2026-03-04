@@ -269,3 +269,19 @@ class LanguageSelectionSerializer(serializers.Serializer):
     language_3 = serializers.CharField(  # 2026-02-12: Third
         max_length=30, required=False, default=''
     )
+
+
+class MonitorPasswordResetRequestSerializer(serializers.Serializer):
+    """2026-03-04: Serializer for monitor password reset request (email)."""
+
+    email = serializers.EmailField()  # 2026-03-04: Staff user email
+
+
+class MonitorPasswordResetConfirmSerializer(serializers.Serializer):
+    """2026-03-04: Serializer for monitor password reset confirmation."""
+
+    uid = serializers.CharField()  # 2026-03-04: Base64-encoded user PK
+    token = serializers.CharField()  # 2026-03-04: Django password reset token
+    new_password = serializers.CharField(  # 2026-03-04: Must be at least 8 chars
+        min_length=8, max_length=128
+    )

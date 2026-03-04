@@ -1,577 +1,782 @@
 {
-  "lesson_id": "SCI6_CURIOSITY_CH01_W01",
+  "lesson_id": "SCI6_ENV_CH01_W01",
   "class": 6,
   "subject": "Science",
+  "chapter_id": "SCI6_ENV_CH01",
+  "chapter_title": "Our Environment",
   "character": "Dr. Saina the Science Explorer",
-  "chapter_id": "CURIOSITY_CH01",
-  "chapter_title": "The Wonderful World of Science",
   "week_number": 1,
-
   "learning_objectives": [
-    "Define science in your own words",
-    "Explain why curiosity is important",
-    "Describe the steps of the scientific method",
-    "Apply scientific thinking in daily life"
+    "Identify the main components of air and their approximate percentages",
+    "Explain the water cycle stages: evaporation, condensation, precipitation",
+    "Distinguish between the three soil layers and two major rock types",
+    "Describe a food chain with at least three organisms and explain ecosystem services",
+    "Apply scientific vocabulary: atmosphere, evaporation, humus, biodiversity"
   ],
-
   "micro_lessons": [
-
     {
       "day": 1,
-      "micro_lesson_id": "SCI6_CURIOSITY_CH01_W01_D1",
-      "title": "What is Science?",
-      "duration_minutes": 15,
-
+      "micro_lesson_id": "SCI6_ENV_CH01_W01_D1",
+      "title": "Air — Our Invisible Shield",
+      "duration_minutes": 20,
       "teaching_content": {
         "foundation": {
-          "concept_text": "Science is not just a school subject. Science is a way of thinking about the world. When you look at something carefully and ask why it happens, you are thinking like a scientist. Curiosity makes us ask questions. If your pen stops writing and you try to find out why, that is science. Science helps us understand nature and everyday life.",
+          "concept_text": "Air is all around us even though we cannot see it. Air is a mixture of gases. The most important gases in air are: Nitrogen (78%), Oxygen (21%), and Carbon dioxide (0.04%). We breathe in Oxygen. Plants use Carbon dioxide to make food. Nitrogen is the most abundant gas — that means it is found the most in air. Air also helps carry seeds, fly kites, and move windmills. When harmful things like smoke and dust mix with air, it is called Air Pollution. Burning vehicles and factories cause air pollution. Clean air is important for all living things.",
           "pacing": "slow",
           "repetition_count": 3,
-          "tts_rate": 0.7
+          "tts_rate": 0.75
         },
         "standard": {
-          "concept_text": "Science is a systematic way of understanding the natural world. It begins with curiosity and observation. When we notice something interesting, we ask questions. We investigate those questions and find answers based on evidence. Scientific knowledge grows as discoveries improve our understanding.",
+          "concept_text": "Air is an invisible mixture of gases that surrounds the Earth. It is made up of approximately 78% Nitrogen, 21% Oxygen, 0.9% Argon, and 0.04% Carbon dioxide. The layer of air around Earth is called the Atmosphere. Oxygen is essential for respiration in living organisms. Carbon dioxide is used by plants during photosynthesis. Air also regulates temperature on Earth. Human activities like burning fossil fuels, vehicle emissions, and industrial smoke cause air pollution. Air pollution leads to health problems such as asthma and bronchitis. Planting trees and using cleaner fuels can reduce air pollution.",
           "pacing": "normal",
           "repetition_count": 2,
           "tts_rate": 0.9
         },
         "advanced": {
-          "concept_text": "Science is an evolving and evidence-based process of inquiry. It builds reliable knowledge through observation, reasoning and experimentation. Scientific explanations may change when new evidence provides better understanding. This self-correcting nature makes science powerful.",
+          "concept_text": "Earth's atmosphere is a layered shell of gases held by gravity. By volume: Nitrogen (N2) 78.09%, Oxygen (O2) 20.95%, Argon 0.93%, Carbon dioxide 0.04%, plus trace gases and water vapour. The atmosphere acts as a thermal blanket, retaining heat, and as a shield, filtering harmful UV radiation via the ozone layer. Air pollution is classified as primary (directly emitted: SO2, NOx, particulates from combustion) and secondary (formed by chemical reactions: ozone, smog). The WHO estimates 7 million deaths annually are linked to air pollution. Mitigation strategies include emission standards, renewable energy, and green urban planning.",
           "pacing": "fast",
           "repetition_count": 1,
           "tts_rate": 1.1
         }
       },
-
       "vocabulary": [
-        {"word": "science", "definition": "Systematic study of the natural world.", "image_hint": "science.png"},
-        {"word": "curiosity", "definition": "Desire to learn more.", "image_hint": "curiosity.png"},
-        {"word": "discovery", "definition": "Finding new knowledge.", "image_hint": "discovery.png"}
+        {
+          "word": "atmosphere",
+          "definition": "The layer of gases surrounding the Earth held in place by gravity.",
+          "image_hint": "atmosphere.png"
+        },
+        {
+          "word": "nitrogen",
+          "definition": "The most abundant gas in air, making up about 78% of the atmosphere.",
+          "image_hint": "nitrogen.png"
+        },
+        {
+          "word": "pollution",
+          "definition": "The introduction of harmful substances into the environment.",
+          "image_hint": "pollution.png"
+        }
       ],
-
       "dialogue_flow": [
-        {"stage": "greeting", "text": "Hello! I am Dr. Saina. Let us explore what science really means."},
-        {"stage": "concept", "text": "Today we understand science as a way of thinking."},
-        {"stage": "activity", "text": "Let us connect important science words with their meanings."},
-        {"stage": "wrapup", "text": "Wonderful start! Tomorrow we explore curiosity and questions."}
+        {
+          "stage": "greeting",
+          "text": "Namaste, young explorers! I am Dr. Saina, your Science Explorer. Today we dive into something invisible yet absolutely essential — AIR! Ready?"
+        },
+        {
+          "stage": "concept",
+          "text": "Air is a mixture of gases. The big three: Nitrogen (78%), Oxygen (21%), and Carbon dioxide (0.04%). Can you say these percentages with me?"
+        },
+        {
+          "stage": "activity",
+          "text": "Imagine Earth wrapped in a blanket of air — that blanket is the atmosphere. It keeps us warm and safe. What do you think would happen without it?"
+        },
+        {
+          "stage": "wrapup",
+          "text": "Excellent thinking! Remember: Nitrogen is most abundant, Oxygen keeps us alive, and pollution harms the air. See you tomorrow for WATER!"
+        }
       ],
-
       "activities": [
         {
           "id": "D1_A1",
           "type": "matching",
-          "instructions": "Match each word with its correct meaning.",
+          "instructions": "Match each gas to its percentage in air",
           "items": [
-            {"word": "science", "match": "Systematic study of the natural world"},
-            {"word": "curiosity", "match": "Desire to learn more"},
-            {"word": "discovery", "match": "Finding new knowledge"}
+            {"word": "Nitrogen", "match": "78%"},
+            {"word": "Oxygen", "match": "21%"},
+            {"word": "Carbon dioxide", "match": "0.04%"}
           ],
           "scoring": {"correct_xp": 5}
         }
       ],
-
       "practice_questions": [
         {
           "id": "D1_Q1",
           "type": "mcq",
-          "question": "Science mainly helps us understand the:",
-          "options": ["Natural world", "Only machines", "Only stories"],
-          "correct_answer": 0,
-          "hint": "Think about what science studies."
+          "question": "Which gas makes up about 78% of the atmosphere?",
+          "options": ["Oxygen", "Nitrogen", "Carbon dioxide", "Argon"],
+          "correct_answer": 1,
+          "hint": "It is NOT the gas we breathe."
         },
         {
           "id": "D1_Q2",
           "type": "mcq",
-          "question": "Curiosity means:",
-          "options": ["Fear", "Desire to learn", "Ignoring questions"],
-          "correct_answer": 1,
-          "hint": "Curious people want to know more."
+          "question": "What is the layer of air around Earth called?",
+          "options": ["Hydrosphere", "Lithosphere", "Atmosphere", "Biosphere"],
+          "correct_answer": 2,
+          "hint": "Atmo = air, sphere = ball."
         },
         {
           "id": "D1_Q3",
           "type": "mcq",
-          "question": "Science is mainly a way of:",
-          "options": ["Sleeping", "Guessing", "Thinking systematically"],
-          "correct_answer": 2,
-          "hint": "Science involves careful thinking."
+          "question": "Which human activity causes air pollution?",
+          "options": ["Planting trees", "Burning fossil fuels", "Swimming in rivers", "Reading books"],
+          "correct_answer": 1,
+          "hint": "Vehicles and factories do this."
         }
       ],
-
       "read_along": {
         "English": {
           "sentences": [
-            "Science is a way of thinking.",
-            "Curiosity leads to discovery.",
-            "Science helps us understand nature.",
-            "Scientific ideas can change."
+            "Air is an invisible mixture of gases that surrounds the Earth.",
+            "Nitrogen makes up about 78% of air, while Oxygen makes up 21%.",
+            "The atmosphere acts as a shield, protecting us from harmful radiation.",
+            "Air pollution from vehicles and factories harms our health and environment."
           ],
           "transliterations": []
         },
         "Hindi": {
           "sentences": [
-            "विज्ञान सोचने का एक तरीका है।",
-            "जिज्ञासा खोज की ओर ले जाती है।",
-            "विज्ञान हमें प्रकृति को समझने में मदद करता है।",
-            "वैज्ञानिक विचार बदल सकते हैं।"
+            "वायु गैसों का एक अदृश्य मिश्रण है जो पृथ्वी को घेरे हुए है।",
+            "नाइट्रोजन वायु का लगभग 78% है, जबकि ऑक्सीजन 21% है।",
+            "वायुमंडल एक ढाल की तरह काम करता है, हमें हानिकारक विकिरण से बचाता है।",
+            "वाहनों और कारखानों से वायु प्रदूषण हमारे स्वास्थ्य और पर्यावरण को नुकसान पहुंचाता है।"
           ],
           "transliterations": [
-            "Vigyan sochne ka ek tareeka hai.",
-            "Jigyasa khoj ki aur le jaati hai.",
-            "Vigyan hamein prakriti ko samajhne mein madad karta hai.",
-            "Vaigyanik vichar badal sakte hain."
+            "Vayu gaaso ka ek adrishya mishran hai jo prithvi ko ghere hua hai.",
+            "Nitrogen vayu ka lagbhag 78% hai, jabki Oxygen 21% hai.",
+            "Vayumandal ek dhaal ki tarah kaam karta hai, hame haanikaarak vikiran se bachata hai.",
+            "Vahanon aur karkhano se vayu pradushan hamare swasthya aur paryavaran ko nuksan pahunchata hai."
           ]
         },
         "Telugu": {
           "sentences": [
-            "శాస్త్రం అనేది ఆలోచించే విధానం.",
-            "ఆసక్తి ఆవిష్కరణకు దారి తీస్తుంది.",
-            "శాస్త్రం ప్రకృతిని అర్థం చేసుకోవడంలో సహాయపడుతుంది.",
-            "శాస్త్రీయ ఆలోచనలు మారవచ్చు."
+            "వాయువు భూమిని చుట్టుముట్టే వాయువుల అదృశ్య మిశ్రమం.",
+            "నత్రజని వాయువులో దాదాపు 78% ఉంటుంది, ఆక్సిజన్ 21% ఉంటుంది.",
+            "వాతావరణం ఒక కవచంలా పని చేస్తుంది, హానికరమైన వికిరణం నుండి మనలను రక్షిస్తుంది.",
+            "వాహనాలు మరియు కర్మాగారాల నుండి వాయు కాలుష్యం మన ఆరోగ్యానికి మరియు పర్యావరణానికి హాని చేస్తుంది."
           ],
           "transliterations": [
-            "Shastram anedi alochinche vidhanam.",
-            "Aasakti avishkaranaku daari teesstundi.",
-            "Shastram prakrutini artham chesukovadamlO sahayapadutundi.",
-            "Shastriya alochanalu maaravacchu."
+            "Vaayu bhumini chuttumutteye vaayuvula adrishya mishramam.",
+            "Natrajani vaayuvulo daadaapu 78% untundi, Oxygen 21% untundi.",
+            "Vaataavaranaamu oka kavachamla pani chestundi, haanikaramaina vikiranam nundi manalni rakshisTundi.",
+            "Vaahanaalu mariyu karmaagaraala nundi vaayu kaalusyam mana aarogyaaniki mariyu paryavarananiki haani chestundi."
           ]
         }
-      }
+      },
+      "comprehension_questions": [
+        {
+          "id": "D1_CQ1",
+          "marks": 3,
+          "type": "articulation",
+          "question": "Explain the composition of air and the role each major gas plays.",
+          "key_points": [
+            "Nitrogen makes up approximately 78% of air",
+            "Oxygen makes up approximately 21% and is essential for respiration",
+            "Carbon dioxide is used by plants for photosynthesis"
+          ],
+          "model_answer": "Air is a mixture of gases. Nitrogen is the most abundant at about 78%. Oxygen makes up about 21% and is essential for respiration. Carbon dioxide, though only about 0.04%, is vital for plant photosynthesis.",
+          "explanation": "A 3-mark answer must name all three gases with their roles: N2 (78%), O2 (21%, respiration), CO2 (0.04%, photosynthesis).",
+          "media": []
+        },
+        {
+          "id": "D1_CQ2",
+          "marks": 5,
+          "type": "articulation",
+          "question": "What are the causes and effects of air pollution? Suggest two ways to reduce it.",
+          "key_points": [
+            "Causes include burning fossil fuels, vehicle emissions, and industrial smoke",
+            "Effects include respiratory diseases like asthma and bronchitis",
+            "Effects also include global warming and damage to the ozone layer",
+            "Solution 1: Use renewable energy sources or reduce vehicle use",
+            "Solution 2: Plant more trees or enforce stricter emission standards"
+          ],
+          "model_answer": "Air pollution is caused by burning fossil fuels, vehicle emissions, and industrial smoke. Effects include respiratory diseases such as asthma, contribution to global warming, and ozone layer damage. Two ways to reduce it: (1) switching to renewable energy, and (2) planting more trees.",
+          "explanation": "A 5-mark answer must address causes (2 marks), effects (2 marks), and at least two solutions (1 mark).",
+          "media": []
+        }
+      ]
     },
-
     {
       "day": 2,
-      "micro_lesson_id": "SCI6_CURIOSITY_CH01_W01_D2",
-      "title": "Curiosity and Questions",
-      "duration_minutes": 15,
-
+      "micro_lesson_id": "SCI6_ENV_CH01_W01_D2",
+      "title": "Water — The Cycle of Life",
+      "duration_minutes": 20,
       "revision_prompts": {
         "foundation": [
-          "What is science?",
-          "What does curiosity mean?",
-          "Science helps us understand what?"
+          "Yesterday we learned about air. What is the most common gas in air? NITROGEN!",
+          "Which gas do we breathe in? OXYGEN!",
+          "What do we call it when smoke makes the air dirty? AIR POLLUTION!"
         ],
         "standard": [
-          "Why is curiosity important?",
-          "Can science exist without questions?"
+          "Quick recap: Name the three main gases in air and their approximate percentages.",
+          "What is the difference between primary and secondary air pollutants?"
         ],
         "advanced": [
-          "Explain how curiosity leads to discovery."
+          "Explain how the atmosphere protects Earth, and give one example of how human activity threatens this protection."
         ]
       },
-
       "teaching_content": {
         "foundation": {
-          "concept_text": "Curiosity makes us ask questions. Questions often begin with why or how. When we ask questions, we try to understand the world better. Asking questions is the beginning of scientific thinking.",
+          "concept_text": "Water covers about 71% of the Earth. But most water is salty ocean water. Only about 3% is freshwater! Water moves around the Earth in a cycle called the Water Cycle. Step 1: EVAPORATION — heat from the Sun turns water into water vapour. Step 2: CONDENSATION — water vapour cools and forms clouds. Step 3: PRECIPITATION — water falls from clouds as rain or snow. Step 4: COLLECTION — water goes back into rivers, lakes, and the ocean. This cycle keeps going forever! We need to CONSERVE (save) water because freshwater is rare.",
           "pacing": "slow",
           "repetition_count": 3,
-          "tts_rate": 0.7
+          "tts_rate": 0.75
         },
         "standard": {
-          "concept_text": "Curiosity is the starting point of science. Observation makes us notice something interesting. That observation leads to questions. These questions guide investigation and discovery.",
+          "concept_text": "Water is the most essential molecule for life. The Earth has about 1.386 billion km3 of water, but 97% is saline (salty ocean water). Only 3% is freshwater, and two-thirds of that is locked in glaciers. The water cycle (hydrological cycle) has four stages: Evaporation (sun heats surface water to vapour), Transpiration (plants release water vapour), Condensation (vapour cools to form clouds), and Precipitation (rain, snow, hail). Freshwater conservation is critical due to over-extraction, pollution, and climate change. Rainwater harvesting and drip irrigation are effective conservation strategies.",
           "pacing": "normal",
           "repetition_count": 2,
           "tts_rate": 0.9
         },
         "advanced": {
-          "concept_text": "Scientific inquiry begins with meaningful and testable questions. Strong questions are based on observation and can be answered through evidence.",
+          "concept_text": "The global hydrological cycle is driven by solar energy and gravity. Only 2.5% of Earth's water is fresh; of this, 68.7% is in glaciers, 30.1% in groundwater, and just 0.3% in surface water. Transpiration by vegetation is critical — the Amazon rainforest generates its own rainfall via moisture recycling. Anthropogenic disruptions include groundwater depletion (overextraction), salinisation of coastal aquifers, and altered precipitation patterns due to climate change. Water stress affects over 2 billion people globally. Integrated water resource management (IWRM) combines conservation, treatment, and equitable distribution.",
           "pacing": "fast",
           "repetition_count": 1,
           "tts_rate": 1.1
         }
       },
-
       "vocabulary": [
-        {"word": "observe", "definition": "To notice carefully.", "image_hint": "observe.png"},
-        {"word": "question", "definition": "Something asked to get information.", "image_hint": "question.png"},
-        {"word": "inquiry", "definition": "Search for knowledge.", "image_hint": "inquiry.png"}
+        {
+          "word": "evaporation",
+          "definition": "The process by which water is converted from liquid to vapour by heat.",
+          "image_hint": "evaporation.png"
+        },
+        {
+          "word": "condensation",
+          "definition": "The process by which water vapour cools and turns back into liquid, forming clouds.",
+          "image_hint": "condensation.png"
+        },
+        {
+          "word": "precipitation",
+          "definition": "Water falling from clouds in the form of rain, snow, sleet, or hail.",
+          "image_hint": "precipitation.png"
+        }
       ],
-
       "dialogue_flow": [
-        {"stage": "greeting", "text": "Welcome back! Let us explore how curiosity creates questions."},
-        {"stage": "concept", "text": "Today we understand how questions guide science."},
-        {"stage": "activity", "text": "Let us match new vocabulary words."},
-        {"stage": "wrapup", "text": "Great work! Tomorrow we explore the scientific method."}
+        {
+          "stage": "greeting",
+          "text": "Welcome back, explorers! Yesterday we explored AIR. Today we travel through the amazing world of WATER!"
+        },
+        {
+          "stage": "concept",
+          "text": "The water cycle is nature's recycling system. Evaporation, Condensation, Precipitation — can you say these three magic words?"
+        },
+        {
+          "stage": "activity",
+          "text": "Picture a cup of water on a sunny day. Where does the water go? That is evaporation at work!"
+        },
+        {
+          "stage": "wrapup",
+          "text": "Wonderful work! Water is precious — 97% of Earth's water is salty. Protect every drop! Tomorrow: SOIL!"
+        }
       ],
-
       "activities": [
         {
           "id": "D2_A1",
-          "type": "matching",
-          "instructions": "Match the word with its meaning.",
-          "items": [
-            {"word": "observe", "match": "Notice carefully"},
-            {"word": "question", "match": "Ask to get information"},
-            {"word": "inquiry", "match": "Search for knowledge"}
-          ],
+          "type": "sequencing",
+          "instructions": "Arrange the water cycle stages in the correct order",
+          "items": ["Condensation", "Evaporation", "Collection", "Precipitation"],
+          "correct_order": [1, 0, 3, 2],
           "scoring": {"correct_xp": 5}
         }
       ],
-
       "practice_questions": [
         {
           "id": "D2_Q1",
           "type": "mcq",
-          "question": "Curiosity leads to:",
-          "options": ["Questions", "Silence", "Confusion"],
-          "correct_answer": 0,
-          "hint": "Curious people ask something."
+          "question": "What percentage of Earth's water is freshwater?",
+          "options": ["71%", "50%", "3%", "25%"],
+          "correct_answer": 2,
+          "hint": "It is a very small percentage!"
         },
         {
           "id": "D2_Q2",
           "type": "mcq",
-          "question": "To observe means to:",
-          "options": ["Ignore", "Notice carefully", "Sleep"],
+          "question": "What is the process by which water vapour turns into clouds called?",
+          "options": ["Evaporation", "Condensation", "Precipitation", "Transpiration"],
           "correct_answer": 1,
-          "hint": "It means looking carefully."
+          "hint": "It is the opposite of evaporation."
         },
         {
           "id": "D2_Q3",
           "type": "mcq",
-          "question": "Scientific questions must be based on:",
-          "options": ["Magic", "Stories", "Evidence"],
-          "correct_answer": 2,
-          "hint": "They must relate to observation."
+          "question": "Which of the following is a method of water conservation?",
+          "options": ["Leaving taps running", "Drip irrigation", "Industrial dumping", "Deforestation"],
+          "correct_answer": 1,
+          "hint": "Farmers use this to water crops efficiently."
         }
       ],
-
       "read_along": {
         "English": {
           "sentences": [
-            "Curiosity makes us ask questions.",
-            "Observation leads to inquiry.",
-            "Scientific questions are testable.",
-            "Questions guide discovery."
+            "Water covers about 71% of the Earth, but most of it is salty ocean water.",
+            "The water cycle includes evaporation, condensation, and precipitation.",
+            "Only about 3% of Earth's water is freshwater, which is essential for life.",
+            "We must conserve water by fixing leaks and using it wisely."
           ],
           "transliterations": []
         },
         "Hindi": {
           "sentences": [
-            "जिज्ञासा हमें प्रश्न पूछने के लिए प्रेरित करती है।",
-            "अवलोकन से जांच शुरू होती है।",
-            "वैज्ञानिक प्रश्न परखे जा सकते हैं।",
-            "प्रश्न खोज की ओर ले जाते हैं।"
+            "पानी पृथ्वी के लगभग 71% भाग को ढकता है, लेकिन अधिकांश खारा समुद्री जल है।",
+            "जल चक्र में वाष्पीकरण, संघनन और वर्षा शामिल हैं।",
+            "पृथ्वी के केवल 3% जल में मीठा पानी है, जो जीवन के लिए आवश्यक है।",
+            "हमें रिसाव ठीक करके और बुद्धिमानी से उपयोग करके जल का संरक्षण करना चाहिए।"
           ],
           "transliterations": [
-            "Jigyasa hamein prashn poochne ke liye prerit karti hai.",
-            "Avalokan se jaanch shuru hoti hai.",
-            "Vaigyanik prashn parkhe ja sakte hain.",
-            "Prashn khoj ki aur le jaate hain."
+            "Paani prithvi ke lagbhag 71% bhaag ko dhakta hai, lekin adhikansh khaara samudr jal hai.",
+            "Jal chakra mein vaashpikaran, sanghan aur varsha shamil hain.",
+            "Prithvi ke keval 3% jal mein meetha paani hai, jo jeevan ke liye avashyak hai.",
+            "Hame risaav theek karke aur buddhimaani se upyog karke jal ka sanrakshan karna chahiye."
           ]
         },
         "Telugu": {
           "sentences": [
-            "ఆసక్తి ప్రశ్నలకు దారి తీస్తుంది.",
-            "పరిశీలన విచారణను ప్రారంభిస్తుంది.",
-            "శాస్త్రీయ ప్రశ్నలు పరీక్షించదగినవి.",
-            "ప్రశ్నలు ఆవిష్కరణకు దారి తీస్తాయి."
+            "నీరు భూమిలో సుమారు 71% ఆవరిస్తుంది, కానీ చాలా వరకు ఉప్పు సముద్రపు నీరు.",
+            "నీటి చక్రంలో ఆవిరి, ఘనీభవనం మరియు వర్షపాతం ఉంటాయి.",
+            "భూమిపై కేవలం 3% నీరు మాత్రమే మంచినీరు, ఇది జీవితానికి అవసరం.",
+            "మనం లీకులను సరి చేయడం ద్వారా మరియు వివేకంగా వినియోగించడం ద్వారా నీటిని పొదుపు చేయాలి."
           ],
           "transliterations": [
-            "Aasakti prashnalaku daari teesstundi.",
-            "Pariseelana vicharananu prarambhistundi.",
-            "Shastriya prashnalu pareekshinchedaginavi.",
-            "Prashnalu avishkaranaku daari teesstayi."
+            "Neeru bhumilo sumaaru 71% aavarituundi, kaani chaala varaku uppu samudramu neeru.",
+            "Neeti chakramlo aaviri, ghaneebhavanam mariyu varshapatam untaayi.",
+            "Bhumipai kevalam 3% neeru maatrame manchineeru, idi jeevitaaniki avasaram.",
+            "Manam leekuunu sari cheyadam dvaara mariyu vivekamgaa viniyoginchatadam dvaara neetini podhupu cheyyaali."
           ]
         }
-      }
+      },
+      "comprehension_questions": [
+        {
+          "id": "D2_CQ1",
+          "marks": 3,
+          "type": "articulation",
+          "question": "Describe the four stages of the water cycle in order.",
+          "key_points": [
+            "Evaporation: Sun heats surface water to convert it to water vapour",
+            "Condensation: Water vapour cools and forms clouds",
+            "Precipitation: Water falls from clouds as rain or snow",
+            "Collection: Water collects in rivers, lakes, and oceans"
+          ],
+          "model_answer": "The water cycle has four stages: (1) Evaporation — the Sun heats surface water, turning it into water vapour. (2) Condensation — vapour rises and cools to form clouds. (3) Precipitation — water falls as rain or snow. (4) Collection — water gathers in rivers, lakes, and oceans.",
+          "explanation": "A 3-mark answer must correctly sequence at least 3 of the 4 stages with brief explanations.",
+          "media": []
+        }
+      ]
     },
-
     {
       "day": 3,
-      "micro_lesson_id": "SCI6_CURIOSITY_CH01_W01_D3",
-      "title": "The Scientific Method",
-      "duration_minutes": 15,
-
+      "micro_lesson_id": "SCI6_ENV_CH01_W01_D3",
+      "title": "Soil and Rocks — Earth's Foundation",
+      "duration_minutes": 20,
       "revision_prompts": {
         "foundation": [
-          "What is curiosity?",
-          "What does observe mean?",
-          "Why do we ask questions?"
+          "What moves water from rivers to clouds? EVAPORATION!",
+          "Water falls from clouds as what? RAIN or PRECIPITATION!",
+          "We should do this to save water — CONSERVE it!"
         ],
         "standard": [
-          "What makes a question scientific?",
-          "How does observation help inquiry?"
+          "What is the difference between freshwater and saline water? Where is most freshwater found?",
+          "Explain how transpiration contributes to the water cycle."
         ],
         "advanced": [
-          "How does a hypothesis connect observation and experiment?"
+          "How do human activities disrupt the water cycle? Give two specific examples with consequences."
         ]
       },
-
       "teaching_content": {
         "foundation": {
-          "concept_text": "The scientific method follows steps. First we observe. Then we ask a question. Next we form a hypothesis. After that we test it. Finally we conclude.",
+          "concept_text": "Soil is the thin layer of material on the Earth's surface where plants grow. Soil has three layers called HORIZONS. The TOP layer (Topsoil) is dark and has humus — that is rotted plants and animals that makes soil rich. The MIDDLE layer (Subsoil) has more rocks and minerals. The BOTTOM layer (Bedrock) is solid rock. There are three types of rocks: IGNEOUS rocks form from cooled lava (like granite). SEDIMENTARY rocks form from layers of sand pressed together (like sandstone). METAMORPHIC rocks form when rocks are changed by heat and pressure. Soil EROSION happens when wind or water carries away topsoil.",
           "pacing": "slow",
           "repetition_count": 3,
-          "tts_rate": 0.7
+          "tts_rate": 0.75
         },
         "standard": {
-          "concept_text": "The scientific method is a step-by-step way to solve problems. It includes observation, forming a hypothesis, conducting an experiment and drawing conclusions.",
+          "concept_text": "Soil is a complex mixture of minerals, organic matter (humus), water, air, and microorganisms. The soil profile has three horizons: A-Horizon (topsoil rich in humus, where most plants root), B-Horizon (subsoil with leached minerals, less organic matter), and C-Horizon (weathered parent rock). Rocks are classified into three types: Igneous (formed from solidified magma — granite is intrusive, basalt is extrusive), Sedimentary (formed by compaction of sediment layers — limestone, sandstone), and Metamorphic (formed by heat/pressure transformation — marble from limestone, slate from shale). Soil erosion degrades agricultural land; cover crops and terracing are preventive measures.",
           "pacing": "normal",
           "repetition_count": 2,
           "tts_rate": 0.9
         },
         "advanced": {
-          "concept_text": "The scientific method ensures logical, repeatable and evidence-based investigation. Hypotheses must be testable, and conclusions must be based on results.",
+          "concept_text": "Pedogenesis (soil formation) is a centuries-long process involving physical weathering, chemical decomposition, and biological activity. The rock cycle: magma forms igneous rocks, which weather into sediment, compact into sedimentary rocks, and transform under heat/pressure into metamorphic rocks, which may melt back to magma. Soil erosion accelerates with deforestation; roots stabilise soil. Solutions: contour farming, windbreaks, and bioengineering. India loses an estimated 5,334 million tonnes of soil annually to erosion.",
           "pacing": "fast",
           "repetition_count": 1,
           "tts_rate": 1.1
         }
       },
-
       "vocabulary": [
-        {"word": "hypothesis", "definition": "An educated guess.", "image_hint": "hypothesis.png"},
-        {"word": "experiment", "definition": "Test to check a hypothesis.", "image_hint": "experiment.png"},
-        {"word": "conclusion", "definition": "Final answer after testing.", "image_hint": "conclusion.png"}
+        {
+          "word": "humus",
+          "definition": "The dark organic material in soil, formed from decayed plant and animal matter.",
+          "image_hint": "humus.png"
+        },
+        {
+          "word": "erosion",
+          "definition": "The wearing away and transportation of soil or rock by wind, water, or ice.",
+          "image_hint": "erosion.png"
+        },
+        {
+          "word": "igneous",
+          "definition": "A type of rock formed from cooled and solidified magma or lava.",
+          "image_hint": "igneous_rock.png"
+        }
       ],
-
       "dialogue_flow": [
-        {"stage": "greeting", "text": "Today we explore the steps scientists follow."},
-        {"stage": "concept", "text": "Let us understand the scientific method."},
-        {"stage": "activity", "text": "Arrange the steps in correct order."},
-        {"stage": "wrapup", "text": "Excellent! Tomorrow we connect science to daily life."}
+        {
+          "stage": "greeting",
+          "text": "Explorer friends! We go underground today to discover SOIL and ROCKS — the very foundation of our planet!"
+        },
+        {
+          "stage": "concept",
+          "text": "Soil has three layers like a sandwich. The top layer is the tastiest — full of humus and nutrients. Remember: A-B-C for topsoil, subsoil, and bedrock!"
+        },
+        {
+          "stage": "activity",
+          "text": "Rocks come in three families: Igneous, Sedimentary, Metamorphic. Think of them as fire-born, layer-built, and pressure-changed!"
+        },
+        {
+          "stage": "wrapup",
+          "text": "Brilliant! Protect topsoil — it takes 500 years to form 1 cm. Tomorrow we explore the living world of FORESTS!"
+        }
       ],
-
       "activities": [
         {
           "id": "D3_A1",
-          "type": "sequencing",
-          "instructions": "Arrange the scientific method steps in correct order.",
+          "type": "categorization",
+          "instructions": "Sort each rock into its correct type",
           "items": [
-            {"position": 1, "text": "Observation"},
-            {"position": 2, "text": "Hypothesis"},
-            {"position": 3, "text": "Experiment"},
-            {"position": 4, "text": "Conclusion"}
-          ],
-          "scoring": {"correct_xp": 10}
-        }
-      ],
-
-      "practice_questions": [
-        {
-          "id": "D3_Q1",
-          "type": "mcq",
-          "question": "First step of scientific method:",
-          "options": ["Observation", "Experiment", "Conclusion"],
-          "correct_answer": 0,
-          "hint": "What comes before everything else?"
-        },
-        {
-          "id": "D3_Q2",
-          "type": "mcq",
-          "question": "A hypothesis is:",
-          "options": ["Result", "An educated guess", "Observation"],
-          "correct_answer": 1,
-          "hint": "It is a possible explanation."
-        },
-        {
-          "id": "D3_Q3",
-          "type": "mcq",
-          "question": "An experiment is used to:",
-          "options": ["Sleep", "Guess randomly", "Test a hypothesis"],
-          "correct_answer": 2,
-          "hint": "Experiments check something."
-        }
-      ],
-
-      "read_along": {
-        "English": {
-          "sentences": [
-            "Scientists follow steps to solve problems.",
-            "A hypothesis is an educated guess.",
-            "Experiments test ideas.",
-            "Conclusions are based on results."
-          ],
-          "transliterations": []
-        },
-        "Hindi": {
-          "sentences": [
-            "वैज्ञानिक समस्याओं को हल करने के लिए कदम उठाते हैं।",
-            "परिकल्पना एक शिक्षित अनुमान है।",
-            "प्रयोग विचारों की जांच करते हैं।",
-            "निष्कर्ष परिणामों पर आधारित होते हैं।"
-          ],
-          "transliterations": [
-            "Vaigyanik samasyaon ko hal karne ke liye kadam uthate hain.",
-            "Parikalpana ek shikshit anumaan hai.",
-            "Prayog vicharon ki jaanch karte hain.",
-            "Nishkarsh parinaamon par aadharit hote hain."
-          ]
-        },
-        "Telugu": {
-          "sentences": [
-            "శాస్త్రవేత్తలు సమస్యలను పరిష్కరించడానికి దశలను అనుసరిస్తారు.",
-            "హైపోతిసిస్ అనేది విద్యావంతమైన అంచనా.",
-            "ప్రయోగాలు ఆలోచనలను పరీక్షిస్తాయి.",
-            "నిష్కర్షలు ఫలితాలపై ఆధారపడతాయి."
-          ],
-          "transliterations": [
-            "Shastravettalu samasyalanu parishkarinchadaniki dashalanu anusaristaru.",
-            "Hypothesis anedi vidyavantamaina anchanā.",
-            "Prayogalu alochanalanu pareekshistayi.",
-            "Nishkarshalu phalitalapai aadharapaḍatai."
-          ]
-        }
-      }
-    },
-
-    {
-      "day": 4,
-      "micro_lesson_id": "SCI6_CURIOSITY_CH01_W01_D4",
-      "title": "Science in Daily Life",
-      "duration_minutes": 15,
-
-      "revision_prompts": {
-        "foundation": [
-          "What is a hypothesis?",
-          "What is an experiment?",
-          "Why do we conclude?"
-        ],
-        "standard": [
-          "How does scientific method solve problems?",
-          "Why is evidence important?"
-        ],
-        "advanced": [
-          "How does scientific thinking improve society?"
-        ]
-      },
-
-      "teaching_content": {
-        "foundation": {
-          "concept_text": "We use science every day. When we try to fix something or find out why something happened, we use scientific thinking. Anyone can think like a scientist.",
-          "pacing": "slow",
-          "repetition_count": 3,
-          "tts_rate": 0.7
-        },
-        "standard": {
-          "concept_text": "Science is not limited to laboratories. From cooking food to fixing a tyre, we apply observation, questioning and testing. Scientific thinking helps us solve daily life problems logically.",
-          "pacing": "normal",
-          "repetition_count": 2,
-          "tts_rate": 0.9
-        },
-        "advanced": {
-          "concept_text": "Scientific literacy empowers individuals to make informed and evidence-based decisions. Collaboration and critical thinking strengthen scientific discovery and benefit society.",
-          "pacing": "fast",
-          "repetition_count": 1,
-          "tts_rate": 1.1
-        }
-      },
-
-      "vocabulary": [
-        {"word": "evidence", "definition": "Facts that support a claim.", "image_hint": "evidence.png"},
-        {"word": "method", "definition": "Step-by-step procedure.", "image_hint": "method.png"},
-        {"word": "analysis", "definition": "Careful study of results.", "image_hint": "analysis.png"}
-      ],
-
-      "dialogue_flow": [
-        {"stage": "greeting", "text": "Let us see how science works in everyday life."},
-        {"stage": "concept", "text": "Science helps us solve real problems."},
-        {"stage": "activity", "text": "Match the final vocabulary words."},
-        {"stage": "wrapup", "text": "Amazing work! Get ready for your weekly assessment."}
-      ],
-
-      "activities": [
-        {
-          "id": "D4_A1",
-          "type": "matching",
-          "instructions": "Match the word with its meaning.",
-          "items": [
-            {"word": "evidence", "match": "Facts that support a claim"},
-            {"word": "method", "match": "Step-by-step process"},
-            {"word": "analysis", "match": "Careful study of results"}
+            {"item": "Granite", "category": "Igneous"},
+            {"item": "Sandstone", "category": "Sedimentary"},
+            {"item": "Marble", "category": "Metamorphic"},
+            {"item": "Limestone", "category": "Sedimentary"}
           ],
           "scoring": {"correct_xp": 5}
         }
       ],
-
       "practice_questions": [
         {
-          "id": "D4_Q1",
+          "id": "D3_Q1",
           "type": "mcq",
-          "question": "Science helps us solve:",
-          "options": ["Problems", "Stories", "Dreams"],
-          "correct_answer": 0,
-          "hint": "Science is practical."
-        },
-        {
-          "id": "D4_Q2",
-          "type": "mcq",
-          "question": "Evidence is:",
-          "options": ["Guess", "Facts", "Magic"],
-          "correct_answer": 1,
-          "hint": "It supports a claim."
-        },
-        {
-          "id": "D4_Q3",
-          "type": "mcq",
-          "question": "Scientific thinking requires:",
-          "options": ["Fear", "Luck", "Logic"],
+          "question": "Which layer of soil is richest in humus?",
+          "options": ["Subsoil", "Bedrock", "Topsoil", "C-Horizon"],
           "correct_answer": 2,
-          "hint": "It involves reasoning."
+          "hint": "It is the topmost dark layer."
+        },
+        {
+          "id": "D3_Q2",
+          "type": "mcq",
+          "question": "Granite is an example of which type of rock?",
+          "options": ["Sedimentary", "Metamorphic", "Igneous", "Fossil"],
+          "correct_answer": 2,
+          "hint": "It forms from cooled lava."
+        },
+        {
+          "id": "D3_Q3",
+          "type": "mcq",
+          "question": "What is the carrying away of topsoil by wind or water called?",
+          "options": ["Weathering", "Erosion", "Deposition", "Sedimentation"],
+          "correct_answer": 1,
+          "hint": "It makes fertile land poor."
         }
       ],
-
       "read_along": {
         "English": {
           "sentences": [
-            "Science helps us solve problems.",
-            "Evidence supports conclusions.",
-            "Scientific thinking uses logic.",
-            "Anyone can think like a scientist."
+            "Soil is a thin layer of Earth where plants grow, made of minerals, humus, and water.",
+            "The three layers of soil are topsoil, subsoil, and bedrock.",
+            "Rocks are classified as igneous, sedimentary, or metamorphic based on how they form.",
+            "Soil erosion removes the fertile topsoil layer and must be prevented by planting trees."
           ],
           "transliterations": []
         },
         "Hindi": {
           "sentences": [
-            "विज्ञान हमें समस्याओं को हल करने में मदद करता है।",
-            "प्रमाण निष्कर्षों का समर्थन करते हैं।",
-            "वैज्ञानिक सोच तर्क का उपयोग करती है।",
-            "कोई भी वैज्ञानिक की तरह सोच सकता है।"
+            "मिट्टी पृथ्वी की एक पतली परत है जहाँ पौधे उगते हैं, खनिजों, ह्यूमस और पानी से बनी है।",
+            "मिट्टी की तीन परतें हैं: ऊपरी मिट्टी, उप-मिट्टी और आधार शैल।",
+            "चट्टानें बनने के तरीके के आधार पर आग्नेय, अवसादी या कायांतरित होती हैं।",
+            "मिट्टी का कटाव उपजाऊ ऊपरी मिट्टी को हटा देता है, इसे पेड़ लगाकर रोका जाना चाहिए।"
           ],
           "transliterations": [
-            "Vigyan hamein samasyaon ko hal karne mein madad karta hai.",
-            "Pramaan nishkarshon ka samarthan karte hain.",
-            "Vaigyanik soch tark ka upyog karti hai.",
-            "Koi bhi vaigyanik ki tarah soch sakta hai."
+            "Mitti prithvi ki ek patali parat hai jahan paudhe ugte hain, khanijon, humus aur paani se bani hai.",
+            "Mitti ki teen paraten hain: uupari mitti, upa-mitti aur aadhaar shail.",
+            "Chattanen banne ke tarike ke aadhar par aagney, avasadi ya kaayaantrit hoti hain.",
+            "Mitti ka katav upajau uupari mitti ko hata deta hai, ise ped lagakar roka jana chahiye."
           ]
         },
         "Telugu": {
           "sentences": [
-            "శాస్త్రం సమస్యలను పరిష్కరించడంలో సహాయపడుతుంది.",
-            "సాక్ష్యాలు నిష్కర్షలను మద్దతు ఇస్తాయి.",
-            "శాస్త్రీయ ఆలోచన తార్కికతను ఉపయోగిస్తుంది.",
-            "ఎవరైనా శాస్త్రవేత్తలా ఆలోచించవచ్చు."
+            "నేల అనేది భూమి యొక్క సన్నని పొర, ఖనిజాలు, హ్యూమస్ మరియు నీటితో తయారైంది.",
+            "నేల యొక్క మూడు పొరలు: పై నేల, ఉప-నేల మరియు మూల శిల.",
+            "రాళ్ళు ఏర్పడిన విధానం ఆధారంగా అగ్నిశిల, అవక్షేప మరియు రూపాంతర రాళ్ళుగా వర్గీకరించబడతాయి.",
+            "నేల కోత సారవంతమైన పై నేల పొరను తొలగిస్తుంది మరియు చెట్లు నాటడం ద్వారా నివారించాలి."
           ],
           "transliterations": [
-            "Shastram samasyalanu parishkarinchadamlO sahayapadutundi.",
-            "Saakshyalu nishkarshalanu maddatu istayi.",
-            "Shastriya alochana tarkikatanu upayogistundi.",
-            "Evaraina shastravettala alochinchavacchu."
+            "Nela anedi bhuumi yokka sannani pora, khanijaalu, hyuumus mariyu neetito tayaaraindi.",
+            "Nela yokka muudu poralu: pai nela, upa-nela mariyu muula shila.",
+            "Raatlu erpadina vidhanam aadhaaramga agni shila, avaksheepa mariyu ruupaantara raatluugaa vargiikarinchhabadatayi.",
+            "Nela kota saaravantamaina pai nela poranu tolagisTundi mariyu chetlu naatatadam dvaara nivaariMchaali."
           ]
         }
-      }
+      },
+      "comprehension_questions": [
+        {
+          "id": "D3_CQ1",
+          "marks": 3,
+          "type": "articulation",
+          "question": "Describe the three layers of soil and what each contains.",
+          "key_points": [
+            "Topsoil (A-Horizon) is dark and rich in humus and organic matter where plants grow",
+            "Subsoil (B-Horizon) contains leached minerals with less organic matter",
+            "Bedrock (C-Horizon) is solid or weathered rock at the base"
+          ],
+          "model_answer": "Soil has three layers. The topsoil (A-Horizon) is dark, rich in humus and organic matter, where most plants root. Below is the subsoil (B-Horizon) with minerals washed down but less organic matter. At the bottom is the bedrock (C-Horizon) consisting of solid or weathered rock.",
+          "explanation": "A 3-mark answer must correctly describe all three layers with their key characteristics.",
+          "media": []
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "micro_lesson_id": "SCI6_ENV_CH01_W01_D4",
+      "title": "Forests and Biodiversity — Web of Life",
+      "duration_minutes": 20,
+      "revision_prompts": {
+        "foundation": [
+          "Which soil layer has the most humus? TOPSOIL!",
+          "Which rock forms from cooled lava? IGNEOUS rock!",
+          "Wind and water carrying away soil is called? EROSION!"
+        ],
+        "standard": [
+          "Explain the difference between the three rock types and give one example of each.",
+          "Why is topsoil important and how can we prevent its erosion?"
+        ],
+        "advanced": [
+          "Compare the A, B, and C horizons of soil in terms of formation, content, and agricultural importance."
+        ]
+      },
+      "teaching_content": {
+        "foundation": {
+          "concept_text": "Forests are large areas with many trees and plants where animals live. Forests are the HOME for millions of plants and animals — this variety of life is called BIODIVERSITY. Forests give us: OXYGEN (trees make oxygen), WOOD, FOOD (fruits, nuts), and MEDICINE. A FOOD CHAIN shows who eats who. Grass → Rabbit → Fox — the arrow shows energy going from food to the eater. The SUN gives energy to plants. Plants are PRODUCERS. Animals that eat plants are HERBIVORES. Animals that eat other animals are CARNIVORES. When forests are cut down it is called DEFORESTATION — this is bad for all life.",
+          "pacing": "slow",
+          "repetition_count": 3,
+          "tts_rate": 0.75
+        },
+        "standard": {
+          "concept_text": "Forests cover about 31% of Earth's land and harbour over 80% of terrestrial biodiversity. Biodiversity refers to the variety of life forms — species, genetic, and ecosystem diversity. A food chain represents the flow of energy: Producers (plants) → Primary consumers (herbivores) → Secondary consumers (carnivores) → Tertiary consumers. Multiple food chains form a food web. Ecosystem services provided by forests include carbon sequestration, oxygen production, water purification, soil stabilisation, and habitat provision. Deforestation causes species extinction, increases CO2, disrupts water cycles, and accelerates soil erosion. India's forest cover is about 21.7% of its land area.",
+          "pacing": "normal",
+          "repetition_count": 2,
+          "tts_rate": 0.9
+        },
+        "advanced": {
+          "concept_text": "Tropical rainforests, covering only 6% of Earth's surface, contain over 50% of the world's species. Food webs model complex trophic relationships; trophic levels represent energy transfer with ~10% efficiency (Lindeman's Law). Keystone species have disproportionate effects — wolf reintroduction in Yellowstone caused a trophic cascade. Forest fragmentation reduces biodiversity through edge effects and habitat loss. Conservation strategies: IUCN Red List, CITES, protected areas, biodiversity corridors. India: Project Tiger (1973), Biological Diversity Act (2002), 18 Biodiversity Heritage Sites.",
+          "pacing": "fast",
+          "repetition_count": 1,
+          "tts_rate": 1.1
+        }
+      },
+      "vocabulary": [
+        {
+          "word": "biodiversity",
+          "definition": "The variety of all living organisms in a given area, including plants, animals, and microorganisms.",
+          "image_hint": "biodiversity.png"
+        },
+        {
+          "word": "ecosystem",
+          "definition": "A community of living organisms interacting with each other and their physical environment.",
+          "image_hint": "ecosystem.png"
+        },
+        {
+          "word": "deforestation",
+          "definition": "The large-scale removal of forests, often for agriculture or urban development.",
+          "image_hint": "deforestation.png"
+        }
+      ],
+      "dialogue_flow": [
+        {
+          "stage": "greeting",
+          "text": "Welcome to Day 4! Today we enter the most biodiverse places on Earth — FORESTS! Every organism plays a role in the web of life."
+        },
+        {
+          "stage": "concept",
+          "text": "A food chain starts with the Sun — energy flows from plants to herbivores to carnivores. Can you make your own food chain using animals you know?"
+        },
+        {
+          "stage": "activity",
+          "text": "Forests give us oxygen, clean water, medicines, and home for millions of species. They are Earth's lungs. Why should we protect them?"
+        },
+        {
+          "stage": "wrapup",
+          "text": "Magnificent, Science Explorers! You have completed all 4 days. Tomorrow is your Weekly Assessment. Review: Air, Water, Soil, Forests!"
+        }
+      ],
+      "activities": [
+        {
+          "id": "D4_A1",
+          "type": "sequencing",
+          "instructions": "Arrange this food chain in the correct order from producer to top consumer",
+          "items": ["Eagle", "Grass", "Mouse", "Snake"],
+          "correct_order": [1, 2, 3, 0],
+          "scoring": {"correct_xp": 5}
+        }
+      ],
+      "practice_questions": [
+        {
+          "id": "D4_Q1",
+          "type": "mcq",
+          "question": "Which organism in a food chain is called a producer?",
+          "options": ["Eagle", "Mouse", "Snake", "Grass"],
+          "correct_answer": 3,
+          "hint": "It makes its own food using sunlight."
+        },
+        {
+          "id": "D4_Q2",
+          "type": "mcq",
+          "question": "What is the removal of large numbers of trees called?",
+          "options": ["Afforestation", "Deforestation", "Biodiversity", "Conservation"],
+          "correct_answer": 1,
+          "hint": "It has the word 'forest' in it with a negative prefix."
+        },
+        {
+          "id": "D4_Q3",
+          "type": "mcq",
+          "question": "Which is an ecosystem service provided by forests?",
+          "options": ["Increasing pollution", "Causing soil erosion", "Carbon sequestration", "Reducing rainfall"],
+          "correct_answer": 2,
+          "hint": "Forests absorb CO2 from the atmosphere."
+        }
+      ],
+      "read_along": {
+        "English": {
+          "sentences": [
+            "Forests are home to over 80% of Earth's terrestrial biodiversity.",
+            "A food chain shows how energy passes from producers to consumers.",
+            "Forests provide ecosystem services like clean air, clean water, and climate regulation.",
+            "Deforestation destroys habitats and must be stopped to protect biodiversity."
+          ],
+          "transliterations": []
+        },
+        "Hindi": {
+          "sentences": [
+            "वन पृथ्वी की 80% से अधिक स्थलीय जैव विविधता का घर हैं।",
+            "खाद्य श्रृंखला दर्शाती है कि ऊर्जा उत्पादकों से उपभोक्ताओं तक कैसे जाती है।",
+            "वन स्वच्छ वायु, स्वच्छ जल और जलवायु नियंत्रण जैसी पारिस्थितिकी तंत्र सेवाएं प्रदान करते हैं।",
+            "वनों की कटाई आवासों को नष्ट करती है और जैव विविधता की रक्षा के लिए रोकी जानी चाहिए।"
+          ],
+          "transliterations": [
+            "Van prithvi ki 80% se adhik sthaliy jaiv vividhata ka ghar hain.",
+            "Khaadya shrankhala darshati hai ki urja utpadakon se upabhoktaon tak kaise jaati hai.",
+            "Van svachch vayu, svachch jal aur jalvayu niyantran jaisi paaristhitiki tantr sevaen pradaan karte hain.",
+            "Vanon ki kataai aavasyon ko nasht karti hai aur jaiv vividhata ki raksha ke liye roki jaani chahiye."
+          ]
+        },
+        "Telugu": {
+          "sentences": [
+            "అడవులు భూమిపై 80%కి పైగా భూగత జీవవైవిధ్యానికి నిలయం.",
+            "ఆహార గొలుసు ఉత్పత్తిదారుల నుండి వినియోగదారులకు శక్తి ఎలా ప్రవహిస్తుందో చూపిస్తుంది.",
+            "అడవులు స్వచ్ఛమైన వాయువు, స్వచ్ఛమైన నీరు మరియు వాతావరణ నియంత్రణ వంటి సేవలను అందిస్తాయి.",
+            "అడవుల నరికివేత ఆవాసాలను నాశనం చేస్తుంది మరియు జీవవైవిధ్యాన్ని రక్షించడానికి ఆపాలి."
+          ],
+          "transliterations": [
+            "Adavulu bhumipai 80%ki paigaa bhuugata jeevavaividhyaaniki nilayam.",
+            "Aahaara golasu utpattidaarula nundi viniyogadaarulaku shakti elaa pravahisTundho choopisTundi.",
+            "Adavulu svacchamaina vaayu, svacchamaina neeru mariyu vaataavaraNa niyantrana vanti sevlanu andisTaayi.",
+            "Adavula narikiveeta avaasaaLanu naashanam chesTundi mariyu jeevavaividhyaanni rakshiMchadam ki aapaali."
+          ]
+        }
+      },
+      "comprehension_questions": [
+        {
+          "id": "D4_CQ1",
+          "marks": 5,
+          "type": "articulation",
+          "question": "Explain what a food chain is with an example, and describe three ecosystem services provided by forests.",
+          "key_points": [
+            "A food chain shows the flow of energy from producers to consumers",
+            "Example: Grass to Grasshopper to Frog to Snake to Eagle",
+            "Ecosystem service 1: Oxygen production through photosynthesis",
+            "Ecosystem service 2: Carbon sequestration (absorbing CO2)",
+            "Ecosystem service 3: Water purification, soil stabilisation, or habitat provision"
+          ],
+          "model_answer": "A food chain shows how energy passes from one organism to another. Example: Grass → Grasshopper → Frog → Snake → Eagle. Forests provide ecosystem services including: (1) Oxygen production through photosynthesis, (2) Carbon sequestration by absorbing CO2, and (3) Water purification as tree roots filter rainwater.",
+          "explanation": "A 5-mark answer needs: food chain definition (1), correct example (1), and three named ecosystem services (3 marks).",
+          "media": []
+        }
+      ]
     }
-
   ],
-
   "weekly_assessment": {
-    "assessment_id": "SCI6_CURIOSITY_CH01_W01_ASSESS",
-    "title": "Week 1 Assessment",
+    "assessment_id": "SCI6_ENV_CH01_W01_ASSESS",
+    "title": "Week 1 Assessment: Our Environment",
     "time_limit_minutes": 20,
+    "star_thresholds": {"5": 90, "4": 75, "3": 60, "2": 40, "1": 0},
     "questions": [
-      {"id":"WA_Q1","type":"mcq","question":"Science is a way of:","options":["Thinking","Sleeping","Guessing","Imagining"],"correct_answer":0,"points":2},
-      {"id":"WA_Q2","type":"mcq","question":"Curiosity leads to:","options":["Answers","Questions","Silence","Fear"],"correct_answer":1,"points":2},
-      {"id":"WA_Q3","type":"mcq","question":"A hypothesis is:","options":["Observation","Experiment","Conclusion","Educated guess"],"correct_answer":3,"points":2},
-      {"id":"WA_Q4","type":"mcq","question":"First step of scientific method:","options":["Conclusion","Observation","Guess","Test"],"correct_answer":1,"points":2},
-      {"id":"WA_Q5","type":"mcq","question":"Science helps solve:","options":["Problems","Stories","Dreams","Jokes"],"correct_answer":0,"points":2},
-      {"id":"WA_Q6","type":"mcq","question":"Evidence means:","options":["Guess","Facts","Magic","Opinion"],"correct_answer":1,"points":2},
-      {"id":"WA_Q7","type":"mcq","question":"An experiment is used to:","options":["Test a hypothesis","Sleep","Dance","Ignore"],"correct_answer":0,"points":2},
-      {"id":"WA_Q8","type":"mcq","question":"Scientific thinking requires:","options":["Logic","Luck","Fear","Magic"],"correct_answer":0,"points":2},
-      {"id":"WA_Q9","type":"mcq","question":"Observation means to:","options":["Notice carefully","Sleep","Guess","Forget"],"correct_answer":0,"points":2},
-      {"id":"WA_Q10","type":"mcq","question":"Science improves when:","options":["Evidence appears","Stories spread","People guess","Magic happens"],"correct_answer":0,"points":2}
-    ],
-    "star_thresholds": {
-      "one_star": 40,
-      "two_stars": 60,
-      "three_stars": 80
-    }
+      {
+        "id": "WA_Q1",
+        "type": "mcq",
+        "question": "Which gas makes up the largest proportion of Earth's atmosphere?",
+        "options": ["Oxygen", "Carbon dioxide", "Nitrogen", "Argon"],
+        "correct_answer": 2,
+        "points": 2
+      },
+      {
+        "id": "WA_Q2",
+        "type": "mcq",
+        "question": "What is the correct percentage of oxygen in air?",
+        "options": ["78%", "21%", "0.04%", "50%"],
+        "correct_answer": 1,
+        "points": 2
+      },
+      {
+        "id": "WA_Q3",
+        "type": "mcq",
+        "question": "What process converts liquid water to water vapour?",
+        "options": ["Condensation", "Precipitation", "Evaporation", "Transpiration"],
+        "correct_answer": 2,
+        "points": 2
+      },
+      {
+        "id": "WA_Q4",
+        "type": "mcq",
+        "question": "What percentage of Earth's water is freshwater?",
+        "options": ["71%", "97%", "3%", "50%"],
+        "correct_answer": 2,
+        "points": 2
+      },
+      {
+        "id": "WA_Q5",
+        "type": "mcq",
+        "question": "Which layer of soil is richest in humus?",
+        "options": ["Bedrock", "Subsoil", "Parent rock", "Topsoil"],
+        "correct_answer": 3,
+        "points": 2
+      },
+      {
+        "id": "WA_Q6",
+        "type": "mcq",
+        "question": "Granite is an example of which rock type?",
+        "options": ["Sedimentary", "Metamorphic", "Igneous", "Fossil"],
+        "correct_answer": 2,
+        "points": 2
+      },
+      {
+        "id": "WA_Q7",
+        "type": "mcq",
+        "question": "In a food chain, what is an organism that makes its own food called?",
+        "options": ["Consumer", "Decomposer", "Predator", "Producer"],
+        "correct_answer": 3,
+        "points": 2
+      },
+      {
+        "id": "WA_Q8",
+        "type": "mcq",
+        "question": "What is the term for the variety of all living organisms in an area?",
+        "options": ["Ecosystem", "Biodiversity", "Food chain", "Habitat"],
+        "correct_answer": 1,
+        "points": 2
+      },
+      {
+        "id": "WA_Q9",
+        "type": "mcq",
+        "question": "Which of the following is a cause of air pollution?",
+        "options": ["Planting trees", "Solar panels", "Vehicle emissions", "Rainwater harvesting"],
+        "correct_answer": 2,
+        "points": 2
+      },
+      {
+        "id": "WA_Q10",
+        "type": "mcq",
+        "question": "What is the large-scale removal of forests called?",
+        "options": ["Conservation", "Afforestation", "Biodiversity", "Deforestation"],
+        "correct_answer": 3,
+        "points": 2
+      }
+    ]
   }
 }

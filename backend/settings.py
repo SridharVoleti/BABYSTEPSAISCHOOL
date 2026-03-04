@@ -94,6 +94,10 @@ INSTALLED_APPS = [
     'services.gamification_service',  # 2026-02-20: Gamification Engine (BS-GAM)
     'services.spaced_repetition_service',  # 2026-02-27: Spaced Repetition Service (BS-SPC)
     'services.story_mode_service',  # 2026-02-27: Story Mode Service (BS-GAM-003)
+    'services.language_stages_service',  # 2026-03-02: Language Stages Service (BS-LNG-005)
+    'services.math_service',  # 2026-03-02: Mathematics Module (BS-MTH)
+    'services.pod_service',  # 2026-03-04: Pod Management & AI Monitoring (BS-POD + BS-MON)
+    'services.passkey_service',  # 2026-03-04: Passkey / WebAuthn authentication (BS-AUTH-002)
 ]
 
 MIDDLEWARE = [
@@ -239,21 +243,25 @@ LLM_CONFIG = {
     'max_retries': 3,
 }
 
-# To switch to OpenAI (example):
+# 2026-03-04: To switch to OpenAI — install SDK first: pip install openai>=1.0
 # LLM_PROVIDER = 'openai'
 # LLM_CONFIG = {
-#     'model_name': 'gpt-3.5-turbo',
-#     'api_key': os.getenv('OPENAI_API_KEY'),  # Set in environment
+#     'model_name': 'gpt-4o-mini',              # or 'gpt-4o', 'gpt-4-turbo'
+#     'api_key': os.getenv('OPENAI_API_KEY'),   # set in .env
 #     'timeout': 60,
 # }
 
-# To switch to Anthropic Claude (example):
+# 2026-03-04: To switch to Anthropic Claude — install SDK: pip install anthropic>=0.20
 # LLM_PROVIDER = 'anthropic'
 # LLM_CONFIG = {
-#     'model_name': 'claude-3-sonnet-20240229',
-#     'api_key': os.getenv('ANTHROPIC_API_KEY'),  # Set in environment
+#     'model_name': 'claude-haiku-4-5-20251001',    # fast + cheap; or 'claude-sonnet-4-6'
+#     'api_key': os.getenv('ANTHROPIC_API_KEY'),    # set in .env
 #     'timeout': 60,
 # }
+
+# 2026-03-04: For automated tests (zero latency, no network):
+# LLM_PROVIDER = 'mock'
+# LLM_CONFIG = {'model_name': 'mock', 'default_response': 'Test LLM response.'}
 
 # 2026-02-12: JWT Configuration (SimpleJWT)
 from datetime import timedelta  # noqa: E402
@@ -283,3 +291,13 @@ OTP_CONFIG = {
 # TWILIO_ACCOUNT_SID = os.getenv('TWILIO_ACCOUNT_SID')
 # TWILIO_AUTH_TOKEN = os.getenv('TWILIO_AUTH_TOKEN')
 # TWILIO_WHATSAPP_FROM = os.getenv('TWILIO_WHATSAPP_FROM', 'whatsapp:+14155238886')
+
+# 2026-03-04: Email backend (console for dev; swap to smtp in production)
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+FRONTEND_URL = os.getenv('FRONTEND_URL', 'http://localhost:3000')
+PASSWORD_RESET_TIMEOUT = 3600  # 2026-03-04: Token validity in seconds (1 hour)
+
+# 2026-03-04: WebAuthn / Passkey settings (BS-AUTH-002)
+WEBAUTHN_RP_ID = os.getenv('WEBAUTHN_RP_ID', 'localhost')
+WEBAUTHN_RP_NAME = 'BabySteps Digital School'
+WEBAUTHN_ORIGIN = os.getenv('WEBAUTHN_ORIGIN', 'http://localhost:3000')

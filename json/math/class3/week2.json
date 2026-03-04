@@ -1,0 +1,396 @@
+{
+  "lesson_id": "MATH3_W02",
+  "class": 3,
+  "subject": "Math",
+  "topic": "Multiplication, Division and Introduction to Fractions",
+  "week_number": 2,
+  "character": "Eagle the Explorer",
+  "learning_objectives": [
+    "Multiply 2-digit by 1-digit numbers",
+    "Divide with equal groups and find remainders",
+    "Understand fractions as equal parts of a whole"
+  ],
+  "days": [
+    {
+      "day": 1,
+      "title": "2-Digit \u00d7 1-Digit Multiplication",
+      "teaching_summary": "To multiply a 2-digit number by a 1-digit number, multiply the ones then the tens and add.",
+      "worked_examples": [
+        {
+          "problem": "24 \u00d7 3 = ?",
+          "solution_steps": [
+            "Ones: 4 \u00d7 3 = 12. Write 2, carry 1",
+            "Tens: 2 \u00d7 3 = 6, plus carry 1 = 7",
+            "Answer: 72"
+          ],
+          "answer": "72"
+        }
+      ],
+      "problems": {
+        "easy": [
+          {
+            "id": "MATH3_W02_D1_E1",
+            "type": "mcq",
+            "question": "21 \u00d7 4 = ?",
+            "options": ["74", "84", "94", "104"],
+            "correct_answer": 1,
+            "worked_solution": {
+              "steps": ["Ones: 1\u00d74=4", "Tens: 2\u00d74=8", "Answer: 84"],
+              "answer": "84",
+              "explanation": "21 \u00d7 4 = 84. Multiply ones then tens."
+            },
+            "hint": "Multiply ones (1\u00d74) then tens (2\u00d74) and combine."
+          },
+          {
+            "id": "MATH3_W02_D1_E2",
+            "type": "mcq",
+            "question": "30 \u00d7 3 = ?",
+            "options": ["60", "90", "120", "150"],
+            "correct_answer": 1,
+            "worked_solution": {
+              "steps": ["3 \u00d7 3 = 9 tens = 90"],
+              "answer": "90",
+              "explanation": "30 \u00d7 3 = 90. Three times 3 tens = 9 tens."
+            },
+            "hint": "30 is 3 tens. Multiply 3 by 3 then add a zero."
+          }
+        ],
+        "medium": [
+          {
+            "id": "MATH3_W02_D1_M1",
+            "type": "numeric_fill",
+            "question": "36 \u00d7 4 = __",
+            "correct_answer": 144,
+            "worked_solution": {
+              "steps": ["Ones: 6\u00d74=24. Write 4, carry 2", "Tens: 3\u00d74=12, plus carry 2=14", "Answer: 144"],
+              "answer": "144",
+              "explanation": "36 \u00d7 4 = 144."
+            },
+            "hint": "6\u00d74=24. Write 4, carry 2. Then 3\u00d74=12, plus 2 = 14."
+          },
+          {
+            "id": "MATH3_W02_D1_M2",
+            "type": "numeric_fill",
+            "question": "If 1 packet holds 25 pencils, how many pencils are in 3 packets?",
+            "correct_answer": 75,
+            "worked_solution": {
+              "steps": ["3 \u00d7 25", "Ones: 3\u00d75=15. Write 5, carry 1", "Tens: 3\u00d72=6, plus 1=7", "Answer: 75"],
+              "answer": "75",
+              "explanation": "3 \u00d7 25 = 75 pencils."
+            },
+            "hint": "Multiply 3 \u00d7 25. Think ones then tens."
+          }
+        ],
+        "hard": [
+          {
+            "id": "MATH3_W02_D1_H1",
+            "type": "word_problem",
+            "question": "A class has 28 students. Each student needs 6 coloured pencils. How many coloured pencils are needed in all?",
+            "correct_answer": 168,
+            "worked_solution": {
+              "steps": [
+                "Students: 28",
+                "Pencils per student: 6",
+                "Total = 28 \u00d7 6",
+                "Ones: 8\u00d76=48. Write 8, carry 4",
+                "Tens: 2\u00d76=12, plus 4=16",
+                "Answer: 168 pencils"
+              ],
+              "answer": "168",
+              "key_concepts": ["2-digit \u00d7 1-digit multiplication", "equal groups"],
+              "explanation": "28 \u00d7 6 = 168 pencils needed."
+            },
+            "hint": "Multiply students by pencils each: 28 \u00d7 6."
+          }
+        ]
+      }
+    },
+    {
+      "day": 2,
+      "title": "Division: Equal Groups",
+      "teaching_summary": "Division splits a total into equal groups. 12 \u00f7 3 = 4 means 12 split into 3 equal groups gives 4 each.",
+      "worked_examples": [
+        {
+          "problem": "20 \u00f7 4 = ?",
+          "solution_steps": [
+            "How many groups of 4 make 20?",
+            "4, 8, 12, 16, 20 \u2014 5 groups",
+            "Answer: 5"
+          ],
+          "answer": "5"
+        }
+      ],
+      "problems": {
+        "easy": [
+          {
+            "id": "MATH3_W02_D2_E1",
+            "type": "mcq",
+            "question": "15 \u00f7 3 = ?",
+            "options": ["4", "5", "6", "7"],
+            "correct_answer": 1,
+            "worked_solution": {
+              "steps": ["How many 3s make 15?", "3,6,9,12,15 \u2014 5 threes", "Answer: 5"],
+              "answer": "5",
+              "explanation": "15 \u00f7 3 = 5. Five groups of 3 make 15."
+            },
+            "hint": "Count by 3 until you reach 15. How many steps?"
+          },
+          {
+            "id": "MATH3_W02_D2_E2",
+            "type": "mcq",
+            "question": "24 \u00f7 6 = ?",
+            "options": ["3", "4", "6", "8"],
+            "correct_answer": 1,
+            "worked_solution": {
+              "steps": ["How many 6s make 24?", "6,12,18,24 \u2014 4 sixes", "Answer: 4"],
+              "answer": "4",
+              "explanation": "24 \u00f7 6 = 4."
+            },
+            "hint": "Count by 6 until you reach 24."
+          }
+        ],
+        "medium": [
+          {
+            "id": "MATH3_W02_D2_M1",
+            "type": "numeric_fill",
+            "question": "35 \u00f7 5 = __",
+            "correct_answer": 7,
+            "worked_solution": {
+              "steps": ["How many 5s make 35?", "5\u00d77=35", "Answer: 7"],
+              "answer": "7",
+              "explanation": "35 \u00f7 5 = 7. Seven fives make 35."
+            },
+            "hint": "Use the 5 times table: 5\u00d7? = 35."
+          },
+          {
+            "id": "MATH3_W02_D2_M2",
+            "type": "numeric_fill",
+            "question": "56 \u00f7 7 = __",
+            "correct_answer": 8,
+            "worked_solution": {
+              "steps": ["7\u00d78=56", "Answer: 8"],
+              "answer": "8",
+              "explanation": "56 \u00f7 7 = 8."
+            },
+            "hint": "Use the 7 times table: 7\u00d7? = 56."
+          }
+        ],
+        "hard": [
+          {
+            "id": "MATH3_W02_D2_H1",
+            "type": "word_problem",
+            "question": "54 students are to be divided equally into 9 teams. How many students will be in each team?",
+            "correct_answer": 6,
+            "worked_solution": {
+              "steps": [
+                "Total students: 54",
+                "Number of teams: 9",
+                "Students per team: 54 \u00f7 9",
+                "9 \u00d7 6 = 54",
+                "Answer: 6 students per team"
+              ],
+              "answer": "6",
+              "key_concepts": ["division", "equal groups"],
+              "explanation": "54 \u00f7 9 = 6. Each team has 6 students."
+            },
+            "hint": "Divide total students by number of teams: 54 \u00f7 9."
+          }
+        ]
+      }
+    },
+    {
+      "day": 3,
+      "title": "Division with Remainders",
+      "teaching_summary": "Sometimes things do not divide evenly. The leftover amount is called the remainder. 13 \u00f7 4 = 3 remainder 1.",
+      "worked_examples": [
+        {
+          "problem": "17 \u00f7 5 = ?",
+          "solution_steps": [
+            "5 \u00d7 3 = 15 (closest multiple of 5 below 17)",
+            "Remainder: 17 \u2212 15 = 2",
+            "Answer: 3 remainder 2"
+          ],
+          "answer": "3 remainder 2"
+        }
+      ],
+      "problems": {
+        "easy": [
+          {
+            "id": "MATH3_W02_D3_E1",
+            "type": "mcq",
+            "question": "What is the remainder of 13 \u00f7 4?",
+            "options": ["0", "1", "2", "3"],
+            "correct_answer": 1,
+            "worked_solution": {
+              "steps": ["4 \u00d7 3 = 12", "13 \u2212 12 = 1", "Remainder: 1"],
+              "answer": "1",
+              "explanation": "13 \u00f7 4 = 3 remainder 1. 4\u00d73=12, leftover 1."
+            },
+            "hint": "Find the largest multiple of 4 that fits in 13. Subtract to get the remainder."
+          },
+          {
+            "id": "MATH3_W02_D3_E2",
+            "type": "mcq",
+            "question": "23 \u00f7 7 = ?",
+            "options": ["3 rem 0", "3 rem 2", "3 rem 4", "4 rem 0"],
+            "correct_answer": 1,
+            "worked_solution": {
+              "steps": ["7 \u00d7 3 = 21", "23 \u2212 21 = 2", "Answer: 3 remainder 2"],
+              "answer": "3 rem 2",
+              "explanation": "23 \u00f7 7 = 3 remainder 2."
+            },
+            "hint": "7\u00d73=21. 23\u221221=2. So quotient is 3 and remainder is 2."
+          }
+        ],
+        "medium": [
+          {
+            "id": "MATH3_W02_D3_M1",
+            "type": "numeric_fill",
+            "question": "25 \u00f7 4 = 6 remainder __",
+            "correct_answer": 1,
+            "worked_solution": {
+              "steps": ["4 \u00d7 6 = 24", "25 \u2212 24 = 1", "Remainder: 1"],
+              "answer": "1",
+              "explanation": "25 \u00f7 4 = 6 remainder 1."
+            },
+            "hint": "4\u00d76=24. What is 25\u221224?"
+          },
+          {
+            "id": "MATH3_W02_D3_M2",
+            "type": "numeric_fill",
+            "question": "If 29 sweets are shared among 6 children equally, how many sweets does each child get?",
+            "correct_answer": 4,
+            "worked_solution": {
+              "steps": ["29 \u00f7 6", "6 \u00d7 4 = 24", "Remainder: 29\u221224=5", "Each child gets 4 sweets (5 left over)"],
+              "answer": "4",
+              "explanation": "29 \u00f7 6 = 4 remainder 5. Each child gets 4 sweets."
+            },
+            "hint": "Find how many groups of 6 fit in 29."
+          }
+        ],
+        "hard": [
+          {
+            "id": "MATH3_W02_D3_H1",
+            "type": "word_problem",
+            "question": "A tailor has 47 metres of cloth. Each shirt needs 3 metres. How many complete shirts can he make and how much cloth will be left over?",
+            "correct_answer": "15 shirts, 2 metres left",
+            "worked_solution": {
+              "steps": [
+                "Total cloth: 47 metres",
+                "Cloth per shirt: 3 metres",
+                "47 \u00f7 3 = ?",
+                "3 \u00d7 15 = 45",
+                "Remainder: 47 \u2212 45 = 2",
+                "Answer: 15 shirts, 2 metres left"
+              ],
+              "answer": "15 shirts, 2 metres left",
+              "key_concepts": ["division with remainder", "real-world application"],
+              "explanation": "47 \u00f7 3 = 15 remainder 2. He makes 15 shirts with 2 m left."
+            },
+            "hint": "Divide 47 by 3. The quotient is shirts made; the remainder is cloth left."
+          }
+        ]
+      }
+    },
+    {
+      "day": 4,
+      "title": "Introduction to Fractions",
+      "teaching_summary": "A fraction shows equal parts of a whole. 1/2 means 1 part out of 2 equal parts. The bottom number (denominator) tells how many equal parts; the top (numerator) tells how many we have.",
+      "worked_examples": [
+        {
+          "problem": "A pizza is cut into 4 equal pieces. You eat 1 piece. What fraction did you eat?",
+          "solution_steps": [
+            "Total equal pieces: 4 (denominator)",
+            "Pieces eaten: 1 (numerator)",
+            "Fraction = 1/4"
+          ],
+          "answer": "1/4"
+        }
+      ],
+      "problems": {
+        "easy": [
+          {
+            "id": "MATH3_W02_D4_E1",
+            "type": "mcq",
+            "question": "A ribbon is cut into 3 equal pieces. What fraction is each piece?",
+            "options": ["1/2", "1/3", "1/4", "3/1"],
+            "correct_answer": 1,
+            "worked_solution": {
+              "steps": ["Total pieces: 3 (denominator)", "Each piece: 1 (numerator)", "Fraction = 1/3"],
+              "answer": "1/3",
+              "explanation": "One piece out of 3 equal pieces = 1/3."
+            },
+            "hint": "How many equal pieces in total? That is the denominator."
+          },
+          {
+            "id": "MATH3_W02_D4_E2",
+            "type": "mcq",
+            "question": "Which fraction is bigger: 1/2 or 1/4?",
+            "options": ["1/4", "1/2", "they are equal", "cannot say"],
+            "correct_answer": 1,
+            "worked_solution": {
+              "steps": ["1/2 means 1 of 2 equal parts (half)", "1/4 means 1 of 4 equal parts (quarter)", "Fewer equal parts means each part is bigger", "1/2 > 1/4"],
+              "answer": "1/2",
+              "explanation": "Cutting something into fewer pieces makes each piece larger. 1/2 > 1/4."
+            },
+            "hint": "Imagine cutting a cake into 2 vs 4 pieces. Which piece is bigger?"
+          }
+        ],
+        "medium": [
+          {
+            "id": "MATH3_W02_D4_M1",
+            "type": "numeric_fill",
+            "question": "Colour 3 out of 8 equal parts. What fraction is coloured? Write as a fraction (numerator only if denominator is 8).",
+            "correct_answer": 3,
+            "worked_solution": {
+              "steps": ["Coloured: 3 parts", "Total equal parts: 8", "Fraction = 3/8", "Numerator = 3"],
+              "answer": "3",
+              "explanation": "3 out of 8 parts coloured = 3/8. The numerator is 3."
+            },
+            "hint": "Numerator = parts coloured. Denominator = total equal parts = 8."
+          },
+          {
+            "id": "MATH3_W02_D4_M2",
+            "type": "numeric_fill",
+            "question": "3/5 of a class of 30 students brought lunch. How many students brought lunch?",
+            "correct_answer": 18,
+            "worked_solution": {
+              "steps": [
+                "3/5 of 30",
+                "First find 1/5: 30 \u00f7 5 = 6",
+                "Then 3/5: 6 \u00d7 3 = 18",
+                "Answer: 18 students"
+              ],
+              "answer": "18",
+              "explanation": "3/5 of 30 = 18 students."
+            },
+            "hint": "Find 1/5 of 30 first (30\u00f75), then multiply by 3."
+          }
+        ],
+        "hard": [
+          {
+            "id": "MATH3_W02_D4_H1",
+            "type": "word_problem",
+            "question": "A mango was cut into 8 equal pieces. Asha ate 3 pieces and her brother ate 2 pieces. What fraction of the mango was eaten? How much is left?",
+            "correct_answer": "5/8 eaten, 3/8 left",
+            "worked_solution": {
+              "steps": [
+                "Total pieces: 8",
+                "Asha ate: 3 pieces",
+                "Brother ate: 2 pieces",
+                "Total eaten: 3 + 2 = 5 pieces",
+                "Fraction eaten: 5/8",
+                "Pieces left: 8 \u2212 5 = 3",
+                "Fraction left: 3/8"
+              ],
+              "answer": "5/8 eaten, 3/8 left",
+              "key_concepts": ["fractions", "addition of fractions with same denominator"],
+              "explanation": "5 of 8 pieces eaten = 5/8. Remaining: 3/8."
+            },
+            "hint": "Add pieces eaten (3+2=5). Fraction eaten = 5/8. Subtract to find what is left."
+          }
+        ]
+      }
+    }
+  ]
+}

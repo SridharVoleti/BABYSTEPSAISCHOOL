@@ -1,0 +1,372 @@
+{
+  "lesson_id": "MATH1_W02",
+  "class": 1,
+  "subject": "Math",
+  "topic": "Addition and Subtraction within 10",
+  "week_number": 2,
+  "character": "Bunny the Counter",
+  "learning_objectives": [
+    "Add two single-digit numbers with sum up to 10",
+    "Subtract a smaller number from a number up to 10",
+    "Understand addition as combining and subtraction as taking away"
+  ],
+  "days": [
+    {
+      "day": 1,
+      "title": "Adding Numbers (sum up to 5)",
+      "teaching_summary": "Addition means joining two groups together. We use the + sign. Count all objects to find the total.",
+      "worked_examples": [
+        {
+          "problem": "2 + 3 = ?",
+          "solution_steps": ["Start with 2", "Count on 3 more: 3, 4, 5", "Answer: 5"],
+          "answer": "5"
+        }
+      ],
+      "problems": {
+        "easy": [
+          {
+            "id": "MATH1_W02_D1_E1",
+            "type": "mcq",
+            "question": "What is 1 + 2?",
+            "options": ["2", "3", "4", "5"],
+            "correct_answer": 1,
+            "worked_solution": {
+              "steps": ["Start at 1", "Count on 2 more: 2, 3", "Answer: 3"],
+              "answer": "3",
+              "explanation": "1 + 2 = 3. Start at 1 and count two more steps."
+            },
+            "hint": "Start at 1, then count 2 more numbers forward."
+          },
+          {
+            "id": "MATH1_W02_D1_E2",
+            "type": "mcq",
+            "question": "What is 2 + 2?",
+            "options": ["2", "3", "4", "5"],
+            "correct_answer": 2,
+            "worked_solution": {
+              "steps": ["2 and 2 more", "Count: 1+1+1+1 = 4"],
+              "answer": "4",
+              "explanation": "2 + 2 = 4. Two pairs make four."
+            },
+            "hint": "Count two groups of 2 objects."
+          }
+        ],
+        "medium": [
+          {
+            "id": "MATH1_W02_D1_M1",
+            "type": "numeric_fill",
+            "question": "3 + __ = 5",
+            "correct_answer": 2,
+            "worked_solution": {
+              "steps": ["We need: 3 + ? = 5", "Count on from 3: 4, 5 \u2014 that is 2 steps", "Answer: 2"],
+              "answer": "2",
+              "explanation": "3 + 2 = 5. Count on 2 from 3 to reach 5."
+            },
+            "hint": "Start at 3. How many steps to reach 5?"
+          },
+          {
+            "id": "MATH1_W02_D1_M2",
+            "type": "numeric_fill",
+            "question": "1 + 4 = __",
+            "correct_answer": 5,
+            "worked_solution": {
+              "steps": ["Start at 1", "Count on 4: 2, 3, 4, 5", "Answer: 5"],
+              "answer": "5",
+              "explanation": "1 + 4 = 5."
+            },
+            "hint": "Start at 1 and count forward 4 steps."
+          }
+        ],
+        "hard": [
+          {
+            "id": "MATH1_W02_D1_H1",
+            "type": "word_problem",
+            "question": "Priya has 2 red flowers and 3 yellow flowers. How many flowers does she have altogether?",
+            "correct_answer": 5,
+            "worked_solution": {
+              "steps": [
+                "Red flowers: 2",
+                "Yellow flowers: 3",
+                "Altogether means we ADD",
+                "2 + 3 = 5",
+                "Answer: 5 flowers"
+              ],
+              "answer": "5",
+              "key_concepts": ["addition", "altogether"],
+              "explanation": "Altogether we combine both groups: 2 + 3 = 5."
+            },
+            "hint": "Altogether means we put both groups together. Do we add or subtract?"
+          }
+        ]
+      }
+    },
+    {
+      "day": 2,
+      "title": "Adding Numbers (sum 6\u201310)",
+      "teaching_summary": "We continue adding. Use fingers or a number line to count on from the bigger number.",
+      "worked_examples": [
+        {
+          "problem": "4 + 5 = ?",
+          "solution_steps": ["Start at 5 (bigger number)", "Count on 4 more: 6, 7, 8, 9", "Answer: 9"],
+          "answer": "9"
+        }
+      ],
+      "problems": {
+        "easy": [
+          {
+            "id": "MATH1_W02_D2_E1",
+            "type": "mcq",
+            "question": "What is 3 + 4?",
+            "options": ["5", "6", "7", "8"],
+            "correct_answer": 2,
+            "worked_solution": {
+              "steps": ["Start at 4 (bigger)", "Count on 3: 5, 6, 7", "Answer: 7"],
+              "answer": "7",
+              "explanation": "3 + 4 = 7."
+            },
+            "hint": "Start at the bigger number (4) and count on 3."
+          },
+          {
+            "id": "MATH1_W02_D2_E2",
+            "type": "mcq",
+            "question": "What is 5 + 5?",
+            "options": ["8", "9", "10", "11"],
+            "correct_answer": 2,
+            "worked_solution": {
+              "steps": ["5 and 5 more", "Count on 5 from 5: 6, 7, 8, 9, 10", "Answer: 10"],
+              "answer": "10",
+              "explanation": "5 + 5 = 10. Two groups of 5 make 10."
+            },
+            "hint": "Count 5 more starting from 5."
+          }
+        ],
+        "medium": [
+          {
+            "id": "MATH1_W02_D2_M1",
+            "type": "numeric_fill",
+            "question": "6 + __ = 10",
+            "correct_answer": 4,
+            "worked_solution": {
+              "steps": ["6 + ? = 10", "Count on from 6: 7, 8, 9, 10 \u2014 that is 4 steps", "Answer: 4"],
+              "answer": "4",
+              "explanation": "6 + 4 = 10."
+            },
+            "hint": "Start at 6. How many steps to reach 10?"
+          },
+          {
+            "id": "MATH1_W02_D2_M2",
+            "type": "numeric_fill",
+            "question": "__ + 3 = 8",
+            "correct_answer": 5,
+            "worked_solution": {
+              "steps": ["? + 3 = 8", "8 \u2212 3 = 5", "Answer: 5"],
+              "answer": "5",
+              "explanation": "5 + 3 = 8. We can check by adding."
+            },
+            "hint": "Think: what number plus 3 gives 8?"
+          }
+        ],
+        "hard": [
+          {
+            "id": "MATH1_W02_D2_H1",
+            "type": "word_problem",
+            "question": "Arjun has 4 toy cars and his father gives him 6 more. How many toy cars does Arjun have now?",
+            "correct_answer": 10,
+            "worked_solution": {
+              "steps": [
+                "Arjun's cars: 4",
+                "Father gives: 6 more",
+                "More cars means we ADD",
+                "4 + 6 = 10",
+                "Answer: 10 cars"
+              ],
+              "answer": "10",
+              "key_concepts": ["addition", "gives more"],
+              "explanation": "4 + 6 = 10. Adding the cars together gives 10."
+            },
+            "hint": "Arjun is getting MORE cars. Add the two amounts."
+          }
+        ]
+      }
+    },
+    {
+      "day": 3,
+      "title": "Subtraction (take away from 5)",
+      "teaching_summary": "Subtraction means taking away from a group. We use the \u2212 sign. The answer is always smaller than where we started.",
+      "worked_examples": [
+        {
+          "problem": "5 \u2212 2 = ?",
+          "solution_steps": ["Start with 5", "Take away 2: cross out 2 objects", "Count what is left: 3"],
+          "answer": "3"
+        }
+      ],
+      "problems": {
+        "easy": [
+          {
+            "id": "MATH1_W02_D3_E1",
+            "type": "mcq",
+            "question": "What is 4 \u2212 1?",
+            "options": ["2", "3", "4", "5"],
+            "correct_answer": 1,
+            "worked_solution": {
+              "steps": ["Start at 4", "Take away 1: count back one step", "4 \u2192 3", "Answer: 3"],
+              "answer": "3",
+              "explanation": "4 \u2212 1 = 3. Taking away one gives three."
+            },
+            "hint": "Start at 4 and count back 1."
+          },
+          {
+            "id": "MATH1_W02_D3_E2",
+            "type": "mcq",
+            "question": "What is 5 \u2212 5?",
+            "options": ["0", "1", "5", "10"],
+            "correct_answer": 0,
+            "worked_solution": {
+              "steps": ["Start with 5", "Take all 5 away", "Nothing is left: 0"],
+              "answer": "0",
+              "explanation": "When you take away all objects, nothing remains: 0."
+            },
+            "hint": "If you take away all of something, what is left?"
+          }
+        ],
+        "medium": [
+          {
+            "id": "MATH1_W02_D3_M1",
+            "type": "numeric_fill",
+            "question": "5 \u2212 __ = 2",
+            "correct_answer": 3,
+            "worked_solution": {
+              "steps": ["5 \u2212 ? = 2", "Count from 2 up to 5: 3, 4, 5 \u2014 that is 3 steps", "Answer: 3"],
+              "answer": "3",
+              "explanation": "5 \u2212 3 = 2."
+            },
+            "hint": "Count from 2 up to 5. How many steps is that?"
+          },
+          {
+            "id": "MATH1_W02_D3_M2",
+            "type": "numeric_fill",
+            "question": "4 \u2212 3 = __",
+            "correct_answer": 1,
+            "worked_solution": {
+              "steps": ["Start at 4", "Count back 3: 3, 2, 1", "Answer: 1"],
+              "answer": "1",
+              "explanation": "4 \u2212 3 = 1."
+            },
+            "hint": "Start at 4 and count backwards 3 steps."
+          }
+        ],
+        "hard": [
+          {
+            "id": "MATH1_W02_D3_H1",
+            "type": "word_problem",
+            "question": "There are 5 cookies on a plate. Sita eats 3 cookies. How many cookies are left?",
+            "correct_answer": 2,
+            "worked_solution": {
+              "steps": [
+                "Cookies on plate: 5",
+                "Sita eats: 3",
+                "Eating takes away, so we SUBTRACT",
+                "5 \u2212 3 = 2",
+                "Answer: 2 cookies left"
+              ],
+              "answer": "2",
+              "key_concepts": ["subtraction", "taking away", "remaining"],
+              "explanation": "Eating takes cookies away. 5 \u2212 3 = 2 cookies left."
+            },
+            "hint": "Eating the cookies takes them away. Should we add or subtract?"
+          }
+        ]
+      }
+    },
+    {
+      "day": 4,
+      "title": "Subtraction (take away from 10)",
+      "teaching_summary": "Subtraction from larger numbers: start at the first number and count back. The result must be non-negative.",
+      "worked_examples": [
+        {
+          "problem": "10 \u2212 6 = ?",
+          "solution_steps": ["Start at 10", "Count back 6: 9, 8, 7, 6, 5, 4", "Answer: 4"],
+          "answer": "4"
+        }
+      ],
+      "problems": {
+        "easy": [
+          {
+            "id": "MATH1_W02_D4_E1",
+            "type": "mcq",
+            "question": "What is 8 \u2212 3?",
+            "options": ["4", "5", "6", "7"],
+            "correct_answer": 1,
+            "worked_solution": {
+              "steps": ["Start at 8", "Count back 3: 7, 6, 5", "Answer: 5"],
+              "answer": "5",
+              "explanation": "8 \u2212 3 = 5."
+            },
+            "hint": "Start at 8 and count backwards 3 steps."
+          },
+          {
+            "id": "MATH1_W02_D4_E2",
+            "type": "mcq",
+            "question": "What is 10 \u2212 4?",
+            "options": ["5", "6", "7", "8"],
+            "correct_answer": 1,
+            "worked_solution": {
+              "steps": ["Start at 10", "Count back 4: 9, 8, 7, 6", "Answer: 6"],
+              "answer": "6",
+              "explanation": "10 \u2212 4 = 6."
+            },
+            "hint": "Start at 10 and count backwards 4 steps."
+          }
+        ],
+        "medium": [
+          {
+            "id": "MATH1_W02_D4_M1",
+            "type": "numeric_fill",
+            "question": "9 \u2212 __ = 5",
+            "correct_answer": 4,
+            "worked_solution": {
+              "steps": ["9 \u2212 ? = 5", "Count from 5 to 9: 6, 7, 8, 9 \u2014 that is 4 steps", "Answer: 4"],
+              "answer": "4",
+              "explanation": "9 \u2212 4 = 5."
+            },
+            "hint": "Count from 5 up to 9. How many steps?"
+          },
+          {
+            "id": "MATH1_W02_D4_M2",
+            "type": "numeric_fill",
+            "question": "10 \u2212 7 = __",
+            "correct_answer": 3,
+            "worked_solution": {
+              "steps": ["Start at 10", "Count back 7: 9,8,7,6,5,4,3", "Answer: 3"],
+              "answer": "3",
+              "explanation": "10 \u2212 7 = 3."
+            },
+            "hint": "Start at 10 and count backwards 7 steps."
+          }
+        ],
+        "hard": [
+          {
+            "id": "MATH1_W02_D4_H1",
+            "type": "word_problem",
+            "question": "Rohan had 10 pencils. He gave 4 to his sister and 2 to his friend. How many pencils does Rohan have left?",
+            "correct_answer": 4,
+            "worked_solution": {
+              "steps": [
+                "Rohan starts with: 10 pencils",
+                "Gives to sister: 4 pencils",
+                "Gives to friend: 2 pencils",
+                "Total given away: 4 + 2 = 6",
+                "Pencils left: 10 \u2212 6 = 4",
+                "Answer: 4 pencils"
+              ],
+              "answer": "4",
+              "key_concepts": ["subtraction", "two-step problem", "giving away"],
+              "explanation": "Rohan gave away 4+2=6 pencils, leaving 10\u22126=4."
+            },
+            "hint": "First add up what he gave away, then subtract from 10."
+          }
+        ]
+      }
+    }
+  ]
+}

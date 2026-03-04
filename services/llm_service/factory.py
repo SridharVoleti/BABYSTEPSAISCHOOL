@@ -31,8 +31,21 @@ from typing import Optional
 from django.conf import settings
 
 # Local imports
-from .base import LLMProvider, LLMError
-from .providers.ollama_provider import OllamaProvider
+from .base import LLMProvider, LLMError  # 2026-03-04: ABC + error type
+from .providers.ollama_provider import OllamaProvider  # 2026-03-04: Always available
+from .providers.mock_provider import MockLLMProvider  # 2026-03-04: Always available (tests)
+
+# 2026-03-04: Optional providers — imported only when the SDK is installed.
+# The factory registers them automatically; no code changes needed to enable them.
+try:
+    from .providers.openai_provider import OpenAIProvider  # 2026-03-04: pip install openai>=1.0
+except ImportError:
+    OpenAIProvider = None  # type: ignore[assignment,misc]  # 2026-03-04: SDK not installed
+
+try:
+    from .providers.anthropic_provider import AnthropicProvider  # 2026-03-04: pip install anthropic
+except ImportError:
+    AnthropicProvider = None  # type: ignore[assignment,misc]  # 2026-03-04: SDK not installed
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -68,14 +81,15 @@ class LLMFactory:
         }
     """
     
-    # Map provider names to classes
-    PROVIDERS = {
-        'ollama': OllamaProvider,
-        # Future providers (uncomment when implemented):
-        # 'openai': OpenAIProvider,
-        # 'anthropic': AnthropicProvider,
-        # 'google': GoogleProvider,
-    }
+    # 2026-03-04: Map provider names to classes.
+    # Optional providers are included only when their SDK is installed.
+    # To switch provider: change settings.LLM_PROVIDER — no code changes needed.
+    PROVIDERS = {k: v for k, v in {
+        'ollama': OllamaProvider,          # 2026-03-04: Local (default, no API key)
+        'mock': MockLLMProvider,           # 2026-03-04: Deterministic mock for tests
+        'openai': OpenAIProvider,          # 2026-03-04: pip install openai>=1.0
+        'anthropic': AnthropicProvider,    # 2026-03-04: pip install anthropic>=0.20
+    }.items() if v is not None}            # 2026-03-04: Exclude uninstalled providers
     
     @classmethod
     def create_provider(

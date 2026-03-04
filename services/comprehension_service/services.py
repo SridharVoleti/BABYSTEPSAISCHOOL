@@ -219,6 +219,13 @@ class ComprehensionService:
                     day_prog.completed_at = timezone.now()  # 2026-02-19: Mark done
                     day_prog.save()  # 2026-02-19: Persist
 
+                # 2026-03-02: BS-CMP-003: Record self-explanation score in Phase 2 formula
+                try:
+                    from services.teaching_engine.weighted_stars import WeightedStarService  # 2026-03-02
+                    WeightedStarService.record_self_explanation(day_prog, comprehension_score)
+                except Exception as exc:  # 2026-03-02: Non-fatal
+                    logger.warning("WeightedStarService.record_self_explanation failed: %s", exc)
+
                 # 2026-02-19: Update lesson progress day_statuses
                 statuses = progress.day_statuses or {}  # 2026-02-19: Get current
                 statuses[str(day_number)] = 'day_complete'  # 2026-02-19: Update status
@@ -535,6 +542,13 @@ class ComprehensionService:
             day_prog.status = 'day_complete'
             day_prog.completed_at = timezone.now()
             day_prog.save()
+
+            # 2026-03-02: BS-CMP-003: Record self-explanation score in Phase 2 formula
+            try:
+                from services.teaching_engine.weighted_stars import WeightedStarService  # 2026-03-02
+                WeightedStarService.record_self_explanation(day_prog, comprehension_score)
+            except Exception as exc:  # 2026-03-02: Non-fatal
+                logger.warning("WeightedStarService.record_self_explanation (question) failed: %s", exc)
 
         # 2026-02-21: Advance current_day in StudentLessonProgress
         statuses = progress.day_statuses or {}

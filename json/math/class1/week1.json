@@ -1,0 +1,369 @@
+{
+  "lesson_id": "MATH1_W01",
+  "class": 1,
+  "subject": "Math",
+  "topic": "Counting 1\u201310",
+  "week_number": 1,
+  "character": "Bunny the Counter",
+  "learning_objectives": [
+    "Count objects 1\u201310",
+    "Write numbers 1\u201310",
+    "Recognise number names one to ten"
+  ],
+  "days": [
+    {
+      "day": 1,
+      "title": "Numbers 1\u20135",
+      "teaching_summary": "We count by touching each object once and saying its number aloud. After counting we write the numeral.",
+      "worked_examples": [
+        {
+          "problem": "Count the stars: \u2605\u2605\u2605\u2605",
+          "solution_steps": ["Point to each star: 1, 2, 3, 4", "The last number we said is 4"],
+          "answer": "4"
+        }
+      ],
+      "problems": {
+        "easy": [
+          {
+            "id": "MATH1_W01_D1_E1",
+            "type": "mcq",
+            "question": "How many apples? \ud83c\udf4e\ud83c\udf4e\ud83c\udf4e",
+            "options": ["2", "3", "4", "5"],
+            "correct_answer": 1,
+            "worked_solution": {
+              "steps": ["Count each apple: 1, 2, 3", "Total = 3"],
+              "answer": "3",
+              "explanation": "Count carefully: one, two, three. There are 3 apples."
+            },
+            "hint": "Count each fruit one by one."
+          },
+          {
+            "id": "MATH1_W01_D1_E2",
+            "type": "mcq",
+            "question": "How many balloons? \ud83c\udf88\ud83c\udf88",
+            "options": ["1", "2", "3", "4"],
+            "correct_answer": 1,
+            "worked_solution": {
+              "steps": ["Count each balloon: 1, 2", "Total = 2"],
+              "answer": "2",
+              "explanation": "One balloon, two balloons. There are 2 balloons."
+            },
+            "hint": "Point to each balloon and count."
+          }
+        ],
+        "medium": [
+          {
+            "id": "MATH1_W01_D1_M1",
+            "type": "numeric_fill",
+            "question": "Write the number of fingers shown: \u270b (one open hand)",
+            "correct_answer": 5,
+            "worked_solution": {
+              "steps": ["An open hand has 5 fingers", "Count: thumb, index, middle, ring, little = 5"],
+              "answer": "5",
+              "explanation": "One hand has exactly 5 fingers."
+            },
+            "hint": "Count the fingers on one hand."
+          },
+          {
+            "id": "MATH1_W01_D1_M2",
+            "type": "numeric_fill",
+            "question": "What number comes after 3?",
+            "correct_answer": 4,
+            "worked_solution": {
+              "steps": ["Count forward from 3: 1, 2, 3, 4", "The number after 3 is 4"],
+              "answer": "4",
+              "explanation": "When we count forward, 4 comes right after 3."
+            },
+            "hint": "Say the numbers in order: 1, 2, 3, ..."
+          }
+        ],
+        "hard": [
+          {
+            "id": "MATH1_W01_D1_H1",
+            "type": "word_problem",
+            "question": "Rani has 3 mangoes. Her mother gives her 2 more. How many mangoes does Rani have now?",
+            "correct_answer": 5,
+            "worked_solution": {
+              "steps": [
+                "Rani starts with: 3 mangoes",
+                "Mother gives: 2 more mangoes",
+                "We are getting MORE, so we ADD",
+                "3 + 2 = 5",
+                "Answer: 5 mangoes"
+              ],
+              "answer": "5",
+              "key_concepts": ["addition", "combining groups"],
+              "explanation": "When we get more things we add. 3 + 2 = 5."
+            },
+            "hint": "Rani is getting MORE mangoes. Should we add or subtract?"
+          }
+        ]
+      }
+    },
+    {
+      "day": 2,
+      "title": "Numbers 6\u201310",
+      "teaching_summary": "We continue counting beyond 5. Count groups of objects, matching each object to exactly one number.",
+      "worked_examples": [
+        {
+          "problem": "Count the dots: \u2022\u2022\u2022\u2022\u2022\u2022\u2022",
+          "solution_steps": ["Count each dot: 1,2,3,4,5,6,7", "Answer: 7"],
+          "answer": "7"
+        }
+      ],
+      "problems": {
+        "easy": [
+          {
+            "id": "MATH1_W01_D2_E1",
+            "type": "mcq",
+            "question": "How many stars? \u2605\u2605\u2605\u2605\u2605\u2605\u2605",
+            "options": ["5", "6", "7", "8"],
+            "correct_answer": 2,
+            "worked_solution": {
+              "steps": ["Count each star: 1,2,3,4,5,6,7", "Total = 7"],
+              "answer": "7",
+              "explanation": "Count all seven stars one by one."
+            },
+            "hint": "Count slowly, touching each star."
+          },
+          {
+            "id": "MATH1_W01_D2_E2",
+            "type": "mcq",
+            "question": "Which number is 8?",
+            "options": ["six", "seven", "eight", "nine"],
+            "correct_answer": 2,
+            "worked_solution": {
+              "steps": ["8 is the numeral for the word 'eight'"],
+              "answer": "eight",
+              "explanation": "The word for the number 8 is 'eight'."
+            },
+            "hint": "Say the number names: six, seven, eight..."
+          }
+        ],
+        "medium": [
+          {
+            "id": "MATH1_W01_D2_M1",
+            "type": "numeric_fill",
+            "question": "What number comes before 10?",
+            "correct_answer": 9,
+            "worked_solution": {
+              "steps": ["Count: ..., 8, 9, 10", "The number before 10 is 9"],
+              "answer": "9",
+              "explanation": "9 comes just before 10 when counting forward."
+            },
+            "hint": "Count backwards from 10: 10, 9, ..."
+          },
+          {
+            "id": "MATH1_W01_D2_M2",
+            "type": "numeric_fill",
+            "question": "Fill in the missing number: 6, 7, __, 9",
+            "correct_answer": 8,
+            "worked_solution": {
+              "steps": ["After 7 comes 8", "Check: 6, 7, 8, 9 \u2013 correct!"],
+              "answer": "8",
+              "explanation": "When counting in order, 8 follows 7."
+            },
+            "hint": "What number comes after 7?"
+          }
+        ],
+        "hard": [
+          {
+            "id": "MATH1_W01_D2_H1",
+            "type": "word_problem",
+            "question": "There are 6 birds on a tree. 3 more birds land on the tree. How many birds are there now?",
+            "correct_answer": 9,
+            "worked_solution": {
+              "steps": [
+                "Birds on tree: 6",
+                "More birds that land: 3",
+                "We add because more birds arrive",
+                "6 + 3 = 9",
+                "Answer: 9 birds"
+              ],
+              "answer": "9",
+              "key_concepts": ["addition", "joining groups"],
+              "explanation": "More birds joined so we add: 6 + 3 = 9."
+            },
+            "hint": "More birds are arriving, so do we add or subtract?"
+          }
+        ]
+      }
+    },
+    {
+      "day": 3,
+      "title": "Number Line 1\u201310",
+      "teaching_summary": "A number line shows numbers in order from left to right. Bigger numbers are further to the right.",
+      "worked_examples": [
+        {
+          "problem": "On the number line 1-10, which number is bigger: 4 or 7?",
+          "solution_steps": ["7 is to the right of 4 on the number line", "Numbers to the right are bigger", "7 > 4"],
+          "answer": "7"
+        }
+      ],
+      "problems": {
+        "easy": [
+          {
+            "id": "MATH1_W01_D3_E1",
+            "type": "mcq",
+            "question": "Which number is bigger: 5 or 8?",
+            "options": ["5", "8", "they are equal", "cannot say"],
+            "correct_answer": 1,
+            "worked_solution": {
+              "steps": ["8 is further right on the number line", "So 8 is bigger"],
+              "answer": "8",
+              "explanation": "On the number line, 8 comes after 5, so 8 is bigger."
+            },
+            "hint": "Think of the number line. Which is further right?"
+          },
+          {
+            "id": "MATH1_W01_D3_E2",
+            "type": "mcq",
+            "question": "Which number is smaller: 3 or 7?",
+            "options": ["3", "7", "they are equal", "cannot say"],
+            "correct_answer": 0,
+            "worked_solution": {
+              "steps": ["3 is to the left of 7 on the number line", "Numbers to the left are smaller"],
+              "answer": "3",
+              "explanation": "3 comes before 7 when counting, so 3 is smaller."
+            },
+            "hint": "Which number do you count first, 3 or 7?"
+          }
+        ],
+        "medium": [
+          {
+            "id": "MATH1_W01_D3_M1",
+            "type": "numeric_fill",
+            "question": "Fill the missing number on the number line: 1, 2, __, 4, 5",
+            "correct_answer": 3,
+            "worked_solution": {
+              "steps": ["After 2, the next number is 3", "Check: 1, 2, 3, 4, 5 \u2013 correct"],
+              "answer": "3",
+              "explanation": "3 fills the gap between 2 and 4."
+            },
+            "hint": "What comes after 2 when counting?"
+          },
+          {
+            "id": "MATH1_W01_D3_M2",
+            "type": "numeric_fill",
+            "question": "How many numbers are between 4 and 8 (not including 4 and 8)?",
+            "correct_answer": 3,
+            "worked_solution": {
+              "steps": ["Numbers between 4 and 8: 5, 6, 7", "Count them: 1, 2, 3", "Answer: 3"],
+              "answer": "3",
+              "explanation": "Between 4 and 8 we have 5, 6, and 7 \u2014 that is 3 numbers."
+            },
+            "hint": "List the numbers between 4 and 8: 5, then 6, then..."
+          }
+        ],
+        "hard": [
+          {
+            "id": "MATH1_W01_D3_H1",
+            "type": "word_problem",
+            "question": "Raju has 9 marbles. He gives 4 to his friend. How many marbles does Raju have left?",
+            "correct_answer": 5,
+            "worked_solution": {
+              "steps": [
+                "Raju starts with: 9 marbles",
+                "He gives away: 4 marbles",
+                "Giving away means we SUBTRACT",
+                "9 \u2212 4 = 5",
+                "Answer: 5 marbles"
+              ],
+              "answer": "5",
+              "key_concepts": ["subtraction", "taking away"],
+              "explanation": "When things are taken away we subtract. 9 \u2212 4 = 5."
+            },
+            "hint": "Raju is GIVING AWAY marbles. Do we add or subtract?"
+          }
+        ]
+      }
+    },
+    {
+      "day": 4,
+      "title": "Ordering Numbers",
+      "teaching_summary": "We can arrange numbers from smallest to biggest (ascending) or biggest to smallest (descending).",
+      "worked_examples": [
+        {
+          "problem": "Arrange in order from smallest to biggest: 7, 2, 5",
+          "solution_steps": ["Smallest is 2, then 5, then 7", "Order: 2, 5, 7"],
+          "answer": "2, 5, 7"
+        }
+      ],
+      "problems": {
+        "easy": [
+          {
+            "id": "MATH1_W01_D4_E1",
+            "type": "mcq",
+            "question": "Which set is in order from smallest to biggest?",
+            "options": ["3, 5, 8", "8, 5, 3", "5, 3, 8", "8, 3, 5"],
+            "correct_answer": 0,
+            "worked_solution": {
+              "steps": ["3 < 5 < 8", "Option A goes 3, 5, 8 \u2013 smallest to biggest"],
+              "answer": "3, 5, 8",
+              "explanation": "3 is the smallest, then 5, then 8 the largest."
+            },
+            "hint": "Which list goes from the smallest number to the biggest?"
+          },
+          {
+            "id": "MATH1_W01_D4_E2",
+            "type": "mcq",
+            "question": "What is the biggest number: 4, 9, 6?",
+            "options": ["4", "6", "9", "all equal"],
+            "correct_answer": 2,
+            "worked_solution": {
+              "steps": ["Compare 4, 9, 6", "9 is the furthest right on the number line"],
+              "answer": "9",
+              "explanation": "9 is the largest of the three numbers."
+            },
+            "hint": "Think about which number comes last when counting."
+          }
+        ],
+        "medium": [
+          {
+            "id": "MATH1_W01_D4_M1",
+            "type": "numeric_fill",
+            "question": "Arrange 8, 3, 6, 1 from biggest to smallest. What is the 3rd number?",
+            "correct_answer": 3,
+            "worked_solution": {
+              "steps": ["Biggest to smallest: 8, 6, 3, 1", "The 3rd number is 3"],
+              "answer": "3",
+              "explanation": "Ordered from biggest: 8, 6, 3, 1 \u2014 so position 3 is 3."
+            },
+            "hint": "First arrange all four numbers from biggest to smallest, then find position 3."
+          },
+          {
+            "id": "MATH1_W01_D4_M2",
+            "type": "numeric_fill",
+            "question": "What is the smallest number in this group: 5, 2, 8, 1, 6?",
+            "correct_answer": 1,
+            "worked_solution": {
+              "steps": ["List: 5, 2, 8, 1, 6", "1 is the smallest (furthest left on number line)"],
+              "answer": "1",
+              "explanation": "1 is the smallest number in the group."
+            },
+            "hint": "Which number comes first when counting from 1?"
+          }
+        ],
+        "hard": [
+          {
+            "id": "MATH1_W01_D4_H1",
+            "type": "word_problem",
+            "question": "Three children have 4, 7, and 2 stickers. They line up from fewest stickers to most. What order do they stand in (write the number of stickers in order)?",
+            "correct_answer": "2, 4, 7",
+            "worked_solution": {
+              "steps": [
+                "Stickers: 4, 7, 2",
+                "Arrange from fewest to most: 2, 4, 7",
+                "The child with 2 stickers stands first, then 4, then 7"
+              ],
+              "answer": "2, 4, 7",
+              "key_concepts": ["ordering", "ascending order"],
+              "explanation": "Fewest to most means ascending order: 2, 4, 7."
+            },
+            "hint": "Which child has the FEWEST stickers? They stand first."
+          }
+        ]
+      }
+    }
+  ]
+}

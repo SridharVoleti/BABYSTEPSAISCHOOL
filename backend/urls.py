@@ -103,4 +103,20 @@ urlpatterns = [
     # 2026-02-27: Story Mode Service endpoints (BS-GAM-003 module)
     # Mounted at: http://localhost:8000/api/v1/story/
     path('api/v1/story/', include('services.story_mode_service.urls')),
+
+    # 2026-03-02: Language Stages Service endpoints (BS-LNG-005 module)
+    # Mounted at: http://localhost:8000/api/v1/language-stages/
+    path('api/v1/language-stages/', include('services.language_stages_service.urls')),
+
+    # 2026-03-02: Mathematics Module endpoints (BS-MTH module)
+    # Mounted at: http://localhost:8000/api/v1/math/
+    path('api/v1/math/', include('services.math_service.urls')),
+
+    # 2026-03-04: Pod Management & Monitoring endpoints (BS-POD + BS-MON)
+    # Mounted at: http://localhost:8000/api/v1/pods/
+    path('api/v1/pods/', include('services.pod_service.urls')),
+
+    # 2026-03-04: Passkey / WebAuthn endpoints (BS-AUTH-002)
+    # Mounted at: http://localhost:8000/api/v1/passkeys/
+    path('api/v1/passkeys/', include('services.passkey_service.urls')),
 ]

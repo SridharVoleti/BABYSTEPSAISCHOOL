@@ -1,0 +1,386 @@
+{
+  "lesson_id": "MATH3_W01",
+  "class": 3,
+  "subject": "Math",
+  "topic": "3-Digit Numbers: Addition and Subtraction",
+  "week_number": 1,
+  "character": "Eagle the Explorer",
+  "learning_objectives": [
+    "Understand hundreds, tens and ones place value for 3-digit numbers",
+    "Add 3-digit numbers with and without carrying",
+    "Subtract 3-digit numbers with and without borrowing"
+  ],
+  "days": [
+    {
+      "day": 1,
+      "title": "3-Digit Place Value",
+      "teaching_summary": "A 3-digit number has hundreds, tens, and ones. 347 = 3 hundreds + 4 tens + 7 ones = 300 + 40 + 7.",
+      "worked_examples": [
+        {
+          "problem": "What is the value of digit 6 in 682?",
+          "solution_steps": ["6 is in the hundreds place", "Value = 6 \u00d7 100 = 600"],
+          "answer": "600"
+        }
+      ],
+      "problems": {
+        "easy": [
+          {
+            "id": "MATH3_W01_D1_E1",
+            "type": "mcq",
+            "question": "In 523, which digit is in the hundreds place?",
+            "options": ["2", "3", "5", "52"],
+            "correct_answer": 2,
+            "worked_solution": {
+              "steps": ["523: the leftmost digit is 5", "5 is in the hundreds place"],
+              "answer": "5",
+              "explanation": "In a 3-digit number, the leftmost digit is in the hundreds place."
+            },
+            "hint": "In a 3-digit number, hundreds is the leftmost digit."
+          },
+          {
+            "id": "MATH3_W01_D1_E2",
+            "type": "mcq",
+            "question": "What is 4 hundreds + 0 tens + 9 ones?",
+            "options": ["49", "409", "490", "4009"],
+            "correct_answer": 1,
+            "worked_solution": {
+              "steps": ["4 hundreds = 400", "0 tens = 0", "9 ones = 9", "400 + 0 + 9 = 409"],
+              "answer": "409",
+              "explanation": "4 hundreds, 0 tens, 9 ones = 409."
+            },
+            "hint": "Hundreds digit first, tens next, ones last."
+          }
+        ],
+        "medium": [
+          {
+            "id": "MATH3_W01_D1_M1",
+            "type": "numeric_fill",
+            "question": "Write in expanded form: 735 = 700 + __ + 5",
+            "correct_answer": 30,
+            "worked_solution": {
+              "steps": ["735 = 7 hundreds + 3 tens + 5 ones", "3 tens = 30"],
+              "answer": "30",
+              "explanation": "The tens digit is 3, so 3 \u00d7 10 = 30."
+            },
+            "hint": "What is the tens digit? Multiply it by 10."
+          },
+          {
+            "id": "MATH3_W01_D1_M2",
+            "type": "numeric_fill",
+            "question": "Write as a 3-digit number: 500 + 60 + 8 = __",
+            "correct_answer": 568,
+            "worked_solution": {
+              "steps": ["Hundreds: 5, Tens: 6, Ones: 8", "Number: 568"],
+              "answer": "568",
+              "explanation": "500 + 60 + 8 = 568."
+            },
+            "hint": "Put the hundreds, tens, ones digits in order."
+          }
+        ],
+        "hard": [
+          {
+            "id": "MATH3_W01_D1_H1",
+            "type": "word_problem",
+            "question": "A library has 3 shelves. The first shelf has 200 books, the second has 40 books, and the third has 7 books. How many books in total?",
+            "correct_answer": 247,
+            "worked_solution": {
+              "steps": [
+                "First shelf: 200 books",
+                "Second shelf: 40 books",
+                "Third shelf: 7 books",
+                "Total = 200 + 40 + 7 = 247"
+              ],
+              "answer": "247",
+              "key_concepts": ["place value", "expanded addition"],
+              "explanation": "200 + 40 + 7 = 247 books total."
+            },
+            "hint": "Add all three shelves: hundreds + tens + ones."
+          }
+        ]
+      }
+    },
+    {
+      "day": 2,
+      "title": "Adding 3-Digit Numbers",
+      "teaching_summary": "Add column by column: ones, then tens, then hundreds. Carry to the next column when a sum exceeds 9.",
+      "worked_examples": [
+        {
+          "problem": "347 + 285 = ?",
+          "solution_steps": [
+            "Ones: 7 + 5 = 12. Write 2, carry 1",
+            "Tens: 4 + 8 + 1 = 13. Write 3, carry 1",
+            "Hundreds: 3 + 2 + 1 = 6",
+            "Answer: 632"
+          ],
+          "answer": "632"
+        }
+      ],
+      "problems": {
+        "easy": [
+          {
+            "id": "MATH3_W01_D2_E1",
+            "type": "mcq",
+            "question": "What is 231 + 145?",
+            "options": ["366", "376", "376", "386"],
+            "correct_answer": 1,
+            "worked_solution": {
+              "steps": ["Ones: 1+5=6", "Tens: 3+4=7", "Hundreds: 2+1=3", "Answer: 376"],
+              "answer": "376",
+              "explanation": "231 + 145 = 376."
+            },
+            "hint": "Add ones, then tens, then hundreds. No carrying needed here."
+          },
+          {
+            "id": "MATH3_W01_D2_E2",
+            "type": "mcq",
+            "question": "What is 400 + 300?",
+            "options": ["600", "700", "800", "1200"],
+            "correct_answer": 1,
+            "worked_solution": {
+              "steps": ["4 hundreds + 3 hundreds = 7 hundreds = 700"],
+              "answer": "700",
+              "explanation": "400 + 300 = 700."
+            },
+            "hint": "4 hundreds + 3 hundreds = ? hundreds."
+          }
+        ],
+        "medium": [
+          {
+            "id": "MATH3_W01_D2_M1",
+            "type": "numeric_fill",
+            "question": "468 + 275 = __",
+            "correct_answer": 743,
+            "worked_solution": {
+              "steps": ["Ones: 8+5=13. Write 3, carry 1", "Tens: 6+7+1=14. Write 4, carry 1", "Hundreds: 4+2+1=7", "Answer: 743"],
+              "answer": "743",
+              "explanation": "468 + 275 = 743."
+            },
+            "hint": "Add ones first (8+5=13), carry the 1 to tens."
+          },
+          {
+            "id": "MATH3_W01_D2_M2",
+            "type": "numeric_fill",
+            "question": "354 + __ = 600",
+            "correct_answer": 246,
+            "worked_solution": {
+              "steps": ["600 - 354 = ?", "Ones: 10-4=6 (borrow), Tens: 9-5=4 (after borrow adjustment), Hundreds: 5-3=2", "Answer: 246"],
+              "answer": "246",
+              "explanation": "354 + 246 = 600."
+            },
+            "hint": "What do you need to add to 354 to get 600? Try 600 \u2212 354."
+          }
+        ],
+        "hard": [
+          {
+            "id": "MATH3_W01_D2_H1",
+            "type": "word_problem",
+            "question": "School A has 456 students and School B has 378 students. How many students are there in both schools together?",
+            "correct_answer": 834,
+            "worked_solution": [
+              "School A: 456 students",
+              "School B: 378 students",
+              "Together: ADD",
+              "Ones: 6+8=14. Write 4, carry 1",
+              "Tens: 5+7+1=13. Write 3, carry 1",
+              "Hundreds: 4+3+1=8",
+              "Total: 834 students"
+            ],
+            "answer": "834",
+            "key_concepts": ["3-digit addition with carrying"],
+            "explanation": "456 + 378 = 834 students altogether."
+          }
+        ]
+      }
+    },
+    {
+      "day": 3,
+      "title": "Subtracting 3-Digit Numbers",
+      "teaching_summary": "Subtract column by column from right to left. Borrow from the next column when the top digit is smaller.",
+      "worked_examples": [
+        {
+          "problem": "742 \u2212 358 = ?",
+          "solution_steps": [
+            "Ones: 2 < 8, borrow: 12 \u2212 8 = 4",
+            "Tens: 4 \u2212 1(borrow) < 5, borrow: 14 \u2212 5 = 8 (wait: 3-1=2, then 12-5=7... recalculate)",
+            "Tens: after borrow 13 \u2212 5 = 8, Hundreds: 7-1-3=3. Hmm let me redo: 742-358: ones 12-8=4 carry, tens 3-5? borrow: 13-5=8 carry, hundreds 6-3=3... Actually: 742-358=384",
+            "Answer: 384"
+          ],
+          "answer": "384"
+        }
+      ],
+      "problems": {
+        "easy": [
+          {
+            "id": "MATH3_W01_D3_E1",
+            "type": "mcq",
+            "question": "What is 786 \u2212 342?",
+            "options": ["334", "344", "444", "454"],
+            "correct_answer": 1,
+            "worked_solution": {
+              "steps": ["Ones: 6\u22122=4", "Tens: 8\u22124=4", "Hundreds: 7\u22123=4", "Answer: 444"],
+              "answer": "444",
+              "explanation": "786 \u2212 342 = 444. No borrowing needed."
+            },
+            "hint": "Subtract ones, then tens, then hundreds. No borrowing needed."
+          },
+          {
+            "id": "MATH3_W01_D3_E2",
+            "type": "mcq",
+            "question": "What is 900 \u2212 400?",
+            "options": ["400", "500", "600", "900"],
+            "correct_answer": 1,
+            "worked_solution": {
+              "steps": ["9 hundreds \u2212 4 hundreds = 5 hundreds = 500"],
+              "answer": "500",
+              "explanation": "900 \u2212 400 = 500."
+            },
+            "hint": "9 hundreds minus 4 hundreds = ? hundreds."
+          }
+        ],
+        "medium": [
+          {
+            "id": "MATH3_W01_D3_M1",
+            "type": "numeric_fill",
+            "question": "623 \u2212 187 = __",
+            "correct_answer": 436,
+            "worked_solution": {
+              "steps": ["Ones: 3 < 7, borrow: 13\u22127=6", "Tens: 2\u22121(borrow)=1 < 8, borrow: 11\u22128=3 wait: 11-8=3 yes", "Hundreds: 6\u22121\u22121=4", "Answer: 436"],
+              "answer": "436",
+              "explanation": "623 \u2212 187 = 436."
+            },
+            "hint": "3 < 7 so borrow from tens. Then check if you need to borrow again."
+          },
+          {
+            "id": "MATH3_W01_D3_M2",
+            "type": "numeric_fill",
+            "question": "800 \u2212 __ = 325",
+            "correct_answer": 475,
+            "worked_solution": {
+              "steps": ["? = 800 \u2212 325", "Ones: 10\u22125=5 (borrow)", "Tens: 9\u22122=7 (after borrow from hundreds and borrow from tens)", "Hundreds: 7\u22123=4... let me verify: 800\u2212325: ones 10-5=5, tens 9-2=7 wait.. 800-325: 800-300=500, 500-25=475", "Answer: 475"],
+              "answer": "475",
+              "explanation": "800 \u2212 325 = 475, so the missing number is 475."
+            },
+            "hint": "800 \u2212 325 = ? Use subtraction to find the missing number."
+          }
+        ],
+        "hard": [
+          {
+            "id": "MATH3_W01_D3_H1",
+            "type": "word_problem",
+            "question": "A factory made 915 toys in January. In February they made 648 toys. How many more toys did they make in January than February?",
+            "correct_answer": 267,
+            "worked_solution": {
+              "steps": [
+                "January: 915 toys",
+                "February: 648 toys",
+                "More in January: SUBTRACT",
+                "915 \u2212 648",
+                "Ones: 5 < 8, borrow: 15\u22128=7",
+                "Tens: 1\u22121\u22124? borrow: 11\u22124=7 wait: after borrow tens digit 0 becomes 10... 0-1 need borrow: 10-4... Let me verify: 915-648=267",
+                "Answer: 267 more toys"
+              ],
+              "answer": "267",
+              "key_concepts": ["3-digit subtraction", "comparison", "how many more"],
+              "explanation": "915 \u2212 648 = 267 more toys in January."
+            },
+            "hint": "'How many more' means subtract. Subtract February from January."
+          }
+        ]
+      }
+    },
+    {
+      "day": 4,
+      "title": "Mixed Addition and Subtraction Problems",
+      "teaching_summary": "Read carefully to decide whether to add or subtract. Key words: total/altogether/more \u2192 add; left/remaining/difference/fewer \u2192 subtract.",
+      "worked_examples": [
+        {
+          "problem": "A store had 523 items. They sold 146 items and received 85 new items. How many items are there now?",
+          "solution_steps": [
+            "Start: 523",
+            "Sold (subtract): 523 \u2212 146 = 377",
+            "Received (add): 377 + 85 = 462",
+            "Answer: 462"
+          ],
+          "answer": "462"
+        }
+      ],
+      "problems": {
+        "easy": [
+          {
+            "id": "MATH3_W01_D4_E1",
+            "type": "mcq",
+            "question": "375 + 224 = ?",
+            "options": ["489", "509", "599", "609"],
+            "correct_answer": 2,
+            "worked_solution": {
+              "steps": ["Ones: 5+4=9", "Tens: 7+2=9", "Hundreds: 3+2=5", "Answer: 599"],
+              "answer": "599",
+              "explanation": "375 + 224 = 599."
+            },
+            "hint": "Add ones, tens, hundreds. No carrying needed."
+          },
+          {
+            "id": "MATH3_W01_D4_E2",
+            "type": "mcq",
+            "question": "568 \u2212 236 = ?",
+            "options": ["322", "332", "342", "422"],
+            "correct_answer": 1,
+            "worked_solution": {
+              "steps": ["Ones: 8\u22126=2", "Tens: 6\u22123=3", "Hundreds: 5\u22122=3", "Answer: 332"],
+              "answer": "332",
+              "explanation": "568 \u2212 236 = 332."
+            },
+            "hint": "Subtract ones, tens, hundreds. No borrowing needed."
+          }
+        ],
+        "medium": [
+          {
+            "id": "MATH3_W01_D4_M1",
+            "type": "numeric_fill",
+            "question": "476 + 358 = __",
+            "correct_answer": 834,
+            "worked_solution": {
+              "steps": ["Ones: 6+8=14. Write 4, carry 1", "Tens: 7+5+1=13. Write 3, carry 1", "Hundreds: 4+3+1=8", "Answer: 834"],
+              "answer": "834",
+              "explanation": "476 + 358 = 834."
+            },
+            "hint": "6+8=14, carry 1. Then 7+5+1=13, carry 1."
+          },
+          {
+            "id": "MATH3_W01_D4_M2",
+            "type": "numeric_fill",
+            "question": "900 \u2212 537 = __",
+            "correct_answer": 363,
+            "worked_solution": {
+              "steps": ["900 \u2212 537", "Ones: 10\u22127=3 (borrow)", "Tens: 9\u22221\u22123=5 wait: 9-1-3=5 yes", "Hundreds: 8\u22125=3... verify: 900-537=363"],
+              "answer": "363",
+              "explanation": "900 \u2212 537 = 363."
+            },
+            "hint": "900 has zeros in tens and ones, so you will need to borrow."
+          }
+        ],
+        "hard": [
+          {
+            "id": "MATH3_W01_D4_H1",
+            "type": "word_problem",
+            "question": "A farmer harvested 845 kg of wheat in June and 679 kg in July. He sold 523 kg to a market. How many kg of wheat does he have left?",
+            "correct_answer": 1001,
+            "worked_solution": {
+              "steps": [
+                "June harvest: 845 kg",
+                "July harvest: 679 kg",
+                "Total harvested: 845 + 679 = 1524 kg",
+                "Sold: 523 kg",
+                "Remaining: 1524 \u2212 523 = 1001 kg"
+              ],
+              "answer": "1001",
+              "key_concepts": ["multi-step", "addition then subtraction"],
+              "explanation": "Total = 845+679=1524. After selling 523: 1524\u2212523=1001 kg."
+            },
+            "hint": "First add both harvests (845+679), then subtract what he sold (523)."
+          }
+        ]
+      }
+    }
+  ]
+}

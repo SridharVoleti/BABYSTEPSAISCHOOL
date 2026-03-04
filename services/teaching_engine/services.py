@@ -9,6 +9,7 @@ Purpose:
 
 import logging  # 2026-02-17: Logging
 
+from django.db.models import Avg  # 2026-03-03: Aggregate for proficiency calculation
 from django.utils import timezone  # 2026-02-17: Timezone-aware timestamps
 
 from services.diagnostic_service.models import DiagnosticResult  # 2026-02-17: IQ level source
@@ -365,6 +366,14 @@ class TeachingService:
             f"{correct_count}/{total_count} ({score}%) — mastery practice next"
         )
 
+        # 2026-03-04: AI Monitor — check if student is stuck (BS-MON hook)
+        monitor_result = {}  # 2026-03-04: Default (no intervention)
+        try:
+            from services.pod_service.ai_monitor import AIMonitorService  # 2026-03-04: Local import
+            monitor_result = AIMonitorService.check_student_progress(student, progress)
+        except Exception as monitor_exc:  # 2026-03-04: Monitoring must not break teaching
+            logger.warning(f"AI monitor check failed (non-fatal): {monitor_exc}")
+
         return {  # 2026-02-18: Return result with mastery_practice_required flag
             'success': True,
             'lesson_id': lesson_id,
@@ -373,6 +382,7 @@ class TeachingService:
             'questions_correct': correct_count,
             'questions_total': total_count,
             'mastery_practice_required': True,  # 2026-02-18: Signal to frontend
+            'ai_checkin': monitor_result.get('checkin_question'),  # 2026-03-04: Optional check-in
         }
 
     @classmethod
@@ -576,6 +586,72 @@ class TeachingService:
             'total_points': total_points,
             'percentage': percentage,
             'star_rating': star_rating,
+        }
+
+    @classmethod
+    def get_subject_proficiency(cls, student, subject, class_number):
+        """
+        2026-03-03: Return per-lesson mastery percentages for radar chart analytics.
+
+        Queries all published lessons for the given subject and class, then
+        computes completed days and average mastery star rating per lesson.
+
+        Args:
+            student: Student model instance.
+            subject: Subject name string (e.g. 'Science', 'Social').
+            class_number: Class/grade integer (e.g. 6).
+
+        Returns:
+            dict: {
+                'success': True,
+                'subject': str,
+                'class_number': int,
+                'lessons': list of per-lesson proficiency dicts,
+            }
+        """
+        lessons = TeachingLesson.objects.filter(  # 2026-03-03: Get published lessons
+            subject=subject,
+            class_number=class_number,
+            status='published',
+        ).order_by('week_number')  # 2026-03-03: Natural order
+
+        result = []  # 2026-03-03: Accumulate per-lesson data
+        for lesson in lessons:  # 2026-03-03: Process each lesson
+            progress = StudentLessonProgress.objects.filter(  # 2026-03-03: Student's progress
+                student=student,
+                lesson=lesson,
+            ).first()
+
+            completed_days = 0  # 2026-03-03: Days with day_complete status
+            mastery_pct = 0  # 2026-03-03: Average mastery as percentage
+
+            if progress:  # 2026-03-03: Has started the lesson
+                day_progresses = DayProgress.objects.filter(  # 2026-03-03: Completed days
+                    lesson_progress=progress,
+                    status='day_complete',
+                )
+                completed_days = day_progresses.count()  # 2026-03-03: Count completed
+
+                if completed_days > 0:  # 2026-03-03: Compute average stars
+                    avg_stars = day_progresses.aggregate(  # 2026-03-03: Mean star rating
+                        avg=Avg('mastery_star_rating')
+                    )['avg'] or 0
+                    mastery_pct = round((avg_stars / 5) * 100, 1)  # 2026-03-03: 0-100%
+
+            result.append({  # 2026-03-03: Add lesson entry
+                'lesson_id': lesson.lesson_id,
+                'title': lesson.title,
+                'week_number': lesson.week_number,
+                'completed_days': completed_days,
+                'total_days': 4,
+                'mastery_percentage': mastery_pct,
+            })
+
+        return {  # 2026-03-03: Return proficiency report
+            'success': True,
+            'subject': subject,
+            'class_number': class_number,
+            'lessons': result,
         }
 
 
@@ -1051,6 +1127,13 @@ class MasteryPracticeService:
                 progress.save()
             else:
                 day_progress.save()
+
+            # 2026-03-02: BS-CMP-003: Recompute Phase 2 weighted stars with all available signals
+            try:
+                from .weighted_stars import WeightedStarService  # 2026-03-02: Lazy import
+                WeightedStarService.compute_and_save(day_progress)
+            except Exception as exc:  # 2026-03-02: Non-fatal — don't break mastery flow
+                logger.warning("WeightedStarService.compute_and_save failed: %s", exc)
 
         logger.info(  # 2026-02-18: Log
             f"Student {session.student.id} completed mastery practice "

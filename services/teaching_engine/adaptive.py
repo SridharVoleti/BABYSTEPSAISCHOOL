@@ -217,6 +217,10 @@ class AdaptiveEngine:
             is_correct = student_answer == correct_order  # 2026-02-17: Exact match
             return is_correct, correct_order, explanation
 
+        if q_type == 'assertion_reason':  # 2026-03-03: AR is an MCQ variant with index answer
+            is_correct = str(student_answer).strip() == str(correct)  # 2026-03-03: Compare index
+            return is_correct, correct, explanation
+
         # 2026-02-17: MCQ, true_false, numeric_fill — direct comparison
         is_correct = student_answer == correct  # 2026-02-17: Compare
         return is_correct, correct, explanation

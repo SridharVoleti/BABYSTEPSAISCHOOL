@@ -12,6 +12,7 @@ from rest_framework import status, viewsets  # 2026-02-12: DRF
 from rest_framework.decorators import action  # 2026-02-12: Custom actions
 from rest_framework.permissions import AllowAny  # 2026-02-12: Public access
 from rest_framework.response import Response  # 2026-02-12: API responses
+from rest_framework.views import APIView  # 2026-03-04: CBV base for monitor reset
 from rest_framework_simplejwt.tokens import RefreshToken  # 2026-02-12: Token refresh
 from rest_framework_simplejwt.exceptions import TokenError  # 2026-02-12: Token errors
 
@@ -24,6 +25,7 @@ from .serializers import (  # 2026-02-12: Serializers
     PasswordLoginSerializer, ResetCredentialSerializer,
     ParentPasswordLoginSerializer, ForgotPasswordSerializer,
     ConsentGrantSerializer, LanguageSelectionSerializer,
+    MonitorPasswordResetRequestSerializer, MonitorPasswordResetConfirmSerializer,
 )
 from .services import AuthService  # 2026-02-12: Business logic
 from .language_data import (  # 2026-02-12: Language data
@@ -305,6 +307,8 @@ class StudentAuthViewSet(viewsets.ViewSet):
             )
 
         # 2026-02-12: Return only public-safe student info (name, avatar, login method)
+        # 2026-03-04: Import PasskeyCredential lazily to avoid circular imports
+        from services.passkey_service.models import PasskeyCredential  # 2026-03-04
         students = parent.students.filter(is_active=True)
         return Response({
             'students': [
@@ -314,6 +318,11 @@ class StudentAuthViewSet(viewsets.ViewSet):
                     'avatar_id': s.avatar_id,
                     'grade': s.grade,
                     'login_method': s.login_method,
+                    # 2026-03-04: Passkey registered for this student?
+                    'has_passkey': (
+                        PasskeyCredential.objects.filter(user_id=s.user_id).exists()
+                        if s.user_id else False
+                    ),
                 }
                 for s in students
             ],
@@ -570,3 +579,110 @@ class LanguageViewSet(viewsets.ViewSet):
         return Response({
             'languages': AVAILABLE_LANGUAGES,
         })
+
+
+class MonitorPasswordResetRequestView(APIView):
+    """
+    2026-03-04: POST /api/v1/auth/monitor-password-reset/
+
+    Send a password reset email to a Django staff (monitor) user.
+    Always returns 200 to avoid email enumeration — the reset link
+    is printed to the console (EMAIL_BACKEND=console) in dev.
+    """
+
+    permission_classes = [AllowAny]  # 2026-03-04: Public reset request
+
+    def post(self, request):
+        """2026-03-04: Send reset email for staff user."""
+        from django.contrib.auth import get_user_model  # 2026-03-04: Lazy import
+        from django.contrib.auth.tokens import default_token_generator  # 2026-03-04
+        from django.utils.encoding import force_bytes  # 2026-03-04: Bytes helper
+        from django.utils.http import urlsafe_base64_encode  # 2026-03-04: URL-safe encode
+        from django.core.mail import send_mail  # 2026-03-04: Email
+        from django.conf import settings as dj_settings  # 2026-03-04: FRONTEND_URL
+
+        serializer = MonitorPasswordResetRequestSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        email = serializer.validated_data['email']
+
+        User = get_user_model()
+        try:
+            user = User.objects.get(email=email, is_staff=True)
+            uid = urlsafe_base64_encode(force_bytes(user.pk))  # 2026-03-04: Encode PK
+            token = default_token_generator.make_token(user)  # 2026-03-04: Signed token
+            reset_url = (
+                f"{dj_settings.FRONTEND_URL}/login/monitor/reset/{uid}/{token}/"
+            )
+            send_mail(
+                subject='BabySteps Monitor — Password Reset',
+                message=(
+                    f'Hello {user.username},\n\n'
+                    f'Click the link below to reset your password (valid for 1 hour):\n\n'
+                    f'{reset_url}\n\n'
+                    'If you did not request this, ignore this email.\n'
+                ),
+                from_email='noreply@babysteps.school',
+                recipient_list=[email],
+                fail_silently=True,  # 2026-03-04: Never surface email errors to client
+            )
+        except User.DoesNotExist:
+            pass  # 2026-03-04: No enumeration — same 200 response regardless
+
+        return Response(
+            {'message': 'If that email belongs to a monitor account, a reset link has been sent.'},
+            status=status.HTTP_200_OK,
+        )
+
+
+class MonitorPasswordResetConfirmView(APIView):
+    """
+    2026-03-04: POST /api/v1/auth/monitor-password-reset/confirm/
+
+    Verify the uid + token from the email link and set a new password.
+    """
+
+    permission_classes = [AllowAny]  # 2026-03-04: Token proves identity
+
+    def post(self, request):
+        """2026-03-04: Validate token and update password."""
+        from django.contrib.auth import get_user_model  # 2026-03-04
+        from django.contrib.auth.tokens import default_token_generator  # 2026-03-04
+        from django.utils.encoding import force_str  # 2026-03-04
+        from django.utils.http import urlsafe_base64_decode  # 2026-03-04
+
+        serializer = MonitorPasswordResetConfirmSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+
+        uid = serializer.validated_data['uid']
+        token = serializer.validated_data['token']
+        new_password = serializer.validated_data['new_password']
+
+        User = get_user_model()
+        try:
+            pk = force_str(urlsafe_base64_decode(uid))  # 2026-03-04: Decode PK
+            user = User.objects.get(pk=pk)
+        except (User.DoesNotExist, ValueError, TypeError, OverflowError):
+            return Response(
+                {'error': 'Invalid reset link.'},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        if not default_token_generator.check_token(user, token):  # 2026-03-04: Verify
+            return Response(
+                {'error': 'Reset link is invalid or has expired.'},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        if not user.is_staff:  # 2026-03-04: Only staff can use this endpoint
+            return Response(
+                {'error': 'This endpoint is for monitor accounts only.'},
+                status=status.HTTP_403_FORBIDDEN,
+            )
+
+        user.set_password(new_password)  # 2026-03-04: Hash and save
+        user.save(update_fields=['password'])
+
+        return Response(
+            {'message': 'Password updated successfully. You can now log in.'},
+            status=status.HTTP_200_OK,
+        )

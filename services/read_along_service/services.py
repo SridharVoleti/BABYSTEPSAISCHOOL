@@ -244,6 +244,25 @@ class ReadAlongService:
             student.id, lesson_id, day_number, language, star_rating,
         )
 
+        # 2026-03-02: BS-CMP-003: Record read-along score in Phase 2 weighted star formula
+        try:
+            from services.teaching_engine.models import (  # 2026-03-02: Lazy import
+                StudentLessonProgress, DayProgress,
+            )
+            from services.teaching_engine.weighted_stars import WeightedStarService  # 2026-03-02
+
+            slp = StudentLessonProgress.objects.filter(
+                student=student, lesson=lesson
+            ).first()
+            if slp:  # 2026-03-02: DayProgress record lookup
+                day_prog = DayProgress.objects.filter(
+                    lesson_progress=slp, day_number=day_number
+                ).first()
+                if day_prog:  # 2026-03-02: Record best read-along score
+                    WeightedStarService.record_read_along(day_prog, overall_score)
+        except Exception as exc:  # 2026-03-02: Non-fatal — never break read-along flow
+            logger.warning("WeightedStarService.record_read_along failed: %s", exc)
+
         return {
             'overall_score': round(overall_score, 4),
             'star_rating': star_rating,

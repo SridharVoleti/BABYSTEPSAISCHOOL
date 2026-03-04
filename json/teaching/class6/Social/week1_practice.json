@@ -1,0 +1,647 @@
+{
+  "lesson_id": "SST6_EARTH_CH01_W01",
+  "practice_bank": {
+    "day_1": {
+      "concept_id": "SST6_W01_SOLAR",
+      "concept_name": "Solar System",
+      "questions": {
+        "easy": [
+          {
+            "id": "SST_W01_D1_P_E1",
+            "type": "mcq",
+            "question": "How many planets are there in the Solar System?",
+            "options": ["Seven", "Eight", "Nine", "Ten"],
+            "correct_answer": 1,
+            "explanation": "There are eight planets in our Solar System: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune.",
+            "hint": "Pluto was reclassified as a dwarf planet in 2006."
+          },
+          {
+            "id": "SST_W01_D1_P_E2",
+            "type": "true_false",
+            "question": "The Sun is a planet.",
+            "correct_answer": false,
+            "explanation": "The Sun is a star, not a planet. It is the centre of our Solar System."
+          },
+          {
+            "id": "SST_W01_D1_P_E3",
+            "type": "mcq",
+            "question": "Which planet is closest to the Sun?",
+            "options": ["Venus", "Earth", "Mercury", "Mars"],
+            "correct_answer": 2,
+            "explanation": "Mercury is the first and closest planet to the Sun.",
+            "hint": "It is also the smallest planet."
+          },
+          {
+            "id": "SST_W01_D1_P_E4",
+            "type": "true_false",
+            "question": "Earth is the only planet in the Solar System known to support life.",
+            "correct_answer": true,
+            "explanation": "Earth is uniquely positioned in the habitable zone with liquid water, oxygen, and suitable temperatures for life."
+          },
+          {
+            "id": "SST_W01_D1_P_E5",
+            "type": "mcq",
+            "question": "What is Earth's natural satellite?",
+            "options": ["Mars", "Venus", "Sun", "Moon"],
+            "correct_answer": 3,
+            "explanation": "The Moon is Earth's only natural satellite.",
+            "hint": "It causes tides on Earth."
+          }
+        ],
+        "medium": [
+          {
+            "id": "SST_W01_D1_P_M1",
+            "type": "mcq",
+            "question": "Which planet is known for its prominent ring system?",
+            "options": ["Jupiter", "Saturn", "Mars", "Neptune"],
+            "correct_answer": 1,
+            "explanation": "Saturn is famous for its visible ring system made of ice and rock particles.",
+            "hint": "It looks like it has rings around its equator."
+          },
+          {
+            "id": "SST_W01_D1_P_M2",
+            "type": "assertion_reason",
+            "question": "Read the Assertion and Reason carefully and choose the correct option.",
+            "assertion": "The equator divides the Earth into two equal halves.",
+            "reason": "The equator is an imaginary line at 0° latitude.",
+            "options": [
+              "Both A and R are true, and R is the correct explanation of A",
+              "Both A and R are true, but R is not the correct explanation of A",
+              "A is true but R is false",
+              "A is false but R is true"
+            ],
+            "correct_answer": 0,
+            "explanation": "The assertion is true — the equator divides Earth into Northern and Southern hemispheres. The reason correctly states that it is at 0° latitude, which is why it creates equal halves.",
+            "hint": "Does 0° latitude divide the Earth equally?"
+          },
+          {
+            "id": "SST_W01_D1_P_M3",
+            "type": "mcq",
+            "question": "In the mnemonic 'My Very Educated Mother Just Served Us Noodles', what does 'J' stand for?",
+            "options": ["Mars", "Saturn", "Jupiter", "Juno"],
+            "correct_answer": 2,
+            "explanation": "In the mnemonic, M=Mercury, V=Venus, E=Earth, M=Mars, J=Jupiter, S=Saturn, U=Uranus, N=Neptune.",
+            "hint": "It is the 5th planet and the largest."
+          },
+          {
+            "id": "SST_W01_D1_P_M4",
+            "type": "mcq",
+            "question": "Earth's tilt of approximately 23.5° is responsible for:",
+            "options": ["The Moon's phases", "Day and night", "The seasons", "The tides"],
+            "correct_answer": 2,
+            "explanation": "Earth's axial tilt of 23.5° causes different parts of Earth to receive varying amounts of sunlight throughout the year, creating seasons.",
+            "hint": "Without this tilt, everywhere would have the same climate all year."
+          },
+          {
+            "id": "SST_W01_D1_P_M5",
+            "type": "numeric_fill",
+            "question": "How many planets are classified as inner rocky planets (between the Sun and the asteroid belt)?",
+            "correct_answer": 4,
+            "explanation": "The four inner rocky planets are Mercury, Venus, Earth, and Mars."
+          }
+        ],
+        "hard": [
+          {
+            "id": "SST_W01_D1_P_H1",
+            "type": "drag_order",
+            "question": "Arrange the planets from closest to farthest from the Sun:",
+            "items": ["Jupiter", "Venus", "Neptune", "Mars", "Earth", "Mercury", "Uranus", "Saturn"],
+            "correct_order": [5, 1, 4, 3, 0, 7, 6, 2],
+            "explanation": "Order: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune."
+          },
+          {
+            "id": "SST_W01_D1_P_H2",
+            "type": "assertion_reason",
+            "question": "Read the Assertion and Reason carefully and choose the correct option.",
+            "assertion": "Venus is the hottest planet in the Solar System despite not being the closest to the Sun.",
+            "reason": "Venus has a thick atmosphere of carbon dioxide that traps heat through the greenhouse effect.",
+            "options": [
+              "Both A and R are true, and R is the correct explanation of A",
+              "Both A and R are true, but R is not the correct explanation of A",
+              "A is true but R is false",
+              "A is false but R is true"
+            ],
+            "correct_answer": 0,
+            "explanation": "Venus is hotter than Mercury despite being farther. The reason (CO2 greenhouse effect) correctly explains this apparent paradox.",
+            "hint": "Mercury has no atmosphere — how does that affect its temperature?"
+          },
+          {
+            "id": "SST_W01_D1_P_H3",
+            "type": "mcq",
+            "question": "What is the 'Goldilocks zone' (habitable zone) in astronomy?",
+            "options": [
+              "The region with no gravity in space",
+              "The area around a star where liquid water could exist on a planet's surface",
+              "The belt of asteroids between Mars and Jupiter",
+              "The orbit path of the Moon"
+            ],
+            "correct_answer": 1,
+            "explanation": "The Goldilocks zone is the range of distances from a star where conditions are just right (not too hot, not too cold) for liquid water to exist.",
+            "hint": "Goldilocks wanted things 'just right' — what condition is just right for life?"
+          },
+          {
+            "id": "SST_W01_D1_P_H4",
+            "type": "mcq",
+            "question": "Which of Kepler's Laws states that planets sweep equal areas in equal times?",
+            "options": ["First Law (Law of Ellipses)", "Second Law (Law of Equal Areas)", "Third Law (Law of Harmonics)", "Newton's Law of Gravitation"],
+            "correct_answer": 1,
+            "explanation": "Kepler's Second Law (Law of Equal Areas) states that a planet sweeps out equal areas in equal time intervals, meaning it moves faster when closer to the Sun.",
+            "hint": "Think of the law that deals with speed in an orbit."
+          },
+          {
+            "id": "SST_W01_D1_P_H5",
+            "type": "drag_order",
+            "question": "Arrange these Solar System objects from smallest to largest:",
+            "items": ["Jupiter", "Sun", "Moon", "Earth"],
+            "correct_order": [2, 3, 0, 1],
+            "explanation": "Smallest to largest: Moon < Earth < Jupiter < Sun."
+          }
+        ]
+      }
+    },
+    "day_2": {
+      "concept_id": "SST6_W01_EARTH_LAYERS",
+      "concept_name": "Earth's Layers",
+      "questions": {
+        "easy": [
+          {
+            "id": "SST_W01_D2_P_E1",
+            "type": "mcq",
+            "question": "Which is the outermost layer of the Earth?",
+            "options": ["Mantle", "Outer Core", "Crust", "Inner Core"],
+            "correct_answer": 2,
+            "explanation": "The crust is the outermost solid layer of Earth, where we live.",
+            "hint": "It is the layer on the outside."
+          },
+          {
+            "id": "SST_W01_D2_P_E2",
+            "type": "true_false",
+            "question": "The inner core of the Earth is liquid.",
+            "correct_answer": false,
+            "explanation": "The inner core is solid (though extremely hot) due to the enormous pressure at Earth's centre."
+          },
+          {
+            "id": "SST_W01_D2_P_E3",
+            "type": "mcq",
+            "question": "Which layer of Earth is the thickest?",
+            "options": ["Crust", "Outer Core", "Mantle", "Inner Core"],
+            "correct_answer": 2,
+            "explanation": "The mantle is approximately 2,900 km thick, making it the thickest layer of Earth.",
+            "hint": "It lies between the crust and the core."
+          },
+          {
+            "id": "SST_W01_D2_P_E4",
+            "type": "true_false",
+            "question": "The outer core is made of liquid iron and nickel.",
+            "correct_answer": true,
+            "explanation": "The outer core consists of liquid iron and nickel, and its movement generates Earth's magnetic field."
+          },
+          {
+            "id": "SST_W01_D2_P_E5",
+            "type": "mcq",
+            "question": "What is the hot molten rock called when it erupts from a volcano?",
+            "options": ["Magma", "Lava", "Sediment", "Mantle"],
+            "correct_answer": 1,
+            "explanation": "When magma reaches the surface and erupts, it is called lava.",
+            "hint": "It changes its name when it exits the volcano."
+          }
+        ],
+        "medium": [
+          {
+            "id": "SST_W01_D2_P_M1",
+            "type": "mcq",
+            "question": "What property of the outer core creates Earth's magnetic field?",
+            "options": ["Its solid state", "The movement of liquid iron and nickel", "Its low temperature", "Its contact with the mantle"],
+            "correct_answer": 1,
+            "explanation": "The movement (convection) of liquid iron and nickel in the outer core generates electric currents, which create Earth's magnetic field.",
+            "hint": "Moving charged metals create electric currents."
+          },
+          {
+            "id": "SST_W01_D2_P_M2",
+            "type": "assertion_reason",
+            "question": "Read the Assertion and Reason carefully and choose the correct option.",
+            "assertion": "Earth's inner core is solid despite being the hottest layer.",
+            "reason": "The extreme pressure at Earth's centre prevents the iron and nickel from melting.",
+            "options": [
+              "Both A and R are true, and R is the correct explanation of A",
+              "Both A and R are true, but R is not the correct explanation of A",
+              "A is true but R is false",
+              "A is false but R is true"
+            ],
+            "correct_answer": 0,
+            "explanation": "The inner core is solid despite temperatures of ~5000°C because the immense pressure raises the melting point of iron-nickel above what the heat can achieve.",
+            "hint": "High pressure raises the melting point of substances."
+          },
+          {
+            "id": "SST_W01_D2_P_M3",
+            "type": "mcq",
+            "question": "The Moho discontinuity marks the boundary between:",
+            "options": ["Outer core and inner core", "Mantle and outer core", "Crust and mantle", "Atmosphere and crust"],
+            "correct_answer": 2,
+            "explanation": "The Mohorovicic discontinuity (Moho) is the boundary between Earth's crust and the mantle.",
+            "hint": "Named after the scientist Mohorovicic who discovered it."
+          },
+          {
+            "id": "SST_W01_D2_P_M4",
+            "type": "mcq",
+            "question": "Why do S-waves (secondary seismic waves) not pass through the outer core?",
+            "options": ["They are blocked by the crust", "The outer core is liquid, and S-waves cannot travel through liquids", "S-waves travel too fast", "The outer core is too hot"],
+            "correct_answer": 1,
+            "explanation": "S-waves are shear waves that can only travel through solid material. Since the outer core is liquid, S-waves cannot pass through it.",
+            "hint": "S-waves need solid material to travel."
+          },
+          {
+            "id": "SST_W01_D2_P_M5",
+            "type": "numeric_fill",
+            "question": "Approximately how thick (in km) is the mantle?",
+            "correct_answer": 2900,
+            "explanation": "The mantle is approximately 2,900 km thick, making it the largest layer of Earth by volume."
+          }
+        ],
+        "hard": [
+          {
+            "id": "SST_W01_D2_P_H1",
+            "type": "drag_order",
+            "question": "Arrange the Earth's layers from outermost to innermost:",
+            "items": ["Inner Core", "Crust", "Outer Core", "Mantle"],
+            "correct_order": [1, 3, 2, 0],
+            "explanation": "Outermost to innermost: Crust → Mantle → Outer Core → Inner Core."
+          },
+          {
+            "id": "SST_W01_D2_P_H2",
+            "type": "assertion_reason",
+            "question": "Read the Assertion and Reason carefully and choose the correct option.",
+            "assertion": "Mantle convection is responsible for the movement of tectonic plates.",
+            "reason": "Heat from the core causes the mantle rock to flow in convection currents, dragging plates along.",
+            "options": [
+              "Both A and R are true, and R is the correct explanation of A",
+              "Both A and R are true, but R is not the correct explanation of A",
+              "A is true but R is false",
+              "A is false but R is true"
+            ],
+            "correct_answer": 0,
+            "explanation": "Both are true and directly connected. Convection currents in the mantle are the driving force behind plate tectonics.",
+            "hint": "Think of how hot water circulates in a pot on a stove."
+          },
+          {
+            "id": "SST_W01_D2_P_H3",
+            "type": "mcq",
+            "question": "Oceanic crust is denser than continental crust. What happens when they collide at a convergent plate boundary?",
+            "options": [
+              "They bounce off each other",
+              "The oceanic crust subducts (dives) under the continental crust",
+              "The continental crust subducts under oceanic crust",
+              "Both plates rise equally to form mountains"
+            ],
+            "correct_answer": 1,
+            "explanation": "At convergent boundaries, denser oceanic crust subducts under lighter continental crust, descending into the mantle.",
+            "hint": "Heavier things sink under lighter things."
+          },
+          {
+            "id": "SST_W01_D2_P_H4",
+            "type": "drag_order",
+            "question": "Arrange these from shallowest to deepest inside Earth:",
+            "items": ["Lower Mantle", "Upper Mantle", "Outer Core", "Crust", "Inner Core"],
+            "correct_order": [3, 1, 0, 2, 4],
+            "explanation": "Shallow to deep: Crust → Upper Mantle → Lower Mantle → Outer Core → Inner Core."
+          },
+          {
+            "id": "SST_W01_D2_P_H5",
+            "type": "mcq",
+            "question": "What is isostasy in geology?",
+            "options": [
+              "The measurement of earthquake magnitudes",
+              "The floating equilibrium of Earth's crust on the denser mantle",
+              "The study of ocean currents",
+              "The process of rock formation"
+            ],
+            "correct_answer": 1,
+            "explanation": "Isostasy describes the gravitational equilibrium between the lighter crust and the denser mantle, similar to how icebergs float on water.",
+            "hint": "Think of an iceberg floating — the crust floats on the mantle similarly."
+          }
+        ]
+      }
+    },
+    "day_3": {
+      "concept_id": "SST6_W01_CONTINENTS",
+      "concept_name": "Continents and Oceans",
+      "questions": {
+        "easy": [
+          {
+            "id": "SST_W01_D3_P_E1",
+            "type": "mcq",
+            "question": "How many continents are there on Earth?",
+            "options": ["Five", "Six", "Seven", "Eight"],
+            "correct_answer": 2,
+            "explanation": "There are seven continents: Asia, Africa, North America, South America, Europe, Australia, Antarctica.",
+            "hint": "Think of them: Asia, Africa, Americas (2), Europe, Australia, Antarctica."
+          },
+          {
+            "id": "SST_W01_D3_P_E2",
+            "type": "true_false",
+            "question": "Asia is the largest continent in the world.",
+            "correct_answer": true,
+            "explanation": "Asia is the largest continent by area at approximately 44.6 million km2."
+          },
+          {
+            "id": "SST_W01_D3_P_E3",
+            "type": "mcq",
+            "question": "How many oceans are there on Earth?",
+            "options": ["Three", "Four", "Five", "Six"],
+            "correct_answer": 2,
+            "explanation": "There are five oceans: Pacific, Atlantic, Indian, Southern (Antarctic), and Arctic.",
+            "hint": "Count them: P-A-I-S-A (Pacific, Atlantic, Indian, Southern, Arctic)."
+          },
+          {
+            "id": "SST_W01_D3_P_E4",
+            "type": "true_false",
+            "question": "Australia is both a country and a continent.",
+            "correct_answer": true,
+            "explanation": "Australia is unique in being the only country that occupies an entire continent by itself."
+          },
+          {
+            "id": "SST_W01_D3_P_E5",
+            "type": "mcq",
+            "question": "What is the name of the supercontinent that existed millions of years ago?",
+            "options": ["Eurasia", "Pangaea", "Gondwana", "Laurasia"],
+            "correct_answer": 1,
+            "explanation": "Pangaea was the supercontinent that existed about 335 million years ago before breaking apart.",
+            "hint": "Pan means all, gaea means Earth — 'all Earth'."
+          }
+        ],
+        "medium": [
+          {
+            "id": "SST_W01_D3_P_M1",
+            "type": "mcq",
+            "question": "The Pacific Ocean is significant because it:",
+            "options": ["Is the smallest ocean", "Contains the deepest point on Earth (Mariana Trench)", "Is entirely surrounded by land", "Has the least biodiversity"],
+            "correct_answer": 1,
+            "explanation": "The Pacific Ocean contains the Mariana Trench, which at ~11 km deep is the deepest point on Earth.",
+            "hint": "The deepest ocean trench is in this ocean."
+          },
+          {
+            "id": "SST_W01_D3_P_M2",
+            "type": "assertion_reason",
+            "question": "Read the Assertion and Reason carefully and choose the correct option.",
+            "assertion": "The continents were once joined together into a single landmass called Pangaea.",
+            "reason": "Matching coastlines of South America and Africa, similar fossils, and rock sequences support continental drift.",
+            "options": [
+              "Both A and R are true, and R is the correct explanation of A",
+              "Both A and R are true, but R is not the correct explanation of A",
+              "A is true but R is false",
+              "A is false but R is true"
+            ],
+            "correct_answer": 0,
+            "explanation": "Pangaea's existence is supported by the evidence listed in the reason (matching coastlines, fossils, rocks). Both statements are true and the reason correctly supports the assertion.",
+            "hint": "What evidence did Wegener use to propose continental drift?"
+          },
+          {
+            "id": "SST_W01_D3_P_M3",
+            "type": "mcq",
+            "question": "Which is the smallest continent by area?",
+            "options": ["Europe", "Antarctica", "Australia", "South America"],
+            "correct_answer": 2,
+            "explanation": "Australia/Oceania is the smallest continent at approximately 8.5 million km2.",
+            "hint": "It is both a country and a continent."
+          },
+          {
+            "id": "SST_W01_D3_P_M4",
+            "type": "mcq",
+            "question": "The Himalayas formed because:",
+            "options": ["Volcanic eruption under the ocean", "The Indian plate collided with the Eurasian plate", "Glacial erosion over millions of years", "Sea level dropped and exposed the mountains"],
+            "correct_answer": 1,
+            "explanation": "About 50 million years ago, the northward-moving Indian tectonic plate collided with the Eurasian plate, pushing up the Himalayan mountain range.",
+            "hint": "Two continents crashed into each other."
+          },
+          {
+            "id": "SST_W01_D3_P_M5",
+            "type": "numeric_fill",
+            "question": "How many continents are in the Southern Hemisphere (fully or mostly below the equator)?",
+            "correct_answer": 3,
+            "explanation": "Three continents are fully or mostly in the Southern Hemisphere: South America (mostly), Africa (mostly), Australia, and Antarctica. The clearest answer is Antarctica, South America, and Australia = 3."
+          }
+        ],
+        "hard": [
+          {
+            "id": "SST_W01_D3_P_H1",
+            "type": "drag_order",
+            "question": "Arrange the continents from largest to smallest by area:",
+            "items": ["Europe", "Africa", "Australia", "Asia", "North America", "South America", "Antarctica"],
+            "correct_order": [3, 1, 4, 5, 6, 0, 2],
+            "explanation": "Size order: Asia > Africa > North America > South America > Antarctica > Europe > Australia."
+          },
+          {
+            "id": "SST_W01_D3_P_H2",
+            "type": "assertion_reason",
+            "question": "Read the Assertion and Reason carefully and choose the correct option.",
+            "assertion": "The Indian Ocean is geopolitically the most important ocean for India.",
+            "reason": "India's coastline borders the Indian Ocean, through which 80% of India's oil imports and 90% of trade pass.",
+            "options": [
+              "Both A and R are true, and R is the correct explanation of A",
+              "Both A and R are true, but R is not the correct explanation of A",
+              "A is true but R is false",
+              "A is false but R is true"
+            ],
+            "correct_answer": 0,
+            "explanation": "Both are true and connected: India's dependence on the Indian Ocean for trade and energy supply makes it strategically critical.",
+            "hint": "India's name even comes from the ocean's name!"
+          },
+          {
+            "id": "SST_W01_D3_P_H3",
+            "type": "mcq",
+            "question": "What type of plate boundary created the Mid-Atlantic Ridge?",
+            "options": ["Convergent boundary (collision)", "Divergent boundary (spreading)", "Transform boundary (sliding)", "Subduction zone"],
+            "correct_answer": 1,
+            "explanation": "The Mid-Atlantic Ridge is a divergent boundary where the North American and Eurasian plates are moving apart, creating new oceanic crust.",
+            "hint": "Plates moving apart create new crust — what type of boundary is this?"
+          },
+          {
+            "id": "SST_W01_D3_P_H4",
+            "type": "drag_order",
+            "question": "Arrange the oceans from largest to smallest:",
+            "items": ["Indian", "Arctic", "Pacific", "Atlantic", "Southern"],
+            "correct_order": [2, 3, 0, 4, 1],
+            "explanation": "Size order: Pacific > Atlantic > Indian > Southern > Arctic."
+          },
+          {
+            "id": "SST_W01_D3_P_H5",
+            "type": "mcq",
+            "question": "Why does Mercator map projection distort the size of countries near the poles?",
+            "options": [
+              "Polar regions have more land",
+              "Projecting a sphere onto a flat surface requires stretching, which increases near the poles",
+              "The poles rotate faster than the equator",
+              "Polar countries are simply larger than they appear"
+            ],
+            "correct_answer": 1,
+            "explanation": "Mercator projection maintains shapes but distorts sizes: to project a sphere onto a flat map, areas near the poles are stretched increasingly, making them appear much larger than they are.",
+            "hint": "Unwrapping a sphere onto a flat surface always involves distortion."
+          }
+        ]
+      }
+    },
+    "day_4": {
+      "concept_id": "SST6_W01_LAT_LONG",
+      "concept_name": "Latitudes and Longitudes",
+      "questions": {
+        "easy": [
+          {
+            "id": "SST_W01_D4_P_E1",
+            "type": "mcq",
+            "question": "What is the line at 0° latitude called?",
+            "options": ["Prime Meridian", "Tropic of Cancer", "Equator", "Arctic Circle"],
+            "correct_answer": 2,
+            "explanation": "The Equator is the imaginary line at 0° latitude that divides Earth into Northern and Southern hemispheres.",
+            "hint": "It divides Earth equally into top and bottom."
+          },
+          {
+            "id": "SST_W01_D4_P_E2",
+            "type": "true_false",
+            "question": "Latitude lines run north to south (vertically).",
+            "correct_answer": false,
+            "explanation": "Latitude lines run east to west (horizontally/parallel). Longitude lines run north to south (vertically)."
+          },
+          {
+            "id": "SST_W01_D4_P_E3",
+            "type": "mcq",
+            "question": "Which city does the Prime Meridian pass through?",
+            "options": ["New Delhi", "Paris", "Greenwich (London)", "New York"],
+            "correct_answer": 2,
+            "explanation": "The Prime Meridian (0° longitude) passes through Greenwich in London, England.",
+            "hint": "It is a suburb of London."
+          },
+          {
+            "id": "SST_W01_D4_P_E4",
+            "type": "true_false",
+            "question": "The Tropic of Cancer is at 23.5°N latitude.",
+            "correct_answer": true,
+            "explanation": "The Tropic of Cancer is located at 23.5°N latitude, marking the northernmost point where the Sun can be directly overhead."
+          },
+          {
+            "id": "SST_W01_D4_P_E5",
+            "type": "mcq",
+            "question": "What system do we use to locate any place on Earth?",
+            "options": ["Height and weight", "Latitude and Longitude", "Compass points only", "Street address only"],
+            "correct_answer": 1,
+            "explanation": "Latitude and longitude form a coordinate system to pinpoint any location on Earth.",
+            "hint": "GPS uses this system."
+          }
+        ],
+        "medium": [
+          {
+            "id": "SST_W01_D4_P_M1",
+            "type": "mcq",
+            "question": "If one degree of longitude corresponds to 4 minutes of time, what time difference does 15° longitude represent?",
+            "options": ["30 minutes", "45 minutes", "60 minutes (1 hour)", "90 minutes"],
+            "correct_answer": 2,
+            "explanation": "15° × 4 minutes = 60 minutes = 1 hour. Earth rotates 360° in 24 hours, so 15° = 1 hour.",
+            "hint": "360° ÷ 24 hours = 15° per hour."
+          },
+          {
+            "id": "SST_W01_D4_P_M2",
+            "type": "assertion_reason",
+            "question": "Read the Assertion and Reason carefully and choose the correct option.",
+            "assertion": "India uses a single time zone (IST, UTC+5:30) despite spanning about 30 degrees of longitude.",
+            "reason": "A single time zone simplifies administration and national coordination, though it creates solar time variations within the country.",
+            "options": [
+              "Both A and R are true, and R is the correct explanation of A",
+              "Both A and R are true, but R is not the correct explanation of A",
+              "A is true but R is false",
+              "A is false but R is true"
+            ],
+            "correct_answer": 0,
+            "explanation": "India does use IST (82.5°E) as a single time zone despite spanning ~30° longitude. The reason correctly explains the policy rationale and its consequence.",
+            "hint": "Why would a large country choose just one time zone?"
+          },
+          {
+            "id": "SST_W01_D4_P_M3",
+            "type": "mcq",
+            "question": "What is the International Date Line?",
+            "options": [
+              "The line at 0° longitude",
+              "The line at approximately 180° longitude where the date changes",
+              "The Equator at 0° latitude",
+              "The boundary between North and South poles"
+            ],
+            "correct_answer": 1,
+            "explanation": "The International Date Line runs approximately along 180° longitude. Crossing it eastward means going back one day; crossing it westward adds one day.",
+            "hint": "It is at the opposite side of the Earth from the Prime Meridian."
+          },
+          {
+            "id": "SST_W01_D4_P_M4",
+            "type": "mcq",
+            "question": "What does a location of 28°N, 77°E approximately identify?",
+            "options": ["Mumbai", "Delhi", "Kolkata", "Chennai"],
+            "correct_answer": 1,
+            "explanation": "Delhi (New Delhi) is located at approximately 28.7°N, 77.2°E.",
+            "hint": "It is India's capital city."
+          },
+          {
+            "id": "SST_W01_D4_P_M5",
+            "type": "numeric_fill",
+            "question": "The Earth rotates 360 degrees in 24 hours. How many degrees does it rotate per hour?",
+            "correct_answer": 15,
+            "explanation": "360° ÷ 24 hours = 15° per hour. This is why every 15° of longitude = 1 hour of time difference."
+          }
+        ],
+        "hard": [
+          {
+            "id": "SST_W01_D4_P_H1",
+            "type": "drag_order",
+            "question": "Arrange these latitude lines from northernmost to southernmost:",
+            "items": ["Tropic of Capricorn", "Arctic Circle", "Equator", "Tropic of Cancer", "Antarctic Circle"],
+            "correct_order": [1, 3, 2, 0, 4],
+            "explanation": "North to South: Arctic Circle (66.5°N) → Tropic of Cancer (23.5°N) → Equator (0°) → Tropic of Capricorn (23.5°S) → Antarctic Circle (66.5°S)."
+          },
+          {
+            "id": "SST_W01_D4_P_H2",
+            "type": "assertion_reason",
+            "question": "Read the Assertion and Reason carefully and choose the correct option.",
+            "assertion": "The distance represented by one degree of longitude varies with latitude.",
+            "reason": "Longitude lines converge at the poles, so one degree of longitude covers less distance at higher latitudes than at the equator.",
+            "options": [
+              "Both A and R are true, and R is the correct explanation of A",
+              "Both A and R are true, but R is not the correct explanation of A",
+              "A is true but R is false",
+              "A is false but R is true"
+            ],
+            "correct_answer": 0,
+            "explanation": "Both are true and connected. At the equator, 1° longitude ≈ 111 km; at the poles it approaches 0 km because all longitude lines meet there.",
+            "hint": "Look at a globe — do longitude lines stay the same distance apart everywhere?"
+          },
+          {
+            "id": "SST_W01_D4_P_H3",
+            "type": "mcq",
+            "question": "India Standard Time (IST) is based on which meridian?",
+            "options": ["75°E", "82.5°E", "90°E", "77°E"],
+            "correct_answer": 1,
+            "explanation": "India Standard Time is based on the 82.5°E meridian, which is 5 hours 30 minutes ahead of UTC (5.5 × 1 hour/15° = 5.5 hours).",
+            "hint": "82.5 ÷ 15 = 5.5 hours, which equals UTC+5:30."
+          },
+          {
+            "id": "SST_W01_D4_P_H4",
+            "type": "drag_order",
+            "question": "Arrange these geographic features from lowest latitude (nearest equator) to highest latitude (nearest pole):",
+            "items": ["Tropic of Cancer", "North Pole", "Equator", "Arctic Circle"],
+            "correct_order": [2, 0, 3, 1],
+            "explanation": "Equator (0°) → Tropic of Cancer (23.5°N) → Arctic Circle (66.5°N) → North Pole (90°N)."
+          },
+          {
+            "id": "SST_W01_D4_P_H5",
+            "type": "mcq",
+            "question": "What is a Great Circle in navigation, and why is it significant?",
+            "options": [
+              "The equator only, used for all maritime navigation",
+              "Any circle on Earth's surface with its centre at Earth's centre; represents the shortest path between two points",
+              "The circle formed by all the Tropics combined",
+              "A circular navigational chart used by pilots"
+            ],
+            "correct_answer": 1,
+            "explanation": "A Great Circle has its centre at Earth's centre and represents the shortest path between two points on a sphere. Airlines use Great Circle routes to save fuel and time.",
+            "hint": "Pilots take curved routes on maps — why? Because on a sphere, a straight line IS a curve."
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,160 +1,160 @@
 """
-Anthropic Claude LLM Provider Implementation (TEMPLATE)
-
-Date: 2025-12-11
-Author: BabySteps Development Team
+2026-03-04: Anthropic Claude LLM Provider implementation.
 
 Purpose:
-    Template implementation of LLMProvider for Anthropic Claude.
-    Shows how to add support for Claude 3, Claude 2, etc.
-
-Status:
-    TEMPLATE - Uncomment and configure when you want to use Claude
+    Concrete LLMProvider for Anthropic Claude models (claude-opus-4-6,
+    claude-sonnet-4-6, claude-haiku-4-5, etc.)
+    Uses the anthropic SDK (anthropic.Anthropic client).
 
 Setup:
-    1. Install: pip install anthropic
-    2. Set API key in environment: ANTHROPIC_API_KEY=your-key
-    3. Update settings.py: LLM_PROVIDER = 'anthropic'
-    4. Uncomment this file's import in providers/__init__.py
+    1. pip install anthropic>=0.20
+    2. Set ANTHROPIC_API_KEY in environment (or pass api_key directly)
+    3. In settings.py:
+           LLM_PROVIDER = 'anthropic'
+           LLM_CONFIG = {
+               'model_name': 'claude-haiku-4-5-20251001',  # fast + cheap
+               'api_key': os.getenv('ANTHROPIC_API_KEY'),
+               'timeout': 60,
+           }
 
 Usage:
-    llm = get_llm_provider()  # Will use Claude if configured
+    llm = get_llm_provider()
     response = llm.chat(message="Hello", system_prompt="You are helpful")
+    print(response.text)
 """
 
-# Uncomment when ready to use Anthropic
-"""
 # Python standard library
-import time
-import logging
-from typing import List, Optional
+import time  # 2026-03-04: Latency measurement
+import logging  # 2026-03-04: Module logger
+from typing import List, Optional  # 2026-03-04: Type hints
 
-# Third-party imports
-import anthropic  # pip install anthropic
+# Third-party imports — installed separately: pip install anthropic>=0.20
+try:
+    import anthropic  # 2026-03-04: Anthropic SDK
+    _anthropic_available = True  # 2026-03-04: SDK present
+except ImportError:
+    _anthropic_available = False  # 2026-03-04: SDK not installed
 
 # Local imports
-from ..base import LLMProvider, LLMResponse, LLMError
+from ..base import LLMProvider, LLMResponse, LLMError  # 2026-03-04: ABC + types
 
 # Configure logging
-logger = logging.getLogger(__name__)
+logger = logging.getLogger(__name__)  # 2026-03-04: Module logger
 
 
 class AnthropicProvider(LLMProvider):
-    '''
-    Anthropic Claude LLM provider implementation.
-    
+    """
+    2026-03-04: Anthropic Claude provider.
+
     Purpose:
-        Provide standardized LLM interface for Anthropic Claude models.
-        Supports Claude 3 Opus, Sonnet, Haiku, and Claude 2.
-    
-    Features:
-        - Long context window (100K+ tokens)
-        - Strong reasoning capabilities
-        - Constitutional AI safety
-        - Tool use / function calling
-    
-    Configuration:
-        api_key: Anthropic API key (required)
-        model_name: Model to use (default: claude-3-sonnet-20240229)
-        timeout: Request timeout in seconds (default: 60)
-    '''
-    
-    def __init__(
+        Provide a standardized LLM interface for Claude models.
+        Supports the full Claude 4.x/3.x model family.
+
+    Design:
+        - Uses anthropic.Anthropic() client (SDK v0.20+).
+        - Claude requires max_tokens; defaults to 1024 if not specified.
+        - Raises LLMError on failure.
+
+    Configuration (via settings.LLM_CONFIG):
+        model_name: Claude model id (default: claude-haiku-4-5-20251001)
+        api_key: Anthropic API key (or ANTHROPIC_API_KEY env var)
+        timeout: Request timeout seconds (default: 60)
+    """
+
+    def __init__(  # 2026-03-04: Initialize Anthropic provider
         self,
-        model_name: str = "claude-3-sonnet-20240229",
+        model_name: str = 'claude-haiku-4-5-20251001',
         api_key: Optional[str] = None,
         timeout: int = 60,
-        **kwargs
+        **kwargs,
     ):
-        '''
-        Initialize Anthropic provider.
-        
+        """
+        2026-03-04: Initialize the Anthropic provider.
+
         Args:
-            model_name: Claude model name
-            api_key: Anthropic API key (or set ANTHROPIC_API_KEY env var)
-            timeout: Request timeout in seconds
-            **kwargs: Additional configuration
-        '''
-        # Call parent constructor
-        super().__init__(
+            model_name: Claude model id (e.g. 'claude-haiku-4-5-20251001').
+            api_key: API key. Falls back to ANTHROPIC_API_KEY env var if None.
+            timeout: HTTP request timeout in seconds.
+            **kwargs: Absorbed for forward-compatibility.
+
+        Raises:
+            LLMError: If the anthropic package is not installed.
+        """
+        if not _anthropic_available:  # 2026-03-04: SDK not installed
+            raise LLMError(
+                "anthropic package not installed. Run: pip install anthropic>=0.20",
+                provider='anthropic',
+            )
+
+        super().__init__(  # 2026-03-04: Call LLMProvider base
             model_name=model_name,
-            base_url=None,  # Anthropic uses default endpoint
+            base_url=None,
             api_key=api_key,
-            **kwargs
         )
-        
-        # Create Anthropic client
-        self.client = anthropic.Anthropic(api_key=api_key)
-        
-        # Store timeout
-        self.timeout = timeout
-        
-        # Log initialization
-        logger.info(f"AnthropicProvider initialized: model={model_name}")
-    
-    def chat(
+
+        self.timeout = timeout  # 2026-03-04: Store timeout
+
+        # 2026-03-04: Create the anthropic.Anthropic client
+        client_kwargs = {}
+        if api_key:
+            client_kwargs['api_key'] = api_key  # 2026-03-04: Explicit key
+        self._client = anthropic.Anthropic(**client_kwargs)  # 2026-03-04: SDK client
+
+        logger.info(  # 2026-03-04: Log initialization
+            "AnthropicProvider initialized: model=%s", model_name
+        )
+
+    def chat(  # 2026-03-04: Generate chat completion
         self,
         message: str,
         system_prompt: Optional[str] = None,
         temperature: float = 0.7,
         max_tokens: Optional[int] = 1024,
-        **kwargs
+        **kwargs,
     ) -> LLMResponse:
-        '''
-        Generate chat completion using Claude.
-        
+        """
+        2026-03-04: Generate a response from Claude.
+
         Args:
-            message: User message/prompt
-            system_prompt: System prompt for context (optional)
-            temperature: Response randomness (0.0-1.0)
-            max_tokens: Maximum response tokens (required for Claude)
-            **kwargs: Additional Anthropic-specific parameters
-        
+            message: User message.
+            system_prompt: Optional system context (Claude 'system' param).
+            temperature: Sampling temperature (0.0–1.0).
+            max_tokens: Max output tokens (Claude requires this; default 1024).
+            **kwargs: Extra params forwarded to the API.
+
         Returns:
-            LLMResponse: Standardized response with text, tokens, timing
-        
+            LLMResponse: Standardized response.
+
         Raises:
-            LLMError: If generation fails
-        '''
-        # Validate parameters
-        self._validate_parameters(
-            temperature=temperature,
-            max_tokens=max_tokens
-        )
-        
-        # Claude requires max_tokens
-        if max_tokens is None:
+            LLMError: On API error.
+        """
+        self._validate_parameters(temperature=temperature, max_tokens=max_tokens)
+
+        if max_tokens is None:  # 2026-03-04: Claude requires max_tokens
             max_tokens = 1024
-            logger.warning("max_tokens not set, using default: 1024")
-        
-        # Record start time
-        start_time = time.time()
-        
+
+        start_time = time.time()  # 2026-03-04: Start latency timer
+
         try:
-            # Call Anthropic API
-            response = self.client.messages.create(
-                model=self.model_name,
-                max_tokens=max_tokens,
-                temperature=temperature,
-                system=system_prompt if system_prompt else "",
-                messages=[
-                    {"role": "user", "content": message}
-                ],
-                timeout=self.timeout,
-                **kwargs
-            )
-            
-            # Calculate latency
-            latency_ms = (time.time() - start_time) * 1000
-            
-            # Extract response text
-            response_text = response.content[0].text
-            
-            # Get token usage
+            # 2026-03-04: Build API call kwargs
+            api_kwargs = {
+                'model': self.model_name,
+                'max_tokens': max_tokens,
+                'temperature': temperature,
+                'messages': [{'role': 'user', 'content': message}],
+                **kwargs,
+            }
+            if system_prompt:  # 2026-03-04: Claude uses top-level 'system' param
+                api_kwargs['system'] = system_prompt
+
+            response = self._client.messages.create(**api_kwargs)  # 2026-03-04: API call
+
+            latency_ms = (time.time() - start_time) * 1000  # 2026-03-04: Latency
+
+            response_text = response.content[0].text  # 2026-03-04: Extract text
             tokens_used = response.usage.input_tokens + response.usage.output_tokens
-            
-            # Create standardized response
-            return LLMResponse(
+
+            return LLMResponse(  # 2026-03-04: Return standardized response
                 text=response_text,
                 model=self.model_name,
                 tokens_used=tokens_used,
@@ -163,89 +163,66 @@ class AnthropicProvider(LLMProvider):
                     'provider': 'anthropic',
                     'stop_reason': response.stop_reason,
                     'input_tokens': response.usage.input_tokens,
-                    'output_tokens': response.usage.output_tokens
+                    'output_tokens': response.usage.output_tokens,
                 },
                 success=True,
-                error=None
+                error=None,
             )
-        
-        except Exception as e:
-            # Calculate latency even on failure
+
+        except Exception as exc:  # 2026-03-04: API or network error
             latency_ms = (time.time() - start_time) * 1000
-            
-            # Log error
-            logger.error(
-                f"Anthropic chat failed: {e}",
+            logger.error(  # 2026-03-04: Log error details
+                "Anthropic chat failed: %s (model=%s, latency=%.0fms)",
+                exc,
+                self.model_name,
+                latency_ms,
                 exc_info=True,
-                extra={
-                    'model': self.model_name,
-                    'message_length': len(message),
-                    'latency_ms': latency_ms
-                }
             )
-            
-            # Raise standardized error
-            raise LLMError(
-                message=f"Anthropic generation failed: {str(e)}",
-                provider="anthropic",
-                original_error=e
+            raise LLMError(  # 2026-03-04: Re-raise as LLMError
+                f"Anthropic generation failed: {exc}",
+                provider='anthropic',
+                original_error=exc,
             )
-    
-    def health_check(self, force: bool = False) -> bool:
-        '''
-        Check if Anthropic API is accessible.
-        
+
+    def health_check(self, force: bool = False) -> bool:  # 2026-03-04: Health check
+        """
+        2026-03-04: Check if Anthropic API is reachable via a minimal message call.
+
         Args:
-            force: Force fresh check (ignore cache)
-        
+            force: Ignored (reserved for cache invalidation).
+
         Returns:
-            bool: True if healthy, False otherwise
-        '''
+            bool: True if API responds, False on any error.
+        """
         try:
-            # Try a minimal API call as health check
-            response = self.client.messages.create(
+            # 2026-03-04: Minimal 1-token call to verify connectivity + key validity
+            self._client.messages.create(
                 model=self.model_name,
                 max_tokens=1,
-                messages=[{"role": "user", "content": "test"}],
-                timeout=5
+                messages=[{'role': 'user', 'content': 'ping'}],
             )
-            
-            is_healthy = response is not None
-            
-            # Log health status
             if force:
-                logger.info(
-                    f"Anthropic health check: {'healthy' if is_healthy else 'unhealthy'} "
-                    f"(model={self.model_name})"
-                )
-            
-            return is_healthy
-        
-        except Exception as e:
-            # Log error
-            logger.error(f"Anthropic health check failed: {e}")
+                logger.info("Anthropic health: healthy (model=%s)", self.model_name)
+            return True
+        except Exception as exc:  # 2026-03-04: Connection or auth error
+            logger.warning("Anthropic health check failed: %s", exc)
             return False
-    
-    def get_available_models(self) -> List[str]:
-        '''
-        Get list of available Anthropic models.
-        
-        Returns:
-            List[str]: List of model names
-        
-        Note:
-            Anthropic doesn't provide a models list API yet,
-            so we return known models.
-        '''
-        # Known Claude models as of Dec 2024
-        return [
-            'claude-3-opus-20240229',
-            'claude-3-sonnet-20240229',
-            'claude-3-haiku-20240307',
-            'claude-2.1',
-            'claude-2.0'
-        ]
-"""
 
-# Template marker - remove this when uncommenting above
-print("Anthropic provider template - uncomment to use")
+    def get_available_models(self) -> List[str]:  # 2026-03-04: List known models
+        """
+        2026-03-04: Return the known Claude model catalogue.
+
+        Anthropic does not expose a REST models-list endpoint, so we return
+        a static list of current production models.
+
+        Returns:
+            List[str]: Known Claude model ids.
+        """
+        return [  # 2026-03-04: Current Claude models (March 2026)
+            'claude-opus-4-6',
+            'claude-sonnet-4-6',
+            'claude-haiku-4-5-20251001',
+            'claude-3-5-sonnet-20241022',
+            'claude-3-5-haiku-20241022',
+            'claude-3-opus-20240229',
+        ]

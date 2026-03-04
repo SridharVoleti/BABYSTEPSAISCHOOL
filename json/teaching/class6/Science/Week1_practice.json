@@ -1,128 +1,627 @@
 {
-  "lesson_id": "SCI6_CURIOSITY_CH01_W01",
+  "lesson_id": "SCI6_ENV_CH01_W01",
   "practice_bank": {
-
-    "distribution_summary": {
-      "total_questions": 60,
-      "mcq_total": 44,
-      "true_false_total": 12,
-      "drag_order_total": 2,
-      "numeric_total": 2,
-      "mcq_correct_index_distribution": {
-        "0": 11,
-        "1": 11,
-        "2": 11,
-        "3": 11
-      }
-    },
-
     "day_1": {
-      "concept_name": "What is Science?",
+      "concept_id": "SCI6_W01_AIR",
+      "concept_name": "Air",
       "questions": {
         "easy": [
-          {"id":"D1E1","type":"mcq","question":"Science mainly helps us understand the:","options":["Stories","Natural world","Dreams","Games"],"correct_answer":1},
-          {"id":"D1E2","type":"true_false","question":"Science is only done in laboratories.","correct_answer":false},
-          {"id":"D1E3","type":"mcq","question":"Curiosity means:","options":["Fear","Silence","Desire to learn","Anger"],"correct_answer":2},
-          {"id":"D1E4","type":"true_false","question":"Scientific ideas never change.","correct_answer":false},
-          {"id":"D1E5","type":"mcq","question":"Science is a way of:","options":["Sleeping","Playing","Thinking","Guessing randomly"],"correct_answer":2}
+          {
+            "id": "W01_D1_P_E1",
+            "type": "mcq",
+            "question": "Which gas do we breathe in to stay alive?",
+            "options": ["Nitrogen", "Oxygen", "Carbon dioxide", "Argon"],
+            "correct_answer": 1,
+            "explanation": "We breathe in Oxygen (O2) to stay alive.",
+            "hint": "Plants give this gas out during the day."
+          },
+          {
+            "id": "W01_D1_P_E2",
+            "type": "true_false",
+            "question": "Nitrogen is the most abundant gas in the atmosphere.",
+            "correct_answer": true,
+            "explanation": "Nitrogen makes up about 78% of the atmosphere, making it the most abundant."
+          },
+          {
+            "id": "W01_D1_P_E3",
+            "type": "mcq",
+            "question": "What do we call the layer of air surrounding the Earth?",
+            "options": ["Hydrosphere", "Biosphere", "Atmosphere", "Lithosphere"],
+            "correct_answer": 2,
+            "explanation": "The layer of air around Earth is called the atmosphere.",
+            "hint": "Atmo means air."
+          },
+          {
+            "id": "W01_D1_P_E4",
+            "type": "true_false",
+            "question": "Air is visible to the naked eye.",
+            "correct_answer": false,
+            "explanation": "Air is an invisible mixture of gases."
+          },
+          {
+            "id": "W01_D1_P_E5",
+            "type": "mcq",
+            "question": "Which gas do plants use to make food?",
+            "options": ["Oxygen", "Nitrogen", "Carbon dioxide", "Hydrogen"],
+            "correct_answer": 2,
+            "explanation": "Plants use Carbon dioxide (CO2) during photosynthesis to make food.",
+            "hint": "Humans breathe this out."
+          }
         ],
         "medium": [
-          {"id":"D1M1","type":"mcq","question":"Which shows scientific thinking?","options":["Ignoring a problem","Complaining","Asking why something happened","Sleeping"],"correct_answer":2},
-          {"id":"D1M2","type":"numeric_fill","question":"How many teaching levels are used in this lesson?","correct_answer":3},
-          {"id":"D1M3","type":"mcq","question":"Science improves when:","options":["Magic happens","Evidence appears","Stories spread","People guess"],"correct_answer":1},
-          {"id":"D1M4","type":"true_false","question":"Science helps us understand daily life.","correct_answer":true},
-          {"id":"D1M5","type":"mcq","question":"Which word relates to science?","options":["Luck","Discovery","Fear","Magic"],"correct_answer":1}
+          {
+            "id": "W01_D1_P_M1",
+            "type": "mcq",
+            "question": "What approximate percentage of air is made up of Nitrogen?",
+            "options": ["21%", "50%", "78%", "0.04%"],
+            "correct_answer": 2,
+            "explanation": "Nitrogen makes up approximately 78% of the atmosphere.",
+            "hint": "It is the largest portion."
+          },
+          {
+            "id": "W01_D1_P_M2",
+            "type": "numeric_fill",
+            "question": "If Oxygen makes up 21% of air and Nitrogen makes up 78%, what percentage is left for all other gases combined?",
+            "correct_answer": 1,
+            "explanation": "100 - 78 - 21 = 1%, which accounts for Argon, CO2, and other trace gases."
+          },
+          {
+            "id": "W01_D1_P_M3",
+            "type": "assertion_reason",
+            "question": "Read the Assertion and Reason carefully and choose the correct option.",
+            "assertion": "Nitrogen is the most abundant gas in air.",
+            "reason": "Nitrogen makes up approximately 78% of the atmosphere.",
+            "options": [
+              "Both A and R are true, and R is the correct explanation of A",
+              "Both A and R are true, but R is not the correct explanation of A",
+              "A is true but R is false",
+              "A is false but R is true"
+            ],
+            "correct_answer": 0,
+            "explanation": "Nitrogen (78%) is indeed the most abundant gas, and the reason correctly explains why.",
+            "hint": "Does the reason explain why nitrogen is most abundant?"
+          },
+          {
+            "id": "W01_D1_P_M4",
+            "type": "mcq",
+            "question": "Which human activity contributes most to air pollution in cities?",
+            "options": ["Farming", "Vehicle emissions", "Swimming", "Solar energy use"],
+            "correct_answer": 1,
+            "explanation": "Vehicle emissions release harmful gases making them the main source of urban air pollution.",
+            "hint": "Think about what moves on roads."
+          },
+          {
+            "id": "W01_D1_P_M5",
+            "type": "mcq",
+            "question": "What does the ozone layer protect us from?",
+            "options": ["Rain", "UV radiation from the Sun", "Earthquakes", "Heavy winds"],
+            "correct_answer": 1,
+            "explanation": "The ozone layer absorbs harmful ultraviolet (UV) radiation from the Sun.",
+            "hint": "It comes from the Sun and can cause sunburn."
+          }
         ],
         "hard": [
-          {"id":"D1H1","type":"drag_order","question":"Arrange correctly:","items":["thinking","Science","is","a way of"],"correct_order":[1,2,3,0]},
-          {"id":"D1H2","type":"mcq","question":"Why can scientific knowledge change?","options":["Because of stories","Because of evidence","Because of guessing","Because of magic"],"correct_answer":1},
-          {"id":"D1H3","type":"mcq","question":"A plant grows taller near a window. What shows scientific thinking?","options":["Ignore it","Investigate why","Guess randomly","Move it away"],"correct_answer":1},
-          {"id":"D1H4","type":"mcq","question":"Why is science self-correcting?","options":["Books change","Scientists guess","Evidence improves ideas","Opinions differ"],"correct_answer":2},
-          {"id":"D1H5","type":"mcq","question":"How should students resolve disagreement scientifically?","options":["Argue","Vote","Test ideas","Ignore"],"correct_answer":2}
+          {
+            "id": "W01_D1_P_H1",
+            "type": "drag_order",
+            "question": "Arrange the gases in air from most abundant to least abundant:",
+            "items": ["Carbon dioxide", "Oxygen", "Argon", "Nitrogen"],
+            "correct_order": [3, 1, 2, 0],
+            "explanation": "Order: Nitrogen (78%) > Oxygen (21%) > Argon (0.9%) > Carbon dioxide (0.04%)."
+          },
+          {
+            "id": "W01_D1_P_H2",
+            "type": "assertion_reason",
+            "question": "Read the Assertion and Reason carefully and choose the correct option.",
+            "assertion": "Air pollution causes respiratory diseases in humans.",
+            "reason": "Pollutants like nitrogen, which is harmless, fill the air during pollution events.",
+            "options": [
+              "Both A and R are true, and R is the correct explanation of A",
+              "Both A and R are true, but R is not the correct explanation of A",
+              "A is true but R is false",
+              "A is false but R is true"
+            ],
+            "correct_answer": 2,
+            "explanation": "The assertion is true but the reason is false. It is harmful pollutants like SO2 and NOx (not harmless nitrogen) that cause respiratory diseases.",
+            "hint": "Is nitrogen really the harmful pollutant during pollution events?"
+          },
+          {
+            "id": "W01_D1_P_H3",
+            "type": "mcq",
+            "question": "Which of the following is classified as a secondary air pollutant?",
+            "options": ["SO2 from factories", "Smoke from vehicles", "Ground-level ozone", "Dust from construction"],
+            "correct_answer": 2,
+            "explanation": "Ground-level ozone is a secondary pollutant formed when primary pollutants react in sunlight.",
+            "hint": "Secondary pollutants are formed by chemical reactions, not direct emission."
+          },
+          {
+            "id": "W01_D1_P_H4",
+            "type": "drag_order",
+            "question": "Arrange these events in the order they occur during smog formation:",
+            "items": ["Sunlight triggers chemical reactions", "Secondary pollutants form (ozone)", "Vehicles emit NOx and VOCs", "Smog reduces visibility"],
+            "correct_order": [2, 0, 1, 3],
+            "explanation": "Smog forms: vehicles emit NOx/VOCs → sunlight triggers reactions → secondary pollutants form → smog reduces visibility."
+          },
+          {
+            "id": "W01_D1_P_H5",
+            "type": "mcq",
+            "question": "Which strategy is MOST effective for reducing PM2.5 levels in a city?",
+            "options": ["Building more roads", "Enforcing strict emission standards and using electric vehicles", "Cutting forests near the city", "Increasing industrial production"],
+            "correct_answer": 1,
+            "explanation": "Enforcing emission standards and shifting to EVs directly reduces the primary source of PM2.5 in urban areas.",
+            "hint": "Target the source of PM2.5."
+          }
         ]
       }
     },
-
     "day_2": {
-      "concept_name": "Curiosity and Questions",
+      "concept_id": "SCI6_W01_WATER",
+      "concept_name": "Water",
       "questions": {
         "easy": [
-          {"id":"D2E1","type":"mcq","question":"Curiosity leads to:","options":["Questions","Silence","Confusion","Fear"],"correct_answer":0},
-          {"id":"D2E2","type":"true_false","question":"Scientific questions begin with why or how.","correct_answer":true},
-          {"id":"D2E3","type":"mcq","question":"To observe means to:","options":["Ignore","Notice carefully","Forget","Guess"],"correct_answer":1},
-          {"id":"D2E4","type":"true_false","question":"Curiosity stops discovery.","correct_answer":false},
-          {"id":"D2E5","type":"mcq","question":"Inquiry means:","options":["Magic","Search","Sleep","Luck"],"correct_answer":1}
+          {
+            "id": "W01_D2_P_E1",
+            "type": "mcq",
+            "question": "What is the process by which the Sun heats water and turns it into vapour?",
+            "options": ["Condensation", "Evaporation", "Precipitation", "Collection"],
+            "correct_answer": 1,
+            "explanation": "Evaporation is when the Sun heats liquid water and converts it to water vapour.",
+            "hint": "The Sun makes water disappear from puddles."
+          },
+          {
+            "id": "W01_D2_P_E2",
+            "type": "true_false",
+            "question": "About 97% of Earth's water is freshwater.",
+            "correct_answer": false,
+            "explanation": "97% of Earth's water is saline. Only about 3% is freshwater."
+          },
+          {
+            "id": "W01_D2_P_E3",
+            "type": "mcq",
+            "question": "What do we call water falling from clouds as rain or snow?",
+            "options": ["Evaporation", "Condensation", "Precipitation", "Transpiration"],
+            "correct_answer": 2,
+            "explanation": "Precipitation is any form of water (rain, snow, hail) falling from clouds.",
+            "hint": "It is the third step of the water cycle."
+          },
+          {
+            "id": "W01_D2_P_E4",
+            "type": "true_false",
+            "question": "The water cycle is a continuous process with no beginning or end.",
+            "correct_answer": true,
+            "explanation": "The water cycle is continuous — water evaporates, condenses, precipitates, and collects endlessly."
+          },
+          {
+            "id": "W01_D2_P_E5",
+            "type": "mcq",
+            "question": "Where is most of the world's freshwater stored?",
+            "options": ["Rivers and lakes", "Underground aquifers", "Glaciers and ice caps", "In plants"],
+            "correct_answer": 2,
+            "explanation": "About 68.7% of Earth's freshwater is locked in glaciers and ice caps.",
+            "hint": "Think of very cold places on Earth."
+          }
         ],
         "medium": [
-          {"id":"D2M1","type":"mcq","question":"Which is scientific?","options":["Why is the sky blue?","Is blue pretty?","Do I like blue?","Is blue lucky?"],"correct_answer":0},
-          {"id":"D2M2","type":"true_false","question":"Scientific questions must be based on observation.","correct_answer":true},
-          {"id":"D2M3","type":"mcq","question":"Which shows curiosity?","options":["Ignore","Ask why","Throw away","Sleep"],"correct_answer":1},
-          {"id":"D2M4","type":"mcq","question":"Inquiry helps us:","options":["Stay confused","Avoid learning","Find answers","Guess"],"correct_answer":2},
-          {"id":"D2M5","type":"true_false","question":"All questions are scientific.","correct_answer":false}
+          {
+            "id": "W01_D2_P_M1",
+            "type": "mcq",
+            "question": "Which of the following describes condensation in the water cycle?",
+            "options": ["Water evaporates from the ocean", "Water vapour cools and forms clouds", "Rain falls from clouds", "Water collects in rivers"],
+            "correct_answer": 1,
+            "explanation": "Condensation is when water vapour rises, cools, and turns back into tiny liquid droplets forming clouds.",
+            "hint": "It is the opposite of evaporation."
+          },
+          {
+            "id": "W01_D2_P_M2",
+            "type": "assertion_reason",
+            "question": "Read the Assertion and Reason carefully and choose the correct option.",
+            "assertion": "Freshwater is a scarce resource even though water covers 71% of the Earth.",
+            "reason": "Most of Earth's water is saline, and the majority of freshwater is locked in glaciers.",
+            "options": [
+              "Both A and R are true, and R is the correct explanation of A",
+              "Both A and R are true, but R is not the correct explanation of A",
+              "A is true but R is false",
+              "A is false but R is true"
+            ],
+            "correct_answer": 0,
+            "explanation": "Freshwater is indeed scarce (assertion true). The reason correctly explains why: 97% is saline and most freshwater is frozen.",
+            "hint": "Does the reason explain why freshwater is scarce?"
+          },
+          {
+            "id": "W01_D2_P_M3",
+            "type": "mcq",
+            "question": "Drip irrigation helps conserve water because it:",
+            "options": ["Waters a large area at once", "Delivers water directly to plant roots with minimal waste", "Uses salt water for crops", "Increases evaporation"],
+            "correct_answer": 1,
+            "explanation": "Drip irrigation delivers water directly to the root zone, minimising evaporation and runoff.",
+            "hint": "Think about where the water goes."
+          },
+          {
+            "id": "W01_D2_P_M4",
+            "type": "numeric_fill",
+            "question": "If Earth has 100 units of total water, how many units are approximately freshwater?",
+            "correct_answer": 3,
+            "explanation": "Approximately 3% of Earth's total water is freshwater."
+          },
+          {
+            "id": "W01_D2_P_M5",
+            "type": "mcq",
+            "question": "Transpiration is the process by which:",
+            "options": ["Clouds form from water vapour", "Plants release water vapour through their leaves", "Rivers carry water to the sea", "Ice caps melt and add to groundwater"],
+            "correct_answer": 1,
+            "explanation": "Transpiration is the release of water vapour from plant leaves.",
+            "hint": "Plants do this — they release water through tiny pores in their leaves."
+          }
         ],
         "hard": [
-          {"id":"D2H1","type":"mcq","question":"Most scientific question?","options":["Why plants grow toward sunlight?","Are plants nice?","Do I like plants?","Are plants beautiful?"],"correct_answer":0},
-          {"id":"D2H2","type":"mcq","question":"Student wonders why metal feels cold. First step?","options":["Ignore","Form clear question","Guess","Argue"],"correct_answer":1},
-          {"id":"D2H3","type":"true_false","question":"Curiosity without investigation cannot lead to discovery.","correct_answer":true},
-          {"id":"D2H4","type":"mcq","question":"Why avoid opinions in science?","options":["Cannot be tested","Fun","Teacher dislikes","Easy"],"correct_answer":0},
-          {"id":"D2H5","type":"mcq","question":"Which shows inquiry?","options":["Argue","Test bread molding","Ignore","Assume"],"correct_answer":1}
+          {
+            "id": "W01_D2_P_H1",
+            "type": "drag_order",
+            "question": "Arrange the water cycle stages in the correct sequence:",
+            "items": ["Precipitation", "Condensation", "Collection", "Evaporation"],
+            "correct_order": [3, 1, 0, 2],
+            "explanation": "Water cycle: Evaporation → Condensation → Precipitation → Collection."
+          },
+          {
+            "id": "W01_D2_P_H2",
+            "type": "assertion_reason",
+            "question": "Read the Assertion and Reason carefully and choose the correct option.",
+            "assertion": "Deforestation reduces the amount of precipitation in a region.",
+            "reason": "Trees release water vapour through transpiration, which contributes to cloud formation and rainfall.",
+            "options": [
+              "Both A and R are true, and R is the correct explanation of A",
+              "Both A and R are true, but R is not the correct explanation of A",
+              "A is true but R is false",
+              "A is false but R is true"
+            ],
+            "correct_answer": 0,
+            "explanation": "Both are true. Deforestation removes trees that transpire water, reducing moisture and thus precipitation.",
+            "hint": "How do trees contribute moisture to the atmosphere?"
+          },
+          {
+            "id": "W01_D2_P_H3",
+            "type": "mcq",
+            "question": "What is the term for over-extraction of groundwater causing the land surface to sink?",
+            "options": ["Precipitation", "Transpiration", "Land subsidence", "Salinisation"],
+            "correct_answer": 2,
+            "explanation": "Land subsidence occurs when groundwater is pumped out faster than recharged, removing underground support.",
+            "hint": "When underground support is removed, the surface drops."
+          },
+          {
+            "id": "W01_D2_P_H4",
+            "type": "drag_order",
+            "question": "Arrange these water conservation methods from most to least efficient on a farm:",
+            "items": ["Flood irrigation", "Drip irrigation", "Rainwater harvesting", "Sprinkler irrigation"],
+            "correct_order": [1, 2, 3, 0],
+            "explanation": "Efficiency: Drip irrigation > Rainwater harvesting > Sprinklers > Flood irrigation."
+          },
+          {
+            "id": "W01_D2_P_H5",
+            "type": "mcq",
+            "question": "How does climate change affect the global water cycle?",
+            "options": [
+              "It has no effect on the water cycle",
+              "It causes more freshwater to become available",
+              "It intensifies the cycle: more evaporation, stronger storms, more droughts in some regions",
+              "It slows down evaporation globally"
+            ],
+            "correct_answer": 2,
+            "explanation": "Climate change increases temperatures, causing greater evaporation, more intense precipitation events, and shifting rainfall patterns.",
+            "hint": "Warmer temperatures speed up evaporation."
+          }
         ]
       }
     },
-
     "day_3": {
-      "concept_name": "Scientific Method",
+      "concept_id": "SCI6_W01_SOIL",
+      "concept_name": "Soil and Rocks",
       "questions": {
         "easy": [
-          {"id":"D3E1","type":"mcq","question":"First step:","options":["Observation","Experiment","Conclusion","Hypothesis"],"correct_answer":0},
-          {"id":"D3E2","type":"true_false","question":"Hypothesis is an educated guess.","correct_answer":true},
-          {"id":"D3E3","type":"mcq","question":"Experiment is used to:","options":["Sleep","Test hypothesis","Guess","Ignore"],"correct_answer":1},
-          {"id":"D3E4","type":"true_false","question":"Conclusion comes before experiment.","correct_answer":false},
-          {"id":"D3E5","type":"mcq","question":"Final step:","options":["Observation","Conclusion","Hypothesis","Question"],"correct_answer":1}
+          {
+            "id": "W01_D3_P_E1",
+            "type": "mcq",
+            "question": "What is the topmost layer of soil called?",
+            "options": ["Subsoil", "Bedrock", "Topsoil", "C-Horizon"],
+            "correct_answer": 2,
+            "explanation": "The topmost layer of soil is called topsoil (A-Horizon), richest in humus.",
+            "hint": "It is the layer you see at the surface."
+          },
+          {
+            "id": "W01_D3_P_E2",
+            "type": "true_false",
+            "question": "Humus is found mainly in topsoil.",
+            "correct_answer": true,
+            "explanation": "Humus is concentrated in the topsoil layer where biological activity is highest."
+          },
+          {
+            "id": "W01_D3_P_E3",
+            "type": "mcq",
+            "question": "Which type of rock is formed from cooled lava?",
+            "options": ["Sedimentary", "Metamorphic", "Igneous", "Limestone"],
+            "correct_answer": 2,
+            "explanation": "Igneous rocks form when magma or lava cools and solidifies.",
+            "hint": "Ignis is Latin for fire."
+          },
+          {
+            "id": "W01_D3_P_E4",
+            "type": "true_false",
+            "question": "Marble is an example of a sedimentary rock.",
+            "correct_answer": false,
+            "explanation": "Marble is a metamorphic rock formed from limestone under heat and pressure."
+          },
+          {
+            "id": "W01_D3_P_E5",
+            "type": "mcq",
+            "question": "What causes soil erosion?",
+            "options": ["Planting trees", "Wind and water", "Adding compost", "Watering crops"],
+            "correct_answer": 1,
+            "explanation": "Wind and water are the primary agents that carry away loose soil particles.",
+            "hint": "Natural forces move loose topsoil."
+          }
         ],
         "medium": [
-          {"id":"D3M1","type":"drag_order","question":"Arrange steps","items":["Observation","Hypothesis","Experiment","Conclusion"],"correct_order":[0,1,2,3]},
-          {"id":"D3M2","type":"mcq","question":"If hypothesis is wrong:","options":["Ignore","Revise","Argue","Quit"],"correct_answer":1},
-          {"id":"D3M3","type":"true_false","question":"Experiments must be repeatable.","correct_answer":true},
-          {"id":"D3M4","type":"mcq","question":"After hypothesis comes:","options":["Experiment","Observation","Conclusion","Guess"],"correct_answer":0},
-          {"id":"D3M5","type":"mcq","question":"Conclusions based on:","options":["Opinion","Evidence","Guess","Emotion"],"correct_answer":1}
+          {
+            "id": "W01_D3_P_M1",
+            "type": "mcq",
+            "question": "Which rock type forms when existing rocks are changed by intense heat and pressure?",
+            "options": ["Sedimentary", "Igneous", "Metamorphic", "Fossil"],
+            "correct_answer": 2,
+            "explanation": "Metamorphic rocks form when pre-existing rocks are transformed by heat and/or pressure.",
+            "hint": "Meta means change."
+          },
+          {
+            "id": "W01_D3_P_M2",
+            "type": "assertion_reason",
+            "question": "Read the Assertion and Reason carefully and choose the correct option.",
+            "assertion": "Topsoil is the most important layer for growing crops.",
+            "reason": "Topsoil is rich in humus and organic matter, which provides nutrients essential for plant growth.",
+            "options": [
+              "Both A and R are true, and R is the correct explanation of A",
+              "Both A and R are true, but R is not the correct explanation of A",
+              "A is true but R is false",
+              "A is false but R is true"
+            ],
+            "correct_answer": 0,
+            "explanation": "Topsoil is indeed most important for crops, and the reason correctly explains why: humus and nutrients support plant growth.",
+            "hint": "Why do farmers protect the top layer of soil?"
+          },
+          {
+            "id": "W01_D3_P_M3",
+            "type": "mcq",
+            "question": "Sandstone is formed by compaction of sand particles. It is which type of rock?",
+            "options": ["Igneous", "Metamorphic", "Sedimentary", "Volcanic"],
+            "correct_answer": 2,
+            "explanation": "Sandstone is a sedimentary rock formed when sand particles are compacted and cemented.",
+            "hint": "Sand settles in layers."
+          },
+          {
+            "id": "W01_D3_P_M4",
+            "type": "mcq",
+            "question": "Which practice BEST prevents soil erosion on hilly farmland?",
+            "options": ["Ploughing down the slope", "Contour farming", "Removing all vegetation", "Increasing irrigation"],
+            "correct_answer": 1,
+            "explanation": "Contour farming creates barriers along slope contour lines that slow water runoff and reduce erosion.",
+            "hint": "Contour lines run across a slope."
+          },
+          {
+            "id": "W01_D3_P_M5",
+            "type": "numeric_fill",
+            "question": "If it takes 500 years to form 1 cm of topsoil, how many years does it take to form 3 cm?",
+            "correct_answer": 1500,
+            "explanation": "500 years per cm × 3 cm = 1500 years."
+          }
         ],
         "hard": [
-          {"id":"D3H1","type":"mcq","question":"Why repeat experiments?","options":["Confirm reliability","Waste time","Entertain","Confuse"],"correct_answer":0},
-          {"id":"D3H2","type":"mcq","question":"If evidence contradicts hypothesis:","options":["Ignore","Change hypothesis","Blame","Stop"],"correct_answer":1},
-          {"id":"D3H3","type":"true_false","question":"Scientific method prevents random guessing.","correct_answer":true},
-          {"id":"D3H4","type":"mcq","question":"Hypothesis is:","options":["Final answer","Observation","Testable explanation","Random idea"],"correct_answer":2},
-          {"id":"D3H5","type":"mcq","question":"Evidence is important because:","options":["Proves reliability","Entertains","Colorful","Easy"],"correct_answer":0}
+          {
+            "id": "W01_D3_P_H1",
+            "type": "drag_order",
+            "question": "Arrange the rock cycle stages in order starting from magma:",
+            "items": ["Metamorphic rock", "Sedimentary rock", "Magma cools to form Igneous rock", "Weathering into sediment"],
+            "correct_order": [2, 3, 1, 0],
+            "explanation": "Rock cycle: Magma → Igneous rock → Weathering → Sediment → Sedimentary rock → Heat/Pressure → Metamorphic rock."
+          },
+          {
+            "id": "W01_D3_P_H2",
+            "type": "assertion_reason",
+            "question": "Read the Assertion and Reason carefully and choose the correct option.",
+            "assertion": "Deforestation accelerates soil erosion.",
+            "reason": "Tree roots bind soil particles together, preventing them from being washed or blown away.",
+            "options": [
+              "Both A and R are true, and R is the correct explanation of A",
+              "Both A and R are true, but R is not the correct explanation of A",
+              "A is true but R is false",
+              "A is false but R is true"
+            ],
+            "correct_answer": 0,
+            "explanation": "Deforestation does accelerate erosion, and roots binding soil is the correct explanation.",
+            "hint": "What do roots physically do to hold soil in place?"
+          },
+          {
+            "id": "W01_D3_P_H3",
+            "type": "mcq",
+            "question": "What term describes the process by which minerals from the A-Horizon are washed down to the B-Horizon?",
+            "options": ["Erosion", "Eluviation", "Deposition", "Pedogenesis"],
+            "correct_answer": 1,
+            "explanation": "Eluviation is the downward movement of dissolved minerals from upper to lower soil horizons.",
+            "hint": "Think of 'e' for exit — minerals exit the upper layer."
+          },
+          {
+            "id": "W01_D3_P_H4",
+            "type": "drag_order",
+            "question": "Arrange the soil horizons from surface to deepest:",
+            "items": ["C-Horizon (Bedrock)", "B-Horizon (Subsoil)", "O-Horizon (Organic litter)", "A-Horizon (Topsoil)"],
+            "correct_order": [2, 3, 1, 0],
+            "explanation": "Surface to deep: O-Horizon → A-Horizon (topsoil) → B-Horizon (subsoil) → C-Horizon (bedrock)."
+          },
+          {
+            "id": "W01_D3_P_H5",
+            "type": "mcq",
+            "question": "India loses approximately how many million tonnes of soil to erosion annually?",
+            "options": ["534 million", "5,334 million", "534,000 million", "53 million"],
+            "correct_answer": 1,
+            "explanation": "India loses an estimated 5,334 million tonnes of soil annually to erosion.",
+            "hint": "It is a very large number — in the thousands of millions."
+          }
         ]
       }
     },
-
     "day_4": {
-      "concept_name": "Science in Daily Life",
+      "concept_id": "SCI6_W01_FORESTS",
+      "concept_name": "Forests and Biodiversity",
       "questions": {
         "easy": [
-          {"id":"D4E1","type":"mcq","question":"Science is used in:","options":["Daily life","Only space","Only school","Only labs"],"correct_answer":0},
-          {"id":"D4E2","type":"true_false","question":"Fixing a tyre uses science.","correct_answer":true},
-          {"id":"D4E3","type":"mcq","question":"Evidence helps:","options":["Guess","Support conclusions","Sleep","Ignore"],"correct_answer":1},
-          {"id":"D4E4","type":"true_false","question":"Science is useless daily.","correct_answer":false},
-          {"id":"D4E5","type":"mcq","question":"Scientific thinking requires:","options":["Logic","Fear","Magic","Luck"],"correct_answer":0}
+          {
+            "id": "W01_D4_P_E1",
+            "type": "mcq",
+            "question": "What do we call the variety of all living organisms in an area?",
+            "options": ["Ecosystem", "Biodiversity", "Food chain", "Habitat"],
+            "correct_answer": 1,
+            "explanation": "Biodiversity refers to the variety of all living organisms.",
+            "hint": "Bio means life, diversity means variety."
+          },
+          {
+            "id": "W01_D4_P_E2",
+            "type": "true_false",
+            "question": "Plants are called producers in a food chain.",
+            "correct_answer": true,
+            "explanation": "Plants are producers because they produce their own food through photosynthesis."
+          },
+          {
+            "id": "W01_D4_P_E3",
+            "type": "mcq",
+            "question": "What is the cutting down of forests on a large scale called?",
+            "options": ["Afforestation", "Conservation", "Deforestation", "Photosynthesis"],
+            "correct_answer": 2,
+            "explanation": "Deforestation is the large-scale removal or clearing of forests.",
+            "hint": "De- means removal."
+          },
+          {
+            "id": "W01_D4_P_E4",
+            "type": "true_false",
+            "question": "An eagle is a producer in a food chain.",
+            "correct_answer": false,
+            "explanation": "An eagle is a consumer (top predator), not a producer."
+          },
+          {
+            "id": "W01_D4_P_E5",
+            "type": "mcq",
+            "question": "Which of these is a service provided by forests?",
+            "options": ["Increasing carbon dioxide", "Producing oxygen", "Causing floods", "Reducing rainfall"],
+            "correct_answer": 1,
+            "explanation": "Forests produce oxygen through photosynthesis and absorb carbon dioxide.",
+            "hint": "Trees breathe out what we breathe in."
+          }
         ],
         "medium": [
-          {"id":"D4M1","type":"mcq","question":"Reflects science?","options":["Test spoiled milk","Ignore","Argue","Guess"],"correct_answer":0},
-          {"id":"D4M2","type":"true_false","question":"Science improves decisions.","correct_answer":true},
-          {"id":"D4M3","type":"mcq","question":"Analysis means:","options":["Careful study","Guess","Sleep","Magic"],"correct_answer":0},
-          {"id":"D4M4","type":"mcq","question":"Method means:","options":["Step process","Emotion","Fear","Luck"],"correct_answer":0},
-          {"id":"D4M5","type":"true_false","question":"Anyone can think scientifically.","correct_answer":true}
+          {
+            "id": "W01_D4_P_M1",
+            "type": "mcq",
+            "question": "In Grass → Grasshopper → Frog → Snake → Eagle, the grasshopper is a:",
+            "options": ["Producer", "Primary consumer", "Secondary consumer", "Decomposer"],
+            "correct_answer": 1,
+            "explanation": "The grasshopper eats grass (the producer), making it a primary consumer.",
+            "hint": "It is the first animal to eat in the chain."
+          },
+          {
+            "id": "W01_D4_P_M2",
+            "type": "assertion_reason",
+            "question": "Read the Assertion and Reason carefully and choose the correct option.",
+            "assertion": "Tropical rainforests are called the 'lungs of the Earth'.",
+            "reason": "Rainforests produce large amounts of oxygen through photosynthesis and absorb CO2.",
+            "options": [
+              "Both A and R are true, and R is the correct explanation of A",
+              "Both A and R are true, but R is not the correct explanation of A",
+              "A is true but R is false",
+              "A is false but R is true"
+            ],
+            "correct_answer": 0,
+            "explanation": "Rainforests are called Earth's lungs, and oxygen production + CO2 absorption correctly explains why.",
+            "hint": "Lungs exchange gases — what do forests exchange?"
+          },
+          {
+            "id": "W01_D4_P_M3",
+            "type": "mcq",
+            "question": "Which level of biodiversity refers to the variety of different species in an ecosystem?",
+            "options": ["Genetic diversity", "Species diversity", "Ecosystem diversity", "Population diversity"],
+            "correct_answer": 1,
+            "explanation": "Species diversity refers to the number and variety of different species within an area.",
+            "hint": "It is about different kinds of organisms."
+          },
+          {
+            "id": "W01_D4_P_M4",
+            "type": "mcq",
+            "question": "What is the approximate percentage of Earth's land covered by forests?",
+            "options": ["10%", "50%", "31%", "71%"],
+            "correct_answer": 2,
+            "explanation": "Forests cover about 31% of Earth's land area.",
+            "hint": "It is roughly one-third of Earth's land."
+          },
+          {
+            "id": "W01_D4_P_M5",
+            "type": "numeric_fill",
+            "question": "Using the 10% energy rule: if the producer has 10,000 units, how many units reach the 3rd trophic level?",
+            "correct_answer": 100,
+            "explanation": "10,000 × 10% = 1,000 (Level 2) × 10% = 100 units at Level 3."
+          }
         ],
         "hard": [
-          {"id":"D4H1","type":"mcq","question":"Scientific literacy helps:","options":["Make informed decisions","Spread rumors","Entertain","Replace logic"],"correct_answer":0},
-          {"id":"D4H2","type":"mcq","question":"Two solutions proposed. Science suggests:","options":["Test with evidence","Pick random","Argue","Follow opinion"],"correct_answer":0},
-          {"id":"D4H3","type":"true_false","question":"Scientific thinking discourages blind belief.","correct_answer":true},
-          {"id":"D4H4","type":"mcq","question":"Daily scientific thinking example:","options":["Test water temperature","Ignore","Guess","Close eyes"],"correct_answer":0},
-          {"id":"D4H5","type":"mcq","question":"Scientific collaboration is important because:","options":["Combines ideas","Confuses","Wastes time","Avoids thinking"],"correct_answer":0}
+          {
+            "id": "W01_D4_P_H1",
+            "type": "drag_order",
+            "question": "Arrange this food chain from producer to top consumer:",
+            "items": ["Eagle", "Grass", "Frog", "Grasshopper", "Snake"],
+            "correct_order": [1, 3, 2, 4, 0],
+            "explanation": "Correct food chain: Grass → Grasshopper → Frog → Snake → Eagle."
+          },
+          {
+            "id": "W01_D4_P_H2",
+            "type": "assertion_reason",
+            "question": "Read the Assertion and Reason carefully and choose the correct option.",
+            "assertion": "Removing a keystone species can cause the collapse of an entire ecosystem.",
+            "reason": "Keystone species have a disproportionately large effect on their ecosystem relative to their abundance.",
+            "options": [
+              "Both A and R are true, and R is the correct explanation of A",
+              "Both A and R are true, but R is not the correct explanation of A",
+              "A is true but R is false",
+              "A is false but R is true"
+            ],
+            "correct_answer": 0,
+            "explanation": "Both statements are correct. A keystone species' outsized influence explains why its removal causes ecosystem collapse.",
+            "hint": "Think of a keystone in an arch — remove it and the arch falls."
+          },
+          {
+            "id": "W01_D4_P_H3",
+            "type": "mcq",
+            "question": "India's forest cover is approximately what percentage of its total land area?",
+            "options": ["33%", "21.7%", "50%", "10%"],
+            "correct_answer": 1,
+            "explanation": "India's forest cover is about 21.7%, below the national target of 33%.",
+            "hint": "It is below the national target."
+          },
+          {
+            "id": "W01_D4_P_H4",
+            "type": "mcq",
+            "question": "What does 'trophic cascade' mean in ecology?",
+            "options": [
+              "The flow of water through a food chain",
+              "Indirect effects where changes at one trophic level ripple through the entire food web",
+              "The movement of animals between forests",
+              "Seasonal changes in forest biodiversity"
+            ],
+            "correct_answer": 1,
+            "explanation": "A trophic cascade is when a change at one level triggers indirect effects throughout the food web.",
+            "hint": "Wolf reintroduction in Yellowstone changed river courses!"
+          },
+          {
+            "id": "W01_D4_P_H5",
+            "type": "drag_order",
+            "question": "Arrange these India biodiversity conservation milestones in chronological order:",
+            "items": ["Biological Diversity Act", "Project Tiger", "Biodiversity Heritage Sites", "Wildlife Protection Act"],
+            "correct_order": [3, 1, 0, 2],
+            "explanation": "Timeline: Wildlife Protection Act (1972) → Project Tiger (1973) → Biological Diversity Act (2002) → Biodiversity Heritage Sites (ongoing)."
+          }
         ]
       }
     }
-
   }
 }

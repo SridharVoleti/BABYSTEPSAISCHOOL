@@ -311,3 +311,46 @@ class TutoringChatView(APIView):
         if result['success']:  # 2026-02-17: Success
             return Response(result, status=status.HTTP_200_OK)
         return Response(result, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+class SubjectProficiencyView(APIView):
+    """
+    2026-03-03: Subject proficiency analytics endpoint (BS-SCI/BS-SST).
+
+    Returns per-lesson mastery percentages for a student's subject, used for
+    radar chart analytics on the SubjectLanding page.
+
+    GET /api/v1/teaching/proficiency/?subject=Science&class_number=6
+    """
+
+    permission_classes = [IsAuthenticated]  # 2026-03-03: Auth required
+
+    def get(self, request):
+        """2026-03-03: Return per-lesson mastery proficiency for a subject."""
+        student, error = _get_student(request)  # 2026-03-03: Require student role
+        if error:
+            return error
+
+        subject = request.query_params.get('subject')  # 2026-03-03: e.g. 'Science'
+        class_number = request.query_params.get('class_number')  # 2026-03-03: e.g. '6'
+
+        if not subject or not class_number:  # 2026-03-03: Both params required
+            return Response(
+                {'error': 'subject and class_number are required query parameters'},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        try:
+            class_number_int = int(class_number)  # 2026-03-03: Parse class number
+        except (ValueError, TypeError):  # 2026-03-03: Non-integer class_number
+            return Response(
+                {'error': 'class_number must be an integer'},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        result = TeachingService.get_subject_proficiency(  # 2026-03-03: Business logic
+            student=student,
+            subject=subject,
+            class_number=class_number_int,
+        )
+        return Response(result, status=status.HTTP_200_OK)
