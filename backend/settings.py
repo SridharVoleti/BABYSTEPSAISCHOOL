@@ -101,6 +101,7 @@ INSTALLED_APPS = [
     'services.attendance_service',  # 2026-03-04: Attendance tracking (BS-ATT)
     'services.monitor_tools_service',  # 2026-03-04: Teacher tools: gradebook, homework, timetable (BS-MON-005/006/007)
     'services.communication_service',  # 2026-03-04: Messaging, announcements, reports (BS-COM + BS-PAR-006)
+    'services.mentor_dashboard_service',  # 2026-03-06: Mentor Dashboard (BS-MNT)
 ]
 
 MIDDLEWARE = [

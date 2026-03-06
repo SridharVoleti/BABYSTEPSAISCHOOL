@@ -131,4 +131,8 @@ urlpatterns = [
     # 2026-03-04: Communication Service endpoints (BS-COM-001/002/003 + BS-PAR-006)
     # Mounted at: http://localhost:8000/api/v1/comms/
     path('api/v1/comms/', include('services.communication_service.urls')),
+
+    # 2026-03-06: Mentor Dashboard endpoints (BS-MNT)
+    # Mounted at: http://localhost:8000/api/v1/mentor/
+    path('api/v1/mentor/', include('services.mentor_dashboard_service.urls')),
 ]
